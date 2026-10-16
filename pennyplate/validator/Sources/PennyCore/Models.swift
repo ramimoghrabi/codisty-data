@@ -82,6 +82,9 @@ public enum Equipment: String, Codable, CaseIterable, Sendable {
 
 public enum MealType: String, Codable, CaseIterable, Sendable { case breakfast, lunch, dinner }
 
+/// How much heat the household likes.
+public enum Spice: String, Codable, CaseIterable, Sendable { case mild, medium, hot }
+
 /// One line of a recipe, as written and as understood.
 public struct RecipeIngredient: Codable, Hashable, Sendable {
     public var text: String
@@ -164,6 +167,8 @@ public struct Recipe: Codable, Identifiable, Hashable, Sendable {
     }
 
     public var isImported: Bool { source.kind != .builtIn }
+    /// A budget take on a dish going viral this week (from the weekly trend scout).
+    public var isTrending: Bool { tags.contains("trending") }
 }
 
 // MARK: - Household & plan
@@ -207,6 +212,7 @@ public struct Household: Codable, Hashable, Sendable {
     public var store: StoreTier = .standard
     public var region: Region = .national
     public var currency: String = "USD"
+    public var spice: Spice = .medium
     /// Converts USD national prices into the user's currency and price level.
     public var priceFactor: Double = 1
 
@@ -227,6 +233,7 @@ public struct Household: Codable, Hashable, Sendable {
         store = (try? c.decodeIfPresent(StoreTier.self, forKey: .store)) ?? d.store
         region = (try? c.decodeIfPresent(Region.self, forKey: .region)) ?? d.region
         currency = (try? c.decodeIfPresent(String.self, forKey: .currency)) ?? d.currency
+        spice = (try? c.decodeIfPresent(Spice.self, forKey: .spice)) ?? d.spice
         priceFactor = (try? c.decodeIfPresent(Double.self, forKey: .priceFactor)) ?? d.priceFactor
     }
 
@@ -312,9 +319,10 @@ public enum Day {
         return calendar.date(from: DateComponents(year: p[0], month: p[1], day: p[2]))
     }
     /// Monday of the week containing `date`.
-    public static func weekStart(_ date: Date, calendar: Calendar = .current) -> Date {
+    /// The first day of the week holding `date`; `firstWeekday` 1 = Sunday, 2 = Monday.
+    public static func weekStart(_ date: Date, calendar: Calendar = .current, firstWeekday: Int = 2) -> Date {
         var cal = calendar
-        cal.firstWeekday = 2
+        cal.firstWeekday = firstWeekday
         return cal.dateInterval(of: .weekOfYear, for: date)?.start ?? cal.startOfDay(for: date)
     }
 }
