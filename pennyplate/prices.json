@@ -1,0 +1,131 @@
+{
+ "basePeriod": "2026-09",
+ "cpi": {
+  "series": "CUUR0000SAF11",
+  "name": "CPI-U food at home, US city average",
+  "base": 321.758
+ },
+ "bls": {
+  "bacon": {
+   "series": "APU0000704111",
+   "base": 6.756
+  },
+  "banana": {
+   "series": "APU0000711211",
+   "base": 0.656
+  },
+  "berries": {
+   "series": "APU0000711415",
+   "base": 2.84
+  },
+  "bread": {
+   "series": "APU0000702111",
+   "base": 1.83
+  },
+  "butter": {
+   "series": "APU0000FS1101",
+   "base": 3.959
+  },
+  "cheddar": {
+   "series": "APU0000710212",
+   "base": 6.133
+  },
+  "chicken-breast": {
+   "series": "APU0000FF1101",
+   "base": 4.203
+  },
+  "corn-canned": {
+   "series": "APU0000714221",
+   "base": 1.321
+  },
+  "dried-beans": {
+   "series": "APU0000714233",
+   "base": 1.669
+  },
+  "drumstick": {
+   "series": "APU0000706212",
+   "base": 1.739
+  },
+  "egg": {
+   "series": "APU0000708111",
+   "base": 2.272
+  },
+  "flank-steak": {
+   "series": "APU0000FC3101",
+   "base": 12.69
+  },
+  "flour": {
+   "series": "APU0000701111",
+   "base": 0.545
+  },
+  "ground-beef": {
+   "series": "APU0000703112",
+   "base": 6.792
+  },
+  "ham": {
+   "series": "APU0000704312",
+   "base": 5.45
+  },
+  "lemon": {
+   "series": "APU0000711412",
+   "base": 2.128
+  },
+  "milk": {
+   "series": "APU0000709112",
+   "base": 4.106
+  },
+  "orange": {
+   "series": "APU0000711311",
+   "base": 1.723
+  },
+  "pasta": {
+   "series": "APU0000701322",
+   "base": 1.375
+  },
+  "pork-chop": {
+   "series": "APU0000704212",
+   "base": 4.55
+  },
+  "pork-shoulder": {
+   "series": "APU0000FD4101",
+   "base": 3.679
+  },
+  "potato": {
+   "series": "APU0000712112",
+   "base": 0.989
+  },
+  "rice": {
+   "series": "APU0000701312",
+   "base": 1.118
+  },
+  "romaine": {
+   "series": "APU0000FL2101",
+   "base": 3.312
+  },
+  "stew-beef": {
+   "series": "APU0000703432",
+   "base": 8.533
+  },
+  "sugar": {
+   "series": "APU0000715211",
+   "base": 1.019
+  },
+  "tomato": {
+   "series": "APU0000712311",
+   "base": 1.992
+  },
+  "whole-chicken": {
+   "series": "APU0000706111",
+   "base": 2.064
+  },
+  "wine": {
+   "series": "APU0000720311",
+   "base": 13.769
+  },
+  "yogurt": {
+   "series": "APU0000FJ4101",
+   "base": 1.578
+  }
+ },
+ "applied": "2026-09"
+}

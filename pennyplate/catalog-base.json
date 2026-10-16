@@ -1,0 +1,5607 @@
+{
+ "basePeriod": "2026-09",
+ "note": "Prices as of September 2026. update_prices.py scales these by the latest BLS figures; edit items here, never in public/.",
+ "items": [
+  {
+   "id": "onion",
+   "name": "Yellow onion",
+   "aliases": [
+    "onion",
+    "onions",
+    "yellow onion",
+    "white onion",
+    "brown onion",
+    "sweet onion"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 160,
+   "gramsEach": 225,
+   "packages": [
+    {
+     "amount": 225,
+     "price": 0.69,
+     "label": "1 onion"
+    },
+    {
+     "amount": 1360.78,
+     "price": 3.49,
+     "label": "3 lb bag"
+    }
+   ],
+   "kcal100": 40,
+   "protein100": 1.1,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "est"
+  },
+  {
+   "id": "red-onion",
+   "name": "Red onion",
+   "aliases": [
+    "red onion",
+    "purple onion"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 160,
+   "gramsEach": 225,
+   "packages": [
+    {
+     "amount": 225,
+     "price": 0.95,
+     "label": "1 red onion"
+    }
+   ],
+   "kcal100": 40,
+   "protein100": 1.1,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "est"
+  },
+  {
+   "id": "garlic",
+   "name": "Garlic",
+   "aliases": [
+    "garlic",
+    "garlic clove",
+    "clove garlic",
+    "cloves garlic",
+    "head garlic",
+    "garlic bulb"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 136,
+   "gramsEach": 5,
+   "packages": [
+    {
+     "amount": 50,
+     "price": 0.65,
+     "label": "1 head"
+    },
+    {
+     "amount": 150,
+     "price": 1.99,
+     "label": "3-pack heads"
+    }
+   ],
+   "kcal100": 149,
+   "protein100": 6.4,
+   "staple": false,
+   "keepsDays": 60,
+   "priceSource": "est"
+  },
+  {
+   "id": "carrot",
+   "name": "Carrots",
+   "aliases": [
+    "carrot",
+    "carrots",
+    "baby carrot"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 128,
+   "gramsEach": 61,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.19,
+     "label": "1 lb bag"
+    },
+    {
+     "amount": 907.18,
+     "price": 1.99,
+     "label": "2 lb bag"
+    }
+   ],
+   "kcal100": 41,
+   "protein100": 0.9,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "celery",
+   "name": "Celery",
+   "aliases": [
+    "celery",
+    "celery stalk",
+    "celery rib"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 101,
+   "gramsEach": 40,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.99,
+     "label": "1 bunch"
+    }
+   ],
+   "kcal100": 16,
+   "protein100": 0.7,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "bell-pepper",
+   "name": "Bell pepper",
+   "aliases": [
+    "bell pepper",
+    "red bell pepper",
+    "green bell pepper",
+    "yellow bell pepper",
+    "pepper red",
+    "capsicum",
+    "sweet pepper"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 149,
+   "gramsEach": 150,
+   "packages": [
+    {
+     "amount": 150,
+     "price": 1.29,
+     "label": "1 pepper"
+    },
+    {
+     "amount": 450,
+     "price": 3.99,
+     "label": "3-pack"
+    }
+   ],
+   "kcal100": 31,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "est"
+  },
+  {
+   "id": "jalapeno",
+   "name": "Jalapeño",
+   "aliases": [
+    "jalapeno",
+    "jalapeño",
+    "jalapeno pepper",
+    "green chili",
+    "chili pepper",
+    "serrano"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 90,
+   "gramsEach": 15,
+   "packages": [
+    {
+     "amount": 45,
+     "price": 0.25,
+     "label": "3 peppers"
+    }
+   ],
+   "kcal100": 29,
+   "protein100": 0.9,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "est"
+  },
+  {
+   "id": "broccoli",
+   "name": "Broccoli",
+   "aliases": [
+    "broccoli",
+    "broccoli floret",
+    "broccoli crown"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 91,
+   "gramsEach": 400,
+   "packages": [
+    {
+     "amount": 400,
+     "price": 1.99,
+     "label": "1 crown"
+    }
+   ],
+   "kcal100": 34,
+   "protein100": 2.8,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "cauliflower",
+   "name": "Cauliflower",
+   "aliases": [
+    "cauliflower",
+    "cauliflower floret"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 107,
+   "gramsEach": 900,
+   "packages": [
+    {
+     "amount": 900,
+     "price": 3.49,
+     "label": "1 head"
+    }
+   ],
+   "kcal100": 25,
+   "protein100": 1.9,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "zucchini",
+   "name": "Zucchini",
+   "aliases": [
+    "zucchini",
+    "courgette",
+    "summer squash"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 124,
+   "gramsEach": 200,
+   "packages": [
+    {
+     "amount": 200,
+     "price": 0.79,
+     "label": "1 zucchini"
+    }
+   ],
+   "kcal100": 17,
+   "protein100": 1.2,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "eggplant",
+   "name": "Eggplant",
+   "aliases": [
+    "eggplant",
+    "aubergine"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 82,
+   "gramsEach": 450,
+   "packages": [
+    {
+     "amount": 450,
+     "price": 1.99,
+     "label": "1 eggplant"
+    }
+   ],
+   "kcal100": 25,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "spinach",
+   "name": "Spinach",
+   "aliases": [
+    "spinach",
+    "baby spinach",
+    "fresh spinach"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 30,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 142,
+     "price": 2.99,
+     "label": "5 oz bag"
+    },
+    {
+     "amount": 283,
+     "price": 4.49,
+     "label": "10 oz bag"
+    }
+   ],
+   "kcal100": 23,
+   "protein100": 2.9,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "est"
+  },
+  {
+   "id": "kale",
+   "name": "Kale",
+   "aliases": [
+    "kale",
+    "lacinato kale"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 21,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 250,
+     "price": 1.99,
+     "label": "1 bunch"
+    }
+   ],
+   "kcal100": 49,
+   "protein100": 4.3,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "est"
+  },
+  {
+   "id": "cabbage",
+   "name": "Cabbage",
+   "aliases": [
+    "cabbage",
+    "green cabbage",
+    "coleslaw mix",
+    "shredded cabbage"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 89,
+   "gramsEach": 900,
+   "packages": [
+    {
+     "amount": 900,
+     "price": 1.79,
+     "label": "1 head"
+    }
+   ],
+   "kcal100": 25,
+   "protein100": 1.3,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "radish",
+   "name": "Radishes",
+   "aliases": [
+    "radish"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 116,
+   "gramsEach": 15,
+   "packages": [
+    {
+     "amount": 170,
+     "price": 1.29,
+     "label": "1 bunch"
+    }
+   ],
+   "kcal100": 16,
+   "protein100": 0.7,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "est"
+  },
+  {
+   "id": "cucumber",
+   "name": "Cucumber",
+   "aliases": [
+    "cucumber",
+    "english cucumber",
+    "persian cucumber"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 119,
+   "gramsEach": 300,
+   "packages": [
+    {
+     "amount": 300,
+     "price": 0.89,
+     "label": "1 cucumber"
+    }
+   ],
+   "kcal100": 15,
+   "protein100": 0.7,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "tomato",
+   "name": "Tomatoes",
+   "aliases": [
+    "tomato",
+    "roma tomato",
+    "plum tomato",
+    "vine tomato",
+    "fresh tomato"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 180,
+   "gramsEach": 150,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.99,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 18,
+   "protein100": 0.9,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "bls"
+  },
+  {
+   "id": "cherry-tomato",
+   "name": "Cherry tomatoes",
+   "aliases": [
+    "cherry tomato",
+    "grape tomato"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 140,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 283,
+     "price": 2.99,
+     "label": "10 oz pint"
+    }
+   ],
+   "kcal100": 18,
+   "protein100": 0.9,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "est"
+  },
+  {
+   "id": "romaine",
+   "name": "Romaine lettuce",
+   "aliases": [
+    "romaine",
+    "romaine lettuce",
+    "lettuce",
+    "iceberg lettuce",
+    "romaine heart",
+    "salad greens",
+    "mixed greens"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 47,
+   "gramsEach": 280,
+   "packages": [
+    {
+     "amount": 280,
+     "price": 2.04,
+     "label": "1 head"
+    }
+   ],
+   "kcal100": 17,
+   "protein100": 1.2,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "bls"
+  },
+  {
+   "id": "potato",
+   "name": "Potatoes",
+   "aliases": [
+    "potato",
+    "russet potato",
+    "yukon gold potato",
+    "white potato",
+    "baby potato",
+    "red potato",
+    "gold potato"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 150,
+   "gramsEach": 213,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 0.99,
+     "label": "1 lb loose"
+    },
+    {
+     "amount": 2267.96,
+     "price": 4.49,
+     "label": "5 lb bag"
+    }
+   ],
+   "kcal100": 77,
+   "protein100": 2,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "bls"
+  },
+  {
+   "id": "sweet-potato",
+   "name": "Sweet potatoes",
+   "aliases": [
+    "sweet potato",
+    "yam"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 133,
+   "gramsEach": 300,
+   "packages": [
+    {
+     "amount": 300,
+     "price": 0.85,
+     "label": "1 sweet potato"
+    },
+    {
+     "amount": 1360.78,
+     "price": 3.99,
+     "label": "3 lb bag"
+    }
+   ],
+   "kcal100": 86,
+   "protein100": 1.6,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "green-beans",
+   "name": "Green beans",
+   "aliases": [
+    "green bean",
+    "string bean",
+    "fresh green bean"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 100,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 2.49,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 31,
+   "protein100": 1.8,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "est"
+  },
+  {
+   "id": "mushroom",
+   "name": "Mushrooms",
+   "aliases": [
+    "mushroom",
+    "white mushroom",
+    "cremini mushroom",
+    "button mushroom",
+    "baby bella"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 70,
+   "gramsEach": 18,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 2.49,
+     "label": "8 oz pack"
+    }
+   ],
+   "kcal100": 22,
+   "protein100": 3.1,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "est"
+  },
+  {
+   "id": "avocado",
+   "name": "Avocado",
+   "aliases": [
+    "avocado"
+   ],
+   "aisle": "produce",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 200,
+   "packages": [
+    {
+     "amount": 1,
+     "price": 1.25,
+     "label": "1 avocado"
+    },
+    {
+     "amount": 4,
+     "price": 3.99,
+     "label": "bag of 4"
+    }
+   ],
+   "kcal100": 320,
+   "protein100": 4,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "est"
+  },
+  {
+   "id": "lemon",
+   "name": "Lemons",
+   "aliases": [
+    "lemon",
+    "lemon juice",
+    "juice of lemon",
+    "lemon zest"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 244,
+   "gramsEach": 120,
+   "packages": [
+    {
+     "amount": 120,
+     "price": 0.56,
+     "label": "1 lemon"
+    },
+    {
+     "amount": 907.18,
+     "price": 3.99,
+     "label": "2 lb bag"
+    }
+   ],
+   "kcal100": 29,
+   "protein100": 1.1,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "bls"
+  },
+  {
+   "id": "lime",
+   "name": "Limes",
+   "aliases": [
+    "lime",
+    "lime juice",
+    "juice of lime",
+    "lime zest"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 244,
+   "gramsEach": 65,
+   "packages": [
+    {
+     "amount": 65,
+     "price": 0.4,
+     "label": "1 lime"
+    },
+    {
+     "amount": 453.59,
+     "price": 2.49,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 30,
+   "protein100": 0.7,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "cilantro",
+   "name": "Cilantro",
+   "aliases": [
+    "cilantro",
+    "coriander leaf",
+    "fresh coriander",
+    "coriander leaves"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 16,
+   "gramsEach": 60,
+   "packages": [
+    {
+     "amount": 60,
+     "price": 0.99,
+     "label": "1 bunch"
+    }
+   ],
+   "kcal100": 23,
+   "protein100": 2.1,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "est"
+  },
+  {
+   "id": "parsley",
+   "name": "Parsley",
+   "aliases": [
+    "parsley",
+    "flat leaf parsley",
+    "italian parsley",
+    "curly parsley"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 60,
+   "gramsEach": 60,
+   "packages": [
+    {
+     "amount": 60,
+     "price": 1.29,
+     "label": "1 bunch"
+    }
+   ],
+   "kcal100": 36,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "mint",
+   "name": "Fresh mint",
+   "aliases": [
+    "mint",
+    "mint leaf",
+    "fresh mint"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 20,
+   "gramsEach": 30,
+   "packages": [
+    {
+     "amount": 30,
+     "price": 1.99,
+     "label": "1 bunch"
+    }
+   ],
+   "kcal100": 70,
+   "protein100": 3.8,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "est"
+  },
+  {
+   "id": "basil",
+   "name": "Fresh basil",
+   "aliases": [
+    "basil",
+    "basil leaf",
+    "fresh basil",
+    "thai basil"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 24,
+   "gramsEach": 20,
+   "packages": [
+    {
+     "amount": 20,
+     "price": 2.49,
+     "label": "1 pack"
+    }
+   ],
+   "kcal100": 23,
+   "protein100": 3.2,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "est"
+  },
+  {
+   "id": "green-onion",
+   "name": "Green onions",
+   "aliases": [
+    "green onion",
+    "scallion",
+    "spring onion"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 100,
+   "gramsEach": 15,
+   "packages": [
+    {
+     "amount": 100,
+     "price": 0.99,
+     "label": "1 bunch"
+    }
+   ],
+   "kcal100": 32,
+   "protein100": 1.8,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "ginger",
+   "name": "Fresh ginger",
+   "aliases": [
+    "ginger",
+    "fresh ginger",
+    "ginger root",
+    "grated ginger"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 96,
+   "gramsEach": 30,
+   "packages": [
+    {
+     "amount": 60,
+     "price": 0.55,
+     "label": "1 piece"
+    }
+   ],
+   "kcal100": 80,
+   "protein100": 1.8,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "banana",
+   "name": "Bananas",
+   "aliases": [
+    "banana"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 150,
+   "gramsEach": 118,
+   "packages": [
+    {
+     "amount": 118,
+     "price": 0.17,
+     "label": "1 banana"
+    },
+    {
+     "amount": 1133.98,
+     "price": 1.64,
+     "label": "bunch (~6)"
+    }
+   ],
+   "kcal100": 89,
+   "protein100": 1.1,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "bls"
+  },
+  {
+   "id": "apple",
+   "name": "Apples",
+   "aliases": [
+    "apple",
+    "granny smith apple",
+    "gala apple"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 125,
+   "gramsEach": 180,
+   "packages": [
+    {
+     "amount": 180,
+     "price": 0.71,
+     "label": "1 apple"
+    },
+    {
+     "amount": 1360.78,
+     "price": 4.49,
+     "label": "3 lb bag"
+    }
+   ],
+   "kcal100": 52,
+   "protein100": 0.3,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "berries",
+   "name": "Strawberries",
+   "aliases": [
+    "strawberry",
+    "berry",
+    "blueberry",
+    "mixed berry"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 150,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 2.84,
+     "label": "12 oz pint"
+    }
+   ],
+   "kcal100": 32,
+   "protein100": 0.7,
+   "staple": false,
+   "keepsDays": 4,
+   "priceSource": "bls"
+  },
+  {
+   "id": "orange",
+   "name": "Oranges",
+   "aliases": [
+    "orange",
+    "orange juice",
+    "orange zest"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 180,
+   "gramsEach": 180,
+   "packages": [
+    {
+     "amount": 180,
+     "price": 0.68,
+     "label": "1 orange"
+    }
+   ],
+   "kcal100": 47,
+   "protein100": 0.9,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "bls"
+  },
+  {
+   "id": "frozen-peas",
+   "name": "Frozen peas",
+   "aliases": [
+    "pea",
+    "frozen pea",
+    "green pea",
+    "peas and carrot",
+    "frozen peas and carrot"
+   ],
+   "aisle": "frozen",
+   "base": "g",
+   "gramsPerCup": 134,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 1.49,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 77,
+   "protein100": 5.2,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "frozen-corn",
+   "name": "Frozen corn",
+   "aliases": [
+    "corn",
+    "frozen corn",
+    "corn kernel",
+    "sweet corn"
+   ],
+   "aisle": "frozen",
+   "base": "g",
+   "gramsPerCup": 145,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 1.49,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 88,
+   "protein100": 3.2,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "frozen-broccoli",
+   "name": "Frozen broccoli",
+   "aliases": [
+    "frozen broccoli"
+   ],
+   "aisle": "frozen",
+   "base": "g",
+   "gramsPerCup": 91,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 1.79,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 28,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "frozen-veg",
+   "name": "Frozen mixed vegetables",
+   "aliases": [
+    "mixed vegetable",
+    "frozen mixed vegetable",
+    "frozen vegetable",
+    "stir fry vegetable"
+   ],
+   "aisle": "frozen",
+   "base": "g",
+   "gramsPerCup": 140,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 1.49,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 65,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "frozen-spinach",
+   "name": "Frozen spinach",
+   "aliases": [
+    "frozen spinach",
+    "chopped spinach"
+   ],
+   "aisle": "frozen",
+   "base": "g",
+   "gramsPerCup": 190,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 283,
+     "price": 1.49,
+     "label": "10 oz box"
+    }
+   ],
+   "kcal100": 34,
+   "protein100": 4,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "frozen-green-beans",
+   "name": "Frozen green beans",
+   "aliases": [
+    "frozen green bean"
+   ],
+   "aisle": "frozen",
+   "base": "g",
+   "gramsPerCup": 125,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 1.49,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 31,
+   "protein100": 1.8,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "shrimp",
+   "name": "Shrimp (frozen)",
+   "aliases": [
+    "shrimp",
+    "prawn",
+    "raw shrimp"
+   ],
+   "aisle": "seafood",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 7.99,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 99,
+   "protein100": 24,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "white-fish",
+   "name": "White fish fillets",
+   "aliases": [
+    "white fish",
+    "tilapia",
+    "cod",
+    "fish fillet",
+    "pollock",
+    "haddock",
+    "swai"
+   ],
+   "aisle": "seafood",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 140,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 5.49,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 96,
+   "protein100": 20,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "salmon",
+   "name": "Salmon fillets",
+   "aliases": [
+    "salmon",
+    "salmon fillet"
+   ],
+   "aisle": "seafood",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 170,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 9.99,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 208,
+   "protein100": 20,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "chicken-breast",
+   "name": "Chicken breast",
+   "aliases": [
+    "chicken breast",
+    "chicken breast fillet",
+    "chicken cutlet",
+    "chicken tender",
+    "chicken tenderloin",
+    "chicken"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 225,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 4.2,
+     "label": "1 lb pack"
+    },
+    {
+     "amount": 1133.98,
+     "price": 9.97,
+     "label": "2.5 lb family pack"
+    }
+   ],
+   "kcal100": 120,
+   "protein100": 22.5,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "chicken-thigh",
+   "name": "Chicken thighs (boneless)",
+   "aliases": [
+    "chicken thigh",
+    "boneless chicken thigh",
+    "chicken thigh fillet"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 120,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 3.49,
+     "label": "1 lb pack"
+    },
+    {
+     "amount": 1133.98,
+     "price": 8.29,
+     "label": "2.5 lb family pack"
+    }
+   ],
+   "kcal100": 144,
+   "protein100": 19.6,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "chicken-thigh-bone",
+   "name": "Chicken thighs (bone-in)",
+   "aliases": [
+    "bone in chicken thigh",
+    "bone-in chicken thigh",
+    "skin on chicken thigh"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 170,
+   "packages": [
+    {
+     "amount": 1133.98,
+     "price": 5.44,
+     "label": "2.5 lb pack"
+    }
+   ],
+   "kcal100": 180,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "drumstick",
+   "name": "Chicken drumsticks",
+   "aliases": [
+    "drumstick",
+    "chicken drumstick",
+    "chicken leg",
+    "chicken leg quarter"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 110,
+   "packages": [
+    {
+     "amount": 1133.98,
+     "price": 4.13,
+     "label": "2.5 lb pack"
+    }
+   ],
+   "kcal100": 172,
+   "protein100": 18,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "whole-chicken",
+   "name": "Whole chicken",
+   "aliases": [
+    "whole chicken",
+    "roasting chicken"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 1800,
+   "packages": [
+    {
+     "amount": 1800,
+     "price": 8.19,
+     "label": "1 chicken (~4 lb)"
+    }
+   ],
+   "kcal100": 190,
+   "protein100": 18,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "ground-beef",
+   "name": "Ground beef",
+   "aliases": [
+    "beef",
+    "ground beef",
+    "minced beef",
+    "beef mince",
+    "hamburger meat",
+    "ground chuck",
+    "lean ground beef"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 6.79,
+     "label": "1 lb pack"
+    },
+    {
+     "amount": 1360.78,
+     "price": 19.35,
+     "label": "3 lb pack"
+    }
+   ],
+   "kcal100": 254,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "stew-beef",
+   "name": "Beef stew meat",
+   "aliases": [
+    "stew beef",
+    "beef stew meat",
+    "stewing beef",
+    "beef chuck",
+    "chuck roast",
+    "beef cube"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 8.53,
+     "label": "1 lb pack"
+    },
+    {
+     "amount": 907.18,
+     "price": 17.06,
+     "label": "2 lb pack"
+    }
+   ],
+   "kcal100": 180,
+   "protein100": 28,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "flank-steak",
+   "name": "Flank or sirloin steak",
+   "aliases": [
+    "flank steak",
+    "sirloin steak",
+    "steak",
+    "beef steak",
+    "skirt steak",
+    "sirloin"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 11.49,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 192,
+   "protein100": 28,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "ground-turkey",
+   "name": "Ground turkey",
+   "aliases": [
+    "turkey",
+    "ground turkey",
+    "turkey mince"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 4.49,
+     "label": "1 lb pack"
+    }
+   ],
+   "kcal100": 150,
+   "protein100": 19.7,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "pork-chop",
+   "name": "Pork chops",
+   "aliases": [
+    "pork chop",
+    "boneless pork chop",
+    "pork loin chop"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 170,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 4.55,
+     "label": "1 lb pack"
+    },
+    {
+     "amount": 907.18,
+     "price": 9.1,
+     "label": "2 lb pack"
+    }
+   ],
+   "kcal100": 172,
+   "protein100": 21,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "pork-shoulder",
+   "name": "Pork shoulder",
+   "aliases": [
+    "pork shoulder",
+    "pork butt",
+    "boston butt",
+    "pork roast"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 1360.78,
+     "price": 10.49,
+     "label": "3 lb roast"
+    }
+   ],
+   "kcal100": 236,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "bls"
+  },
+  {
+   "id": "ground-pork",
+   "name": "Ground pork",
+   "aliases": [
+    "ground pork",
+    "pork mince"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 4.29,
+     "label": "1 lb pack"
+    }
+   ],
+   "kcal100": 263,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "sausage",
+   "name": "Smoked sausage",
+   "aliases": [
+    "smoked sausage",
+    "kielbasa",
+    "andouille",
+    "polish sausage"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 100,
+   "packages": [
+    {
+     "amount": 397,
+     "price": 3.99,
+     "label": "14 oz pack"
+    }
+   ],
+   "kcal100": 300,
+   "protein100": 12,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "est"
+  },
+  {
+   "id": "italian-sausage",
+   "name": "Italian sausage",
+   "aliases": [
+    "italian sausage",
+    "sausage",
+    "pork sausage",
+    "sausage link"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 100,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 4.49,
+     "label": "1 lb pack"
+    }
+   ],
+   "kcal100": 300,
+   "protein100": 14,
+   "staple": false,
+   "keepsDays": 3,
+   "priceSource": "est"
+  },
+  {
+   "id": "bacon",
+   "name": "Bacon",
+   "aliases": [
+    "bacon",
+    "bacon slice",
+    "bacon strip"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 28,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 5.07,
+     "label": "12 oz pack"
+    }
+   ],
+   "kcal100": 417,
+   "protein100": 13,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "bls"
+  },
+  {
+   "id": "ham",
+   "name": "Ham",
+   "aliases": [
+    "ham",
+    "diced ham",
+    "ham steak",
+    "ham hock"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 5.45,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 145,
+   "protein100": 21,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "bls"
+  },
+  {
+   "id": "egg",
+   "name": "Eggs",
+   "aliases": [
+    "egg",
+    "large egg",
+    "egg yolk",
+    "egg white"
+   ],
+   "aisle": "dairy",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 50,
+   "packages": [
+    {
+     "amount": 12,
+     "price": 2.27,
+     "label": "dozen"
+    },
+    {
+     "amount": 18,
+     "price": 3.29,
+     "label": "18-pack"
+    }
+   ],
+   "kcal100": 72,
+   "protein100": 6.3,
+   "staple": false,
+   "keepsDays": 28,
+   "priceSource": "bls"
+  },
+  {
+   "id": "milk",
+   "name": "Milk",
+   "aliases": [
+    "milk",
+    "whole milk",
+    "2% milk",
+    "skim milk"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 244,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 1890,
+     "price": 2.39,
+     "label": "half gallon"
+    },
+    {
+     "amount": 3785,
+     "price": 4.11,
+     "label": "1 gallon"
+    }
+   ],
+   "kcal100": 61,
+   "protein100": 3.2,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "bls"
+  },
+  {
+   "id": "butter",
+   "name": "Butter",
+   "aliases": [
+    "butter",
+    "unsalted butter",
+    "salted butter"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 227,
+   "gramsEach": 113,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 3.96,
+     "label": "1 lb (4 sticks)"
+    }
+   ],
+   "kcal100": 717,
+   "protein100": 0.9,
+   "staple": false,
+   "keepsDays": 60,
+   "priceSource": "bls"
+  },
+  {
+   "id": "heavy-cream",
+   "name": "Heavy cream",
+   "aliases": [
+    "heavy cream",
+    "whipping cream",
+    "double cream",
+    "cream",
+    "half and half"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 238,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 473,
+     "price": 3.49,
+     "label": "1 pint"
+    }
+   ],
+   "kcal100": 340,
+   "protein100": 2.8,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "sour-cream",
+   "name": "Sour cream",
+   "aliases": [
+    "sour cream"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 230,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 2.29,
+     "label": "16 oz tub"
+    }
+   ],
+   "kcal100": 198,
+   "protein100": 2.4,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "ricotta",
+   "name": "Ricotta",
+   "aliases": [
+    "ricotta",
+    "ricotta cheese",
+    "cottage cheese"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 246,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 3.49,
+     "label": "15 oz tub"
+    }
+   ],
+   "kcal100": 174,
+   "protein100": 11,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "est"
+  },
+  {
+   "id": "cream-cheese",
+   "name": "Cream cheese",
+   "aliases": [
+    "cream cheese"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 232,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 2.49,
+     "label": "8 oz block"
+    }
+   ],
+   "kcal100": 342,
+   "protein100": 6,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "cheddar",
+   "name": "Cheddar cheese",
+   "aliases": [
+    "cheddar",
+    "cheddar cheese",
+    "shredded cheese",
+    "mexican blend cheese",
+    "colby jack",
+    "monterey jack",
+    "cheese",
+    "shredded cheddar"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 113,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 3.07,
+     "label": "8 oz block"
+    },
+    {
+     "amount": 453.59,
+     "price": 6.13,
+     "label": "1 lb block"
+    }
+   ],
+   "kcal100": 403,
+   "protein100": 25,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "bls"
+  },
+  {
+   "id": "mozzarella",
+   "name": "Mozzarella",
+   "aliases": [
+    "mozzarella",
+    "shredded mozzarella",
+    "mozzarella cheese"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 112,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 2.79,
+     "label": "8 oz bag"
+    },
+    {
+     "amount": 453.59,
+     "price": 4.99,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 280,
+   "protein100": 28,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "parmesan",
+   "name": "Parmesan",
+   "aliases": [
+    "parmesan",
+    "parmesan cheese",
+    "parmigiano",
+    "grated parmesan",
+    "pecorino"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 100,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 3.99,
+     "label": "8 oz tub"
+    }
+   ],
+   "kcal100": 431,
+   "protein100": 38,
+   "staple": false,
+   "keepsDays": 60,
+   "priceSource": "est"
+  },
+  {
+   "id": "feta",
+   "name": "Feta",
+   "aliases": [
+    "feta",
+    "feta cheese",
+    "crumbled feta"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 150,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 170,
+     "price": 3.49,
+     "label": "6 oz tub"
+    }
+   ],
+   "kcal100": 264,
+   "protein100": 14,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "yogurt",
+   "name": "Plain yogurt",
+   "aliases": [
+    "yogurt",
+    "plain yogurt",
+    "greek yogurt",
+    "plain greek yogurt",
+    "laban",
+    "yoghurt"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 245,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 1.58,
+     "label": "8 oz cup"
+    },
+    {
+     "amount": 907,
+     "price": 3.99,
+     "label": "32 oz tub"
+    }
+   ],
+   "kcal100": 61,
+   "protein100": 3.5,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "bls"
+  },
+  {
+   "id": "bread",
+   "name": "Bread",
+   "aliases": [
+    "bread",
+    "sandwich bread",
+    "white bread",
+    "whole wheat bread",
+    "bread slice",
+    "toast",
+    "sourdough"
+   ],
+   "aisle": "bakery",
+   "base": "g",
+   "gramsPerCup": 45,
+   "gramsEach": 28,
+   "packages": [
+    {
+     "amount": 567,
+     "price": 2.29,
+     "label": "20 oz loaf"
+    }
+   ],
+   "kcal100": 265,
+   "protein100": 9,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "bls"
+  },
+  {
+   "id": "flour-tortilla",
+   "name": "Flour tortillas",
+   "aliases": [
+    "flour tortilla",
+    "tortilla",
+    "burrito tortilla",
+    "wrap"
+   ],
+   "aisle": "bakery",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 45,
+   "packages": [
+    {
+     "amount": 10,
+     "price": 2.49,
+     "label": "10-pack"
+    }
+   ],
+   "kcal100": 140,
+   "protein100": 4,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "corn-tortilla",
+   "name": "Corn tortillas",
+   "aliases": [
+    "corn tortilla",
+    "taco shell",
+    "tostada"
+   ],
+   "aisle": "bakery",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 26,
+   "packages": [
+    {
+     "amount": 30,
+     "price": 2.49,
+     "label": "30-pack"
+    }
+   ],
+   "kcal100": 57,
+   "protein100": 1.5,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "pita",
+   "name": "Pita bread",
+   "aliases": [
+    "pita",
+    "pita bread",
+    "arabic bread",
+    "flatbread",
+    "khubz",
+    "naan",
+    "lavash"
+   ],
+   "aisle": "bakery",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 60,
+   "packages": [
+    {
+     "amount": 6,
+     "price": 2.49,
+     "label": "6-pack"
+    }
+   ],
+   "kcal100": 165,
+   "protein100": 5.5,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "buns",
+   "name": "Burger buns",
+   "aliases": [
+    "bun",
+    "burger bun",
+    "hamburger bun",
+    "slider bun",
+    "brioche bun",
+    "sandwich roll",
+    "hoagie roll"
+   ],
+   "aisle": "bakery",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 55,
+   "packages": [
+    {
+     "amount": 8,
+     "price": 2.29,
+     "label": "8-pack"
+    }
+   ],
+   "kcal100": 150,
+   "protein100": 5,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "rice",
+   "name": "White rice",
+   "aliases": [
+    "rice",
+    "white rice",
+    "long grain rice",
+    "jasmine rice",
+    "basmati rice",
+    "medium grain rice",
+    "short grain rice"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 185,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 907.18,
+     "price": 2.24,
+     "label": "2 lb bag"
+    },
+    {
+     "amount": 2267.96,
+     "price": 5.29,
+     "label": "5 lb bag"
+    }
+   ],
+   "kcal100": 365,
+   "protein100": 7.1,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "bls"
+  },
+  {
+   "id": "brown-rice",
+   "name": "Brown rice",
+   "aliases": [
+    "brown rice"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 190,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 907.18,
+     "price": 2.79,
+     "label": "2 lb bag"
+    }
+   ],
+   "kcal100": 367,
+   "protein100": 7.5,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "pasta",
+   "name": "Pasta",
+   "aliases": [
+    "pasta",
+    "spaghetti",
+    "penne",
+    "macaroni",
+    "elbow macaroni",
+    "rotini",
+    "ziti",
+    "fusilli",
+    "linguine",
+    "fettuccine",
+    "rigatoni",
+    "farfalle",
+    "shells",
+    "short pasta",
+    "small pasta",
+    "ditalini",
+    "spaghetti noodle"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 105,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.38,
+     "label": "1 lb box"
+    }
+   ],
+   "kcal100": 371,
+   "protein100": 13,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "bls"
+  },
+  {
+   "id": "lasagna",
+   "name": "Lasagna noodles",
+   "aliases": [
+    "lasagna noodle",
+    "lasagna sheet",
+    "lasagne"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 20,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.99,
+     "label": "1 lb box"
+    }
+   ],
+   "kcal100": 371,
+   "protein100": 13,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "egg-noodles",
+   "name": "Egg noodles",
+   "aliases": [
+    "egg noodle",
+    "wide egg noodle"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 75,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 1.99,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 384,
+   "protein100": 14,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "ramen",
+   "name": "Instant ramen",
+   "aliases": [
+    "ramen",
+    "instant ramen",
+    "ramen noodle",
+    "instant noodle"
+   ],
+   "aisle": "pantry",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 85,
+   "packages": [
+    {
+     "amount": 1,
+     "price": 0.35,
+     "label": "1 pack"
+    },
+    {
+     "amount": 12,
+     "price": 3.99,
+     "label": "12-pack"
+    }
+   ],
+   "kcal100": 380,
+   "protein100": 9,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "rice-noodles",
+   "name": "Rice noodles",
+   "aliases": [
+    "rice noodle",
+    "rice stick",
+    "pad thai noodle",
+    "vermicelli"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 75,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 397,
+     "price": 2.99,
+     "label": "14 oz pack"
+    }
+   ],
+   "kcal100": 364,
+   "protein100": 6,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "orzo",
+   "name": "Orzo",
+   "aliases": [
+    "orzo"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 170,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.79,
+     "label": "1 lb box"
+    }
+   ],
+   "kcal100": 371,
+   "protein100": 13,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "couscous",
+   "name": "Couscous",
+   "aliases": [
+    "couscous"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 173,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 283,
+     "price": 2.49,
+     "label": "10 oz box"
+    }
+   ],
+   "kcal100": 376,
+   "protein100": 13,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "bulgur",
+   "name": "Bulgur",
+   "aliases": [
+    "bulgur",
+    "burghul",
+    "cracked wheat",
+    "fine bulgur",
+    "coarse bulgur"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 140,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 2.49,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 342,
+   "protein100": 12,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "oats",
+   "name": "Rolled oats",
+   "aliases": [
+    "oat",
+    "oats",
+    "rolled oat",
+    "old fashioned oat",
+    "quick oat",
+    "oatmeal"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 81,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 1190,
+     "price": 4.49,
+     "label": "42 oz canister"
+    }
+   ],
+   "kcal100": 389,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "flour",
+   "name": "All-purpose flour",
+   "aliases": [
+    "flour",
+    "all purpose flour",
+    "plain flour",
+    "white flour",
+    "all-purpose flour"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 125,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 2267.96,
+     "price": 2.73,
+     "label": "5 lb bag"
+    }
+   ],
+   "kcal100": 364,
+   "protein100": 10,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "bls"
+  },
+  {
+   "id": "breadcrumbs",
+   "name": "Breadcrumbs",
+   "aliases": [
+    "breadcrumb",
+    "bread crumb",
+    "panko",
+    "panko breadcrumb"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 108,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 2.29,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 395,
+   "protein100": 13,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "red-lentils",
+   "name": "Red lentils",
+   "aliases": [
+    "red lentil",
+    "split red lentil",
+    "orange lentil"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 192,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 2.29,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 358,
+   "protein100": 24,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "lentils",
+   "name": "Brown lentils",
+   "aliases": [
+    "lentil",
+    "brown lentil",
+    "green lentil",
+    "black lentil"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 192,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.79,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 352,
+   "protein100": 25,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "dried-beans",
+   "name": "Dried beans",
+   "aliases": [
+    "dried bean",
+    "dry bean",
+    "dried pinto bean",
+    "dried black bean",
+    "dried kidney bean",
+    "split pea",
+    "dried split pea"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 190,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.67,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 340,
+   "protein100": 21,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "bls"
+  },
+  {
+   "id": "dried-chickpeas",
+   "name": "Dried chickpeas",
+   "aliases": [
+    "dried chickpea",
+    "dry chickpea",
+    "dried garbanzo"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 200,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 1.89,
+     "label": "1 lb bag"
+    }
+   ],
+   "kcal100": 378,
+   "protein100": 20,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "chickpeas",
+   "name": "Chickpeas (canned)",
+   "aliases": [
+    "chickpea",
+    "garbanzo bean",
+    "canned chickpea",
+    "garbanzo",
+    "hummus bean"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 164,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 1.09,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 139,
+   "protein100": 7,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "black-beans",
+   "name": "Black beans (canned)",
+   "aliases": [
+    "black bean",
+    "canned black bean"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 172,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 0.99,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 91,
+   "protein100": 6,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "kidney-beans",
+   "name": "Kidney beans (canned)",
+   "aliases": [
+    "kidney bean",
+    "red kidney bean",
+    "red bean"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 172,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 0.99,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 84,
+   "protein100": 5.2,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "pinto-beans",
+   "name": "Pinto beans (canned)",
+   "aliases": [
+    "pinto bean",
+    "refried bean"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 172,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 0.99,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 86,
+   "protein100": 4.9,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "white-beans",
+   "name": "White beans (canned)",
+   "aliases": [
+    "white bean",
+    "cannellini bean",
+    "cannellini",
+    "great northern bean",
+    "navy bean",
+    "butter bean"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 179,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 1.19,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 91,
+   "protein100": 6.5,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "fava",
+   "name": "Fava beans (canned)",
+   "aliases": [
+    "fava bean",
+    "foul",
+    "ful",
+    "foul medames",
+    "ful medames",
+    "broad bean"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 170,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 1.49,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 110,
+   "protein100": 7.6,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "crushed-tomatoes",
+   "name": "Crushed tomatoes",
+   "aliases": [
+    "crushed tomato",
+    "tomato puree",
+    "passata",
+    "whole peeled tomato",
+    "san marzano tomato"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 242,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 794,
+     "price": 2.29,
+     "label": "28 oz can"
+    }
+   ],
+   "kcal100": 32,
+   "protein100": 1.6,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "diced-tomatoes",
+   "name": "Diced tomatoes (canned)",
+   "aliases": [
+    "diced tomato",
+    "canned tomato",
+    "canned diced tomato",
+    "fire roasted tomato",
+    "chopped tomato",
+    "tinned tomato"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 411,
+     "price": 1.09,
+     "label": "14.5 oz can"
+    }
+   ],
+   "kcal100": 32,
+   "protein100": 1.6,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "tomato-sauce",
+   "name": "Tomato sauce",
+   "aliases": [
+    "tomato sauce"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 245,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 0.99,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 24,
+   "protein100": 1.2,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "tomato-paste",
+   "name": "Tomato paste",
+   "aliases": [
+    "tomato paste",
+    "tomato puree concentrate",
+    "tomato concentrate"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 262,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 170,
+     "price": 0.89,
+     "label": "6 oz can"
+    }
+   ],
+   "kcal100": 82,
+   "protein100": 4.3,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "marinara",
+   "name": "Marinara sauce",
+   "aliases": [
+    "marinara",
+    "marinara sauce",
+    "pasta sauce",
+    "spaghetti sauce",
+    "pizza sauce"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 250,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 680,
+     "price": 2.49,
+     "label": "24 oz jar"
+    }
+   ],
+   "kcal100": 50,
+   "protein100": 1.5,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "broth",
+   "name": "Chicken broth",
+   "aliases": [
+    "broth",
+    "chicken broth",
+    "chicken stock",
+    "stock",
+    "bouillon",
+    "vegetable broth",
+    "vegetable stock",
+    "beef broth",
+    "beef stock"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 946,
+     "price": 2.29,
+     "label": "32 oz carton"
+    }
+   ],
+   "kcal100": 5,
+   "protein100": 0.6,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "coconut-milk",
+   "name": "Coconut milk",
+   "aliases": [
+    "coconut milk",
+    "coconut cream",
+    "light coconut milk"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 400,
+     "price": 1.99,
+     "label": "13.5 oz can"
+    }
+   ],
+   "kcal100": 197,
+   "protein100": 2,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "tuna",
+   "name": "Canned tuna",
+   "aliases": [
+    "tuna",
+    "canned tuna",
+    "tuna in water",
+    "chunk light tuna"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 142,
+     "price": 1.29,
+     "label": "5 oz can"
+    }
+   ],
+   "kcal100": 116,
+   "protein100": 26,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "corn-canned",
+   "name": "Canned corn",
+   "aliases": [
+    "canned corn",
+    "whole kernel corn"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 165,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 432,
+     "price": 1.26,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 64,
+   "protein100": 2,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "bls"
+  },
+  {
+   "id": "salsa",
+   "name": "Salsa",
+   "aliases": [
+    "salsa",
+    "salsa verde",
+    "pico de gallo"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 260,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 2.99,
+     "label": "16 oz jar"
+    }
+   ],
+   "kcal100": 36,
+   "protein100": 1.5,
+   "staple": false,
+   "keepsDays": 60,
+   "priceSource": "est"
+  },
+  {
+   "id": "enchilada-sauce",
+   "name": "Enchilada sauce",
+   "aliases": [
+    "enchilada sauce",
+    "red enchilada sauce"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 250,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 283,
+     "price": 1.79,
+     "label": "10 oz can"
+    }
+   ],
+   "kcal100": 30,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "chipotle",
+   "name": "Chipotle in adobo",
+   "aliases": [
+    "chipotle",
+    "chipotle in adobo",
+    "chipotle pepper",
+    "adobo sauce"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 230,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 198,
+     "price": 2.29,
+     "label": "7 oz can"
+    }
+   ],
+   "kcal100": 50,
+   "protein100": 2,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "peanut-butter",
+   "name": "Peanut butter",
+   "aliases": [
+    "peanut butter",
+    "creamy peanut butter"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 258,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 2.79,
+     "label": "16 oz jar"
+    }
+   ],
+   "kcal100": 588,
+   "protein100": 25,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "tahini",
+   "name": "Tahini",
+   "aliases": [
+    "tahini",
+    "tahina",
+    "sesame paste"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 6.99,
+     "label": "16 oz jar"
+    }
+   ],
+   "kcal100": 595,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "olives",
+   "name": "Olives",
+   "aliases": [
+    "olive",
+    "kalamata olive",
+    "black olive",
+    "green olive"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 135,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 170,
+     "price": 2.99,
+     "label": "6 oz can"
+    }
+   ],
+   "kcal100": 115,
+   "protein100": 0.8,
+   "staple": false,
+   "keepsDays": 60,
+   "priceSource": "est"
+  },
+  {
+   "id": "pickles",
+   "name": "Pickles",
+   "aliases": [
+    "pickle",
+    "dill pickle",
+    "pickled turnip",
+    "gherkin"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 143,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 680,
+     "price": 2.99,
+     "label": "24 oz jar"
+    }
+   ],
+   "kcal100": 11,
+   "protein100": 0.3,
+   "staple": false,
+   "keepsDays": 90,
+   "priceSource": "est"
+  },
+  {
+   "id": "raisins",
+   "name": "Raisins",
+   "aliases": [
+    "raisin",
+    "golden raisin",
+    "sultana"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 145,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 3.29,
+     "label": "12 oz box"
+    }
+   ],
+   "kcal100": 299,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "almonds",
+   "name": "Almonds",
+   "aliases": [
+    "almond",
+    "slivered almond",
+    "sliced almond",
+    "pine nut",
+    "toasted almond"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 108,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 64,
+     "price": 2.49,
+     "label": "2.25 oz bag"
+    },
+    {
+     "amount": 170,
+     "price": 4.99,
+     "label": "6 oz bag"
+    }
+   ],
+   "kcal100": 579,
+   "protein100": 21,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "walnuts",
+   "name": "Walnuts",
+   "aliases": [
+    "walnut",
+    "pecan",
+    "chopped walnut"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 117,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 170,
+     "price": 4.49,
+     "label": "6 oz bag"
+    }
+   ],
+   "kcal100": 654,
+   "protein100": 15,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "tofu",
+   "name": "Firm tofu",
+   "aliases": [
+    "tofu",
+    "firm tofu",
+    "extra firm tofu"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 397,
+     "price": 1.99,
+     "label": "14 oz block"
+    }
+   ],
+   "kcal100": 144,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "tortilla-chips",
+   "name": "Tortilla chips",
+   "aliases": [
+    "tortilla chip",
+    "corn chip",
+    "pita chip"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 28,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 368,
+     "price": 3.49,
+     "label": "13 oz bag"
+    }
+   ],
+   "kcal100": 489,
+   "protein100": 7,
+   "staple": false,
+   "keepsDays": 60,
+   "priceSource": "est"
+  },
+  {
+   "id": "frozen-hash",
+   "name": "Frozen hash browns",
+   "aliases": [
+    "hash brown",
+    "frozen hash brown",
+    "tater tot"
+   ],
+   "aisle": "frozen",
+   "base": "g",
+   "gramsPerCup": 150,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 907,
+     "price": 3.49,
+     "label": "2 lb bag"
+    }
+   ],
+   "kcal100": 160,
+   "protein100": 2,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "frozen-pizza-dough",
+   "name": "Pizza dough",
+   "aliases": [
+    "pizza dough",
+    "pizza crust",
+    "refrigerated pizza dough"
+   ],
+   "aisle": "bakery",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 2.49,
+     "label": "1 lb dough"
+    }
+   ],
+   "kcal100": 270,
+   "protein100": 8,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "est"
+  },
+  {
+   "id": "biscuits",
+   "name": "Refrigerated biscuits",
+   "aliases": [
+    "biscuit",
+    "refrigerated biscuit",
+    "biscuit dough",
+    "crescent roll"
+   ],
+   "aisle": "dairy",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 45,
+   "packages": [
+    {
+     "amount": 8,
+     "price": 2.49,
+     "label": "8-count can"
+    }
+   ],
+   "kcal100": 150,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "olive-oil",
+   "name": "Olive oil",
+   "aliases": [
+    "olive oil",
+    "extra virgin olive oil",
+    "evoo"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 216,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 460,
+     "price": 6.99,
+     "label": "16.9 oz bottle"
+    }
+   ],
+   "kcal100": 884,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "oil",
+   "name": "Vegetable oil",
+   "aliases": [
+    "oil",
+    "vegetable oil",
+    "canola oil",
+    "cooking oil",
+    "neutral oil",
+    "sunflower oil",
+    "avocado oil",
+    "frying oil"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 218,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 1300,
+     "price": 4.49,
+     "label": "48 oz bottle"
+    }
+   ],
+   "kcal100": 884,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "sesame-oil",
+   "name": "Sesame oil",
+   "aliases": [
+    "sesame oil",
+    "toasted sesame oil"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 218,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 138,
+     "price": 3.49,
+     "label": "5 oz bottle"
+    }
+   ],
+   "kcal100": 884,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "soy-sauce",
+   "name": "Soy sauce",
+   "aliases": [
+    "soy sauce",
+    "low sodium soy sauce",
+    "tamari",
+    "shoyu"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 255,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 444,
+     "price": 2.99,
+     "label": "15 oz bottle"
+    }
+   ],
+   "kcal100": 53,
+   "protein100": 8,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "vinegar",
+   "name": "White vinegar",
+   "aliases": [
+    "vinegar",
+    "white vinegar",
+    "distilled vinegar",
+    "red wine vinegar",
+    "white wine vinegar"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 239,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 946,
+     "price": 1.49,
+     "label": "32 oz bottle"
+    }
+   ],
+   "kcal100": 18,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "cider-vinegar",
+   "name": "Apple cider vinegar",
+   "aliases": [
+    "apple cider vinegar",
+    "cider vinegar"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 239,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 473,
+     "price": 2.49,
+     "label": "16 oz bottle"
+    }
+   ],
+   "kcal100": 21,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "rice-vinegar",
+   "name": "Rice vinegar",
+   "aliases": [
+    "rice vinegar",
+    "rice wine vinegar"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 239,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 355,
+     "price": 2.99,
+     "label": "12 oz bottle"
+    }
+   ],
+   "kcal100": 18,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "honey",
+   "name": "Honey",
+   "aliases": [
+    "honey"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 340,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 4.49,
+     "label": "12 oz bottle"
+    }
+   ],
+   "kcal100": 304,
+   "protein100": 0.3,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "maple-syrup",
+   "name": "Pancake syrup",
+   "aliases": [
+    "maple syrup",
+    "pancake syrup",
+    "syrup"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 315,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 710,
+     "price": 2.99,
+     "label": "24 oz bottle"
+    }
+   ],
+   "kcal100": 260,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "ketchup",
+   "name": "Ketchup",
+   "aliases": [
+    "ketchup",
+    "catsup"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 567,
+     "price": 2.49,
+     "label": "20 oz bottle"
+    }
+   ],
+   "kcal100": 101,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "mustard",
+   "name": "Mustard",
+   "aliases": [
+    "mustard",
+    "yellow mustard",
+    "dijon mustard",
+    "dijon"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 250,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 397,
+     "price": 1.99,
+     "label": "14 oz bottle"
+    }
+   ],
+   "kcal100": 60,
+   "protein100": 3.7,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "mayo",
+   "name": "Mayonnaise",
+   "aliases": [
+    "mayonnaise",
+    "mayo"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 220,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 850,
+     "price": 4.49,
+     "label": "30 oz jar"
+    }
+   ],
+   "kcal100": 680,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 90,
+   "priceSource": "est"
+  },
+  {
+   "id": "bbq-sauce",
+   "name": "BBQ sauce",
+   "aliases": [
+    "bbq sauce",
+    "barbecue sauce"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 280,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 510,
+     "price": 1.99,
+     "label": "18 oz bottle"
+    }
+   ],
+   "kcal100": 172,
+   "protein100": 0.8,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "hot-sauce",
+   "name": "Hot sauce",
+   "aliases": [
+    "hot sauce",
+    "sriracha",
+    "chili sauce",
+    "chili garlic sauce",
+    "sambal",
+    "harissa"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 255,
+     "price": 2.99,
+     "label": "9 oz bottle"
+    }
+   ],
+   "kcal100": 50,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "teriyaki",
+   "name": "Teriyaki sauce",
+   "aliases": [
+    "teriyaki sauce",
+    "teriyaki"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 270,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 296,
+     "price": 2.99,
+     "label": "10 oz bottle"
+    }
+   ],
+   "kcal100": 89,
+   "protein100": 6,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "worcestershire",
+   "name": "Worcestershire sauce",
+   "aliases": [
+    "worcestershire",
+    "worcestershire sauce"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 275,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 296,
+     "price": 2.49,
+     "label": "10 oz bottle"
+    }
+   ],
+   "kcal100": 78,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "pomegranate-molasses",
+   "name": "Pomegranate molasses",
+   "aliases": [
+    "pomegranate molasses",
+    "dibs rumman"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 320,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 283,
+     "price": 4.99,
+     "label": "10 oz bottle"
+    }
+   ],
+   "kcal100": 260,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "sugar",
+   "name": "Sugar",
+   "aliases": [
+    "sugar",
+    "white sugar",
+    "granulated sugar",
+    "caster sugar"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 200,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 1814.37,
+     "price": 4.08,
+     "label": "4 lb bag"
+    }
+   ],
+   "kcal100": 387,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "bls"
+  },
+  {
+   "id": "brown-sugar",
+   "name": "Brown sugar",
+   "aliases": [
+    "brown sugar",
+    "light brown sugar",
+    "dark brown sugar"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 220,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 907,
+     "price": 2.99,
+     "label": "2 lb bag"
+    }
+   ],
+   "kcal100": 380,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "cornstarch",
+   "name": "Cornstarch",
+   "aliases": [
+    "cornstarch",
+    "corn starch",
+    "cornflour"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 128,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 1.99,
+     "label": "16 oz box"
+    }
+   ],
+   "kcal100": 381,
+   "protein100": 0.3,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "baking-powder",
+   "name": "Baking powder",
+   "aliases": [
+    "baking powder"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 230,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 2.29,
+     "label": "8 oz can"
+    }
+   ],
+   "kcal100": 53,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "baking-soda",
+   "name": "Baking soda",
+   "aliases": [
+    "baking soda",
+    "bicarbonate of soda"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 230,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 1.29,
+     "label": "1 lb box"
+    }
+   ],
+   "kcal100": 0,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "vanilla",
+   "name": "Vanilla extract",
+   "aliases": [
+    "vanilla",
+    "vanilla extract"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 208,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 59,
+     "price": 4.99,
+     "label": "2 oz bottle"
+    }
+   ],
+   "kcal100": 288,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "yeast",
+   "name": "Instant yeast",
+   "aliases": [
+    "yeast",
+    "instant yeast",
+    "active dry yeast"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 136,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 21,
+     "price": 1.49,
+     "label": "3 packets"
+    }
+   ],
+   "kcal100": 325,
+   "protein100": 40,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "chocolate-chips",
+   "name": "Chocolate chips",
+   "aliases": [
+    "chocolate chip",
+    "chocolate",
+    "dark chocolate"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 168,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 3.49,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 479,
+   "protein100": 4,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "salt",
+   "name": "Salt",
+   "aliases": [
+    "salt",
+    "kosher salt",
+    "sea salt",
+    "table salt",
+    "salt and pepper",
+    "salt pepper"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 292,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 737,
+     "price": 1.29,
+     "label": "26 oz canister"
+    }
+   ],
+   "kcal100": 0,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 3650,
+   "priceSource": "est"
+  },
+  {
+   "id": "pepper",
+   "name": "Black pepper",
+   "aliases": [
+    "black pepper",
+    "pepper",
+    "ground black pepper",
+    "cracked black pepper"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 110,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 85,
+     "price": 3.49,
+     "label": "3 oz tin"
+    }
+   ],
+   "kcal100": 251,
+   "protein100": 10,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "cumin",
+   "name": "Ground cumin",
+   "aliases": [
+    "cumin",
+    "ground cumin",
+    "cumin seed"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 96,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 42,
+     "price": 2.99,
+     "label": "1.5 oz jar"
+    }
+   ],
+   "kcal100": 375,
+   "protein100": 18,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "paprika",
+   "name": "Paprika",
+   "aliases": [
+    "paprika",
+    "sweet paprika",
+    "smoked paprika",
+    "hungarian paprika"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 110,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 57,
+     "price": 2.49,
+     "label": "2 oz jar"
+    }
+   ],
+   "kcal100": 282,
+   "protein100": 14,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "chili-powder",
+   "name": "Chili powder",
+   "aliases": [
+    "chili powder",
+    "chilli powder",
+    "ancho chili powder"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 128,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 71,
+     "price": 2.49,
+     "label": "2.5 oz jar"
+    }
+   ],
+   "kcal100": 282,
+   "protein100": 13,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "cayenne",
+   "name": "Cayenne pepper",
+   "aliases": [
+    "cayenne",
+    "cayenne pepper",
+    "red pepper flake",
+    "crushed red pepper",
+    "chili flake",
+    "aleppo pepper"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 88,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 42,
+     "price": 2.49,
+     "label": "1.5 oz jar"
+    }
+   ],
+   "kcal100": 318,
+   "protein100": 12,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "garlic-powder",
+   "name": "Garlic powder",
+   "aliases": [
+    "garlic powder",
+    "granulated garlic"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 155,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 87,
+     "price": 2.49,
+     "label": "3 oz jar"
+    }
+   ],
+   "kcal100": 331,
+   "protein100": 17,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "onion-powder",
+   "name": "Onion powder",
+   "aliases": [
+    "onion powder"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 110,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 74,
+     "price": 2.49,
+     "label": "2.6 oz jar"
+    }
+   ],
+   "kcal100": 341,
+   "protein100": 10,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "oregano",
+   "name": "Dried oregano",
+   "aliases": [
+    "oregano",
+    "dried oregano"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 48,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 21,
+     "price": 2.29,
+     "label": "0.75 oz jar"
+    }
+   ],
+   "kcal100": 265,
+   "protein100": 9,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "italian-seasoning",
+   "name": "Italian seasoning",
+   "aliases": [
+    "italian seasoning",
+    "dried basil",
+    "dried herb",
+    "herbs de provence",
+    "dried thyme",
+    "thyme",
+    "dried rosemary",
+    "rosemary"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 48,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 21,
+     "price": 2.49,
+     "label": "0.75 oz jar"
+    }
+   ],
+   "kcal100": 265,
+   "protein100": 9,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "cinnamon",
+   "name": "Ground cinnamon",
+   "aliases": [
+    "cinnamon",
+    "ground cinnamon",
+    "cinnamon stick"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 125,
+   "gramsEach": 3,
+   "packages": [
+    {
+     "amount": 68,
+     "price": 2.49,
+     "label": "2.4 oz jar"
+    }
+   ],
+   "kcal100": 247,
+   "protein100": 4,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "turmeric",
+   "name": "Ground turmeric",
+   "aliases": [
+    "turmeric",
+    "ground turmeric"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 150,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 45,
+     "price": 2.99,
+     "label": "1.6 oz jar"
+    }
+   ],
+   "kcal100": 312,
+   "protein100": 10,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "garam-masala",
+   "name": "Garam masala",
+   "aliases": [
+    "garam masala",
+    "curry powder",
+    "tikka masala spice",
+    "curry spice"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 100,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 45,
+     "price": 3.49,
+     "label": "1.6 oz jar"
+    }
+   ],
+   "kcal100": 379,
+   "protein100": 15,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "coriander",
+   "name": "Ground coriander",
+   "aliases": [
+    "ground coriander",
+    "coriander",
+    "coriander seed"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 80,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 34,
+     "price": 2.99,
+     "label": "1.2 oz jar"
+    }
+   ],
+   "kcal100": 298,
+   "protein100": 12,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "bay-leaf",
+   "name": "Bay leaves",
+   "aliases": [
+    "bay leaf"
+   ],
+   "aisle": "spices",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 0.2,
+   "packages": [
+    {
+     "amount": 30,
+     "price": 2.99,
+     "label": "jar (~30)"
+    }
+   ],
+   "kcal100": 1,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "allspice",
+   "name": "Ground allspice",
+   "aliases": [
+    "allspice",
+    "ground allspice"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 95,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 42,
+     "price": 3.49,
+     "label": "1.5 oz jar"
+    }
+   ],
+   "kcal100": 263,
+   "protein100": 6,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "seven-spice",
+   "name": "Seven spice (baharat)",
+   "aliases": [
+    "seven spice",
+    "7 spice",
+    "baharat",
+    "lebanese seven spice",
+    "shawarma spice",
+    "kabsa spice",
+    "kabsa seasoning"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 100,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 85,
+     "price": 4.49,
+     "label": "3 oz jar"
+    }
+   ],
+   "kcal100": 300,
+   "protein100": 10,
+   "staple": false,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "sumac",
+   "name": "Sumac",
+   "aliases": [
+    "sumac",
+    "summaq"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 100,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 85,
+     "price": 4.99,
+     "label": "3 oz jar"
+    }
+   ],
+   "kcal100": 300,
+   "protein100": 5,
+   "staple": false,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "zaatar",
+   "name": "Za'atar",
+   "aliases": [
+    "za'atar",
+    "zaatar",
+    "zatar",
+    "za atar"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 90,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 113,
+     "price": 4.99,
+     "label": "4 oz bag"
+    }
+   ],
+   "kcal100": 300,
+   "protein100": 9,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "cardamom",
+   "name": "Ground cardamom",
+   "aliases": [
+    "cardamom",
+    "ground cardamom",
+    "cardamom pod"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 90,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 35,
+     "price": 4.99,
+     "label": "1.2 oz jar"
+    }
+   ],
+   "kcal100": 311,
+   "protein100": 11,
+   "staple": false,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "taco-seasoning",
+   "name": "Taco seasoning",
+   "aliases": [
+    "taco seasoning",
+    "fajita seasoning",
+    "taco spice"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 120,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 28,
+     "price": 0.89,
+     "label": "1 oz packet"
+    }
+   ],
+   "kcal100": 300,
+   "protein100": 6,
+   "staple": false,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "sesame-seeds",
+   "name": "Sesame seeds",
+   "aliases": [
+    "sesame seed",
+    "toasted sesame seed"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 144,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 57,
+     "price": 2.49,
+     "label": "2 oz jar"
+    }
+   ],
+   "kcal100": 573,
+   "protein100": 18,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "shallot",
+   "name": "Shallots",
+   "aliases": [
+    "shallot",
+    "eschalot"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 160,
+   "gramsEach": 40,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 2.49,
+     "label": "8 oz bag"
+    }
+   ],
+   "kcal100": 72,
+   "protein100": 2.5,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "est"
+  },
+  {
+   "id": "leek",
+   "name": "Leeks",
+   "aliases": [
+    "leek"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 89,
+   "gramsEach": 180,
+   "packages": [
+    {
+     "amount": 360,
+     "price": 2.49,
+     "label": "2 leeks"
+    }
+   ],
+   "kcal100": 61,
+   "protein100": 1.5,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "est"
+  },
+  {
+   "id": "fresh-herbs",
+   "name": "Fresh herbs",
+   "aliases": [
+    "fresh thyme",
+    "fresh rosemary",
+    "fresh dill",
+    "dill",
+    "chive",
+    "fresh chive",
+    "tarragon",
+    "fresh oregano",
+    "sage leaf"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 20,
+   "gramsEach": 15,
+   "packages": [
+    {
+     "amount": 21,
+     "price": 2.49,
+     "label": "0.75 oz pack"
+    }
+   ],
+   "kcal100": 50,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 6,
+   "priceSource": "est"
+  },
+  {
+   "id": "asparagus",
+   "name": "Asparagus",
+   "aliases": [
+    "asparagus"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 134,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 3.49,
+     "label": "1 lb bunch"
+    }
+   ],
+   "kcal100": 20,
+   "protein100": 2.2,
+   "staple": false,
+   "keepsDays": 4,
+   "priceSource": "est"
+  },
+  {
+   "id": "brussels",
+   "name": "Brussels sprouts",
+   "aliases": [
+    "brussels sprout",
+    "brussel sprout"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 88,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 2.99,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 43,
+   "protein100": 3.4,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "butternut",
+   "name": "Butternut squash",
+   "aliases": [
+    "butternut squash",
+    "butternut",
+    "winter squash",
+    "acorn squash",
+    "pumpkin"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 140,
+   "gramsEach": 1100,
+   "packages": [
+    {
+     "amount": 1100,
+     "price": 3.29,
+     "label": "1 squash"
+    }
+   ],
+   "kcal100": 45,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "est"
+  },
+  {
+   "id": "corn-cob",
+   "name": "Corn on the cob",
+   "aliases": [
+    "ear of corn",
+    "corn on the cob",
+    "corn cob"
+   ],
+   "aisle": "produce",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 150,
+   "packages": [
+    {
+     "amount": 1,
+     "price": 0.6,
+     "label": "1 ear"
+    },
+    {
+     "amount": 4,
+     "price": 2.0,
+     "label": "4 ears"
+    }
+   ],
+   "kcal100": 90,
+   "protein100": 3.3,
+   "staple": false,
+   "keepsDays": 4,
+   "priceSource": "est"
+  },
+  {
+   "id": "arugula",
+   "name": "Arugula",
+   "aliases": [
+    "arugula",
+    "rocket",
+    "spring mix"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 20,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 142,
+     "price": 3.49,
+     "label": "5 oz box"
+    }
+   ],
+   "kcal100": 25,
+   "protein100": 2.6,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "est"
+  },
+  {
+   "id": "bok-choy",
+   "name": "Bok choy",
+   "aliases": [
+    "bok choy",
+    "pak choi",
+    "baby bok choy"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 70,
+   "gramsEach": 300,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 2.49,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 13,
+   "protein100": 1.5,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "est"
+  },
+  {
+   "id": "mango",
+   "name": "Mango",
+   "aliases": [
+    "mango"
+   ],
+   "aisle": "produce",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 200,
+   "packages": [
+    {
+     "amount": 1,
+     "price": 1.25,
+     "label": "1 mango"
+    }
+   ],
+   "kcal100": 120,
+   "protein100": 1.6,
+   "staple": false,
+   "keepsDays": 5,
+   "priceSource": "est"
+  },
+  {
+   "id": "pineapple",
+   "name": "Pineapple",
+   "aliases": [
+    "pineapple",
+    "pineapple chunk"
+   ],
+   "aisle": "produce",
+   "base": "g",
+   "gramsPerCup": 165,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 567,
+     "price": 2.29,
+     "label": "20 oz can"
+    }
+   ],
+   "kcal100": 50,
+   "protein100": 0.5,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "ground-chicken",
+   "name": "Ground chicken",
+   "aliases": [
+    "ground chicken",
+    "chicken mince",
+    "minced chicken"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 4.99,
+     "label": "1 lb pack"
+    }
+   ],
+   "kcal100": 143,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "chicken-wings",
+   "name": "Chicken wings",
+   "aliases": [
+    "chicken wing",
+    "wing"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": 90,
+   "packages": [
+    {
+     "amount": 1133.98,
+     "price": 8.29,
+     "label": "2.5 lb pack"
+    }
+   ],
+   "kcal100": 203,
+   "protein100": 18,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "lamb",
+   "name": "Lamb",
+   "aliases": [
+    "ground lamb",
+    "lamb mince",
+    "lamb",
+    "lamb shoulder",
+    "lamb chop",
+    "leg of lamb"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 453.59,
+     "price": 9.49,
+     "label": "1 lb"
+    }
+   ],
+   "kcal100": 282,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "pork-tenderloin",
+   "name": "Pork tenderloin",
+   "aliases": [
+    "pork tenderloin",
+    "pork loin"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 566.99,
+     "price": 5.36,
+     "label": "1.25 lb"
+    }
+   ],
+   "kcal100": 143,
+   "protein100": 21,
+   "staple": false,
+   "keepsDays": 2,
+   "priceSource": "est"
+  },
+  {
+   "id": "prosciutto",
+   "name": "Prosciutto or pancetta",
+   "aliases": [
+    "prosciutto",
+    "pancetta",
+    "chorizo",
+    "pepperoni",
+    "salami"
+   ],
+   "aisle": "meat",
+   "base": "g",
+   "gramsPerCup": null,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 113,
+     "price": 4.49,
+     "label": "4 oz pack"
+    }
+   ],
+   "kcal100": 300,
+   "protein100": 25,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "quinoa",
+   "name": "Quinoa",
+   "aliases": [
+    "quinoa"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 170,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 3.99,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 368,
+   "protein100": 14,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "cocoa",
+   "name": "Cocoa powder",
+   "aliases": [
+    "cocoa",
+    "cocoa powder",
+    "unsweetened cocoa"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 86,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 3.99,
+     "label": "8 oz can"
+    }
+   ],
+   "kcal100": 228,
+   "protein100": 20,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "powdered-sugar",
+   "name": "Powdered sugar",
+   "aliases": [
+    "powdered sugar",
+    "icing sugar",
+    "confectioners sugar",
+    "confectioner's sugar"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 120,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 907,
+     "price": 2.49,
+     "label": "2 lb bag"
+    }
+   ],
+   "kcal100": 389,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "coconut",
+   "name": "Shredded coconut",
+   "aliases": [
+    "shredded coconut",
+    "desiccated coconut",
+    "coconut flake"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 85,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 198,
+     "price": 2.99,
+     "label": "7 oz bag"
+    }
+   ],
+   "kcal100": 660,
+   "protein100": 7,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "chia",
+   "name": "Chia seeds",
+   "aliases": [
+    "chia seed",
+    "flaxseed",
+    "flax seed",
+    "hemp seed"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 160,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 4.99,
+     "label": "12 oz bag"
+    }
+   ],
+   "kcal100": 486,
+   "protein100": 17,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "molasses",
+   "name": "Molasses",
+   "aliases": [
+    "molasses",
+    "treacle",
+    "golden syrup",
+    "agave",
+    "agave nectar"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 330,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 340,
+     "price": 4.49,
+     "label": "12 oz jar"
+    }
+   ],
+   "kcal100": 290,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "fish-sauce",
+   "name": "Fish sauce",
+   "aliases": [
+    "fish sauce"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 280,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 207,
+     "price": 2.99,
+     "label": "7 oz bottle"
+    }
+   ],
+   "kcal100": 35,
+   "protein100": 5,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "oyster-sauce",
+   "name": "Oyster or hoisin sauce",
+   "aliases": [
+    "oyster sauce",
+    "hoisin",
+    "hoisin sauce",
+    "black bean sauce"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 290,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 255,
+     "price": 2.99,
+     "label": "9 oz bottle"
+    }
+   ],
+   "kcal100": 51,
+   "protein100": 1.4,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "miso",
+   "name": "Miso paste",
+   "aliases": [
+    "miso",
+    "miso paste",
+    "white miso"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 275,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 397,
+     "price": 5.99,
+     "label": "14 oz tub"
+    }
+   ],
+   "kcal100": 199,
+   "protein100": 12,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "curry-paste",
+   "name": "Curry paste",
+   "aliases": [
+    "curry paste",
+    "red curry paste",
+    "green curry paste",
+    "gochujang",
+    "harissa paste"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 260,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 113,
+     "price": 2.99,
+     "label": "4 oz jar"
+    }
+   ],
+   "kcal100": 120,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "wine",
+   "name": "Cooking wine",
+   "aliases": [
+    "white wine",
+    "red wine",
+    "dry white wine",
+    "dry red wine",
+    "wine",
+    "sherry",
+    "marsala",
+    "mirin",
+    "rice wine",
+    "shaoxing wine"
+   ],
+   "aisle": "other",
+   "base": "g",
+   "gramsPerCup": 236,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 750,
+     "price": 7.99,
+     "label": "750 mL bottle"
+    }
+   ],
+   "kcal100": 82,
+   "protein100": 0,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "bls"
+  },
+  {
+   "id": "buttermilk",
+   "name": "Buttermilk",
+   "aliases": [
+    "buttermilk"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 245,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 946,
+     "price": 2.29,
+     "label": "1 quart"
+    }
+   ],
+   "kcal100": 40,
+   "protein100": 3.3,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "swiss",
+   "name": "Swiss or provolone",
+   "aliases": [
+    "swiss cheese",
+    "provolone",
+    "gruyere",
+    "gouda",
+    "pepper jack",
+    "havarti",
+    "fontina",
+    "american cheese"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 110,
+   "gramsEach": 21,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 3.99,
+     "label": "8 oz pack"
+    }
+   ],
+   "kcal100": 380,
+   "protein100": 27,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "goat-cheese",
+   "name": "Goat cheese",
+   "aliases": [
+    "goat cheese",
+    "chevre",
+    "blue cheese",
+    "gorgonzola",
+    "brie",
+    "halloumi"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 130,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 113,
+     "price": 3.49,
+     "label": "4 oz log"
+    }
+   ],
+   "kcal100": 364,
+   "protein100": 21,
+   "staple": false,
+   "keepsDays": 21,
+   "priceSource": "est"
+  },
+  {
+   "id": "plant-milk",
+   "name": "Plant milk",
+   "aliases": [
+    "almond milk",
+    "oat milk",
+    "soy milk",
+    "coconut beverage"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 1890,
+     "price": 3.49,
+     "label": "half gallon"
+    }
+   ],
+   "kcal100": 30,
+   "protein100": 1,
+   "staple": false,
+   "keepsDays": 10,
+   "priceSource": "est"
+  },
+  {
+   "id": "labneh",
+   "name": "Labneh",
+   "aliases": [
+    "labneh",
+    "labne",
+    "strained yogurt"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 245,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 4.99,
+     "label": "16 oz tub"
+    }
+   ],
+   "kcal100": 160,
+   "protein100": 6,
+   "staple": false,
+   "keepsDays": 14,
+   "priceSource": "est"
+  },
+  {
+   "id": "halloumi-fresh",
+   "name": "Fresh mozzarella",
+   "aliases": [
+    "fresh mozzarella",
+    "burrata",
+    "mozzarella ball",
+    "bocconcini"
+   ],
+   "aisle": "dairy",
+   "base": "g",
+   "gramsPerCup": 230,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 227,
+     "price": 4.49,
+     "label": "8 oz ball"
+    }
+   ],
+   "kcal100": 280,
+   "protein100": 22,
+   "staple": false,
+   "keepsDays": 7,
+   "priceSource": "est"
+  },
+  {
+   "id": "sun-dried",
+   "name": "Sun-dried tomatoes",
+   "aliases": [
+    "sun dried tomato",
+    "sundried tomato",
+    "roasted red pepper",
+    "artichoke heart",
+    "capers",
+    "caper"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 110,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 240,
+     "price": 3.99,
+     "label": "8.5 oz jar"
+    }
+   ],
+   "kcal100": 120,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "pesto",
+   "name": "Pesto",
+   "aliases": [
+    "pesto",
+    "basil pesto"
+   ],
+   "aisle": "international",
+   "base": "g",
+   "gramsPerCup": 240,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 170,
+     "price": 3.99,
+     "label": "6 oz jar"
+    }
+   ],
+   "kcal100": 400,
+   "protein100": 5,
+   "staple": false,
+   "keepsDays": 30,
+   "priceSource": "est"
+  },
+  {
+   "id": "salsa-verde-jar",
+   "name": "Alfredo sauce",
+   "aliases": [
+    "alfredo sauce",
+    "alfredo",
+    "vodka sauce"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 245,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 2.99,
+     "label": "15 oz jar"
+    }
+   ],
+   "kcal100": 140,
+   "protein100": 3,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "bouillon",
+   "name": "Bouillon cubes",
+   "aliases": [
+    "bouillon cube",
+    "stock cube",
+    "chicken bouillon",
+    "better than bouillon"
+   ],
+   "aisle": "pantry",
+   "base": "each",
+   "gramsPerCup": null,
+   "gramsEach": 4,
+   "packages": [
+    {
+     "amount": 24,
+     "price": 2.49,
+     "label": "24 cubes"
+    }
+   ],
+   "kcal100": 10,
+   "protein100": 0.5,
+   "staple": false,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "nutmeg",
+   "name": "Ground nutmeg",
+   "aliases": [
+    "nutmeg",
+    "ground nutmeg",
+    "ground ginger",
+    "ginger powder",
+    "mustard powder",
+    "fennel seed"
+   ],
+   "aisle": "spices",
+   "base": "g",
+   "gramsPerCup": 110,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 31,
+     "price": 3.49,
+     "label": "1.1 oz jar"
+    }
+   ],
+   "kcal100": 525,
+   "protein100": 6,
+   "staple": true,
+   "keepsDays": 730,
+   "priceSource": "est"
+  },
+  {
+   "id": "pumpkin-puree",
+   "name": "Pumpkin purée",
+   "aliases": [
+    "pumpkin puree",
+    "canned pumpkin"
+   ],
+   "aisle": "canned",
+   "base": "g",
+   "gramsPerCup": 245,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 425,
+     "price": 1.99,
+     "label": "15 oz can"
+    }
+   ],
+   "kcal100": 34,
+   "protein100": 1.1,
+   "staple": false,
+   "keepsDays": 365,
+   "priceSource": "est"
+  },
+  {
+   "id": "peanuts",
+   "name": "Peanuts or cashews",
+   "aliases": [
+    "peanut",
+    "cashew",
+    "roasted peanut",
+    "pistachio",
+    "hazelnut"
+   ],
+   "aisle": "pantry",
+   "base": "g",
+   "gramsPerCup": 146,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 454,
+     "price": 3.99,
+     "label": "16 oz jar"
+    }
+   ],
+   "kcal100": 567,
+   "protein100": 26,
+   "staple": false,
+   "keepsDays": 180,
+   "priceSource": "est"
+  },
+  {
+   "id": "water",
+   "name": "Water",
+   "aliases": [
+    "water",
+    "hot water",
+    "cold water",
+    "boiling water",
+    "warm water",
+    "ice water"
+   ],
+   "aisle": "other",
+   "base": "g",
+   "gramsPerCup": 237,
+   "gramsEach": null,
+   "packages": [
+    {
+     "amount": 1000,
+     "price": 0,
+     "label": "tap"
+    }
+   ],
+   "kcal100": 0,
+   "protein100": 0,
+   "staple": true,
+   "keepsDays": 3650,
+   "priceSource": "est"
+  }
+ ]
+}

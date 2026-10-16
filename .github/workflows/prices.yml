@@ -1,0 +1,53 @@
+# Monthly: BLS publishes average prices and the CPI mid-month. Checks twice
+# and does nothing if there's no new month yet.
+name: Monthly prices
+on:
+  schedule:
+    - cron: "0 15 16,24 * *"
+  workflow_dispatch:
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.prices.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: prices
+        name: Fetch BLS prices
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+        run: python pennyplate/tools/update_prices.py
+      - name: Build the checker
+        if: steps.prices.outputs.changed == 'true'
+        run: swift build -c release --package-path pennyplate/validator
+      - name: Check every recipe still prices
+        if: steps.prices.outputs.changed == 'true'
+        run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json
+      - name: Commit
+        if: steps.prices.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/pennyplate/catalog.json pennyplate/prices.json
+          git commit -m "Prices for $(date -u +%B\ %Y)"
+          git push
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

@@ -1,0 +1,308 @@
+#!/usr/bin/env python3
+"""Weekly new recipes for Pennyplate.
+
+    python3 pennyplate/tools/generate_recipes.py --checker PATH [--count 5] [--dry-run]
+    python3 pennyplate/tools/generate_recipes.py --checker PATH --candidates FILE   # skip Claude, screen a file
+
+1. Trend scout: Claude searches the web for dishes going viral on TikTok and
+   Instagram right now.
+2. Writer: Claude writes original budget versions of two of them, plus a
+   Middle Eastern classic, a vegetarian dinner and dishes from the cuisines
+   the collection has least of. It may use only ingredients from the price
+   catalog, so every line can be priced.
+3. pennycheck (the app's own parser and costing) screens every candidate:
+   each line must match the catalog, the cost, calories and diet labels must
+   hold up, and nothing may duplicate an existing recipe. Rejects go back to
+   Claude once or twice with the reasons.
+4. The best `count` are appended to public/pennyplate/recipes.json with
+   today's date as "added", and the version goes up so the app downloads it.
+
+Needs ANTHROPIC_API_KEY (a GitHub Actions secret).
+"""
+import argparse, collections, datetime, json, os, random, subprocess, sys, tempfile
+
+import anthropic
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(HERE))
+CATALOG = os.path.join(ROOT, "public", "pennyplate", "catalog.json")
+RECIPES = os.path.join(ROOT, "public", "pennyplate", "recipes.json")
+
+MODEL = "claude-opus-5-5"
+# Re-run a declined request on Anthropic's recommended fallback model.
+FALLBACK = {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
+
+CUISINES = ["american", "mexican", "italian", "asian", "indian", "middleEastern", "mediterranean", "breakfast"]
+DIETS = ["vegetarian", "vegan", "glutenFree", "dairyFree", "highProtein", "pescatarian"]
+EQUIPMENT = ["oven", "stovetop", "slowCooker", "airFryer", "pressureCooker", "microwave", "blender"]
+TINTS = ["tomato", "amber", "sage", "lime", "berry", "clay", "olive", "sea", "plum"]
+
+RECIPE_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["recipes"],
+    "properties": {"recipes": {"type": "array", "items": {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["id", "title", "summary", "cuisine", "diets", "meal", "servings", "minutes", "equipment", "emoji", "tint",
+                     "keepsDays", "tags", "ingredients", "steps"],
+        "properties": {
+            "id": {"type": "string", "description": "lowercase-words-with-hyphens, unique"},
+            "title": {"type": "string"},
+            "summary": {"type": "string", "description": "one appetising sentence, 20-220 characters"},
+            "cuisine": {"type": "string", "enum": CUISINES},
+            "diets": {"type": "array", "items": {"type": "string", "enum": DIETS}},
+            "meal": {"type": "string", "enum": ["breakfast", "lunch", "dinner"]},
+            "servings": {"type": "integer"},
+            "minutes": {"type": "integer"},
+            "equipment": {"type": "array", "items": {"type": "string", "enum": EQUIPMENT}},
+            "emoji": {"type": "string", "description": "exactly one food emoji"},
+            "tint": {"type": "string", "enum": TINTS},
+            "keepsDays": {"type": "integer"},
+            "tags": {"type": "array", "items": {"type": "string"}},
+            "ingredients": {"type": "array", "items": {"type": "string"}},
+            "steps": {"type": "array", "items": {"type": "string"}},
+        },
+    }}},
+}
+
+SCOUT_PROMPT = """Today is {today}. Search the web for food and recipe trends that are going viral on TikTok and Instagram \
+in the US right now (the last three weeks or so): specific dishes, not general topics.
+
+Pick the {n} best candidates for a budget family-dinner app: dishes a home cook can make with ordinary supermarket \
+ingredients for under about $4 a serving. Skip drinks, desserts-only trends, restaurant menu items, brand products and \
+anything unsafe.
+
+For each, give: the dish's common name, why it's trending (one line, no creator names), and the core of the dish in a \
+sentence (main ingredients and method). Keep it short."""
+
+WRITER_SYSTEM = """You write recipes for Pennyplate, a US budget meal-planning app for families. Every recipe is priced \
+ingredient by ingredient against a catalog of US average supermarket prices, so you may only use ingredients from \
+the catalog below, and every ingredient line is read by a strict parser.
+
+Ingredient lines: amount + unit + ingredient name + optional ", note". The name must contain one of the catalog \
+names or aliases (plurals are fine). Examples:
+  "1 lb ground beef"   "2 (15 oz) cans black beans, drained"   "3 cloves garlic, minced"   "1 onion, diced"
+  "1 ½ cups long grain rice"   "2 tbsp olive oil"   "½ tsp ground cumin"   "4 corn tortillas"   "1 bunch cilantro"
+Units: tsp, tbsp, cup, fl oz, oz, lb, g, clove, slice, bunch, pinch, can (written "1 (15 oz) can ..."), or a bare count \
+("2 onions", "6 eggs"). Use weights (lb or oz) for meat, fish and cheese. Never write "to taste" except for salt and pepper. \
+No brand names, no optional or "for serving" lines unless they are really part of the dish.
+
+House style:
+- Original recipes in your own words. Never copy a creator's recipe text and never name creators.
+- Dinners cost about $1-4 a serving; breakfasts and lunches less. Real portions: 400-800 kcal for a dinner serving.
+- servings 4 (6-8 for big-batch dishes); minutes = total time; keepsDays = days it keeps in the fridge (1-5).
+- 3-8 steps, each a full sentence with times and heat levels. Oven temperatures as "425°F (220°C)".
+- Diet labels are promises: vegetarian = no meat or fish (no chicken broth, fish sauce or Worcestershire); vegan = no \
+animal products at all (no egg, dairy, honey); glutenFree = no wheat, flour, pasta, bread, pita, couscous, bulgur, \
+oats or regular soy sauce; dairyFree = no butter, cheese, yogurt, cream or milk; highProtein = at least 25 g protein a \
+serving. When in doubt, leave a label off.
+- emoji: one food emoji that looks like the dish. tint: the tablecloth colour that suits it.
+- tags: 1-4 lowercase words like "one-pot", "freezer", "sheet-pan", "air-fryer", "kid-friendly". Add the tag \
+"trending" only to recipes based on a current trend.
+- Titles must be new: not the same dish as anything in the collection."""
+
+WRITER_PROMPT = """Write {k} new recipes, one for each brief, in this order:
+{briefs}
+
+{trends}
+
+The collection already has these titles (don't repeat these dishes):
+{titles}
+
+Two recipes from the collection, for format and tone:
+{examples}
+
+Ingredient catalog (name: aliases | sold as). Use nothing else:
+{catalog}"""
+
+REPAIR_PROMPT = """The checker rejected these recipes:
+{rejects}
+
+Return corrected versions of only those recipes (same briefs; you may change the dish if it can't be fixed). \
+Keep ids unique."""
+
+
+def load(path):
+    with open(path) as f:
+        return json.load(f)
+
+
+def catalog_lines(catalog):
+    by_aisle = collections.defaultdict(list)
+    for i in catalog["items"]:
+        aliases = [a for a in i["aliases"] if a.lower() != i["name"].lower()][:5]
+        sold = ", ".join(p["label"] for p in i["packages"])
+        staple = " [staple]" if i["staple"] else ""
+        by_aisle[i["aisle"]].append(f"- {i['name']}: {', '.join(aliases)} | {sold}{staple}")
+    return "\n".join(f"{aisle.upper()}\n" + "\n".join(rows) for aisle, rows in by_aisle.items())
+
+
+def briefs(recipes, have_trends, rng):
+    counts = collections.Counter(r["cuisine"] for r in recipes if r["meal"] == "dinner")
+    others = sorted([c for c in CUISINES if c not in ("middleEastern", "breakfast")], key=lambda c: (counts[c], rng.random()))
+    week = datetime.date.today().isocalendar()[1]
+    if have_trends:
+        out = [("trending", "A budget version of trend #1 above, for a family dinner."),
+               ("trending", "A budget version of trend #2 above (a different dish from #1)."),
+               ("trending", "A budget version of trend #3 above (a spare in case one doesn't work out).")]
+    else:
+        out = [("popular", "A crowd-pleasing family dinner that's popular right now, made cheaper.")]
+    out += [("middleEastern", "A Middle Eastern home-cooking classic (Levantine, Gulf, Egyptian, Iraqi or North African) "
+                              "not yet in the collection. Authentic name with a short English gloss in the title."),
+            ("cuisine", f"A {others[0]} dinner."),
+            ("vegetarian", "A hearty vegetarian or vegan dinner, any cuisine, that meat-eaters would happily eat.")]
+    if week % 3 == 0:
+        out.append(("lunch", "A make-ahead lunch that packs well (meal 'lunch')."))
+    else:
+        out.append(("cuisine", f"A {others[1]} dinner, ready in 30 minutes or less."))
+    return out
+
+
+def stream(client, **kw):
+    with client.beta.messages.stream(model=MODEL, **FALLBACK, **kw) as s:
+        return s.get_final_message()
+
+
+def text_of(message):
+    """The answer's text — after the last fallback switch, if a fallback model took over."""
+    blocks = list(message.content)
+    last = max((i for i, b in enumerate(blocks) if b.type == "fallback"), default=-1)
+    return "".join(b.text for b in blocks[last + 1:] if b.type == "text")
+
+
+def usage_of(message, totals):
+    u = message.usage
+    totals["in"] += u.input_tokens + (u.cache_read_input_tokens or 0) + (u.cache_creation_input_tokens or 0)
+    totals["out"] += u.output_tokens
+    stu = getattr(u, "server_tool_use", None)
+    totals["searches"] += getattr(stu, "web_search_requests", 0) or 0 if stu else 0
+
+
+def scout(client, totals, n=3):
+    """What's trending, from a web search. Empty on any failure."""
+    messages = [{"role": "user", "content": SCOUT_PROMPT.format(today=datetime.date.today().strftime("%B %-d, %Y"), n=n)}]
+    try:
+        for _ in range(4):
+            m = stream(client, max_tokens=16000, thinking={"type": "adaptive"}, output_config={"effort": "medium"},
+                       tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}], messages=messages)
+            usage_of(m, totals)
+            if m.stop_reason == "pause_turn":          # the server's search loop wants another turn
+                messages = messages[:1] + [{"role": "assistant", "content": m.content}]
+                continue
+            if m.stop_reason == "refusal":
+                print("trend scout: declined", file=sys.stderr)
+                return ""
+            return text_of(m).strip()
+    except anthropic.APIError as e:
+        print(f"trend scout failed ({e}); writing without trends", file=sys.stderr)
+    return ""
+
+
+def write(client, messages, totals):
+    m = stream(client, max_tokens=64000, thinking={"type": "adaptive"},
+               output_config={"effort": "high", "format": {"type": "json_schema", "schema": RECIPE_SCHEMA}},
+               system=WRITER_SYSTEM, messages=messages)
+    usage_of(m, totals)
+    if m.stop_reason == "refusal":
+        raise SystemExit("the writer declined this week's request")
+    if m.stop_reason == "max_tokens":
+        raise SystemExit("the writer ran out of room; raise max_tokens")
+    return m, json.loads(text_of(m))["recipes"]
+
+
+def screen(checker, candidates):
+    with tempfile.TemporaryDirectory() as d:
+        cand, out = os.path.join(d, "candidates.json"), os.path.join(d, "out.json")
+        with open(cand, "w") as f:
+            json.dump(candidates, f, ensure_ascii=False)
+        r = subprocess.run([checker, "screen", "--catalog", CATALOG, "--recipes", RECIPES, "--candidates", cand, "--out", out],
+                           capture_output=True, text=True)
+        print(r.stdout, end="")
+        if r.returncode != 0:
+            raise SystemExit(f"pennycheck failed: {r.stderr}")
+        return load(out)
+
+
+def pick(accepted, count):
+    trending = [r for r in accepted if "trending" in r.get("tags", [])]
+    rest = [r for r in accepted if r not in trending]
+    chosen = trending[:2] + rest
+    chosen += [r for r in trending[2:] if r not in chosen]
+    return chosen[:count]
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--checker", required=True, help="path to the pennycheck binary")
+    ap.add_argument("--count", type=int, default=5)
+    ap.add_argument("--rounds", type=int, default=2, help="repair rounds for rejected recipes")
+    ap.add_argument("--candidates", help="screen this JSON array instead of asking Claude")
+    ap.add_argument("--dry-run", action="store_true")
+    a = ap.parse_args()
+
+    catalog, book = load(CATALOG), load(RECIPES)
+    today = datetime.date.today().isoformat()
+    rng = random.Random(today)
+    totals = {"in": 0, "out": 0, "searches": 0}
+    accepted, stats, trends = [], {}, ""
+
+    if a.candidates:
+        result = screen(a.checker, load(a.candidates))
+        accepted, stats = result["accepted"], result["stats"]
+    else:
+        client = anthropic.Anthropic(max_retries=4)
+        trends = scout(client, totals)
+        plan = briefs(book["recipes"], bool(trends), rng)
+        examples = [r for r in book["recipes"] if r["id"] in ("chana-masala", "shish-tawook")]
+        prompt = WRITER_PROMPT.format(
+            k=len(plan),
+            briefs="\n".join(f"{i + 1}. {b}" for i, (_, b) in enumerate(plan)),
+            trends=f"Trends this week (from a web search):\n{trends}" if trends else "",
+            titles="; ".join(r["title"] for r in book["recipes"]),
+            examples="\n".join(json.dumps(r, ensure_ascii=False) for r in examples),
+            catalog=catalog_lines(catalog))
+        messages = [{"role": "user", "content": prompt}]
+        for round_ in range(a.rounds + 1):
+            reply, candidates = write(client, messages, totals)
+            # The checker sees this round's candidates after last round's winners.
+            result = screen(a.checker, accepted + candidates) if accepted else screen(a.checker, candidates)
+            accepted, stats = result["accepted"], result["stats"]
+            if len(accepted) >= a.count or not result["rejected"] or round_ == a.rounds:
+                break
+            rejects = "\n".join(f"- {r['title']}: " + "; ".join(r["reasons"]) for r in result["rejected"])
+            messages += [{"role": "assistant", "content": reply.content},
+                         {"role": "user", "content": REPAIR_PROMPT.format(rejects=rejects)}]
+
+    chosen = pick(accepted, a.count)
+    cost = totals["in"] / 1e6 * 4 + totals["out"] / 1e6 * 20 + totals["searches"] * 0.01
+    print(f"tokens in {totals['in']:,} · out {totals['out']:,} · searches {totals['searches']} · ≈ ${cost:.2f}")
+    if not chosen:
+        raise SystemExit("no recipe passed the checker this week")
+
+    for r in chosen:
+        r["added"] = today
+    book["recipes"] += chosen
+    book["version"] += 1
+    book["updated"] = today
+    if not a.dry_run:
+        with open(RECIPES, "w") as f:
+            json.dump(book, f, ensure_ascii=False, separators=(",", ":"))
+
+    lines = [f"### {len(chosen)} new recipes (recipes v{book['version']})", "", "| | recipe | cuisine | per serving | kcal |", "|---|---|---|---|---|"]
+    for r in chosen:
+        s = stats.get(r["id"], {})
+        flag = "🔥" if "trending" in r["tags"] else ""
+        lines.append(f"| {r['emoji']} {flag} | {r['title']} | {r['cuisine']} | ${s.get('perServing', 0):.2f} | {s.get('kcal', 0):.0f} |")
+    if trends:
+        lines += ["", "<details><summary>Trends found</summary>", "", trends, "", "</details>"]
+    lines += ["", f"Claude usage: {totals['in']:,} in / {totals['out']:,} out tokens, {totals['searches']} searches, ≈ ${cost:.2f}"]
+    summary = "\n".join(lines)
+    print(summary)
+    if os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+            f.write(summary + "\n")
+
+
+if __name__ == "__main__":
+    main()
