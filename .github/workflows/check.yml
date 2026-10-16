@@ -1,0 +1,20 @@
+# Any hand edit to the data or the checker gets the same check the jobs use.
+name: Check data
+on:
+  push:
+    branches: [main]
+    paths: ["pennyplate/**", "public/pennyplate/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift build -c release --package-path pennyplate/validator
+      - run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json
