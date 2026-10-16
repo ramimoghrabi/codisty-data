@@ -145,26 +145,47 @@ def catalog_lines(catalog):
     return "\n".join(f"{aisle.upper()}\n" + "\n".join(rows) for aisle, rows in by_aisle.items())
 
 
+DIET_GAPS = [  # (labels, how to ask for it) — the thinnest combination gets a recipe each week
+    (("vegan", "glutenFree"), "vegan and gluten-free (label both)"),
+    (("vegetarian", "glutenFree"), "vegetarian and gluten-free (label both)"),
+    (("vegan",), "vegan"),
+    (("glutenFree", "dairyFree"), "gluten-free and dairy-free (label both)"),
+    (("pescatarian",), "pescatarian, built around fish or seafood"),
+    (("highProtein", "glutenFree"), "high-protein and gluten-free (label both)"),
+    (("vegetarian", "highProtein"), "vegetarian and high-protein (label both)"),
+]
+
+
+def fits(r, diet):
+    ds = set(r["diets"])
+    return (diet in ds or (diet == "vegetarian" and "vegan" in ds)
+            or (diet == "pescatarian" and ("vegetarian" in ds or "vegan" in ds)))
+
+
 def briefs(recipes, have_trends, rng):
-    counts = collections.Counter(r["cuisine"] for r in recipes if r["meal"] == "dinner")
+    """This week's eight briefs: what's trending, plus whatever the collection is thinnest on."""
+    dinners = [r for r in recipes if r["meal"] == "dinner"]
+    counts = collections.Counter(r["cuisine"] for r in dinners)
     others = sorted([c for c in CUISINES if c not in ("middleEastern", "breakfast")], key=lambda c: (counts[c], rng.random()))
+    gaps = sorted(DIET_GAPS, key=lambda g: (sum(1 for r in dinners if all(fits(r, d) for d in g[0])), rng.random()))
     week = datetime.date.today().isocalendar()[1]
     if have_trends:
         out = [("trending", "A budget version of trend #1 above, for a family dinner."),
                ("trending", "A budget version of trend #2 above (a different dish from #1)."),
-               ("trending", "A budget version of trend #3 above (a spare in case one doesn't work out).")]
+               ("trending", "A budget version of trend #3 above (a different dish again).")]
     else:
-        out = [("popular", "A crowd-pleasing family dinner that's popular right now, made cheaper.")]
+        out = [("popular", "A crowd-pleasing family dinner that's popular right now, made cheaper."),
+               ("popular", "Another popular family dinner, different from the first, made cheaper.")]
     out += [("middleEastern", "A Middle Eastern home-cooking classic (Levantine, Gulf, Egyptian, Iraqi or North African) "
                               "not yet in the collection. Authentic name with a short English gloss in the title."),
-            ("cuisine", f"A {others[0]} dinner."),
-            ("vegetarian", "A hearty vegetarian or vegan dinner, any cuisine, that meat-eaters would happily eat.")]
-    if week % 3 == 0:
+            ("diet", f"A satisfying dinner that is {gaps[0][1]}, any cuisine."),
+            ("diet", f"A satisfying dinner that is {gaps[1][1]}, any cuisine, different from the one above."),
+            ("cuisine", f"A {others[0]} dinner, ready in 30 minutes or less.")]
+    if week % 2:
         out.append(("lunch", "A make-ahead lunch that packs well (meal 'lunch')."))
     else:
-        out.append(("cuisine", f"A {others[1]} dinner, ready in 30 minutes or less."))
+        out.append(("breakfast", "A cheap, filling breakfast (meal 'breakfast', cuisine 'breakfast')."))
     return out
-
 
 def strip_strict(schema):
     """The schema without additionalProperties, for APIs that don't take it."""
@@ -321,15 +342,15 @@ def screen(checker, candidates):
 def pick(accepted, count):
     trending = [r for r in accepted if "trending" in r.get("tags", [])]
     rest = [r for r in accepted if r not in trending]
-    chosen = trending[:2] + rest
-    chosen += [r for r in trending[2:] if r not in chosen]
+    chosen = trending[:3] + rest
+    chosen += [r for r in trending[3:] if r not in chosen]
     return chosen[:count]
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--checker", help="path to the pennycheck binary (needed except with --brief)")
-    ap.add_argument("--count", type=int, default=5)
+    ap.add_argument("--count", type=int, default=8)
     ap.add_argument("--rounds", type=int, default=2, help="repair rounds for rejected recipes")
     ap.add_argument("--candidates", help="screen this JSON array instead of asking an AI")
     ap.add_argument("--ai", help="gemini or claude (default: RECIPE_AI, else whichever key is set)")

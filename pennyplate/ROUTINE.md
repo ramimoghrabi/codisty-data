@@ -19,5 +19,5 @@ doesn't pass is dropped. Work carefully and follow the house rules exactly.
 6. Commit only `pennyplate/inbox/candidates.json` with the message "Recipe candidates for <today's date>"
    and push to a new branch named `claude/recipes-<today's date>`. Change nothing else in the repository.
 
-The "Recipes from the routine" workflow takes it from there: it screens the candidates, adds the best five
+The "Recipes from the routine" workflow takes it from there: it screens the candidates, adds the best eight
 to the app's recipes, publishes, and deletes the branch.

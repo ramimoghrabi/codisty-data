@@ -27,9 +27,9 @@ Either AI can write. Choose with the repository variable `RECIPE_AI` (`gemini` o
 A manual run (Actions → Weekly recipes → Run workflow) can pick either for that run.
 
 1. **Trend scout**: the AI searches the web for dishes going viral on TikTok and Instagram.
-2. **Writer**: the AI writes original budget versions of two trends, plus a Middle Eastern classic, a vegetarian dinner and the cuisines the collection has least of. Only catalog ingredients are allowed.
+2. **Writer**: the AI writes original budget versions of three trends, plus a Middle Eastern classic, two dinners for the thinnest diet combinations (e.g. vegan + gluten-free), the least-covered cuisine, and a breakfast or lunch. Only catalog ingredients are allowed.
 3. **pennycheck screen**: every line must match the catalog, the price ($0.45–6.50 a serving), calories and diet labels must hold up, and nothing may duplicate an existing recipe. Rejects go back to the AI with the reasons, up to twice.
-4. The 5 best are appended with `"added": "<date>"` (the app shows them as **New this week**, and trend dishes as **Trending**). The version is bumped, and the job commits and deploys.
+4. The 8 best are appended with `"added": "<date>"` (the app shows them as **New this week**, and trend dishes as **Trending**). The version is bumped, and the job commits and deploys.
 
 
 ### Recipe photos (`photo-queue.yml`, the photo picker routine, `photos.yml`)

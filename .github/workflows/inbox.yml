@@ -1,6 +1,6 @@
 # Recipes written by the weekly Claude Code routine arrive on a claude/recipes-*
 # branch as pennyplate/inbox/candidates.json. Screen them with pennycheck,
-# add the best five to main, publish, and delete the branch.
+# add the best eight to main, publish, and delete the branch.
 name: Recipes from the routine
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
           python-version: "3.12"
       - name: Build the checker
         run: swift build -c release --package-path pennyplate/validator
-      - name: Screen and add the best five
+      - name: Screen and add the best eight
         run: python pennyplate/tools/generate_recipes.py --checker pennyplate/validator/.build/release/pennycheck --candidates "$RUNNER_TEMP/candidates.json"
       - name: Check the whole collection
         run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json
