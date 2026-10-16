@@ -1,0 +1,37 @@
+{
+ "id": "chicken-pot-pie-skillet",
+ "title": "Biscuit-Topped Chicken Pot Pie",
+ "summary": "All the comfort of pot pie with a shortcut biscuit lid.",
+ "ingredients": [
+  "1 lb chicken breast, cubed",
+  "3 tbsp butter",
+  "1 onion, diced",
+  "2 carrots, diced",
+  "1 cup frozen peas",
+  "⅓ cup flour",
+  "2 cups chicken broth",
+  "1 cup milk",
+  "1 tsp dried thyme",
+  "1 tsp salt",
+  "8 refrigerated biscuits"
+ ],
+ "query": "Biscuit-Topped Chicken Pot Pie",
+ "options": [
+  {
+   "n": 1,
+   "title": "Rustic chicken pot pie",
+   "credit": "Farmers Restaurant Group · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/51564099@N02/4742930058",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4073/4742930058_c048e0aa2b_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "World's largest chicken pot pie",
+   "credit": "Dan Costin · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30955003@N00/5254937830",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5281/5254937830_c70401df9f_b.jpg"
+  }
+ ]
+}

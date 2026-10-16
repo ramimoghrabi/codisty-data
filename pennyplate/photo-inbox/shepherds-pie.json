@@ -1,0 +1,86 @@
+{
+ "id": "shepherds-pie",
+ "title": "Shepherd's Pie",
+ "summary": "Savory beef and vegetables under a fluffy mashed potato lid.",
+ "ingredients": [
+  "2 lb potatoes, peeled and cubed",
+  "3 tbsp butter",
+  "½ cup milk",
+  "1 lb ground beef",
+  "1 onion, diced",
+  "2 carrots, diced",
+  "1 cup frozen peas",
+  "2 tbsp tomato paste",
+  "1 tbsp Worcestershire sauce",
+  "1 cup beef broth",
+  "1 tsp dried thyme",
+  "1 tsp salt"
+ ],
+ "query": "Shepherd's Pie",
+ "options": [
+  {
+   "n": 1,
+   "title": "Shepherd's Pie",
+   "credit": "SodanieChea · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41942551@N02/8227698373",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8198/8227698373_0598d6de4f_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "365.223: Shepherd's pie",
+   "credit": "WordRidden · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/97844767@N00/4897135759",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4075/4897135759_a6a8e9e324_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Shepherd's Pie",
+   "credit": "DesheBoard · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30458313@N03/3583163932",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2455/3583163932_da3a0d56e8_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Shepherd's Pie",
+   "credit": "Stevie Rocco · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/98336893@N00/3756093129",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3458/3756093129_477af2d551_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "13/03/2018: Shepherd's Pie with broccoli and cherry tomatoes = 465 calories",
+   "credit": "CharmaineZoe's Marvelous Melange · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/53499099@N00/39898228755",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4776/39898228755_0251cba6c5_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Insides - Shepherds Pie, Fries, Rocket, Pear, Walnut Salad - Gills Diner AUD21",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4720329249",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1021/4720329249_f3b23e892d_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "shepherd's pie",
+   "credit": "vanessayavonne · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/68743941@N00/5396530030",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5176/5396530030_62510a12c9_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Cottage Pie (veggie shepherd's pie)",
+   "credit": "randomduck · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/96463101@N00/2343873328",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2332/2343873328_32521ef132_b.jpg"
+  }
+ ]
+}

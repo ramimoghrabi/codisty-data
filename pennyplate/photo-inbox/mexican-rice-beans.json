@@ -1,0 +1,85 @@
+{
+ "id": "mexican-rice-beans",
+ "title": "Mexican Rice & Beans",
+ "summary": "Fluffy tomato rice with pinto beans — a complete meal for pennies.",
+ "ingredients": [
+  "1 ½ cups long grain rice",
+  "2 tbsp vegetable oil",
+  "½ onion, diced",
+  "2 cloves garlic, minced",
+  "1 (15 oz) can tomato sauce",
+  "2 cups vegetable broth",
+  "1 tsp ground cumin",
+  "1 tsp salt",
+  "2 (15 oz) cans pinto beans, drained",
+  "1 lime",
+  "¼ cup chopped cilantro"
+ ],
+ "query": "Mexican Rice Beans",
+ "options": [
+  {
+   "n": 1,
+   "title": "Family Dinner",
+   "credit": "jeffk · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44124372247@N01/121567312",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/51/121567312_f34859ff10_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "popular eating location",
+   "credit": "permanently scatterbrained · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/88774309@N00/401692601",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/174/401692601_7e89e9a5a8_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "20120125-OSEC-RBN-0028",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6762000269",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7171/6762000269_beedf57842_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Camarones a la diabla",
+   "credit": "sarahstierch · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7633518@N08/52485822397",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/65535/52485822397_06ca507298_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "beans and rice",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/3822165524",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3564/3822165524_ce6b6c43c5_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Wahoo's",
+   "credit": "bfick · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/48948205@N00/2833825194",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3224/2833825194_9984844952_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Chilaquiles con huevos",
+   "credit": "joebeone · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/71753172@N00/363977317",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/159/363977317_f7246187de_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "20120125-OSEC-RBN-0061",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6762003525",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7019/6762003525_646203a457_b.jpg"
+  }
+ ]
+}

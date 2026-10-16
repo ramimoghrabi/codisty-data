@@ -1,0 +1,92 @@
+{
+ "id": "lasagna-soup",
+ "title": "One-Pot Lasagna Soup",
+ "summary": "Everything you love about lasagna, without the layering.",
+ "ingredients": [
+  "1 lb ground beef",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "2 tbsp tomato paste",
+  "1 (28 oz) can crushed tomatoes",
+  "6 cups chicken broth",
+  "1 tsp Italian seasoning",
+  "8 lasagna noodles, broken",
+  "1 cup shredded mozzarella",
+  "½ cup grated parmesan"
+ ],
+ "query": "Lasagna Soup",
+ "options": [
+  {
+   "n": 1,
+   "title": "071117 Lasagna Soup",
+   "credit": "redazadi · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/89626269@N00/2055358817",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2395/2055358817_db8f06c446_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "A close-up of a bowl of lasagna soup topped with a dollop of cheese and garnished with parsley. In the background, there is a plate with toast and a table number.",
+   "credit": "Astha Jain",
+   "page": "https://wordpress.org/photos/photo/24466598ea/",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://pd.w.org/2024/05/24466598ea7447b66.81077301-2048x1536.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Adventures In Cooking",
+   "credit": "Tobyotter · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/78428166@N00/4997581548",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4129/4997581548_00801fa615_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "cooking is working",
+   "credit": "EverJean · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/61532128@N00/516086775",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/198/516086775_537957bf21.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Lasagnia pasta as a sauce and cheese delivery system, minestrone soup, steamed brocolli",
+   "credit": "wbaiv · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/9998127@N06/8561852746",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/8370/8561852746_09a4855a73_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Old English Cottage",
+   "credit": "LeonardKong · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30216515@N05/10362361136",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5549/10362361136_001305dedf_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "English Chicken Lasagna",
+   "credit": "LeonardKong · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30216515@N05/10362366974",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2868/10362366974_e949f744fb_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "English Tea Pot",
+   "credit": "LeonardKong · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30216515@N05/10362336706",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3760/10362336706_a197f814c1_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "pumpkin Soup",
+   "credit": "LeonardKong · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30216515@N05/10362253325",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2881/10362253325_649f9a854b_b.jpg"
+  }
+ ]
+}

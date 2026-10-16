@@ -1,0 +1,43 @@
+{
+ "id": "tuscan-white-bean-soup",
+ "title": "Tuscan White Bean & Kale Soup",
+ "summary": "Silky beans, sausage and greens — a hug in a bowl.",
+ "ingredients": [
+  "1 lb Italian sausage",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "2 (15 oz) cans cannellini beans, drained",
+  "6 cups chicken broth",
+  "1 (14.5 oz) can diced tomatoes",
+  "1 bunch kale, chopped",
+  "1 tsp Italian seasoning",
+  "½ tsp red pepper flakes"
+ ],
+ "query": "Tuscan White Bean Kale Soup",
+ "options": [
+  {
+   "n": 1,
+   "title": "chick peas garbanzo beans in a personalized glass mason jar next to a bowl of Tuscan kale and white bean soup and spaghetti squash with Mediterranean vegetable pesto sauce on a wood table",
+   "credit": "PersonalCreations.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/127294011@N07/16085956870",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7561/16085956870_17893648a0_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Tuscan White Bean Soup with Kale and Chard",
+   "credit": "Leeks 'N' Bounds · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/9027562@N05/720885901",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1241/720885901_a3c5c9f4e5_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Tuscan kale and white bean soup in personalized bowls with spoons on a decorative tree cross cut",
+   "credit": "PersonalCreations.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/127294011@N07/16085794138",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7488/16085794138_c48e879d3d_b.jpg"
+  }
+ ]
+}

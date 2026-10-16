@@ -1,0 +1,29 @@
+{
+ "id": "mini-meatloaves",
+ "title": "Mini Meatloaves",
+ "summary": "Little loaves cook in half the time and come out glazed and juicy.",
+ "ingredients": [
+  "1 lb ground beef",
+  "1 egg",
+  "½ cup breadcrumbs",
+  "¼ cup milk",
+  "1 small onion, finely diced",
+  "1 tsp garlic powder",
+  "1 tsp salt",
+  "½ tsp black pepper",
+  "½ cup ketchup",
+  "1 tbsp brown sugar",
+  "1 tsp mustard"
+ ],
+ "query": "Mini Meatloaves",
+ "options": [
+  {
+   "n": 1,
+   "title": "Mini-Meatloaves",
+   "credit": "laurenbosak · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/47993825@N05/4488306369",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4044/4488306369_5b606aa90a_b.jpg"
+  }
+ ]
+}

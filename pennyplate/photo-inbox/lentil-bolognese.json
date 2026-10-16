@@ -1,0 +1,30 @@
+{
+ "id": "lentil-bolognese",
+ "title": "Lentil Bolognese",
+ "summary": "All the depth of a meat sauce, for a fraction of the price.",
+ "ingredients": [
+  "2 tbsp olive oil",
+  "1 onion, finely diced",
+  "2 carrots, finely diced",
+  "2 celery stalks, finely diced",
+  "3 cloves garlic, minced",
+  "2 tbsp tomato paste",
+  "1 cup brown lentils",
+  "1 (28 oz) can crushed tomatoes",
+  "2 cups vegetable broth",
+  "1 tsp Italian seasoning",
+  "1 tsp salt",
+  "1 lb spaghetti"
+ ],
+ "query": "Lentil Bolognese",
+ "options": [
+  {
+   "n": 1,
+   "title": "Eggplant, spinach, and lentil bolognese",
+   "credit": "veritatem · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/66722164@N00/31867005057",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7843/31867005057_3ac0681f85.jpg"
+  }
+ ]
+}

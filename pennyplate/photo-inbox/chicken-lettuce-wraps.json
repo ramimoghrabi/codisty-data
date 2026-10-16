@@ -1,0 +1,29 @@
+{
+ "id": "chicken-lettuce-wraps",
+ "title": "Ginger Chicken Lettuce Wraps",
+ "summary": "Light, crunchy and fast — fun to build at the table.",
+ "ingredients": [
+  "1 lb ground turkey",
+  "1 tbsp vegetable oil",
+  "8 oz mushrooms, finely chopped",
+  "2 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "3 tbsp soy sauce",
+  "1 tbsp honey",
+  "1 tsp sesame oil",
+  "1 head romaine lettuce",
+  "2 carrots, grated",
+  "3 green onions, sliced"
+ ],
+ "query": "Ginger Chicken Lettuce Wraps",
+ "options": [
+  {
+   "n": 1,
+   "title": "Ginger Soy Chicken Lettuce Wraps with WonTon",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/4339390199",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4068/4339390199_34a5bc6dd9_b.jpg"
+  }
+ ]
+}

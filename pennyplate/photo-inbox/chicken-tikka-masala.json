@@ -1,0 +1,80 @@
+{
+ "id": "chicken-tikka-masala",
+ "title": "Weeknight Chicken Tikka Masala",
+ "summary": "Restaurant flavour from a skillet — no marinating overnight.",
+ "ingredients": [
+  "1.5 lb chicken breast, cubed",
+  "½ cup plain yogurt",
+  "1 tbsp garam masala",
+  "1 tsp salt",
+  "2 tbsp butter",
+  "1 onion, finely diced",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 tsp ground cumin",
+  "1 tsp paprika",
+  "1 (15 oz) can tomato sauce",
+  "½ cup heavy cream",
+  "1 ½ cups basmati rice",
+  "¼ cup chopped cilantro"
+ ],
+ "query": "Chicken Tikka Masala",
+ "options": [
+  {
+   "n": 1,
+   "title": "My Own Chicken Tikka Masala",
+   "credit": "Tobyotter · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/78428166@N00/5580275871",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5022/5580275871_9593593900_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Chicken tikka masala",
+   "credit": "secretlondon123 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/25834786@N03/2895455410",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3168/2895455410_f5e6ef5bcc_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Chicken Tikka Masala, Paratha & Beer",
+   "credit": "Annie Mole · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/21309047@N00/2482768770",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2084/2482768770_4b61c79137_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Chicken Tikka Masala",
+   "credit": "TheCulinaryGeek · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/72949902@N00/4705955437",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4061/4705955437_27a7afbc50_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Chicken Tikka Masala",
+   "credit": "citymama · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/70176840@N00/424267845",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/179/424267845_57aea2584c.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Chicken Tikka Masala",
+   "credit": "TheCulinaryGeek · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/72949902@N00/4820350745",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4122/4820350745_b45b568558_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Vegetarian Chicken Tikka Masala",
+   "credit": "@bastique · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/14429081@N00/6165100594",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/6154/6165100594_f77edabc12_b.jpg"
+  }
+ ]
+}

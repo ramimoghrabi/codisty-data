@@ -1,0 +1,92 @@
+{
+ "id": "beef-broccoli",
+ "title": "Beef & Broccoli",
+ "summary": "Tender beef in a savory-sweet sauce — faster than delivery.",
+ "ingredients": [
+  "1 lb flank steak, thinly sliced",
+  "1 tbsp cornstarch",
+  "1 crown broccoli, florets",
+  "2 tbsp vegetable oil",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "⅓ cup soy sauce",
+  "2 tbsp brown sugar",
+  "½ cup beef broth",
+  "1 ½ cups long grain rice"
+ ],
+ "query": "Beef Broccoli",
+ "options": [
+  {
+   "n": 1,
+   "title": "Beef & Broccoli",
+   "credit": "moonlightbulb · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/24532534@N02/8496987940",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8507/8496987940_986295b1a3_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Beef & broccoli stir fry. One of my all time favourite quick dinners on Sarah Wilson's blog this week! http://www.sarahwilson.com.au/2013/05/mince-meat-and-broccoli-stir-fry-and-4-other-clever-mincey-tricks/",
+   "credit": "jules:stonesoup · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58367355@N00/8742005207",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7287/8742005207_5b63a1d6bc.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Beef & Broccoli Pasta Bake-2",
+   "credit": "jules:stonesoup · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58367355@N00/23833036295",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5667/23833036295_72228cc14c_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Beef & Broccoli Pasta Bake",
+   "credit": "jules:stonesoup · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58367355@N00/23833067265",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/594/23833067265_1d1d192b2b_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Muurikka Beef Broccoli",
+   "credit": "jacobcarlsson",
+   "page": "https://www.flickr.com/photos/97600393@N02/24190442925",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://live.staticflickr.com/1569/24190442925_4b39f68c77_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "beef & broccoli-2",
+   "credit": "jules:stonesoup · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58367355@N00/5907645907",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5319/5907645907_7a35143b03_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Smart Made Grilled Sesame Beef & Broccoli",
+   "credit": "theimpulsivebuy · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27410581@N07/30110698382",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5655/30110698382_e311a30baa.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Beef & Broccoli-4",
+   "credit": "gkdavie · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/16034871@N05/4421791074",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4069/4421791074_4e6eb1ee8a_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Beef & Broccoli-2",
+   "credit": "gkdavie · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/16034871@N05/4421790276",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4037/4421790276_702bec1607_b.jpg"
+  }
+ ]
+}

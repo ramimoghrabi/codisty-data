@@ -1,0 +1,88 @@
+{
+ "id": "bean-cheese-quesadillas",
+ "title": "Bean & Cheese Quesadillas",
+ "summary": "Ten minutes, five ingredients, zero complaints.",
+ "ingredients": [
+  "1 (15 oz) can refried beans",
+  "8 flour tortillas",
+  "2 cups shredded cheddar",
+  "1 tsp ground cumin",
+  "½ cup salsa",
+  "½ cup sour cream"
+ ],
+ "query": "Bean Cheese Quesadillas",
+ "options": [
+  {
+   "n": 1,
+   "title": "Scrambled Eggs, Bacon, Potato Quesadilla - Blue Corn Mexican",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2373286750",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2348/2373286750_81b231e77b_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Mmm... chicken quesadilla with black bean salsa",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/6039834148",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6200/6039834148_167c6c2059_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Double Baked Burrito - Blue Corn Mexican",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2373285736",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2220/2373285736_a7d029b6d4_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Tequila Jalapeno Quesadillas with Ocean Trout and Corn - Bluecorn Mexican Restaurant",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2224799659",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2039/2224799659_f468380268_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Mmm... quesadillas",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/16223676012",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8601/16223676012_6d30bc1556_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Lurid El Yucateco Red and Green Hot Sauce - Bluecorn Mexican Restaurant",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2224800377",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2290/2224800377_83193951b0_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "El Yucateco Red and Green Hot Sauce - Bluecorn Mexican Restaurant",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2224801147",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2299/2224801147_c4340dbe4b_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Decor - Bluecorn Mexican Restaurant",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2224798703",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2378/2224798703_d1db7e60ec_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Mango and Hazelnut Gelati - 7 Apples",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2225597398",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2213/2225597398_3fe3dce7ca_b.jpg"
+  }
+ ]
+}
