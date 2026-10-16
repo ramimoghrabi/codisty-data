@@ -253,6 +253,19 @@ case "screen":
     print("accepted \(accepted.count), rejected \(rejected.count)")
     for r in rejected { print("  ✗ \(r["title"] ?? "?"): \((r["reasons"] as? [String] ?? []).joined(separator: "; "))") }
 
+case "uses":
+    // {"recipe-id": {"ids": [catalog ids], "perServing": 1.23}} for building shelves.
+    let catalog = loadCatalog(args.path("catalog"))
+    let file = loadRecipes(args.path("recipes"))
+    let costing = Costing(catalog: catalog, household: Household())
+    var out: [String: Any] = [:]
+    for r in Library.recipes(file, catalog: catalog) {
+        let ids = Array(Set(r.ingredients.compactMap(\.ingredientID))).sorted()
+        out[r.id] = ["ids": ids, "perServing": (costing.cost(r).perServing * 100).rounded() / 100]
+    }
+    let data = try JSONSerialization.data(withJSONObject: out, options: [.sortedKeys])
+    FileHandle.standardOutput.write(data)
+
 case "lines":
     // Every ingredient line and what it matched, for auditing the matcher.
     let catalog = loadCatalog(args.path("catalog"))

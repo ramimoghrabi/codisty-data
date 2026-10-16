@@ -34,12 +34,15 @@ jobs:
       - name: Check every recipe still prices
         if: steps.prices.outputs.changed == 'true'
         run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json
+      - name: Rebuild the shelves (Cheaper this month)
+        if: steps.prices.outputs.changed == 'true'
+        run: python pennyplate/tools/update_feed.py --checker pennyplate/validator/.build/release/pennycheck
       - name: Commit
         if: steps.prices.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/pennyplate/catalog.json pennyplate/prices.json
+          git add public/pennyplate/catalog.json public/pennyplate/feed.json pennyplate/prices.json pennyplate/collections.json
           git commit -m "Prices for $(date -u +%B\ %Y)"
           git push
 

@@ -127,5 +127,40 @@
    "base": 1.578
   }
  },
- "applied": "2026-09"
+ "applied": "2026-09",
+ "moves": {
+  "period": "2026-09",
+  "items": {
+   "milk": -0.0291,
+   "ground-beef": -0.0189,
+   "pork-shoulder": -0.0155,
+   "butter": -0.0154,
+   "flank-steak": -0.0096,
+   "stew-beef": -0.0063,
+   "flour": -0.0055,
+   "sugar": -0.0049,
+   "yogurt": -0.0038,
+   "egg": 0.0,
+   "pasta": 0.0007,
+   "wine": 0.0016,
+   "bread": 0.0038,
+   "pork-chop": 0.004,
+   "banana": 0.0061,
+   "rice": 0.0063,
+   "lemon": 0.0066,
+   "chicken-breast": 0.0072,
+   "tomato": 0.0076,
+   "romaine": 0.0079,
+   "orange": 0.0082,
+   "ham": 0.0126,
+   "potato": 0.0133,
+   "bacon": 0.0229,
+   "dried-beans": 0.0239,
+   "cheddar": 0.0251,
+   "whole-chicken": 0.0258,
+   "corn-canned": 0.0369,
+   "drumstick": 0.0413,
+   "berries": 0.1016
+  }
+ }
 }

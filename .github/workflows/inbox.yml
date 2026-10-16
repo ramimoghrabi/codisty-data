@@ -1,11 +1,12 @@
-# Recipes written by the weekly Claude Code routine arrive on a claude/recipes-*
-# branch as pennyplate/inbox/candidates.json. Screen them with pennycheck,
-# add the best eight to main, publish, and delete the branch.
+# Recipes written by the daily Claude Code routine arrive on a claude/recipes-*
+# branch as pennyplate/inbox/candidates.json (and, some days,
+# collections.json). Screen them with pennycheck, add the best to main,
+# rebuild the shelves, publish, and delete the branch.
 name: Recipes from the routine
 on:
   push:
     branches: ["claude/recipes-*"]
-    paths: ["pennyplate/inbox/candidates.json"]
+    paths: ["pennyplate/inbox/candidates.json", "pennyplate/inbox/collections.json"]
 
 concurrency:
   group: data-update
@@ -23,22 +24,42 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Take the candidates from the branch
-        run: git show "${{ github.sha }}:pennyplate/inbox/candidates.json" > "$RUNNER_TEMP/candidates.json"
+      - name: Take the candidates (and collections) from the branch
+        run: |
+          git show "${{ github.sha }}:pennyplate/inbox/candidates.json" > "$RUNNER_TEMP/candidates.json" || echo "[]" > "$RUNNER_TEMP/candidates.json"
+          git show "${{ github.sha }}:pennyplate/inbox/collections.json" > "$RUNNER_TEMP/collections.json" 2>/dev/null || echo "[]" > "$RUNNER_TEMP/collections.json"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Build the checker
         run: swift build -c release --package-path pennyplate/validator
-      - name: Screen and add the best eight
-        run: python pennyplate/tools/generate_recipes.py --checker pennyplate/validator/.build/release/pennycheck --candidates "$RUNNER_TEMP/candidates.json"
+      - name: Screen and add the best
+        run: |
+          if [ "$(python -c "import json,sys; print(len(json.load(open(sys.argv[1]))))" "$RUNNER_TEMP/candidates.json")" != "0" ]; then
+            python pennyplate/tools/generate_recipes.py --checker pennyplate/validator/.build/release/pennycheck --candidates "$RUNNER_TEMP/candidates.json" \
+              || echo "::warning::No recipe passed the checker today; publishing the collections anyway."
+          fi
+      - name: Add the collections and rebuild the shelves
+        run: |
+          python - "$RUNNER_TEMP/collections.json" <<'PY'
+          import json, sys
+          new = json.load(open(sys.argv[1]))
+          path = "pennyplate/collections.json"
+          old = json.load(open(path))
+          ids = {c["id"] for c in new if isinstance(c, dict) and "id" in c}
+          keep = [c for c in old if c["id"] not in ids]
+          ok = [c for c in new if isinstance(c, dict) and c.get("title") and isinstance(c.get("recipes"), list)]
+          json.dump(keep + ok, open(path, "w"), ensure_ascii=False, indent=1)
+          print(f"{len(ok)} new collections")
+          PY
+          python pennyplate/tools/update_feed.py --checker pennyplate/validator/.build/release/pennycheck
       - name: Check the whole collection
         run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json
       - name: Commit to main and clean up
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/pennyplate/recipes.json
+          git add public/pennyplate/recipes.json public/pennyplate/feed.json pennyplate/collections.json
           git diff --cached --quiet || git commit -m "New recipes for the week of $(date -u +%F) (from the routine)"
           git push origin main
           git push origin --delete "${GITHUB_REF_NAME}"

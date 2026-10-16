@@ -123,6 +123,26 @@ Two recipes from the collection, for format and tone:
 Ingredient catalog (name: aliases | sold as). Use nothing else:
 {catalog}"""
 
+COLLECTIONS_PROMPT = """
+
+# Collections for the week ahead
+
+Also curate 2 or 3 themed collections for the app's Recipes tab for the next seven days. Make them timely: check
+(web search) what's coming up in the US and the Arab world, such as holidays and observances (Ramadan, Eid,
+Thanksgiving, Christmas, Super Bowl, back to school, Mother's Day), the season and the weather, big sports or
+events. Where nothing special is on, use evergreen budget themes ("Dinners under $2", "20-minute weeknights",
+"Pantry-only dinners"). Already running: {active}.
+
+Write `pennyplate/inbox/collections.json`: a JSON array of
+  {{"id": "<short-slug>-{today}", "title": "<title with one emoji>", "subtitle": "<one line>",
+    "until": "{until}", "recipes": ["<recipe id>", ...]}}
+with 8–14 recipe ids each, chosen from the library below or from the recipes you wrote today (use their ids).
+Titles must be short (under 32 characters) and specific.
+
+Library (id | title | cuisine | meal | diets | time):
+{index}
+"""
+
 REPAIR_PROMPT = """The checker rejected these recipes:
 {rejects}
 
@@ -162,29 +182,50 @@ def fits(r, diet):
             or (diet == "pescatarian" and ("vegetarian" in ds or "vegan" in ds)))
 
 
-def briefs(recipes, have_trends, rng):
-    """This week's eight briefs: what's trending, plus whatever the collection is thinnest on."""
+TREND_DAYS = (0, 3)     # Monday and Thursday: scout what's going viral
+
+
+def trend_day(day=None):
+    return (day or datetime.date.today()).weekday() in TREND_DAYS
+
+
+def briefs(recipes, have_trends, rng, day=None):
+    """Today's two briefs. Each day of the week has its own theme, and the
+    diet and cuisine briefs always aim at what the collection is thinnest on."""
+    day = day or datetime.date.today()
     dinners = [r for r in recipes if r["meal"] == "dinner"]
     counts = collections.Counter(r["cuisine"] for r in dinners)
     others = sorted([c for c in CUISINES if c not in ("middleEastern", "breakfast")], key=lambda c: (counts[c], rng.random()))
     gaps = sorted(DIET_GAPS, key=lambda g: (sum(1 for r in dinners if all(fits(r, d) for d in g[0])), rng.random()))
-    week = datetime.date.today().isocalendar()[1]
-    if have_trends:
-        out = [("trending", "A budget version of trend #1 above, for a family dinner."),
-               ("trending", "A budget version of trend #2 above (a different dish from #1)."),
-               ("trending", "A budget version of trend #3 above (a different dish again).")]
-    else:
-        out = [("popular", "A crowd-pleasing family dinner that's popular right now, made cheaper."),
-               ("popular", "Another popular family dinner, different from the first, made cheaper.")]
-    out += [("middleEastern", "A Middle Eastern home-cooking classic (Levantine, Gulf, Egyptian, Iraqi or North African) "
-                              "not yet in the collection. Authentic name with a short English gloss in the title."),
-            ("diet", f"A satisfying dinner that is {gaps[0][1]}, any cuisine."),
-            ("diet", f"A satisfying dinner that is {gaps[1][1]}, any cuisine, different from the one above."),
-            ("cuisine", f"A {others[0]} dinner, ready in 30 minutes or less.")]
-    if week % 2:
-        out.append(("lunch", "A make-ahead lunch that packs well (meal 'lunch')."))
-    else:
-        out.append(("breakfast", "A cheap, filling breakfast (meal 'breakfast', cuisine 'breakfast')."))
+    trend = ("trending", "A budget version of trend #{n} above, for a family dinner (a different dish from the other trend recipe).")
+    popular = ("popular", "A crowd-pleasing family dinner that's popular right now, made cheaper.")
+    middle_east = ("middleEastern", "A Middle Eastern home-cooking classic (Levantine, Gulf, Egyptian, Iraqi or North African) "
+                                    "not yet in the collection. Authentic name with a short English gloss in the title.")
+    themes = {
+        0: [trend, trend],
+        1: [middle_east, ("diet", f"A satisfying dinner that is {gaps[0][1]}, any cuisine.")],
+        2: [("cuisine", f"A {others[0]} dinner, ready in 30 minutes or less."),
+            ("lunch", "A make-ahead lunch that packs well (meal 'lunch').") if day.isocalendar()[1] % 2
+            else ("breakfast", "A cheap, filling breakfast (meal 'breakfast', cuisine 'breakfast').")],
+        3: [trend, ("diet", f"A satisfying dinner that is {gaps[1][1]}, any cuisine.")],
+        4: [("fakeaway", "A 'fakeaway': a takeout favourite (pizza, burgers, orange chicken, shawarma, curry…) made at home for "
+                         "far less. Say which takeout dish it copies in the summary."),
+            ("cuisine", f"A {others[1]} dinner everyone in a family would eat.")],
+        5: [("batch", "A big-batch dinner for 6–8 that freezes well (tag 'freezer'), so cooking once covers two nights."),
+            ("gadget", "A slow-cooker or air-fryer dinner (equipment slowCooker or airFryer) for a busy day.")],
+        6: [("sunday", "A Sunday family dinner, one-pot or sheet-pan (tag it), that leaves leftovers for Monday's lunch."),
+            middle_east],
+    }
+    out = []
+    n = 1
+    for kind, text in themes[day.weekday()]:
+        if kind == "trending":
+            if not have_trends:
+                kind, text = popular
+            else:
+                text = text.format(n=n)
+                n += 1
+        out.append((kind, text))
     return out
 
 def strip_strict(schema):
@@ -350,7 +391,7 @@ def pick(accepted, count):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--checker", help="path to the pennycheck binary (needed except with --brief)")
-    ap.add_argument("--count", type=int, default=8)
+    ap.add_argument("--count", type=int, default=2, help="recipes to keep (two a day)")
     ap.add_argument("--rounds", type=int, default=2, help="repair rounds for rejected recipes")
     ap.add_argument("--candidates", help="screen this JSON array instead of asking an AI")
     ap.add_argument("--ai", help="gemini or claude (default: RECIPE_AI, else whichever key is set)")
@@ -360,16 +401,21 @@ def main():
 
     if a.brief:
         book = load(RECIPES)
-        plan = briefs(book["recipes"], True, random.Random(datetime.date.today().isoformat()))
+        today = datetime.date.today()
+        trends = trend_day(today)
+        plan = briefs(book["recipes"], trends, random.Random(today.isoformat()), today)
         examples = [r for r in book["recipes"] if r["id"] in ("chana-masala", "shish-tawook")]
         with open(a.brief, "w") as f:
-            f.write("# Trend scouting\n\n" + SCOUT_PROMPT.format(today=datetime.date.today().strftime("%B %-d, %Y"), n=3))
+            if trends:
+                f.write("# Trend scouting\n\n" + SCOUT_PROMPT.format(today=today.strftime("%B %-d, %Y"), n=3))
+            else:
+                f.write("# Trend scouting\n\nNot today: no trend briefs. Skip web searching for trends.")
             f.write("\n\n# House rules\n\n" + WRITER_SYSTEM)
-            f.write("\n\n# This week\n\n" + WRITER_PROMPT.format(
-                k=len(plan) + 2,
+            f.write("\n\n# Today\n\n" + WRITER_PROMPT.format(
+                k=len(plan) + 1,
                 briefs="\n".join(f"{i + 1}. {b}" for i, (_, b) in enumerate(plan)) +
-                       f"\n{len(plan) + 1}. A spare: another dinner from any brief above.\n{len(plan) + 2}. A spare: another dinner from any brief above.",
-                trends="(Use the trends you found.)",
+                       f"\n{len(plan) + 1}. A spare: another dinner that fits either brief above.",
+                trends="(Use the trends you found.)" if trends else "",
                 titles="; ".join(r["title"] for r in book["recipes"]),
                 examples="\n".join(json.dumps(r, ensure_ascii=False) for r in examples),
                 catalog=catalog_lines(load(CATALOG))))
@@ -377,6 +423,13 @@ def main():
                     + ", ".join(RECIPE_SCHEMA["properties"]["recipes"]["items"]["required"])
                     + f".\nAllowed values — cuisine: {', '.join(CUISINES)}; diets: {', '.join(DIETS)}; meal: breakfast, lunch, dinner; "
                     + f"equipment: {', '.join(EQUIPMENT)}; tint: {', '.join(TINTS)}.\n")
+            active = [c for c in load(os.path.join(os.path.dirname(HERE), "collections.json")) or []
+                      if c.get("until", "") >= today.isoformat()] if os.path.exists(os.path.join(os.path.dirname(HERE), "collections.json")) else []
+            if today.weekday() == 0 or len(active) < 2:
+                index = "\n".join(f"{r['id']} | {r['title']} | {r['cuisine']} | {r['meal']} | {','.join(r['diets']) or '-'} | {r['minutes']} min"
+                                   for r in book["recipes"])
+                f.write(COLLECTIONS_PROMPT.format(today=today.isoformat(), until=(today + datetime.timedelta(days=7)).isoformat(),
+                                                  active="; ".join(c["title"] for c in active) or "none", index=index))
         print(f"wrote {a.brief}")
         return
     if not a.checker:
@@ -393,7 +446,7 @@ def main():
     else:
         ai = choose_ai(a.ai)
         print(f"writing with {ai.name}")
-        trends = ai.scout(SCOUT_PROMPT.format(today=datetime.date.today().strftime("%B %-d, %Y"), n=3))
+        trends = ai.scout(SCOUT_PROMPT.format(today=datetime.date.today().strftime("%B %-d, %Y"), n=3)) if trend_day() else ""
         plan = briefs(book["recipes"], bool(trends), rng)
         examples = [r for r in book["recipes"] if r["id"] in ("chana-masala", "shish-tawook")]
         prompt = WRITER_PROMPT.format(

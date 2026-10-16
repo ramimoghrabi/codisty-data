@@ -78,15 +78,27 @@ def contact_sheet(thumbs):
     return sheet
 
 
+def load_skip():
+    """{recipe id: date it last found no good photo}; older lists had no dates."""
+    raw = json.load(open(SKIP)) if os.path.exists(SKIP) else {}
+    if isinstance(raw, list):
+        return {i: datetime.date.today().isoformat() for i in raw}
+    return raw
+
+
 def queue(limit):
     os.makedirs(INBOX, exist_ok=True)
     book = json.load(open(RECIPES))
-    skip = set(json.load(open(SKIP))) if os.path.exists(SKIP) else set()
+    skip = load_skip()
+    retry_before = (datetime.date.today() - datetime.timedelta(days=30)).isoformat()
     waiting = {f[:-5] for f in os.listdir(INBOX) if f.endswith(".json") and f != "choices.json"}
-    todo = [r for r in book["recipes"] if not r.get("photo") and r["id"] not in skip and r["id"] not in waiting][:limit]
+    todo = [r for r in book["recipes"] if not r.get("photo") and r["id"] not in waiting
+            and skip.get(r["id"], "") <= retry_before][:limit]
     done = 0
     for r in todo:
         q = query_for(r)
+        if r["id"] in skip:                   # second try: the plain dish name, e.g. "chicken pot pie"
+            q = re.sub(r"\s*\([^)]*\)", "", r["title"]).replace("&", " ").strip()
         params = {"q": q, "license_type": "commercial,modification", "mature": "false", "page_size": COLS * ROWS}
         doc = None
         for attempt in range(3):              # Openverse has the odd 5xx; retry, then move on
@@ -134,7 +146,7 @@ def apply(choices_path):
     choices = json.load(open(choices_path))
     book = json.load(open(RECIPES))
     by_id = {r["id"]: r for r in book["recipes"]}
-    skip = set(json.load(open(SKIP))) if os.path.exists(SKIP) else set()
+    skip = load_skip()
     os.makedirs(PHOTOS, exist_ok=True)
     added = 0
     for c in choices:
@@ -153,14 +165,14 @@ def apply(choices_path):
             added += 1
             print(f"  {rid}: photo {pick}, {o['credit']}")
         else:
-            skip.add(rid)
-            print(f"  {rid}: no good match; keeps its plate art")
+            skip[rid] = datetime.date.today().isoformat()
+            print(f"  {rid}: no good match; keeps its plate art (tries again in 30 days)")
         for ext in ("json", "jpg"):
             p = os.path.join(INBOX, f"{rid}.{ext}")
             if os.path.exists(p):
                 os.remove(p)
     with open(SKIP, "w") as f:
-        json.dump(sorted(skip), f, indent=1)
+        json.dump(dict(sorted(skip.items())), f, indent=1)
     if added:
         book["version"] += 1
         book["updated"] = datetime.date.today().isoformat()

@@ -46,9 +46,8 @@ def latest_from_flat(series, url):
         except ValueError:
             continue
         period = f"{year}-{per[1:]}"
-        if sid not in out or period > out[sid][0]:
-            out[sid] = (period, value)
-    return out
+        out.setdefault(sid, []).append((period, value))
+    return {sid: sorted(v)[-2:] for sid, v in out.items()}
 
 
 def latest_from_api(series):
@@ -67,9 +66,8 @@ def latest_from_api(series):
                 if not d["period"].startswith("M") or d["period"] == "M13" or d["value"] in ("-", ""):
                     continue
                 period = f"{d['year']}-{d['period'][1:]}"
-                if s["seriesID"] not in out or period > out[s["seriesID"]][0]:
-                    out[s["seriesID"]] = (period, float(d["value"]))
-    return out
+                out.setdefault(s["seriesID"], []).append((period, float(d["value"])))
+    return {sid: sorted(v)[-2:] for sid, v in out.items()}
 
 
 def latest(series):
@@ -94,7 +92,8 @@ def main():
 
     cpi_series = prices["cpi"]["series"]
     series = sorted({m["series"] for m in prices["bls"].values()} | {cpi_series})
-    values = latest(series)
+    history = latest(series)                 # series → [(previous month), (latest month)]
+    values = {sid: h[-1] for sid, h in history.items()}
     period = values[cpi_series][0]
     print(f"latest CPI month {period}; applied {prices['applied']}")
     if period <= prices["applied"] and not force:
@@ -129,6 +128,13 @@ def main():
     with open(PUBLIC, "w") as f:
         json.dump(doc, f, ensure_ascii=False, separators=(",", ":"))
     prices["applied"] = period
+    # Month-on-month moves, for the app's "Cheaper this month" shelf.
+    moves = {}
+    for item_id, m in prices["bls"].items():
+        h = history.get(m["series"], [])
+        if len(h) == 2 and h[0][1] > 0 and h[1][0] == period:
+            moves[item_id] = round(h[1][1] / h[0][1] - 1, 4)
+    prices["moves"] = {"period": period, "items": dict(sorted(moves.items(), key=lambda kv: kv[1]))}
     with open(os.path.join(PENNY, "prices.json"), "w") as f:
         json.dump(prices, f, indent=1)
 

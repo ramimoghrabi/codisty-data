@@ -5,7 +5,7 @@
 name: Weekly recipes
 on:
   schedule:
-    - cron: "7 10 * * 1"     # Mondays 10:07 UTC (6am New York)
+    - cron: "7 10 * * *"     # daily 10:07 UTC (6am New York)
   workflow_dispatch:
     inputs:
       ai:
@@ -40,13 +40,15 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           RECIPE_AI: ${{ (inputs.ai != '' && inputs.ai != 'default') && inputs.ai || vars.RECIPE_AI }}
         run: python pennyplate/tools/generate_recipes.py --checker pennyplate/validator/.build/release/pennycheck
+      - name: Rebuild the shelves
+        run: python pennyplate/tools/update_feed.py --checker pennyplate/validator/.build/release/pennycheck
       - name: Check the whole collection
         run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/pennyplate/recipes.json
+          git add public/pennyplate/recipes.json public/pennyplate/feed.json pennyplate/collections.json
           git diff --cached --quiet || git commit -m "New recipes for the week of $(date -u +%F)"
           git push
 
