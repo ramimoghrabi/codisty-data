@@ -26,6 +26,7 @@ jobs:
       - name: Search Openverse
         run: python pennyplate/tools/photos.py queue --limit 150
       - name: Commit
+        if: always()               # keep whatever was queued, even if a search failed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

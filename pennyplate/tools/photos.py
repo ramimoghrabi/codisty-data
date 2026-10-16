@@ -88,14 +88,25 @@ def queue(limit):
     for r in todo:
         q = query_for(r)
         params = {"q": q, "license_type": "commercial,modification", "mature": "false", "page_size": COLS * ROWS}
-        try:
-            doc = json.loads(get(SEARCH + urllib.parse.urlencode(params)))
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
+        doc = None
+        for attempt in range(3):              # Openverse has the odd 5xx; retry, then move on
+            try:
+                doc = json.loads(get(SEARCH + urllib.parse.urlencode(params)))
+                break
+            except urllib.error.HTTPError as e:
+                if e.code == 429:
+                    break
+                print(f"  {r['id']}: Openverse error {e.code}, try {attempt + 1} of 3")
+                time.sleep(10 * (attempt + 1))
+            except Exception as e:
+                print(f"  {r['id']}: {type(e).__name__}, try {attempt + 1} of 3")
+                time.sleep(10 * (attempt + 1))
+        time.sleep(3.5)                       # stay under 20 searches a minute
+        if doc is None:
+            if attempt < 2:                   # left the loop early: the daily limit
                 print("  Openverse daily limit reached; the rest wait for the next run")
                 break
-            raise
-        time.sleep(3.5)                       # stay under 20 searches a minute
+            continue
         results = doc.get("results", [])[:COLS * ROWS]
         thumbs, options = [], []
         for res in results:
