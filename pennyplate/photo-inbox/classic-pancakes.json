@@ -1,0 +1,29 @@
+{
+ "id": "classic-pancakes",
+ "title": "Fluffy Buttermilk-Style Pancakes",
+ "summary": "Breakfast-for-dinner night, with a lemon trick for 'buttermilk'.",
+ "ingredients": [
+  "2 cups flour",
+  "2 tbsp sugar",
+  "2 tsp baking powder",
+  "½ tsp baking soda",
+  "½ tsp salt",
+  "1 ¾ cups milk",
+  "1 tbsp lemon juice",
+  "2 eggs",
+  "3 tbsp butter, melted",
+  "½ cup maple syrup",
+  "1 pint strawberries"
+ ],
+ "query": "Fluffy Buttermilk-Style Pancakes",
+ "options": [
+  {
+   "n": 1,
+   "title": "[food] Danish-style Buttermilk Soup",
+   "credit": "David Jackmanson · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58301516@N00/50004072512",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/65535/50004072512_c2756c509f_b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "keema-matar",
+ "title": "Keema Matar",
+ "summary": "Spiced ground beef with peas — a fast, homestyle favourite.",
+ "ingredients": [
+  "1 lb ground beef",
+  "1 tbsp vegetable oil",
+  "1 onion, finely diced",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "2 tsp garam masala",
+  "1 tsp ground cumin",
+  "1 tsp ground turmeric",
+  "1 (14.5 oz) can diced tomatoes",
+  "1 ½ cups frozen peas",
+  "1 tsp salt",
+  "1 ½ cups basmati rice"
+ ],
+ "query": "Keema Matar",
+ "options": [
+  {
+   "n": 1,
+   "title": "Keema Matar lunch set @ Les Jardins de Shah Jahan @ Montparnasse @ Paris",
+   "credit": "*_* · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/22539273@N00/31848486323",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/396/31848486323_db124d8b4d_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Keema Matar",
+   "credit": "ravimadhuscooking · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/153337965@N04/38460041161",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4566/38460041161_426d526e96_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Keema Matar @ Les Jardins de Shah Jahan @ Montparnasse @ Paris",
+   "credit": "*_* · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/22539273@N00/32507659402",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/485/32507659402_39b6efe52b_b.jpg"
+  }
+ ]
+}

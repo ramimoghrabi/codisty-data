@@ -1,0 +1,54 @@
+{
+ "id": "greek-lentil-soup",
+ "title": "Fakes (Greek Lentil Soup)",
+ "summary": "Earthy lentils with tomato, bay and a splash of vinegar.",
+ "ingredients": [
+  "1 ½ cups brown lentils",
+  "¼ cup olive oil",
+  "1 onion, diced",
+  "2 carrots, diced",
+  "3 cloves garlic, minced",
+  "2 tbsp tomato paste",
+  "1 (14.5 oz) can diced tomatoes",
+  "6 cups water",
+  "2 bay leaves",
+  "1 tsp dried oregano",
+  "1 ½ tsp salt",
+  "1 tbsp red wine vinegar"
+ ],
+ "query": "Greek Lentil Soup",
+ "options": [
+  {
+   "n": 1,
+   "title": "Spicy Vegetable Stew with Couscous - Moroccan Soup Bar",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/1221497455",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1242/1221497455_4aa508d2c5_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Lightly curried lentil, rice and spinach soup",
+   "credit": "WordRidden · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/97844767@N00/152412044",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/47/152412044_b4b7962d8a_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Fuckess Lentil Soup - with pronunciation - Concrete Kouzina",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/145027257",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/53/145027257_706d9e3635.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Fuckess Lentil Soup - Concrete Kouzina",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/141223069",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/51/141223069_2d2eefc27f.jpg"
+  }
+ ]
+}

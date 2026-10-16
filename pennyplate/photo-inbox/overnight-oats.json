@@ -1,0 +1,25 @@
+{
+ "id": "overnight-oats",
+ "title": "Peanut Butter Banana Overnight Oats",
+ "summary": "Five minutes tonight, breakfast ready tomorrow.",
+ "ingredients": [
+  "2 cups rolled oats",
+  "2 cups milk",
+  "1 cup plain yogurt",
+  "¼ cup peanut butter",
+  "2 tbsp honey",
+  "2 bananas",
+  "½ tsp ground cinnamon"
+ ],
+ "query": "Peanut Butter Banana Overnight Oats",
+ "options": [
+  {
+   "n": 1,
+   "title": "Nutty Honey Overnight Oats",
+   "credit": "Veva Health · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/79485769@N05/6969969552",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8155/6969969552_4dd3496207_m.jpg"
+  }
+ ]
+}

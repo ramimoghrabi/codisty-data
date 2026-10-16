@@ -1,0 +1,69 @@
+{
+ "id": "chicken-caesar-wraps",
+ "title": "Chicken Caesar Wraps",
+ "summary": "Crisp romaine, juicy chicken and a quick Caesar dressing in a wrap.",
+ "ingredients": [
+  "1 lb chicken breast",
+  "1 tbsp olive oil",
+  "1 tsp garlic powder",
+  "½ tsp salt",
+  "1 head romaine lettuce, chopped",
+  "⅓ cup mayonnaise",
+  "1 lemon",
+  "1 tsp Dijon mustard",
+  "1 tsp Worcestershire sauce",
+  "½ cup grated parmesan",
+  "4 flour tortillas"
+ ],
+ "query": "Chicken Caesar Wraps",
+ "options": [
+  {
+   "n": 1,
+   "title": "Chicken Caesar wrap",
+   "credit": "Tim Rodenberg · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/24556804@N04/4782004194",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4102/4782004194_560afe4229.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Late lunch @redrobinburgers. Chicken Tortilla Soup and Chicken Caesar Wrap. I was hungry after my run this morning.",
+   "credit": "AngryJulieMonday · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/33731571@N07/6931891446",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7234/6931891446_7df884a4c3.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Chicken Caesar Wrap - Jake's On the Beach - Hollywood, FL",
+   "credit": "shelnew19 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/77161127@N00/7064771027",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7227/7064771027_6e76b94764_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Caesar chicken wrap at Star Co. Round Rock TX",
+   "credit": "TheSeafarer · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/22028494@N03/3641971571",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3643/3641971571_77ee8d5d86_m.jpg"
+  },
+  {
+   "n": 5,
+   "title": "McDonald's Chicken Caesar Premium McWrap Tomato Basil Wrap",
+   "credit": "theimpulsivebuy · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27410581@N07/10035951784",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5511/10035951784_cf7d2e1761.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Chicken caesar salad spinach wrap with chips",
+   "credit": "mdburnette",
+   "page": "https://wordpress.org/photos/photo/146620f28c/",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://pd.w.org/2022/02/146620f28c85bd638.68290358-2048x1536.jpeg"
+  }
+ ]
+}

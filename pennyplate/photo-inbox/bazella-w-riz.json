@@ -1,0 +1,95 @@
+{
+ "id": "bazella-w-riz",
+ "title": "Bazella w Riz (Pea & Carrot Stew)",
+ "summary": "A cozy Lebanese stew of peas, carrots and a little beef over rice.",
+ "ingredients": [
+  "½ lb ground beef",
+  "1 tbsp olive oil",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "2 (12 oz) bags frozen peas and carrots",
+  "2 tbsp tomato paste",
+  "1 (15 oz) can tomato sauce",
+  "1 tsp allspice",
+  "1 tsp salt",
+  "1 ½ cups water",
+  "¼ cup chopped cilantro",
+  "2 tbsp butter",
+  "1 ½ cups long grain rice"
+ ],
+ "query": "Pea Carrot Stew",
+ "options": [
+  {
+   "n": 1,
+   "title": "Vegetable Beef Stew",
+   "credit": "Tobyotter · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/78428166@N00/3732916395",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2472/3732916395_ce8fc8f150_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "leftovers bento",
+   "credit": "gamene · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12670507@N02/3945749399",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2468/3945749399_840c4a2d7d_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Curry Stew Dinner",
+   "credit": "Tobyotter · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/78428166@N00/6858743117",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7051/6858743117_d4445ef04f_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Seitan stew",
+   "credit": "Lablascovegmenu · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35022955@N06/8492596064",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8507/8492596064_1d78a26b28_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Day 98 - More Pie",
+   "credit": "Phil and Pam · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/33987777@N00/2131629044",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2239/2131629044_933fda0f5d_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Classic Beef Stew",
+   "credit": "TheGirlsNY · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/55768440@N00/5427043280",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5100/5427043280_c493cbf291_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Mmm... beef stew",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/15707525894",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7484/15707525894_df79e78b29_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Mmm... split pea soup",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/8139761028",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8195/8139761028_497ea219f0_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Čorba sa mesom i povrćem",
+   "credit": "erecepti.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/105392694@N02/10958802175",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7299/10958802175_bbf5014604_b.jpg"
+  }
+ ]
+}

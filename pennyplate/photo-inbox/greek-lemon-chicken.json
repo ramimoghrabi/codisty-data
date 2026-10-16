@@ -1,0 +1,59 @@
+{
+ "id": "greek-lemon-chicken",
+ "title": "Greek Lemon Chicken & Potatoes",
+ "summary": "Lemony, oregano-scented chicken with potatoes that soak up every drop.",
+ "ingredients": [
+  "2 lb bone-in chicken thighs",
+  "2 lb potatoes, cut into wedges",
+  "2 lemons",
+  "⅓ cup olive oil",
+  "4 cloves garlic, minced",
+  "1 tbsp dried oregano",
+  "1 ½ tsp salt",
+  "½ tsp black pepper",
+  "1 cup chicken broth"
+ ],
+ "query": "Greek Lemon Chicken Potatoes",
+ "options": [
+  {
+   "n": 1,
+   "title": "lamb souvlakia",
+   "credit": "Geoff Peters 604 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/54359128@N00/3397293291",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3426/3397293291_084d19887a_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "lamb souvlakia",
+   "credit": "Geoff Peters 604 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/54359128@N00/3397303723",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3630/3397303723_b287a54ec1_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "lamb souvlakia",
+   "credit": "Geoff Peters 604 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/54359128@N00/3397293481",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3648/3397293481_f8d7be60dc_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "lamb souvlakia",
+   "credit": "Geoff Peters 604 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/54359128@N00/3397292947",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3616/3397292947_3ddc6a59fd_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Dinner",
+   "credit": "wdwSteve · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/33546659@N08/32875559160",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2874/32875559160_9eae3a896d_b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "id": "moroccan-chickpea-stew",
+ "title": "Moroccan Chickpea & Sweet Potato Stew",
+ "summary": "Warm spices, sweet potato and chickpeas over fluffy couscous.",
+ "ingredients": [
+  "2 tbsp olive oil",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "2 tsp ground cumin",
+  "1 tsp ground cinnamon",
+  "1 tsp paprika",
+  "2 sweet potatoes, cubed",
+  "2 (15 oz) cans chickpeas, drained",
+  "1 (14.5 oz) can diced tomatoes",
+  "3 cups vegetable broth",
+  "1 tsp salt",
+  "¼ cup raisins",
+  "1 ½ cups couscous",
+  "¼ cup chopped cilantro"
+ ],
+ "query": "Moroccan Chickpea Sweet Potato Stew",
+ "options": [
+  {
+   "n": 1,
+   "title": "Moroccan chickpea & sweet potato tajine from 'Healthy & Tasty'",
+   "credit": "jules:stonesoup · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58367355@N00/14850704523",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5555/14850704523_7ff657df24_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "January 2: Moroccan Stew",
+   "credit": "shannonb · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/87097460@N00/24102818706",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1441/24102818706_39b7782188_b.jpg"
+  }
+ ]
+}

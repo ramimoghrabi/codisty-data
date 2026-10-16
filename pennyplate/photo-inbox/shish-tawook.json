@@ -1,0 +1,62 @@
+{
+ "id": "shish-tawook",
+ "title": "Shish Tawook",
+ "summary": "Lemon-garlic yogurt chicken, oven-charred, with toum-style garlic sauce.",
+ "ingredients": [
+  "2 lb chicken breast, cubed",
+  "½ cup plain yogurt",
+  "2 lemons",
+  "6 cloves garlic, crushed",
+  "2 tbsp tomato paste",
+  "1 tsp paprika",
+  "1 tsp dried oregano",
+  "1 ½ tsp salt",
+  "3 tbsp olive oil",
+  "2 bell peppers, cut into chunks",
+  "1 onion, cut into chunks",
+  "8 pita breads"
+ ],
+ "query": "Shish Tawook",
+ "options": [
+  {
+   "n": 1,
+   "title": "shish tawook",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/185979969",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/71/185979969_249f48b11b_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "shish tawook",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/13972913272",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/7224/13972913272_7a984bde14_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "shish tawook",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/14102696353",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/7040/14102696353_08ca69e139_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "shish tawook",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/4609749258",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1191/4609749258_bbe1e81577_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Gemmayze Kabobs",
+   "credit": "TheHungryDudes · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/47854142@N04/6737494273",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7160/6737494273_60e4157304_b.jpg"
+  }
+ ]
+}
