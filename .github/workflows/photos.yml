@@ -29,8 +29,6 @@ jobs:
           python-version: "3.12"
       - run: pip install pillow
       - name: Download and add the photos
-        env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python pennyplate/tools/photos.py apply "$RUNNER_TEMP/choices.json"
       - name: Build the checker
         run: swift build -c release --package-path pennyplate/validator

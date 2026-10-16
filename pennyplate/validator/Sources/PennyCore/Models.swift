@@ -125,13 +125,15 @@ public struct RecipeSource: Codable, Hashable, Sendable {
 /// A real photo of a built-in recipe, hosted with the data files.
 public struct Photo: Codable, Hashable, Sendable {
     public var file: String          // "koshari.jpg" under /pennyplate/photos/
-    public var credit: String        // the photographer
-    public var page: String          // the photo's page on Pexels
+    public var credit: String        // "ultrakml · CC BY 2.0"
+    public var page: String          // where the original lives (Flickr, Wikimedia…)
+    public var license: String?      // the licence's URL
 
-    public init(file: String, credit: String, page: String) {
+    public init(file: String, credit: String, page: String, license: String? = nil) {
         self.file = file
         self.credit = credit
         self.page = page
+        self.license = license
     }
 }
 

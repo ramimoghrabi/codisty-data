@@ -32,6 +32,11 @@ A manual run (Actions → Weekly recipes → Run workflow) can pick either for t
 4. The 5 best are appended with `"added": "<date>"` (the app shows them as **New this week**, and trend dishes as **Trending**). The version is bumped, and the job commits and deploys.
 
 
+### Recipe photos (`photo-queue.yml`, the photo picker routine, `photos.yml`)
+After new recipes are published, `photo-queue` searches Openverse for openly licensed photos that allow commercial use and changes: Flickr, Wikimedia and more, with no key. It saves nine options per recipe to `pennyplate/photo-inbox/` as a contact sheet plus details.
+
+The **Pennyplate photo picker** routine (Mondays 08:07 UTC) looks at each sheet and picks the photo that really shows the dish, or none. Its choices go to a `claude/photos-*` branch, and `photos.yml` saves 1000 px copies to `public/pennyplate/photos/`. The app shows each photo with the creator and licence credited.
+
 ### Prices outside the US (`.github/workflows/world.yml`)
 The app shows US prices × the World Bank's food price level for the user's country (ICP 2021, US = 1) × this week's exchange rate (ExchangeRate-API, open access, attribution in the app). The app labels these as estimates, and users can enter their own prices.
 
