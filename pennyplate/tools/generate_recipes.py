@@ -328,13 +328,38 @@ def pick(accepted, count):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--checker", required=True, help="path to the pennycheck binary")
+    ap.add_argument("--checker", help="path to the pennycheck binary (needed except with --brief)")
     ap.add_argument("--count", type=int, default=5)
     ap.add_argument("--rounds", type=int, default=2, help="repair rounds for rejected recipes")
     ap.add_argument("--candidates", help="screen this JSON array instead of asking an AI")
     ap.add_argument("--ai", help="gemini or claude (default: RECIPE_AI, else whichever key is set)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--brief", metavar="FILE", help="write this week's full instructions for a writer (the Claude Code routine) and stop")
     a = ap.parse_args()
+
+    if a.brief:
+        book = load(RECIPES)
+        plan = briefs(book["recipes"], True, random.Random(datetime.date.today().isoformat()))
+        examples = [r for r in book["recipes"] if r["id"] in ("chana-masala", "shish-tawook")]
+        with open(a.brief, "w") as f:
+            f.write("# Trend scouting\n\n" + SCOUT_PROMPT.format(today=datetime.date.today().strftime("%B %-d, %Y"), n=3))
+            f.write("\n\n# House rules\n\n" + WRITER_SYSTEM)
+            f.write("\n\n# This week\n\n" + WRITER_PROMPT.format(
+                k=len(plan) + 2,
+                briefs="\n".join(f"{i + 1}. {b}" for i, (_, b) in enumerate(plan)) +
+                       f"\n{len(plan) + 1}. A spare: another dinner from any brief above.\n{len(plan) + 2}. A spare: another dinner from any brief above.",
+                trends="(Use the trends you found.)",
+                titles="; ".join(r["title"] for r in book["recipes"]),
+                examples="\n".join(json.dumps(r, ensure_ascii=False) for r in examples),
+                catalog=catalog_lines(load(CATALOG))))
+            f.write("\n\n# Output\n\nA JSON array of recipe objects (not wrapped in an object), each with exactly these fields: "
+                    + ", ".join(RECIPE_SCHEMA["properties"]["recipes"]["items"]["required"])
+                    + f".\nAllowed values — cuisine: {', '.join(CUISINES)}; diets: {', '.join(DIETS)}; meal: breakfast, lunch, dinner; "
+                    + f"equipment: {', '.join(EQUIPMENT)}; tint: {', '.join(TINTS)}.\n")
+        print(f"wrote {a.brief}")
+        return
+    if not a.checker:
+        ap.error("--checker is required")
 
     catalog, book = load(CATALOG), load(RECIPES)
     today = datetime.date.today().isoformat()

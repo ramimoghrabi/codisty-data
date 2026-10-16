@@ -20,6 +20,8 @@ concurrency:
 
 jobs:
   generate:
+    # RECIPE_AI=routine: the Claude Code routine writes the recipes instead (see inbox.yml).
+    if: github.event_name == 'workflow_dispatch' || vars.RECIPE_AI != 'routine'
     runs-on: macos-latest
     timeout-minutes: 45
     permissions:
