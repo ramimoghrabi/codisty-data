@@ -122,6 +122,19 @@ public struct RecipeSource: Codable, Hashable, Sendable {
     }
 }
 
+/// A real photo of a built-in recipe, hosted with the data files.
+public struct Photo: Codable, Hashable, Sendable {
+    public var file: String          // "koshari.jpg" under /pennyplate/photos/
+    public var credit: String        // the photographer
+    public var page: String          // the photo's page on Pexels
+
+    public init(file: String, credit: String, page: String) {
+        self.file = file
+        self.credit = credit
+        self.page = page
+    }
+}
+
 public struct Recipe: Codable, Identifiable, Hashable, Sendable {
     public var id: String
     public var title: String
@@ -142,11 +155,12 @@ public struct Recipe: Codable, Identifiable, Hashable, Sendable {
     public var source: RecipeSource
     public var tags: [String]
     public var createdAt: Date
+    public var photo: Photo?
 
     public init(id: String = UUID().uuidString, title: String, summary: String = "", cuisine: Cuisine = .american, diets: [Diet] = [],
                 meal: MealType = .dinner, servings: Int = 4, minutes: Int = 30, equipment: [Equipment] = [.stovetop],
                 ingredients: [RecipeIngredient], steps: [String], emoji: String = "🍽️", tint: String = "amber", keepsDays: Int = 3,
-                source: RecipeSource = RecipeSource(kind: .manual), tags: [String] = [], createdAt: Date = Date()) {
+                source: RecipeSource = RecipeSource(kind: .manual), tags: [String] = [], createdAt: Date = Date(), photo: Photo? = nil) {
         self.id = id
         self.title = title
         self.summary = summary
@@ -164,6 +178,7 @@ public struct Recipe: Codable, Identifiable, Hashable, Sendable {
         self.source = source
         self.tags = tags
         self.createdAt = createdAt
+        self.photo = photo
     }
 
     public var isImported: Bool { source.kind != .builtIn }

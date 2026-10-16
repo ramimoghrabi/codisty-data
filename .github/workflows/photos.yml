@@ -1,0 +1,50 @@
+# The photo picker routine pushes its choices to a claude/photos-* branch.
+# Download the chosen photos, add them to the recipes, publish, delete the branch.
+name: Recipe photos
+on:
+  push:
+    branches: ["claude/photos-*"]
+    paths: ["pennyplate/photo-inbox/choices.json"]
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Take the choices from the branch
+        run: git show "${{ github.sha }}:pennyplate/photo-inbox/choices.json" > "$RUNNER_TEMP/choices.json"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Download and add the photos
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python pennyplate/tools/photos.py apply "$RUNNER_TEMP/choices.json"
+      - name: Build the checker
+        run: swift build -c release --package-path pennyplate/validator
+      - name: Check the whole collection
+        run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json
+      - name: Commit to main and clean up
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/pennyplate pennyplate/photo-inbox pennyplate/photo-skip.json
+          git diff --cached --quiet || git commit -m "Recipe photos for $(date -u +%F)"
+          git push origin main
+          git push origin --delete "${GITHUB_REF_NAME}"
+      - name: Publish the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

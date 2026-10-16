@@ -48,10 +48,11 @@ public enum Library {
         public var steps: [String]
         /// "yyyy-MM-dd" the recipe was published; nil for the launch set.
         public var added: String?
+        public var photo: Photo?
 
         public init(id: String, title: String, summary: String, cuisine: Cuisine, diets: [Diet], meal: MealType, servings: Int,
                     minutes: Int, equipment: [Equipment], emoji: String, tint: String, keepsDays: Int, tags: [String],
-                    ingredients: [String], steps: [String], added: String? = nil) {
+                    ingredients: [String], steps: [String], added: String? = nil, photo: Photo? = nil) {
             self.id = id
             self.title = title
             self.summary = summary
@@ -68,6 +69,7 @@ public enum Library {
             self.ingredients = ingredients
             self.steps = steps
             self.added = added
+            self.photo = photo
         }
 
         /// When it was published, at noon UTC so it's the same day everywhere.
@@ -134,7 +136,7 @@ public enum Library {
                                    servings: a.servings, minutes: a.minutes, equipment: a.equipment,
                                    ingredients: a.ingredients.map(IngredientParser.parse), steps: a.steps, emoji: a.emoji, tint: a.tint,
                                    keepsDays: a.keepsDays, source: RecipeSource(kind: .builtIn), tags: a.tags,
-                                   createdAt: a.addedDate))
+                                   createdAt: a.addedDate, photo: a.photo))
         }
     }
 }

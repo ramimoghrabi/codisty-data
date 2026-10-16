@@ -1,0 +1,42 @@
+# Finds Pexels options for recipes without a photo and leaves them in
+# pennyplate/photo-inbox/ for the photo picker routine. Runs after new recipes
+# are published (called by inbox.yml), and by hand to backfill.
+name: Queue recipe photos
+on:
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      PEXELS_API_KEY:
+        required: false
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Search Pexels
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: |
+          if [ -z "$PEXELS_API_KEY" ]; then echo "No PEXELS_API_KEY secret yet; skipping."; exit 0; fi
+          python pennyplate/tools/photos.py queue --limit 120
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pennyplate/photo-inbox
+          git diff --cached --quiet || git commit -m "Photo options for $(date -u +%F)"
+          git push origin main
