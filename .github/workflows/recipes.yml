@@ -1,10 +1,18 @@
-# Every Monday: trend scout + recipe writer (Claude), screened by pennycheck,
-# then published. Needs the ANTHROPIC_API_KEY repository secret.
+# Every Monday: trend scout + recipe writer, screened by pennycheck, then
+# published. Uses Gemini (free, GEMINI_API_KEY secret) or Claude
+# (ANTHROPIC_API_KEY secret). Pick one with the RECIPE_AI repository variable
+# ("gemini" or "claude"); without it, whichever key exists is used.
 name: Weekly recipes
 on:
   schedule:
-    - cron: "0 10 * * 1"     # Mondays 10:00 UTC (6am New York)
+    - cron: "7 10 * * 1"     # Mondays 10:07 UTC (6am New York)
   workflow_dispatch:
+    inputs:
+      ai:
+        description: Which AI writes this run
+        type: choice
+        options: [default, gemini, claude]
+        default: default
 
 concurrency:
   group: data-update
@@ -27,6 +35,8 @@ jobs:
       - name: Write this week's recipes
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RECIPE_AI: ${{ (inputs.ai != '' && inputs.ai != 'default') && inputs.ai || vars.RECIPE_AI }}
         run: python pennyplate/tools/generate_recipes.py --checker pennyplate/validator/.build/release/pennycheck
       - name: Check the whole collection
         run: pennyplate/validator/.build/release/pennycheck check --catalog public/pennyplate/catalog.json --recipes public/pennyplate/recipes.json

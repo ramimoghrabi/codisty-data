@@ -1,0 +1,43 @@
+# Weekly: exchange rates (and, once a year, the World Bank food price levels)
+# that turn US prices into every other country's.
+name: Weekly exchange rates
+on:
+  schedule:
+    - cron: "7 9 * * 1"      # Mondays 09:07 UTC, before the recipes
+  workflow_dispatch:
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch rates
+        run: |
+          # Refresh the price levels each January (the World Bank updates them every few years).
+          if [ "$(date -u +%m)" = "01" ] && [ "$(date -u +%d)" -le 07 ]; then extra=--refresh-levels; fi
+          python pennyplate/tools/update_world.py $extra
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/pennyplate/world.json pennyplate/levels.json
+          git diff --cached --quiet || git commit -m "Exchange rates for $(date -u +%F)"
+          git push
+
+  deploy:
+    needs: update
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

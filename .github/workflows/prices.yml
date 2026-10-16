@@ -3,7 +3,7 @@
 name: Monthly prices
 on:
   schedule:
-    - cron: "0 15 16,24 * *"
+    - cron: "7 15 16,24 * *"
   workflow_dispatch:
 
 concurrency:

@@ -1,36 +1,43 @@
 #!/usr/bin/env python3
 """Weekly new recipes for Pennyplate.
 
-    python3 pennyplate/tools/generate_recipes.py --checker PATH [--count 5] [--dry-run]
-    python3 pennyplate/tools/generate_recipes.py --checker PATH --candidates FILE   # skip Claude, screen a file
+    python3 pennyplate/tools/generate_recipes.py --checker PATH [--ai gemini|claude] [--count 5] [--dry-run]
+    python3 pennyplate/tools/generate_recipes.py --checker PATH --candidates FILE   # no AI: screen a file
 
-1. Trend scout: Claude searches the web for dishes going viral on TikTok and
+1. Trend scout: the AI searches the web for dishes going viral on TikTok and
    Instagram right now.
-2. Writer: Claude writes original budget versions of two of them, plus a
+2. Writer: the AI writes original budget versions of two of them, plus a
    Middle Eastern classic, a vegetarian dinner and dishes from the cuisines
    the collection has least of. It may use only ingredients from the price
    catalog, so every line can be priced.
 3. pennycheck (the app's own parser and costing) screens every candidate:
    each line must match the catalog, the cost, calories and diet labels must
    hold up, and nothing may duplicate an existing recipe. Rejects go back to
-   Claude once or twice with the reasons.
+   the AI once or twice with the reasons.
 4. The best `count` are appended to public/pennyplate/recipes.json with
    today's date as "added", and the version goes up so the app downloads it.
 
-Needs ANTHROPIC_API_KEY (a GitHub Actions secret).
+Which AI: --ai, else the RECIPE_AI variable, else whichever key is set
+(ANTHROPIC_API_KEY first, then GEMINI_API_KEY).
+  gemini  Google's free tier: Gemini 2.5 Flash with Google Search finds trends,
+          a newer Flash model writes. Free; Google may use prompts to improve
+          its products (they contain only recipe requests).
+  claude  Claude Opus 5.5 via the Anthropic API: best writing, about $0.50-1 a week.
 """
 import argparse, collections, datetime, json, os, random, subprocess, sys, tempfile
-
-import anthropic
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 CATALOG = os.path.join(ROOT, "public", "pennyplate", "catalog.json")
 RECIPES = os.path.join(ROOT, "public", "pennyplate", "recipes.json")
 
-MODEL = "claude-opus-5-5"
+CLAUDE_MODEL = "claude-opus-5-5"
 # Re-run a declined request on Anthropic's recommended fallback model.
-FALLBACK = {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
+CLAUDE_FALLBACK = {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
+# Free-tier Gemini models; override with GEMINI_SCOUT_MODEL / GEMINI_WRITER_MODEL.
+GEMINI_SCOUT = os.environ.get("GEMINI_SCOUT_MODEL") or "gemini-2.5-flash"      # Google Search grounding is free on 2.5
+GEMINI_WRITER = os.environ.get("GEMINI_WRITER_MODEL") or "gemini-3.8-flash"
+GEMINI_WRITER_FALLBACK = "gemini-2.5-flash"
 
 CUISINES = ["american", "mexican", "italian", "asian", "indian", "middleEastern", "mediterranean", "breakfast"]
 DIETS = ["vegetarian", "vegan", "glutenFree", "dairyFree", "highProtein", "pescatarian"]
@@ -159,56 +166,143 @@ def briefs(recipes, have_trends, rng):
     return out
 
 
-def stream(client, **kw):
-    with client.beta.messages.stream(model=MODEL, **FALLBACK, **kw) as s:
-        return s.get_final_message()
+def strip_strict(schema):
+    """The schema without additionalProperties, for APIs that don't take it."""
+    if isinstance(schema, dict):
+        return {k: strip_strict(v) for k, v in schema.items() if k != "additionalProperties"}
+    if isinstance(schema, list):
+        return [strip_strict(v) for v in schema]
+    return schema
 
 
-def text_of(message):
-    """The answer's text — after the last fallback switch, if a fallback model took over."""
-    blocks = list(message.content)
-    last = max((i for i, b in enumerate(blocks) if b.type == "fallback"), default=-1)
-    return "".join(b.text for b in blocks[last + 1:] if b.type == "text")
+class Claude:
+    name = "Claude"
+
+    def __init__(self):
+        import anthropic
+        self.anthropic = anthropic
+        self.client = anthropic.Anthropic(max_retries=4)
+        self.messages = []
+        self.tokens = {"in": 0, "out": 0, "searches": 0}
+
+    def _stream(self, **kw):
+        with self.client.beta.messages.stream(model=CLAUDE_MODEL, **CLAUDE_FALLBACK, **kw) as s:
+            m = s.get_final_message()
+        u = m.usage
+        self.tokens["in"] += u.input_tokens + (u.cache_read_input_tokens or 0) + (u.cache_creation_input_tokens or 0)
+        self.tokens["out"] += u.output_tokens
+        stu = getattr(u, "server_tool_use", None)
+        self.tokens["searches"] += (getattr(stu, "web_search_requests", 0) or 0) if stu else 0
+        return m
+
+    @staticmethod
+    def _text(message):
+        """The answer's text — after the last fallback switch, if a fallback model took over."""
+        blocks = list(message.content)
+        last = max((i for i, b in enumerate(blocks) if b.type == "fallback"), default=-1)
+        return "".join(b.text for b in blocks[last + 1:] if b.type == "text")
+
+    def scout(self, prompt):
+        messages = [{"role": "user", "content": prompt}]
+        try:
+            for _ in range(4):
+                m = self._stream(max_tokens=16000, thinking={"type": "adaptive"}, output_config={"effort": "medium"},
+                                 tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}], messages=messages)
+                if m.stop_reason == "pause_turn":          # the server's search loop wants another turn
+                    messages = messages[:1] + [{"role": "assistant", "content": m.content}]
+                    continue
+                if m.stop_reason == "refusal":
+                    print("trend scout: declined", file=sys.stderr)
+                    return ""
+                return self._text(m).strip()
+        except self.anthropic.APIError as e:
+            print(f"trend scout failed ({e}); writing without trends", file=sys.stderr)
+        return ""
+
+    def write(self, prompt):
+        self.messages.append({"role": "user", "content": prompt})
+        m = self._stream(max_tokens=64000, thinking={"type": "adaptive"},
+                         output_config={"effort": "high", "format": {"type": "json_schema", "schema": RECIPE_SCHEMA}},
+                         system=WRITER_SYSTEM, messages=self.messages)
+        if m.stop_reason == "refusal":
+            raise SystemExit("the writer declined this week's request")
+        if m.stop_reason == "max_tokens":
+            raise SystemExit("the writer ran out of room; raise max_tokens")
+        self.messages.append({"role": "assistant", "content": m.content})
+        return json.loads(self._text(m))["recipes"]
+
+    def usage(self):
+        t = self.tokens
+        cost = t["in"] / 1e6 * 4 + t["out"] / 1e6 * 20 + t["searches"] * 0.01
+        return f"Claude ({CLAUDE_MODEL}): {t['in']:,} in / {t['out']:,} out tokens, {t['searches']} searches, ≈ ${cost:.2f}"
 
 
-def usage_of(message, totals):
-    u = message.usage
-    totals["in"] += u.input_tokens + (u.cache_read_input_tokens or 0) + (u.cache_creation_input_tokens or 0)
-    totals["out"] += u.output_tokens
-    stu = getattr(u, "server_tool_use", None)
-    totals["searches"] += getattr(stu, "web_search_requests", 0) or 0 if stu else 0
+class Gemini:
+    name = "Gemini"
+
+    def __init__(self):
+        from google import genai
+        from google.genai import types
+        self.genai, self.types = genai, types
+        self.client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+        self.writer = GEMINI_WRITER
+        self.contents = []
+        self.tokens = {"in": 0, "out": 0}
+
+    def _call(self, model, contents, config):
+        r = self.client.models.generate_content(model=model, contents=contents, config=config)
+        u = r.usage_metadata
+        if u:
+            self.tokens["in"] += u.prompt_token_count or 0
+            self.tokens["out"] += (u.candidates_token_count or 0) + (getattr(u, "thoughts_token_count", 0) or 0)
+        return r
+
+    def scout(self, prompt):
+        t = self.types
+        try:
+            r = self._call(GEMINI_SCOUT, prompt, t.GenerateContentConfig(tools=[t.Tool(google_search=t.GoogleSearch())]))
+            return (r.text or "").strip()
+        except Exception as e:                       # trends are a bonus; write without them
+            print(f"trend scout failed ({e}); writing without trends", file=sys.stderr)
+            return ""
+
+    def write(self, prompt):
+        t = self.types
+        self.contents.append(t.Content(role="user", parts=[t.Part(text=prompt)]))
+        config = t.GenerateContentConfig(system_instruction=WRITER_SYSTEM, response_mime_type="application/json",
+                                         response_json_schema=strip_strict(RECIPE_SCHEMA))
+        try:
+            r = self._call(self.writer, self.contents, config)
+        except self.genai.errors.ClientError as e:
+            if self.writer == GEMINI_WRITER_FALLBACK or e.code not in (400, 404):
+                raise
+            print(f"{self.writer} unavailable ({e.code}); using {GEMINI_WRITER_FALLBACK}", file=sys.stderr)
+            self.writer = GEMINI_WRITER_FALLBACK
+            r = self._call(self.writer, self.contents, config)
+        if not r.candidates or not r.text:
+            raise SystemExit(f"Gemini returned nothing ({getattr(r, 'prompt_feedback', None)})")
+        self.contents.append(r.candidates[0].content)
+        return json.loads(r.text)["recipes"]
+
+    def usage(self):
+        return f"Gemini ({GEMINI_SCOUT} + {self.writer}, free tier): {self.tokens['in']:,} in / {self.tokens['out']:,} out tokens, $0"
 
 
-def scout(client, totals, n=3):
-    """What's trending, from a web search. Empty on any failure."""
-    messages = [{"role": "user", "content": SCOUT_PROMPT.format(today=datetime.date.today().strftime("%B %-d, %Y"), n=n)}]
-    try:
-        for _ in range(4):
-            m = stream(client, max_tokens=16000, thinking={"type": "adaptive"}, output_config={"effort": "medium"},
-                       tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}], messages=messages)
-            usage_of(m, totals)
-            if m.stop_reason == "pause_turn":          # the server's search loop wants another turn
-                messages = messages[:1] + [{"role": "assistant", "content": m.content}]
-                continue
-            if m.stop_reason == "refusal":
-                print("trend scout: declined", file=sys.stderr)
-                return ""
-            return text_of(m).strip()
-    except anthropic.APIError as e:
-        print(f"trend scout failed ({e}); writing without trends", file=sys.stderr)
-    return ""
-
-
-def write(client, messages, totals):
-    m = stream(client, max_tokens=64000, thinking={"type": "adaptive"},
-               output_config={"effort": "high", "format": {"type": "json_schema", "schema": RECIPE_SCHEMA}},
-               system=WRITER_SYSTEM, messages=messages)
-    usage_of(m, totals)
-    if m.stop_reason == "refusal":
-        raise SystemExit("the writer declined this week's request")
-    if m.stop_reason == "max_tokens":
-        raise SystemExit("the writer ran out of room; raise max_tokens")
-    return m, json.loads(text_of(m))["recipes"]
+def choose_ai(name):
+    name = (name or os.environ.get("RECIPE_AI") or "auto").lower()
+    if name == "auto":
+        if os.environ.get("ANTHROPIC_API_KEY"):
+            name = "claude"
+        elif os.environ.get("GEMINI_API_KEY"):
+            name = "gemini"
+        else:
+            raise SystemExit("No AI key. Add GEMINI_API_KEY (free, from aistudio.google.com) or ANTHROPIC_API_KEY "
+                             "as a repository secret, or screen your own recipes with --candidates.")
+    if name == "claude":
+        return Claude()
+    if name == "gemini":
+        return Gemini()
+    raise SystemExit(f"unknown AI {name!r}: use gemini or claude")
 
 
 def screen(checker, candidates):
@@ -237,22 +331,23 @@ def main():
     ap.add_argument("--checker", required=True, help="path to the pennycheck binary")
     ap.add_argument("--count", type=int, default=5)
     ap.add_argument("--rounds", type=int, default=2, help="repair rounds for rejected recipes")
-    ap.add_argument("--candidates", help="screen this JSON array instead of asking Claude")
+    ap.add_argument("--candidates", help="screen this JSON array instead of asking an AI")
+    ap.add_argument("--ai", help="gemini or claude (default: RECIPE_AI, else whichever key is set)")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
     catalog, book = load(CATALOG), load(RECIPES)
     today = datetime.date.today().isoformat()
     rng = random.Random(today)
-    totals = {"in": 0, "out": 0, "searches": 0}
-    accepted, stats, trends = [], {}, ""
+    accepted, stats, trends, ai = [], {}, "", None
 
     if a.candidates:
         result = screen(a.checker, load(a.candidates))
         accepted, stats = result["accepted"], result["stats"]
     else:
-        client = anthropic.Anthropic(max_retries=4)
-        trends = scout(client, totals)
+        ai = choose_ai(a.ai)
+        print(f"writing with {ai.name}")
+        trends = ai.scout(SCOUT_PROMPT.format(today=datetime.date.today().strftime("%B %-d, %Y"), n=3))
         plan = briefs(book["recipes"], bool(trends), rng)
         examples = [r for r in book["recipes"] if r["id"] in ("chana-masala", "shish-tawook")]
         prompt = WRITER_PROMPT.format(
@@ -262,21 +357,18 @@ def main():
             titles="; ".join(r["title"] for r in book["recipes"]),
             examples="\n".join(json.dumps(r, ensure_ascii=False) for r in examples),
             catalog=catalog_lines(catalog))
-        messages = [{"role": "user", "content": prompt}]
         for round_ in range(a.rounds + 1):
-            reply, candidates = write(client, messages, totals)
-            # The checker sees this round's candidates after last round's winners.
-            result = screen(a.checker, accepted + candidates) if accepted else screen(a.checker, candidates)
+            candidates = ai.write(prompt)
+            # Last round's winners are screened again first, so new ones can't duplicate them.
+            result = screen(a.checker, accepted + candidates)
             accepted, stats = result["accepted"], result["stats"]
             if len(accepted) >= a.count or not result["rejected"] or round_ == a.rounds:
                 break
-            rejects = "\n".join(f"- {r['title']}: " + "; ".join(r["reasons"]) for r in result["rejected"])
-            messages += [{"role": "assistant", "content": reply.content},
-                         {"role": "user", "content": REPAIR_PROMPT.format(rejects=rejects)}]
+            prompt = REPAIR_PROMPT.format(rejects="\n".join(f"- {r['title']}: " + "; ".join(r["reasons"]) for r in result["rejected"]))
 
     chosen = pick(accepted, a.count)
-    cost = totals["in"] / 1e6 * 4 + totals["out"] / 1e6 * 20 + totals["searches"] * 0.01
-    print(f"tokens in {totals['in']:,} · out {totals['out']:,} · searches {totals['searches']} · ≈ ${cost:.2f}")
+    usage = ai.usage() if ai else "no AI (screened a file)"
+    print(usage)
     if not chosen:
         raise SystemExit("no recipe passed the checker this week")
 
@@ -296,7 +388,7 @@ def main():
         lines.append(f"| {r['emoji']} {flag} | {r['title']} | {r['cuisine']} | ${s.get('perServing', 0):.2f} | {s.get('kcal', 0):.0f} |")
     if trends:
         lines += ["", "<details><summary>Trends found</summary>", "", trends, "", "</details>"]
-    lines += ["", f"Claude usage: {totals['in']:,} in / {totals['out']:,} out tokens, {totals['searches']} searches, ≈ ${cost:.2f}"]
+    lines += ["", usage]
     summary = "\n".join(lines)
     print(summary)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
