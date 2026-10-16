@@ -113,6 +113,32 @@ public enum Library {
         }
     }
 
+    /// Shelves published by the server: the week's collections, "Cheaper
+    /// this month", "In season". The app shows whatever is there.
+    public struct FeedFile: Codable, Sendable {
+        public var version: Int
+        public var updated: String
+        public var shelves: [Shelf]
+
+        public init(version: Int = 0, updated: String = "", shelves: [Shelf] = []) {
+            self.version = version
+            self.updated = updated
+            self.shelves = shelves
+        }
+    }
+
+    public struct Shelf: Codable, Sendable, Identifiable, Hashable {
+        public var id: String
+        public var kind: String            // curated, deals, season
+        public var title: String
+        public var subtitle: String
+        public var recipes: [String]
+    }
+
+    public static func feed(_ data: Data) throws -> FeedFile {
+        try JSONDecoder().decode(FeedFile.self, from: data)
+    }
+
     public static func world(_ data: Data) throws -> WorldFile {
         try JSONDecoder().decode(WorldFile.self, from: data)
     }
