@@ -213,6 +213,8 @@ public struct Household: Codable, Hashable, Sendable {
     public var region: Region = .national
     public var currency: String = "USD"
     public var spice: Spice = .medium
+    /// ISO country code; empty means "the phone's region".
+    public var country: String = ""
     /// Converts USD national prices into the user's currency and price level.
     public var priceFactor: Double = 1
 
@@ -234,6 +236,7 @@ public struct Household: Codable, Hashable, Sendable {
         region = (try? c.decodeIfPresent(Region.self, forKey: .region)) ?? d.region
         currency = (try? c.decodeIfPresent(String.self, forKey: .currency)) ?? d.currency
         spice = (try? c.decodeIfPresent(Spice.self, forKey: .spice)) ?? d.spice
+        country = (try? c.decodeIfPresent(String.self, forKey: .country)) ?? d.country
         priceFactor = (try? c.decodeIfPresent(Double.self, forKey: .priceFactor)) ?? d.priceFactor
     }
 

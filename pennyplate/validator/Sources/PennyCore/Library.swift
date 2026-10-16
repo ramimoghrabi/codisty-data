@@ -85,6 +85,36 @@ public enum Library {
         return f
     }()
 
+    /// Prices outside the US: exchange rates and how food prices compare
+    /// with the US, refreshed weekly.
+    public struct WorldFile: Codable, Sendable {
+        public var version: Int
+        public var updated: String
+        /// Currency units per US dollar.
+        public var rates: [String: Double]
+        /// Food price level vs the US by country (ISO alpha-2); 0.93 = 7% cheaper.
+        public var levels: [String: Double]
+
+        public init(version: Int = 0, updated: String = "", rates: [String: Double] = [:], levels: [String: Double] = [:]) {
+            self.version = version
+            self.updated = updated
+            self.rates = rates
+            self.levels = levels
+        }
+
+        /// What one US dollar of groceries costs in `country`, in `currency`;
+        /// nil when there's no rate for the currency.
+        public func factor(country: String, currency: String) -> Double? {
+            let level = country == "US" ? 1 : levels[country] ?? 1
+            guard let rate = currency == "USD" ? 1 : rates[currency] else { return nil }
+            return level * rate
+        }
+    }
+
+    public static func world(_ data: Data) throws -> WorldFile {
+        try JSONDecoder().decode(WorldFile.self, from: data)
+    }
+
     /// Recipes published in the last `days` days count as new.
     public static func isNew(_ r: Recipe, now: Date = Date(), days: Double = 10) -> Bool {
         r.source.kind == .builtIn && r.createdAt.timeIntervalSince1970 > 0 && now.timeIntervalSince(r.createdAt) < days * 86_400
