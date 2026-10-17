@@ -86,19 +86,39 @@ def load_skip():
     return raw
 
 
-def queue(limit):
+DISH_WORDS = {"soup", "stew", "curry", "salad", "tacos", "taco", "pasta", "bowl", "bowls", "chili", "dal", "rice", "noodles",
+              "burgers", "burger", "sandwich", "wraps", "wrap", "pie", "bake", "casserole", "skillet", "omelette", "pancakes",
+              "oats", "frittata", "quesadillas", "enchiladas", "fajitas", "kebabs", "kebab", "meatballs", "flatbread", "pizza",
+              "stir", "fry", "hash", "shakshuka", "burritos", "burrito", "lasagna", "risotto", "tagine", "pilaf", "falafel", "hummus"}
+
+
+def broad_query(recipe):
+    """The dish, not the name: "Coconut Sweet Potato & Chickpea Curry" → "chickpea curry"."""
+    title = re.sub(r"\s*\([^)]*\)", "", recipe["title"]).replace("&", " ").replace("-", " ")
+    m = re.search(r"\(([^)]+)\)", recipe["title"])
+    if m:                                       # an Arabic dish with an English gloss: search the gloss's dish
+        title = m.group(1)
+    words = [w for w in re.findall(r"[A-Za-z]+", title)]
+    for i in range(len(words) - 1, -1, -1):
+        if words[i].lower() in DISH_WORDS:
+            start = max(0, i - 1)
+            return " ".join(words[start:i + 1]).lower()
+    return " ".join(words[-2:]).lower() + " food"
+
+
+def queue(limit, retry_now=False):
     os.makedirs(INBOX, exist_ok=True)
     book = json.load(open(RECIPES))
     skip = load_skip()
-    retry_before = (datetime.date.today() - datetime.timedelta(days=30)).isoformat()
+    retry_before = (datetime.date.today() - datetime.timedelta(days=0 if retry_now else 30)).isoformat()
     waiting = {f[:-5] for f in os.listdir(INBOX) if f.endswith(".json") and f != "choices.json"}
     todo = [r for r in book["recipes"] if not r.get("photo") and r["id"] not in waiting
             and skip.get(r["id"], "") <= retry_before][:limit]
     done = 0
     for r in todo:
         q = query_for(r)
-        if r["id"] in skip:                   # second try: the plain dish name, e.g. "chicken pot pie"
-            q = re.sub(r"\s*\([^)]*\)", "", r["title"]).replace("&", " ").strip()
+        if r["id"] in skip:                   # second try: the kind of dish, e.g. "chickpea curry"
+            q = broad_query(r)
         params = {"q": q, "license_type": "commercial,modification", "mature": "false", "page_size": COLS * ROWS}
         doc = None
         for attempt in range(3):              # Openverse has the odd 5xx; retry, then move on
@@ -187,7 +207,7 @@ def apply(choices_path):
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "queue":
         limit = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else 120
-        queue(limit)
+        queue(limit, retry_now="--retry-now" in sys.argv)
     elif len(sys.argv) == 3 and sys.argv[1] == "apply":
         apply(sys.argv[2])
     else:
