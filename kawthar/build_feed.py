@@ -53,6 +53,11 @@ POLITICAL = re.compile("|".join([
     r"حزب ?الله", r"hezbollah", r"hizbullah", r"الحشد الشعبي", r"حشد شعبی", r"رئیسی", r"raisi", r"ترامب", r"ترمپ", r"\btrump\b",
     r"نتنياهو", r"netanyahu", r"صهيون", r"صهیون", r"zionis", r"اسرائيل", r"اسرائیل", r"\bisrael", r"انتخابات", r"election",
     r"الحوثي", r"houthi", r"انصار الله", r"\bhamas\b", r"حماس", r"سپاه", r"الحرس الثوري", r"\birgc\b", r"\bbiden\b", r"بايدن",
+    r"خمنائي", r"صواريخ", r"صاروخ", r"الراية الصفراء", r"المقاومة", r"مقاومة", r"السيد القائد",
+]), re.I)
+# Hate chants: one is enough to keep an artist out of Kawthar altogether.
+HATE = re.compile("|".join([
+    r"يهود", r"یهود", r"\byahud", r"\bjews?\b", r"خيبر خيبر", r"khaybar khaybar", r"khyber khyber", r"الموت ل", r"مرگ بر", r"death to",
 ]), re.I)
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
       "media": "http://search.yahoo.com/mrss/", "itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"}
@@ -309,10 +314,14 @@ NEGATIVE = re.compile(r"ahmadi|khuddam|bohra|dawat|fatemi|ismaili|aga khan|hanba
                       r"صحيح البخاري|صحيح مسلم|السلف|ابن تيمية|الوهاب", re.I)
 
 
+PERSIAN_WORDS = re.compile(r"(?:^|\s)(?:را|که|است|از|می|برای|این|آن|های|بی|با|شد|کرد|دلم|جانم)(?=\s|$)")
+
+
 def guess_language(text):
-    if re.search(r"[ٹڈڑںےہ]", text):
+    if re.search(r"[ٹڈڑںے]", text):
         return "ur"
-    if re.search(r"[پچژگکی]", text):
+    # Iraqi Arabic writes گ and چ too, so Persian needs پ/ژ or its own little words.
+    if len(re.findall(r"[پژ]", text)) >= 2 or len(PERSIAN_WORDS.findall(text)) >= 2:
         return "fa"
     if re.search(r"[\u0600-\u06FF]", text):
         return "ar"
@@ -391,71 +400,204 @@ def discover(known_feeds, dismissed):
 
 # ---------------------------------------------------------------- Apple Music
 
-AM_STOREFRONTS = ["iq", "kw", "us"]
+AM_STOREFRONTS = ["iq", "lb", "kw", "us"]
+# Discovery: latmiyat first, then nauha in Persian and Urdu, across the
+# storefronts where Shia communities listen.
+AM_TERMS = {
+    "ar": (["لطمية", "لطميات", "رادود", "نعي", "يا حسين", "كربلاء", "عاشوراء", "أبا الفضل", "زينب", "الزهراء", "مشاية",
+            "الأربعين", "موكب", "هيئة", "عزاء", "حسيني", "الطف", "رقية", "أم البنين", "يا علي", "مولد الزهراء", "قصيدة حسينية"],
+           ["lb", "iq", "kw", "bh", "sa", "ae", "qa", "om", "us", "gb"]),
+    "fa": (["نوحه", "مداحی", "روضه", "حسین", "کربلا", "محرم", "زمینه", "واحد"], ["us", "gb", "ae", "de"]),
+    "ur": (["noha", "nauha", "manqabat", "marsiya", "ya hussain", "matam", "نوحہ", "منقبت"], ["pk", "in", "us", "gb"]),
+}
+# A reciter's own titles must speak of the Ahl al-Bayt, mourning or praise.
+AM_SIGNS = re.compile(
+    r"حسين|الحسين|كربلاء|كربلا|زينب|الزهراء|زهراء|العباس|عباس|ابا الفضل|أبا الفضل|لطمي|نعي|عزاء|محرم|عاشوراء|الطف|رقية|سكينة|"
+    r"الأكبر|الاكبر|القاسم|المهدي|البقيع|الأربعين|اربعين|مشاية|علقمة|حيدر|المرتضى|الكفيل|أم البنين|ام البنين|يا علي|مولاي|"
+    r"الرضا|الكاظم|الجواد|الحسن|السجاد|الامام|الإمام|شهيد|مظلوم|"
+    r"حسین|کربلا|زینب|عباس|نوحه|مداحی|روضه|زهرا|اربعین|ابالفضل|عاشورا|رقیه|مهدی|امام|"
+    r"نوحہ|منقبت|ماتم|مولا|"
+    r"hussain|husain|hussein|karbala|abbas|zainab|zehra|zahra|noha|nauha|manqabat|marsiya|matam|muharram|ashura|maula|mola|ya ali|imam|sakina|ali asghar|qasim",
+    re.I)
 
 
 def itunes(params):
-    raw = fetch("https://itunes.apple.com/search?" + urllib.parse.urlencode(params), tries=2, timeout=20)
-    time.sleep(3.1)  # ~20 calls a minute
-    try:
-        return json.loads(raw).get("results", []) if raw else []
-    except ValueError:
-        return []
+    for attempt in range(3):
+        raw = fetch("https://itunes.apple.com/search?" + urllib.parse.urlencode(params), tries=1, timeout=25)
+        time.sleep(3.3)  # Apple allows about 20 calls a minute
+        if raw:
+            try:
+                return json.loads(raw).get("results", [])
+            except ValueError:
+                return []
+        time.sleep(20 * (attempt + 1))  # throttled: back off
+    return []
 
 
 def itunes_lookup(params):
-    raw = fetch("https://itunes.apple.com/lookup?" + urllib.parse.urlencode(params), tries=2, timeout=20)
-    time.sleep(3.1)
-    try:
-        return json.loads(raw).get("results", []) if raw else []
-    except ValueError:
-        return []
+    for attempt in range(3):
+        raw = fetch("https://itunes.apple.com/lookup?" + urllib.parse.urlencode(params), tries=1, timeout=25)
+        time.sleep(3.3)
+        if raw:
+            try:
+                return json.loads(raw).get("results", [])
+            except ValueError:
+                return []
+        time.sleep(20 * (attempt + 1))
+    return []
 
 
-def apple_music(previous):
-    """Official latmiyat on Apple Music: each configured reciter's artist id and
-    newest songs, with 30-second previews, from the free iTunes Search API."""
+def am_songs(artist_id, storefronts):
+    for cc in storefronts:
+        res = itunes_lookup({"id": artist_id, "entity": "song", "limit": 80, "sort": "recent", "country": cc})
+        songs = [r for r in res if r.get("wrapperType") == "track" and r.get("kind") == "song" and r.get("previewUrl")]
+        if songs:
+            return songs, cc
+    return [], None
+
+
+# Names that say "reciter" (or a mourning hall), and names that say "not for this shelf".
+AM_NAME_SIGNS = re.compile(r"رادود|الملا|ملا |كربلائ|كربلاي|الحسيني|حسيني|هيئة|موكب|حسينية|radood|rawadeed|mulla|karbala|husseini|hussaini", re.I)
+AM_NAME_NOT = re.compile(r"أطفال|اطفال|للأطفال|\bkids\b|children|karaoke|كاريوكي|صوفي|sufi|instrumental|موسيقى", re.I)
+AM_POP = {"Pop", "Arabic Pop", "Khaleeji", "Egyptian Pop", "Hip-Hop/Rap", "Dance", "Rock", "Alternative", "R&B/Soul",
+          "Electronic", "Tarab", "Singer/Songwriter", "Soundtrack"}
+
+
+def am_judge(name, songs, hits=0):
+    """'accept' when an artist's releases are Shia mourning or praise recitation:
+    enough of their own titles or albums speak of the Ahl al-Bayt, or they keep
+    turning up in Shia searches (`hits` distinct tracks) without being a pop act.
+    Political anthems and hate chants are removed song by song."""
+    if not songs or AM_NAME_NOT.search(name):
+        return "reject", []
+    full = [f"{s.get('trackName', '')} {s.get('collectionName', '')}" for s in songs]
+    if any(HATE.search(t) for t in full):
+        return "political", []
+    clean = [s for s in songs if not POLITICAL.search(f"{s.get('trackName', '')} {s.get('collectionName', '')}")]
+    if len(clean) < len(songs) * 0.6:
+        return "political", []
+    # The artist's own name ("Hussein …") and featured names say nothing about the song.
+    own = {name, songs[0].get("artistName", "")} - {""}
+    def bare(t):
+        t = re.sub(r"[(\[](?:feat|ft|مع)\.?[^)\]]*[)\]]", " ", t, flags=re.I)
+        for n in own:
+            t = re.sub(re.escape(n), " ", t, flags=re.I)
+        return t
+    share = sum(1 for t in full if AM_SIGNS.search(bare(t))) / len(full)
+    genres = [s.get("primaryGenreName", "") for s in songs]
+    main_genre = max(set(genres), key=genres.count)
+    pop = main_genre in AM_POP
+    named = bool(AM_NAME_SIGNS.search(name) or AM_NAME_SIGNS.search(songs[0].get("artistName", "")))
+    if pop:
+        return ("accept", clean) if share >= 0.5 or (named and share >= 0.2) else ("reject", [])
+    if share >= 0.3 or (named and share >= 0.03):
+        return "accept", clean
+    if share >= 0.08 and (main_genre == "Islamic" or hits >= 2):
+        return "accept", clean
+    return "reject", []
+
+
+def am_kind_lang(songs, hint_lang):
+    text = " ".join(s.get("trackName", "") for s in songs[:30])
+    lang = guess_language(text)
+    if lang == "en" and hint_lang == "ur":
+        lang = "ur"   # nauha titles are often in Roman Urdu
+    happy = sum(1 for s in songs if re.search(r"مولد|ميلاد|مواليد|أفراح|افراح|فرح|عيد|مدد|ولادة|میلاد|جشن|عید|manqabat|qasida|منقبت", s.get("trackName", ""), re.I))
+    kind = "madh" if happy > len(songs) * 0.5 else ("latmiya" if lang == "ar" else "noha")
+    return kind, lang
+
+
+def am_entry(artist_id, name, songs, cc, kind, lang, extra=None):
+    def art(u):
+        return (u or "").replace("100x100bb", "600x600bb")
+    e = {
+        "id": f"am-{artist_id}", "artistId": str(artist_id), "name": name, "lang": lang, "kind": kind, "storefront": cc,
+        "url": songs[0].get("artistViewUrl"), "image": art(songs[0].get("artworkUrl100")),
+        "songs": [{
+            "id": str(s["trackId"]), "title": s.get("trackName"), "album": s.get("collectionName"),
+            "artwork": art(s.get("artworkUrl100")), "preview": s.get("previewUrl"),
+            "duration": int((s.get("trackTimeMillis") or 0) / 1000) or None, "released": (s.get("releaseDate") or "")[:10],
+            "url": s.get("trackViewUrl"),
+        } for s in songs[:60]],
+    }
+    e.update(extra or {})
+    return e
+
+
+def apple_music(state, discover):
+    """Latmiyat and nauha on Apple Music: the curated reciters (applemusic.json)
+    plus, weekly, every artist discovered by searching the catalogue whose
+    own releases are Shia mourning or praise recitation."""
     cfg = load(os.path.join(HERE, "applemusic.json"), {"artists": []})
-    known = {a.get("term"): a for a in previous.get("artists", [])}
-    out = []
+    judged = state.setdefault("judged", {})
+    found = {}   # artistId -> (name, hint_lang, storefronts)
+
+    # 1. Curated names.
+    curated = {}
     for a in cfg["artists"]:
         names = {norm(n) for n in a.get("match", [])}
-        artist = None
         for cc in AM_STOREFRONTS:
             hits = itunes({"term": a["term"], "entity": "musicArtist", "media": "music", "country": cc, "limit": 10})
-            artist = next((h for h in hits if norm(h.get("artistName", "")) in names), None)
-            if artist:
+            hit = next((h for h in hits if norm(h.get("artistName", "")) in names), None)
+            if hit:
+                curated[str(hit["artistId"])] = a
+                found[str(hit["artistId"])] = (hit["artistName"], a.get("lang"), [cc] + [c for c in AM_STOREFRONTS if c != cc])
                 break
-        if not artist:
-            log("  apple music: no artist for", a["term"])
-            if a["term"] in known:
-                out.append(known[a["term"]])   # keep what we had
+
+    # 2. Discovery (weekly): search the catalogue, collect candidate artists.
+    if discover:
+        counts = {}   # artistId -> distinct Shia-titled tracks seen in searches
+        for lang, (terms, storefronts) in AM_TERMS.items():
+            for term in terms:
+                for cc in storefronts:
+                    for s in itunes({"term": term, "media": "music", "entity": "song", "limit": 200, "country": cc}):
+                        aid = str(s.get("artistId") or "")
+                        if not aid or "&" in s.get("artistName", ""):
+                            continue   # duets list their own artists separately
+                        if aid not in found:
+                            found[aid] = (s.get("artistName", ""), lang, [cc])
+                        elif cc not in found[aid][2]:
+                            found[aid][2].append(cc)
+                        if AM_SIGNS.search(f"{s.get('trackName', '')} {s.get('collectionName', '')}"):
+                            counts.setdefault(aid, set()).add(s.get("trackId"))
+            log(f"  apple music discovery ({lang}): {len(found)} artists so far")
+        # Only artists that came up more than once with Shia titles are worth a look.
+        for aid in list(found):
+            if aid not in curated and len(counts.get(aid, ())) < 1:
+                found.pop(aid)
+        state["hits"] = {aid: len(v) for aid, v in counts.items()}
+
+    # 3. Judge new artists; refresh the songs of accepted ones.
+    previous = {a["artistId"]: a for a in state.get("artists", [])}
+    out = []
+    for aid, (name, hint, storefronts) in found.items():
+        verdict = judged.get(aid, {})
+        if aid not in curated and verdict.get("v") in ("reject", "political") and days_ago(verdict.get("at", "2000-01-01T00:00:00Z")) < 90:
             continue
-        songs, cc_used = [], None
-        for cc in AM_STOREFRONTS:
-            res = itunes_lookup({"id": artist["artistId"], "entity": "song", "limit": 60, "sort": "recent", "country": cc})
-            songs = [r for r in res if r.get("wrapperType") == "track" and r.get("kind") == "song"]
-            if songs:
-                cc_used = cc
-                break
-        if not songs:
+        songs, cc = am_songs(aid, storefronts[:3])
+        if aid in curated:
+            v, clean = ("accept", [s for s in songs if not POLITICAL.search(s.get("trackName", ""))])
+        else:
+            v, clean = am_judge(name, songs, state.get("hits", {}).get(aid, 0))
+        judged[aid] = {"v": v, "at": iso(NOW), "name": name}
+        if v != "accept" or len(clean) < 3:
             continue
-        def art(u):
-            return (u or "").replace("100x100bb", "600x600bb")
-        out.append({
-            "id": f"am-{artist['artistId']}", "term": a["term"], "artistId": str(artist["artistId"]),
-            "name": artist.get("artistName"), "name_ar": a.get("name_ar"), "lang": a.get("lang"), "kind": a.get("kind"),
-            "url": artist.get("artistLinkUrl"), "storefront": cc_used,
-            "image": art(songs[0].get("artworkUrl100")),
-            "songs": [{
-                "id": str(s["trackId"]), "title": s.get("trackName"), "album": s.get("collectionName"),
-                "artwork": art(s.get("artworkUrl100")), "preview": s.get("previewUrl"),
-                "duration": int((s.get("trackTimeMillis") or 0) / 1000) or None, "released": (s.get("releaseDate") or "")[:10],
-                "url": s.get("trackViewUrl"),
-            } for s in songs if s.get("previewUrl")],
-        })
-        log(f"  apple music: {a['term']} → {artist.get('artistName')} ({len(songs)} songs, {cc_used})")
-    return {"updated": iso(NOW), "artists": out}
+        kind, lang = am_kind_lang(clean, hint)
+        c = curated.get(aid)
+        if c:
+            kind, lang = c.get("kind", kind), c.get("lang", lang)
+        out.append(am_entry(aid, name, clean, cc, kind, lang, {"name_ar": c.get("name_ar")} if c and c.get("name_ar") else None))
+    # Keep accepted artists that weren't searched this time (daily runs).
+    have = {a["artistId"] for a in out}
+    out += [a for aid, a in previous.items() if aid not in have and judged.get(aid, {}).get("v") == "accept"]
+    # One entry per reciter even if Apple lists them twice ("حسين خير الدين" / "حسين خيرالدين").
+    seen = {}
+    for a in sorted(out, key=lambda a: -len(a["songs"])):
+        seen.setdefault(norm(a["name"]).replace(" ", ""), a)
+    out = list(seen.values())
+    out.sort(key=lambda a: (a["artistId"] not in curated, -len(a["songs"])))
+    log(f"apple music: {len(out)} reciters ({sum(len(a['songs']) for a in out)} songs), {len(judged)} artists judged")
+    return {"updated": iso(NOW), "artists": out, "judged": judged}
 
 
 # ---------------------------------------------------------------- main
@@ -610,17 +752,23 @@ def main():
         if pid in sources or pid in set(studio.get("dismissed", [])):
             catalog["candidates"].pop(pid)
 
-    # Apple Music, refreshed daily (it changes slowly and the API is rate-limited).
+    # Apple Music: curated reciters daily; catalogue discovery weekly (Wednesdays)
+    # or on request — it takes a while at Apple's rate limit.
     am_path = os.path.join(PUBLIC, "applemusic.json")
-    previous_am = load(am_path, {"artists": []})
-    if os.environ.get("KAWTHAR_APPLE_MUSIC") == "1" or not previous_am.get("artists") or (NOW.hour < 3 and days_ago(previous_am.get("updated", "2000-01-01T00:00:00Z")) >= 1):
-        am = apple_music(previous_am)
+    am_state_path = os.path.join(HERE, "applemusic_state.json")
+    am_state = load(am_state_path, {})
+    am_discover = os.environ.get("KAWTHAR_APPLE_MUSIC") == "discover" or (NOW.weekday() == 2 and NOW.hour < 3)
+    am_due = am_discover or os.environ.get("KAWTHAR_APPLE_MUSIC") == "1" or not am_state.get("artists") \
+        or (NOW.hour < 3 and days_ago(am_state.get("updated", "2000-01-01T00:00:00Z")) >= 1)
+    if am_due:
+        am = apple_music(am_state, am_discover)
+        with open(am_state_path, "w", encoding="utf-8") as f:
+            json.dump(am, f, ensure_ascii=False, separators=(",", ":"))
         hidden = set(overrides.get("hidden_sources", []))
-        am["artists"] = [a for a in am["artists"] if a["id"] not in hidden]
+        public = {"updated": am["updated"], "artists": [a for a in am["artists"] if a["id"] not in hidden]}
         os.makedirs(PUBLIC, exist_ok=True)
         with open(am_path, "w", encoding="utf-8") as f:
-            json.dump(am, f, ensure_ascii=False, separators=(",", ":"))
-        log(f"apple music: {len(am['artists'])} reciters, {sum(len(a['songs']) for a in am['artists'])} songs")
+            json.dump(public, f, ensure_ascii=False, separators=(",", ":"))
 
     catalog["items"] = items
     catalog["updated"] = iso(NOW)

@@ -29,6 +29,14 @@
   {"term": "Farhan Ali Waris", "match": ["farhan ali waris"], "name_ar": "فرحان علي وارث", "lang": "ur", "kind": "noha"},
   {"term": "Shahid Baltistani", "match": ["shahid baltistani"], "name_ar": "شاهد بلتستاني", "lang": "ur", "kind": "noha"},
   {"term": "Mir Qasim Mir", "match": ["mir qasim mir"], "name_ar": "مير قاسم مير", "lang": "ur", "kind": "noha"},
-  {"term": "Ali Jee", "match": ["ali jee"], "name_ar": "علي جي", "lang": "ur", "kind": "noha"}
+  {"term": "Ali Jee", "match": ["ali jee"], "name_ar": "علي جي", "lang": "ur", "kind": "noha"},
+  {"term": "حسين خير الدين", "match": ["حسين خير الدين", "حسين خيرالدين", "hussein khaireddine", "hussein kheireddine"], "name_ar": "حسين خير الدين", "lang": "ar", "kind": "latmiya"},
+  {"term": "بسام شمص", "match": ["بسام شمص", "bassam shams"], "name_ar": "بسام شمص", "lang": "ar", "kind": "latmiya"},
+  {"term": "يوسف سعد العاملي", "match": ["يوسف سعد العاملي", "youssef saad alameli"], "name_ar": "يوسف سعد العاملي", "lang": "ar", "kind": "latmiya"},
+  {"term": "حسين عجمي", "match": ["حسين عجمي", "hussein ajami"], "name_ar": "حسين عجمي", "lang": "ar", "kind": "latmiya"},
+  {"term": "صادق زعيتر", "match": ["صادق زعيتر", "sadek zaiter", "sadiq zaiter"], "name_ar": "صادق زعيتر", "lang": "ar", "kind": "latmiya"},
+  {"term": "هيئة الروضتين", "match": ["هيئة الروضتين"], "name_ar": "هيئة الروضتين", "lang": "ar", "kind": "latmiya"},
+  {"term": "محمد الحلفي", "match": ["محمد الحلفي", "mohammed al helfi"], "name_ar": "محمد الحلفي", "lang": "ar", "kind": "latmiya"},
+  {"term": "السيد هاني الوداعي", "match": ["السيد هاني الوداعي", "sayed hani al wedaei"], "name_ar": "السيد هاني الوداعي", "lang": "ar", "kind": "latmiya"}
  ]
 }
