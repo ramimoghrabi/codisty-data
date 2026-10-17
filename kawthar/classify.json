@@ -17,6 +17,7 @@
   ],
   "kind_priority": [
    "live",
+   "kids",
    "quran",
    "ziyarah",
    "dua",
@@ -340,6 +341,23 @@
    "masaib",
    "masaeb",
    "masa'ib"
+  ],
+  "kids": [
+   "للاطفال",
+   "الاطفال",
+   "اطفال",
+   "كرتون",
+   "cartoon",
+   "kids",
+   "children",
+   "nursery",
+   "العصفوره",
+   "عصفوره",
+   "كوكو",
+   "koko",
+   "كودكان",
+   "كودك",
+   "بچه ها"
   ]
  },
  "kind_weak": {

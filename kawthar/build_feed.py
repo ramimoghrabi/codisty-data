@@ -44,6 +44,16 @@ NOW = dt.datetime.now(dt.timezone.utc)
 PER_SOURCE = 60          # items kept per source in the catalog
 FEED_PER_SOURCE = 30     # videos per channel published to the app
 FEED_PER_PODCAST = 12    # episodes per podcast published to the app
+# A reciter's whole channel (YouTube Data API, only when YOUTUBE_API_KEY is set):
+# kept in kawthar/archive/<id>.json, published as public/kawthar/sources/<id>.json
+# and opened by the app on the reciter's page. API data is refreshed within 30 days.
+YT_KEY = os.environ.get("YOUTUBE_API_KEY", "")
+ARCHIVE_DIR = os.path.join(HERE, "archive")
+ARCHIVE_KINDS = {"latmiya", "noha", "rawda", "madh"}
+ARCHIVE_MAX = 1500        # videos per channel
+ARCHIVE_REFRESH_DAYS = 25
+YT_DAILY_UNITS = 8000     # of the free 10,000
+FEED_POPULAR = 12         # each archived reciter's most-watched, added to the feed
 
 # Kawthar is a devotional library, not a news or politics channel. Titles that
 # name political figures or parties are held back automatically; an editor can
@@ -198,6 +208,74 @@ def youtube_items(src):
             "views": int(stats.get("views", 0)) if stats is not None else 0,
         })
     return out
+
+
+def iso_seconds(d):
+    m = re.fullmatch(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?", d or "")
+    if not m:
+        return 0
+    days, h, mi, sec = (int(x or 0) for x in m.groups())
+    return ((days * 24 + h) * 60 + mi) * 60 + sec
+
+
+class YouTubeAPI:
+    """The YouTube Data API with a daily budget (1 unit per list call)."""
+    def __init__(self, state):
+        today = NOW.strftime("%Y-%m-%d")
+        if state.get("day") != today:
+            state.update(day=today, used=0)
+        self.state = state
+
+    def left(self):
+        return YT_DAILY_UNITS - self.state["used"]
+
+    def get(self, path, params):
+        if not YT_KEY or self.left() <= 0:
+            return None
+        self.state["used"] += 1
+        raw = fetch(f"https://www.googleapis.com/youtube/v3/{path}?" + urllib.parse.urlencode({**params, "key": YT_KEY}),
+                    tries=2, timeout=25)
+        try:
+            return json.loads(raw) if raw else None
+        except ValueError:
+            return None
+
+
+def yt_archive(api, src):
+    """Every long-form upload of a channel — title, date, views, length.
+    UULF… is the channel's uploads without Shorts or live streams."""
+    vids, token, playlist = [], None, "UULF" + src["channel"][2:]
+    while len(vids) < ARCHIVE_MAX:
+        params = {"part": "snippet,contentDetails", "playlistId": playlist, "maxResults": 50}
+        if token:
+            params["pageToken"] = token
+        r = api.get("playlistItems", params)
+        if r is None and not vids and playlist.startswith("UULF"):
+            playlist, token = "UU" + src["channel"][2:], None   # older channels
+            continue
+        if r is None:
+            return None if not vids else vids
+        for it in r.get("items", []):
+            sn, cd = it.get("snippet", {}), it.get("contentDetails", {})
+            title = (sn.get("title") or "").strip()
+            if cd.get("videoId") and title not in ("Private video", "Deleted video"):
+                vids.append({"id": f"yt:{cd['videoId']}", "video": cd["videoId"], "title": title,
+                             "published": cd.get("videoPublishedAt") or sn.get("publishedAt") or iso(NOW)})
+        token = r.get("nextPageToken")
+        if not token:
+            break
+    for i in range(0, len(vids), 50):
+        chunk = vids[i:i + 50]
+        r = api.get("videos", {"part": "statistics,contentDetails", "id": ",".join(v["video"] for v in chunk), "maxResults": 50})
+        if r is None:
+            return None
+        stats = {x["id"]: x for x in r.get("items", [])}
+        for v in chunk:
+            x = stats.get(v["video"])
+            v["views"] = int(x.get("statistics", {}).get("viewCount", 0)) if x else -1
+            v["duration"] = iso_seconds(x.get("contentDetails", {}).get("duration")) if x else 0
+    # Gone, blocked, or a clip too short to listen to.
+    return [v for v in vids if v["views"] >= 0 and v["duration"] >= 60]
 
 
 def parse_duration(s):
@@ -770,6 +848,29 @@ def main():
         with open(am_path, "w", encoding="utf-8") as f:
             json.dump(public, f, ensure_ascii=False, separators=(",", ":"))
 
+    # Whole channels of the latmiya reciters (needs YOUTUBE_API_KEY).
+    archived = {}
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    api = YouTubeAPI(catalog.setdefault("yt_quota", {}))
+    reciters = [s for s in sources.values() if s.get("type") == "youtube" and s.get("channel") and not s.get("live_only")
+                and s.get("kind") in ARCHIVE_KINDS and s["id"] not in hidden_sources]
+    for s in reciters:
+        path = os.path.join(ARCHIVE_DIR, f"{s['id']}.json")
+        arc = load(path, None)
+        if YT_KEY and (arc is None or days_ago(arc.get("fetched", "2000-01-01T00:00:00Z")) >= ARCHIVE_REFRESH_DAYS) and api.left() > 80:
+            got = yt_archive(api, s)
+            if got is not None:
+                arc = {"id": s["id"], "channel": s["channel"], "fetched": iso(NOW), "items": got}
+                with open(path, "w", encoding="utf-8") as f:
+                    json.dump(arc, f, ensure_ascii=False, separators=(",", ":"))
+                log(f"  archive {s['id']}: {len(got)} videos ({api.state['used']} API units today)")
+        if arc and days_ago(arc.get("fetched", "2000-01-01T00:00:00Z")) < 30:
+            archived[s["id"]] = arc
+        elif arc and not YT_KEY:
+            os.remove(path)   # API data can't be kept past 30 days without a refresh
+    if archived:
+        log(f"archives: {len(archived)} reciters, {sum(len(a['items']) for a in archived.values())} videos")
+
     catalog["items"] = items
     catalog["updated"] = iso(NOW)
     with open(os.path.join(HERE, "catalog.json"), "w", encoding="utf-8") as f:
@@ -795,12 +896,44 @@ def main():
         if per[it["source"]] > cap and not it.get("dua"):
             continue
         out = {k: it[k] for k in ("id", "source", "type", "title", "published", "kind") if k in it}
-        for k in ("video", "audio", "thumb", "duration", "lang", "dua"):
+        for k in ("video", "audio", "thumb", "duration", "lang", "dua", "views"):
             if it.get(k):
                 out[k] = it[k]
         if it.get("occasions"):
             out["occasions"] = it["occasions"]
         feed_items.append(out)
+
+    # Archived reciters: their whole channel as its own file for the reciter page,
+    # and their most-watched latmiyat in the feed for "Most loved".
+    os.makedirs(os.path.join(PUBLIC, "sources"), exist_ok=True)
+    in_feed = {it["id"] for it in feed_items}
+    full = {}
+    for sid, arc in archived.items():
+        src = sources[sid]
+        lst = []
+        for v in arc["items"]:
+            if v["id"] in hidden_items or (POLITICAL.search(v["title"]) and v["id"] not in approved) or HATE.search(v["title"]):
+                continue
+            kind, occ, dua = classify(v["title"], src)
+            it = {"id": v["id"], "source": sid, "type": "youtube", "title": v["title"], "published": v["published"],
+                  "kind": kind, "video": v["video"], "views": v["views"], "duration": v["duration"], "lang": (src.get("languages") or ["ar"])[0]}
+            if occ:
+                it["occasions"] = occ
+            if dua:
+                it["dua"] = dua
+            lst.append(it)
+        lst.sort(key=lambda x: x["published"], reverse=True)
+        with open(os.path.join(PUBLIC, "sources", f"{sid}.json"), "w", encoding="utf-8") as f:
+            json.dump({"id": sid, "updated": arc["fetched"], "items": lst}, f, ensure_ascii=False, separators=(",", ":"))
+        full[sid] = len(lst)
+        for it in sorted(lst, key=lambda x: -x["views"])[:FEED_POPULAR]:
+            if it["id"] not in in_feed:
+                feed_items.append(it)
+                in_feed.add(it["id"])
+    for name in os.listdir(os.path.join(PUBLIC, "sources")):
+        if name.endswith(".json") and name[:-5] not in full:
+            os.remove(os.path.join(PUBLIC, "sources", name))
+    feed_items.sort(key=lambda x: x["published"], reverse=True)
 
     recent = [it for it in feed_items if it["type"] == "youtube" and days_ago(it["published"]) <= 21]
     by_views = sorted(recent, key=lambda it: items[it["id"]].get("views", 0), reverse=True)
@@ -817,8 +950,24 @@ def main():
         ids = [it["id"] for it in feed_items if pred(it)][:n]
         return {"id": sid, "title_en": en, "title_ar": ar, "items": ids} if len(ids) >= 3 else None
 
+    country = {s["id"]: s.get("country") for s in sources.values()}
+    def latmiya_from(*cc):
+        return lambda i: i["kind"] in ("latmiya", "noha") and country.get(i["source"]) in cc
+
+    # The best-loved latmiyat: most watched, at most two per reciter so every voice is heard.
+    loved, per_src = [], {}
+    for it in sorted((i for i in feed_items if i["kind"] in ("latmiya", "noha") and i.get("views")), key=lambda i: -i["views"]):
+        if per_src.get(it["source"], 0) < 2:
+            per_src[it["source"]] = per_src.get(it["source"], 0) + 1
+            loved.append(it["id"])
+    popular = {"id": "loved", "title_en": "Most loved latmiyat", "title_ar": "اللطميات الأكثر استماعاً", "items": loved[:30]} if len(loved) >= 6 else None
+
     shelves = [s for s in [
         shelf("latmiyat", "New latmiyat", "أحدث اللطميات", lambda i: i["kind"] == "latmiya"),
+        popular,
+        shelf("lat-iq", "Iraqi latmiyat", "لطميات عراقية", latmiya_from("IQ")),
+        shelf("lat-lb", "Lebanese latmiyat", "لطميات لبنانية", latmiya_from("LB")),
+        shelf("lat-gulf", "Bahrain & the Gulf", "لطميات البحرين والخليج", latmiya_from("BH", "KW", "SA", "AE", "QA", "OM")),
         shelf("nauha", "Nauha & noha", "النوحيات", lambda i: i["kind"] == "noha"),
         shelf("rawda", "Rowzeh & masa'ib", "المصائب والروضة", lambda i: i["kind"] == "rawda"),
         shelf("majalis", "Majalis", "المجالس الحسينية", lambda i: i["kind"] == "majlis"),
@@ -835,7 +984,8 @@ def main():
 
     feed = {
         "version": 1, "generated": iso(NOW),
-        "sources": [{k: s.get(k) for k in ("id", "type", "name_en", "name_ar", "kind", "languages", "country", "image", "url") if s.get(k) is not None}
+        "sources": [{**{k: s.get(k) for k in ("id", "type", "name_en", "name_ar", "kind", "languages", "country", "image", "url") if s.get(k) is not None},
+                     **({"full": full[s["id"]]} if s["id"] in full else {})}
                     for s in pub_sources] + [{"id": "archive", "type": "archive", "name_en": "Internet Archive", "name_ar": "أرشيف الإنترنت",
                                               "kind": "majlis", "languages": ["ur"], "url": "https://archive.org"}],
         "items": feed_items,

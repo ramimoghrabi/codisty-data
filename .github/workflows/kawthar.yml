@@ -41,6 +41,7 @@ jobs:
         env:
           KAWTHAR_DISCOVER: ${{ (inputs.discover && '1') || '' }}
           KAWTHAR_APPLE_MUSIC: ${{ inputs.apple_music }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           KAWTHAR_SITE: https://orange-nightingale-935847.hostingersite.com
         run: python kawthar/build_feed.py
       - id: commit
@@ -50,6 +51,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add kawthar/catalog.json public/kawthar
           if [ -f kawthar/applemusic_state.json ]; then git add kawthar/applemusic_state.json; fi
+          if [ -d kawthar/archive ]; then git add -A kawthar/archive; fi
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -m "Kawthar library $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
