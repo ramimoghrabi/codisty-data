@@ -106,6 +106,24 @@ def broad_query(recipe):
     return " ".join(words[-2:]).lower() + " food"
 
 
+def search(rid, q):
+    """Openverse results for q; "limit" when the daily allowance is used up."""
+    params = {"q": q, "license_type": "commercial,modification", "mature": "false", "page_size": COLS * ROWS}
+    for attempt in range(3):                  # Openverse has the odd 5xx; retry, then move on
+        try:
+            doc = json.loads(get(SEARCH + urllib.parse.urlencode(params)))
+            time.sleep(3.5)                   # stay under 20 searches a minute
+            return doc
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                return "limit"
+            print(f"  {rid}: Openverse error {e.code}, try {attempt + 1} of 3")
+        except Exception as e:
+            print(f"  {rid}: {type(e).__name__}, try {attempt + 1} of 3")
+        time.sleep(10 * (attempt + 1))
+    return None
+
+
 def queue(limit, retry_now=False):
     os.makedirs(INBOX, exist_ok=True)
     book = json.load(open(RECIPES))
@@ -119,27 +137,20 @@ def queue(limit, retry_now=False):
         q = query_for(r)
         if r["id"] in skip:                   # second try: the kind of dish, e.g. "chickpea curry"
             q = broad_query(r)
-        params = {"q": q, "license_type": "commercial,modification", "mature": "false", "page_size": COLS * ROWS}
-        doc = None
-        for attempt in range(3):              # Openverse has the odd 5xx; retry, then move on
-            try:
-                doc = json.loads(get(SEARCH + urllib.parse.urlencode(params)))
+        # Long names rarely match anything: fall back to the kind of dish ("chickpea curry").
+        queries = [q] + [b for b in [broad_query(r)] if b.lower() != q.lower()]
+        results, limited = [], False
+        for q in queries:
+            doc = search(r["id"], q)
+            if doc == "limit":
+                limited = True
                 break
-            except urllib.error.HTTPError as e:
-                if e.code == 429:
-                    break
-                print(f"  {r['id']}: Openverse error {e.code}, try {attempt + 1} of 3")
-                time.sleep(10 * (attempt + 1))
-            except Exception as e:
-                print(f"  {r['id']}: {type(e).__name__}, try {attempt + 1} of 3")
-                time.sleep(10 * (attempt + 1))
-        time.sleep(3.5)                       # stay under 20 searches a minute
-        if doc is None:
-            if attempt < 2:                   # left the loop early: the daily limit
-                print("  Openverse daily limit reached; the rest wait for the next run")
+            results = (doc or {}).get("results", [])[:COLS * ROWS]
+            if len(results) >= 3:
                 break
-            continue
-        results = doc.get("results", [])[:COLS * ROWS]
+        if limited:
+            print("  Openverse daily limit reached; the rest wait for the next run")
+            break
         thumbs, options = [], []
         for res in results:
             try:
