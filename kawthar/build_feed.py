@@ -27,6 +27,7 @@ import sys
 import time
 import unicodedata
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
@@ -388,6 +389,75 @@ def discover(known_feeds, dismissed):
     return found
 
 
+# ---------------------------------------------------------------- Apple Music
+
+AM_STOREFRONTS = ["iq", "kw", "us"]
+
+
+def itunes(params):
+    raw = fetch("https://itunes.apple.com/search?" + urllib.parse.urlencode(params), tries=2, timeout=20)
+    time.sleep(3.1)  # ~20 calls a minute
+    try:
+        return json.loads(raw).get("results", []) if raw else []
+    except ValueError:
+        return []
+
+
+def itunes_lookup(params):
+    raw = fetch("https://itunes.apple.com/lookup?" + urllib.parse.urlencode(params), tries=2, timeout=20)
+    time.sleep(3.1)
+    try:
+        return json.loads(raw).get("results", []) if raw else []
+    except ValueError:
+        return []
+
+
+def apple_music(previous):
+    """Official latmiyat on Apple Music: each configured reciter's artist id and
+    newest songs, with 30-second previews, from the free iTunes Search API."""
+    cfg = load(os.path.join(HERE, "applemusic.json"), {"artists": []})
+    known = {a.get("term"): a for a in previous.get("artists", [])}
+    out = []
+    for a in cfg["artists"]:
+        names = {norm(n) for n in a.get("match", [])}
+        artist = None
+        for cc in AM_STOREFRONTS:
+            hits = itunes({"term": a["term"], "entity": "musicArtist", "media": "music", "country": cc, "limit": 10})
+            artist = next((h for h in hits if norm(h.get("artistName", "")) in names), None)
+            if artist:
+                break
+        if not artist:
+            log("  apple music: no artist for", a["term"])
+            if a["term"] in known:
+                out.append(known[a["term"]])   # keep what we had
+            continue
+        songs, cc_used = [], None
+        for cc in AM_STOREFRONTS:
+            res = itunes_lookup({"id": artist["artistId"], "entity": "song", "limit": 60, "sort": "recent", "country": cc})
+            songs = [r for r in res if r.get("wrapperType") == "track" and r.get("kind") == "song"]
+            if songs:
+                cc_used = cc
+                break
+        if not songs:
+            continue
+        def art(u):
+            return (u or "").replace("100x100bb", "600x600bb")
+        out.append({
+            "id": f"am-{artist['artistId']}", "term": a["term"], "artistId": str(artist["artistId"]),
+            "name": artist.get("artistName"), "name_ar": a.get("name_ar"), "lang": a.get("lang"), "kind": a.get("kind"),
+            "url": artist.get("artistLinkUrl"), "storefront": cc_used,
+            "image": art(songs[0].get("artworkUrl100")),
+            "songs": [{
+                "id": str(s["trackId"]), "title": s.get("trackName"), "album": s.get("collectionName"),
+                "artwork": art(s.get("artworkUrl100")), "preview": s.get("previewUrl"),
+                "duration": int((s.get("trackTimeMillis") or 0) / 1000) or None, "released": (s.get("releaseDate") or "")[:10],
+                "url": s.get("trackViewUrl"),
+            } for s in songs if s.get("previewUrl")],
+        })
+        log(f"  apple music: {a['term']} → {artist.get('artistName')} ({len(songs)} songs, {cc_used})")
+    return {"updated": iso(NOW), "artists": out}
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -539,6 +609,18 @@ def main():
     for pid in list(catalog.get("candidates", {})):
         if pid in sources or pid in set(studio.get("dismissed", [])):
             catalog["candidates"].pop(pid)
+
+    # Apple Music, refreshed daily (it changes slowly and the API is rate-limited).
+    am_path = os.path.join(PUBLIC, "applemusic.json")
+    previous_am = load(am_path, {"artists": []})
+    if os.environ.get("KAWTHAR_APPLE_MUSIC") == "1" or not previous_am.get("artists") or (NOW.hour < 3 and days_ago(previous_am.get("updated", "2000-01-01T00:00:00Z")) >= 1):
+        am = apple_music(previous_am)
+        hidden = set(overrides.get("hidden_sources", []))
+        am["artists"] = [a for a in am["artists"] if a["id"] not in hidden]
+        os.makedirs(PUBLIC, exist_ok=True)
+        with open(am_path, "w", encoding="utf-8") as f:
+            json.dump(am, f, ensure_ascii=False, separators=(",", ":"))
+        log(f"apple music: {len(am['artists'])} reciters, {sum(len(a['songs']) for a in am['artists'])} songs")
 
     catalog["items"] = items
     catalog["updated"] = iso(NOW)
