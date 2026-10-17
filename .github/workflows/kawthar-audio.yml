@@ -1,0 +1,27 @@
+name: Kawthar audio
+# Every 15 minutes, asks Kawthar's server to bring in partners' audio
+# (Studio → Partners & audio). The key can only start the importer on the
+# server (a forced command in ~/.ssh/authorized_keys) and nothing else; all
+# the work and the pacing happen on the server.
+on:
+  schedule:
+    - cron: "4,19,34,49 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: kawthar-audio
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Run the importer on Kawthar's server
+        env:
+          KEY: ${{ secrets.KAWTHAR_WORKER_KEY }}
+        run: |
+          install -m 600 /dev/null ~/worker_key
+          printf '%s\n' "$KEY" > ~/worker_key
+          ssh -i ~/worker_key -p 65002 -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=30 \
+            u673038591@145.14.152.173 run
