@@ -1,11 +1,11 @@
 name: Kawthar audio
-# Every 15 minutes, asks Kawthar's server to bring in partners' audio
+# Every 5 minutes, asks Kawthar's server to bring in partners' audio
 # (Studio → Partners & audio). The key can only start the importer on the
 # server (a forced command in ~/.ssh/authorized_keys) and nothing else; all
 # the work and the pacing happen on the server.
 on:
   schedule:
-    - cron: "4,19,34,49 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
   repository_dispatch:
     types: [kawthar-audio]   # "Run now" in Kawthar Studio
