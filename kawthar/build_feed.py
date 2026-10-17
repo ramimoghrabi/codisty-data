@@ -500,12 +500,12 @@ def days_ago(stamp):
 
 def load_remote(url, default):
     raw = fetch(url, tries=2, timeout=15)
-    if not raw:
-        return default
     try:
-        return json.loads(raw)
+        data = json.loads(raw) if raw else None
     except ValueError:
-        return default
+        data = None
+    print(f"studio {url}: {'ok' if data is not None else 'UNREACHABLE, using defaults'}")
+    return default if data is None else data
 
 
 if __name__ == "__main__":
