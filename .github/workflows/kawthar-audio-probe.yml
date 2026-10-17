@@ -1,0 +1,11 @@
+name: Kawthar audio probe
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: pip install -q "yt-dlp[default]" && yt-dlp --version
+      - name: Can a GitHub server reach YouTube audio? (metadata only, nothing downloaded)
+        run: |
+          yt-dlp --simulate --no-warnings -f "140/bestaudio[ext=m4a]/bestaudio" --print "%(title)s | %(format_id)s %(ext)s %(abr)sk" "https://www.youtube.com/watch?v=jNQXAC9IVRw" || echo "BLOCKED"
