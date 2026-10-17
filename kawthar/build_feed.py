@@ -993,13 +993,23 @@ def main():
     os.makedirs(os.path.join(PUBLIC, "sources"), exist_ok=True)
     in_feed = {it["id"] for it in feed_items}
     full = {}
+    held_archive = []   # older videos strict mode or the political filter kept out — for the Studio's Review
     for sid, arc in archived.items():
         src = sources[sid]
         lst = []
         for v in arc["items"]:
-            if v["id"] in hidden_items or (POLITICAL.search(v["title"]) and v["id"] not in approved) or HATE.search(v["title"]):
+            if v["id"] in hidden_items or HATE.search(v["title"]):
                 continue
-            if src.get("strict") and v["id"] not in approved and not strict_ok(v["title"]):
+            reason = None
+            if POLITICAL.search(v["title"]) and v["id"] not in approved:
+                reason = "political"
+            elif src.get("strict") and v["id"] not in approved and not strict_ok(v["title"]):
+                reason = "check"
+            if reason:
+                if v["id"] not in items:
+                    held_archive.append({"id": v["id"], "source": sid, "type": "youtube", "title": v["title"], "video": v["video"],
+                                         "published": v["published"], "views": v["views"], "duration": v["duration"],
+                                         "kind": classify(v["title"], src)[0], "held": reason, "first_seen": arc.get("fetched")})
                 continue
             kind, occ, dua = classify(v["title"], src)
             exact = items.get(v["id"], {}).get("published")   # the live feed's exact date, when it has the video
@@ -1090,7 +1100,7 @@ def main():
         json.dump(feed, f, ensure_ascii=False, separators=(",", ":"))
     # The full catalog (hidden items included) for Kawthar Studio.
     with open(os.path.join(PUBLIC, "catalog.json"), "w", encoding="utf-8") as f:
-        json.dump({"updated": catalog["updated"], "sources": list(sources.values()), "items": list(items.values()),
+        json.dump({"updated": catalog["updated"], "sources": list(sources.values()), "items": list(items.values()) + held_archive,
                    "live": live, "candidates": list(catalog.get("candidates", {}).values())}, f, ensure_ascii=False, separators=(",", ":"))
     log(f"items {len(feed_items)} (catalog {len(items)}), live {sum(1 for l in live if l['video'])}/{len(live)}, "
         f"shelves {len(shelves)}, featured {len(featured)}, source failures {failures}")
