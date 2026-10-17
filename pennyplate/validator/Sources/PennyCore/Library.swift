@@ -119,11 +119,14 @@ public enum Library {
         public var version: Int
         public var updated: String
         public var shelves: [Shelf]
+        /// Switches the server can flip without an app update ("instacart": true).
+        public var features: [String: Bool]?
 
-        public init(version: Int = 0, updated: String = "", shelves: [Shelf] = []) {
+        public init(version: Int = 0, updated: String = "", shelves: [Shelf] = [], features: [String: Bool]? = nil) {
             self.version = version
             self.updated = updated
             self.shelves = shelves
+            self.features = features
         }
     }
 

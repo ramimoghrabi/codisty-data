@@ -96,12 +96,13 @@ def main():
         shelves.append({"id": f"season-{today:%Y-%m}", "kind": "season", "title": f"In season: {month} {SEASON_LOOK[today.month]}",
                         "subtitle": "Fresh, cheap and at its best right now", "recipes": [r["id"] for r in seasonal[:12]]})
 
+    features = load(os.path.join(PENNY, "features.json"), {})   # switches the app reads, e.g. {"instacart": true}
     path = os.path.join(PUBLIC, "feed.json")
     old = load(path, {"version": 0, "shelves": []})
-    if old.get("shelves") == shelves:
+    if old.get("shelves") == shelves and old.get("features", {}) == features:
         print("feed unchanged")
         return
-    doc = {"version": old.get("version", 0) + 1, "updated": today.isoformat(), "shelves": shelves}
+    doc = {"version": old.get("version", 0) + 1, "updated": today.isoformat(), "shelves": shelves, "features": features}
     with open(path, "w") as f:
         json.dump(doc, f, ensure_ascii=False, separators=(",", ":"))
     print(f"feed v{doc['version']}: " + "; ".join(f"{s['title']} ({len(s['recipes'])})" for s in shelves))
