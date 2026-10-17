@@ -1,0 +1,29 @@
+{
+ "id": "spinach-ricotta-lasagna-roll-ups",
+ "title": "Spinach & Ricotta Lasagna Roll-Ups",
+ "summary": "Creamy spinach-ricotta rolled in noodles, baked under marinara and melted mozzarella.",
+ "ingredients": [
+  "12 lasagna noodles",
+  "15 oz ricotta",
+  "10 oz frozen spinach, thawed and squeezed dry",
+  "1 egg",
+  "8 oz mozzarella, shredded",
+  "2 oz parmesan, grated",
+  "2 cloves garlic, minced",
+  "½ tsp ground nutmeg",
+  "½ tsp salt",
+  "¼ tsp black pepper",
+  "24 oz marinara sauce"
+ ],
+ "query": "Spinach Ricotta Lasagna Roll-Ups",
+ "options": [
+  {
+   "n": 1,
+   "title": "fields of lasgna noodles",
+   "credit": "MrVJTod · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/11693777@N00/5382564262",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5283/5382564262_d31502a8c0_b.jpg"
+  }
+ ]
+}

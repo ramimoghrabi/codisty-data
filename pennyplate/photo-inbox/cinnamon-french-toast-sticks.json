@@ -1,0 +1,43 @@
+{
+ "id": "cinnamon-french-toast-sticks",
+ "title": "Cinnamon French Toast Sticks",
+ "summary": "Golden, cinnamon-scented sticks for dipping in syrup, made from a few pantry basics.",
+ "ingredients": [
+  "8 slices bread, cut into thirds",
+  "3 eggs",
+  "¾ cup milk",
+  "1 tsp ground cinnamon",
+  "1 tsp vanilla extract",
+  "1 pinch salt",
+  "2 tbsp butter",
+  "¼ cup maple syrup",
+  "1 banana, sliced"
+ ],
+ "query": "Cinnamon French Toast Sticks",
+ "options": [
+  {
+   "n": 1,
+   "title": "Hawaiian Bread Cinnamon French Toast Sticks",
+   "credit": "lestercacho · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/93199613@N00/3926797535",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2484/3926797535_33d8ef6785.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Farm Rich Bakery Cinnamon French Toast Sticks",
+   "credit": "theimpulsivebuy · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27410581@N07/29443060692",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/8331/29443060692_316362ccf7.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Jimmy Dean Cinnamon French Toast & Sausage on a Stick",
+   "credit": "theimpulsivebuy · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27410581@N07/27844657531",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/7195/27844657531_636d75cff1.jpg"
+  }
+ ]
+}
