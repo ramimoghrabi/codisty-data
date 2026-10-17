@@ -1,0 +1,35 @@
+{
+ "id": "sheet-pan-lemon-dill-salmon-potatoes-asparagus",
+ "title": "Sheet-Pan Lemon-Dill Salmon with Potatoes & Asparagus",
+ "summary": "Crisp roasted potatoes, tender asparagus and flaky salmon, all on one pan.",
+ "ingredients": [
+  "1 ½ lb salmon fillets",
+  "1 ½ lb baby potatoes, halved",
+  "1 lb asparagus, trimmed",
+  "4 tbsp olive oil",
+  "1 tsp salt",
+  "½ tsp black pepper",
+  "3 cloves garlic, minced",
+  "2 lemons",
+  "2 tbsp fresh dill, chopped"
+ ],
+ "query": "Lemon-Dill Salmon with Potatoes Asparagus",
+ "options": [
+  {
+   "n": 1,
+   "title": "Cooking 2010",
+   "credit": "Girl Interrupted Eating · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35468144810@N01/5351815551",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5007/5351815551_73da96c7f8_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Captain Cook cruises",
+   "credit": "uphillblok · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35803445@N07/7107891675",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/7044/7107891675_0cd0012efa_b.jpg"
+  }
+ ]
+}
