@@ -1,1 +1,62 @@
-[]
+[
+ {
+  "id": "cozy-fall-comfort-2026-10-17",
+  "title": "🍂 Cozy Fall Comfort",
+  "subtitle": "Stews, soups and bakes for the first chilly evenings",
+  "until": "2026-10-24",
+  "recipes": [
+   "slow-cooker-beef-stew",
+   "split-pea-soup",
+   "creamy-potato-soup",
+   "shepherds-pie",
+   "chicken-noodle-soup",
+   "beef-bean-chili",
+   "slow-cooker-pulled-pork",
+   "chicken-pot-pie-skillet",
+   "smoky-sweet-potato-black-bean-chili",
+   "lasagna-soup",
+   "moroccan-chickpea-stew",
+   "coconut-sweet-potato-chickpea-curry"
+  ]
+ },
+ {
+  "id": "cook-once-eat-twice-2026-10-17",
+  "title": "🧊 Cook Once, Eat Twice",
+  "subtitle": "Big batches that freeze well, so one cook covers two nights",
+  "until": "2026-10-24",
+  "recipes": [
+   "freezer-turkey-meatballs-marinara",
+   "beef-bean-chili",
+   "shepherds-pie",
+   "baked-ziti",
+   "beef-enchiladas",
+   "breakfast-burritos",
+   "split-pea-soup",
+   "lasagna-soup",
+   "mini-meatloaves",
+   "pork-carnitas",
+   "spinach-ricotta-lasagna-roll-ups",
+   "egg-muffins"
+  ]
+ },
+ {
+  "id": "twenty-minute-dinners-2026-10-17",
+  "title": "⚡ 20-Minute Weeknights",
+  "subtitle": "Fast, cheap dinners for the busiest evenings",
+  "until": "2026-10-24",
+  "recipes": [
+   "sloppy-joes",
+   "bean-cheese-quesadillas",
+   "aglio-e-olio",
+   "egg-fried-rice",
+   "peanut-noodles",
+   "thai-basil-chicken",
+   "chicken-lettuce-wraps",
+   "upgraded-ramen",
+   "black-bean-tacos",
+   "huevos-rancheros",
+   "ginger-shrimp-bok-choy-noodles",
+   "chili-lime-shrimp-tacos"
+  ]
+ }
+]
