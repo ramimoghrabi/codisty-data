@@ -43,6 +43,10 @@ CUISINES = ["american", "mexican", "italian", "asian", "indian", "middleEastern"
 DIETS = ["vegetarian", "vegan", "glutenFree", "dairyFree", "highProtein", "pescatarian"]
 EQUIPMENT = ["oven", "stovetop", "slowCooker", "airFryer", "pressureCooker", "microwave", "blender"]
 TINTS = ["tomato", "amber", "sage", "lime", "berry", "clay", "olive", "sea", "plum"]
+def cap(s):
+    return s[:1].upper() + s[1:]
+
+
 CUISINE_NAMES = {"american": "an American", "mexican": "a Mexican", "italian": "an Italian", "asian": "an Asian",
                  "indian": "an Indian", "middleEastern": "a Middle Eastern", "mediterranean": "a Mediterranean", "breakfast": "a breakfast"}
 
@@ -198,8 +202,8 @@ def boost_briefs(recipes, rng):
            ("diet", f"A satisfying dinner that is {gaps[0][1]}, a different cuisine from the one above."),
            ("diet", f"A satisfying dinner that is {gaps[1][1]}, any cuisine."),
            ("diet", f"A satisfying dinner that is {gaps[2][1]}, any cuisine."),
-           ("cuisine", f"{CUISINE_NAMES[cuisines[0]].capitalize()} dinner not yet in the collection."),
-           ("cuisine", f"{CUISINE_NAMES[cuisines[1]].capitalize()} dinner, ready in 20 minutes or less."),
+           ("cuisine", f"{cap(CUISINE_NAMES[cuisines[0]])} dinner not yet in the collection."),
+           ("cuisine", f"{cap(CUISINE_NAMES[cuisines[1]])} dinner, ready in 20 minutes or less."),
            ("middleEastern", "A Middle Eastern home-cooking classic (Levantine, Gulf, Egyptian, Iraqi or North African) "
                              "not yet in the collection. Authentic name with a short English gloss in the title.")]
     if meals["breakfast"] <= meals["lunch"]:
@@ -232,13 +236,13 @@ def briefs(recipes, have_trends, rng, day=None):
     themes = {
         0: [trend, trend],
         1: [middle_east, ("diet", f"A satisfying dinner that is {gaps[0][1]}, any cuisine.")],
-        2: [("cuisine", f"{CUISINE_NAMES[others[0]].capitalize()} dinner, ready in 30 minutes or less."),
+        2: [("cuisine", f"{cap(CUISINE_NAMES[others[0]])} dinner, ready in 30 minutes or less."),
             ("lunch", "A make-ahead lunch that packs well (meal 'lunch').") if day.isocalendar()[1] % 2
             else ("breakfast", "A cheap, filling breakfast (meal 'breakfast', cuisine 'breakfast').")],
         3: [trend, ("diet", f"A satisfying dinner that is {gaps[1][1]}, any cuisine.")],
         4: [("fakeaway", "A 'fakeaway': a takeout favourite (pizza, burgers, orange chicken, shawarma, curry…) made at home for "
                          "far less. Say which takeout dish it copies in the summary."),
-            ("cuisine", f"{CUISINE_NAMES[others[1]].capitalize()} dinner everyone in a family would eat.")],
+            ("cuisine", f"{cap(CUISINE_NAMES[others[1]])} dinner everyone in a family would eat.")],
         5: [("batch", "A big-batch dinner for 6–8 that freezes well (tag 'freezer'), so cooking once covers two nights."),
             ("gadget", "A slow-cooker or air-fryer dinner (equipment slowCooker or airFryer) for a busy day.")],
         6: [("sunday", "A Sunday family dinner, one-pot or sheet-pan (tag it), that leaves leftovers for Monday's lunch."),
