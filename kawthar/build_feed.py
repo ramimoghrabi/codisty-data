@@ -160,8 +160,6 @@ def classify(title, source):
         kind = source["kind"]
     if kind == "ziyarah":
         kind = "dua"
-    if kind == "madh":
-        kind = "noha" if source.get("kind") == "noha" else "latmiya"
     occ = [o for o, ps in OCC.items() if any(p.search(text) for p in ps)]
     return kind, occ, dua
 
@@ -291,7 +289,7 @@ def live_video(channel):
 DISCOVER_TERMS = ["shia", "ahlulbayt", "ahl al-bayt", "majlis", "majalis", "muharram", "karbala", "imam hussain", "imam husayn",
                   "noha", "nauha", "nohay", "latmiya", "latmiyat", "ziyarat", "dua kumayl", "nahjul balagha", "azadari", "majlis e aza",
                   "اهل البيت", "مجالس حسينية", "محاضرات حسينية", "لطميات", "عاشوراء", "نعي", "مجلس عزاء", "رادود", "قصائد حسينية",
-                  "شیعه", "مداحی", "مجالس عزا", "نوحه", "عزاداری", "روضه", "نوحہ", "مجلس عزا"]
+                  "شیعه", "مداحی", "مجالس عزا", "نوحه", "عزاداری", "روضه", "روضه خوانی", "نوحہ", "مجلس عزا", "مصائب اهل البيت"]
 DISCOVER_COUNTRIES = ["us", "iq", "kw", "pk", "gb", "lb"]
 
 # A show is judged on its name, its description and its episode titles.
@@ -592,7 +590,9 @@ def main():
     shelves = [s for s in [
         shelf("latmiyat", "New latmiyat", "أحدث اللطميات", lambda i: i["kind"] == "latmiya"),
         shelf("nauha", "Nauha & noha", "النوحيات", lambda i: i["kind"] == "noha"),
+        shelf("rawda", "Rowzeh & masa'ib", "المصائب والروضة", lambda i: i["kind"] == "rawda"),
         shelf("majalis", "Majalis", "المجالس الحسينية", lambda i: i["kind"] == "majlis"),
+        shelf("madh", "Celebrations — mawalid", "المواليد والأفراح", lambda i: i["kind"] == "madh"),
         shelf("english", "Lectures in English", "محاضرات بالإنجليزية", lambda i: i["kind"] in ("lecture", "majlis") and i.get("lang") == "en"),
         shelf("arabic-lectures", "Arabic lectures", "محاضرات بالعربية", lambda i: i["kind"] in ("lecture", "majlis") and i.get("lang") == "ar"),
         shelf("urdu", "Urdu majalis & nauha", "باللغة الأردية", lambda i: i.get("lang") == "ur"),
