@@ -1,0 +1,28 @@
+{
+ "id": "cucumber-feta-labneh-wraps",
+ "title": "Cucumber, Feta & Labneh Wraps",
+ "summary": "Cool, crunchy wraps with creamy labneh, mint and za'atar. No cooking at all.",
+ "ingredients": [
+  "4 flour tortillas",
+  "¾ cup labneh",
+  "2 cucumbers, thinly sliced",
+  "1 cup cherry tomatoes, halved",
+  "4 oz feta, crumbled",
+  "¼ cup fresh mint",
+  "2 tsp za'atar",
+  "2 tbsp olive oil",
+  "1 lemon",
+  "⅛ tsp salt"
+ ],
+ "query": "labneh wraps",
+ "options": [
+  {
+   "n": 1,
+   "title": "Zaatar and Labneh Pizza, Chicken Shwarma, Foul Medammas - Oasis Bakery AUD3, AUD8, AUD5",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/5066956449",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4125/5066956449_52f1a3b44d_b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "id": "teriyaki-chicken-bowls",
+ "title": "Teriyaki Chicken Bowls",
+ "summary": "Glossy homemade teriyaki over rice with broccoli.",
+ "ingredients": [
+  "1.5 lb boneless chicken thighs, cubed",
+  "1 ½ cups long grain rice",
+  "1 crown broccoli, florets",
+  "½ cup soy sauce",
+  "¼ cup honey",
+  "2 tbsp rice vinegar",
+  "2 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 tbsp cornstarch",
+  "1 tbsp vegetable oil",
+  "1 tsp sesame seeds"
+ ],
+ "query": "chicken bowls",
+ "options": [
+  {
+   "n": 1,
+   "title": "Sukiya - Chicken bowl with seaweed",
+   "credit": "Nelo Hotsuma · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/63122283@N06/16013399239",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7574/16013399239_ba6c629bca_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "THAI and Laos food booth 198 from @3elephants.info - Tasty Kosher grilled chicken bowl with fresh made Ponzu & Sirriacha sauce by yours truly😋 - #YellowGreenFarmersMarket",
+   "credit": "YellowGreenFarmersMarket · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/82179181@N04/33374526910",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/758/33374526910_cfae3bee7a.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Kahiki Sesame Ginger Chicken and General Tso's Chicken Bowl & Roll",
+   "credit": "theimpulsivebuy · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27410581@N07/25493880430",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1583/25493880430_41a3138a05.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Chili's Chicken Bowl",
+   "credit": "Clotee Pridgen Allochuku · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44846110@N07/15265813114",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7509/15265813114_1feb3f362c_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Smart Made Mediterranean-Style Chicken Bowl",
+   "credit": "theimpulsivebuy · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27410581@N07/29596223853",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/8279/29596223853_3bf626771d.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Yum! Chicken bowl from @ChipotleTweets for lunch.",
+   "credit": "AngryJulieMonday · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/33731571@N07/7645300244",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8430/7645300244_f8463e6705.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Chicken Bowl",
+   "credit": "punctuated · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/8567662@N02/6781154478",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7062/6781154478_7e2278a0c9.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Project 365 281/365: Kid's blackened chicken bowl and chips & salsa = late lunch awesomeness @WahoosFishTaco",
+   "credit": "AngryJulieMonday · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/33731571@N07/6224526280",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6235/6224526280_2957edaf84.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Smart Made Mexican-Style Chicken Bowl",
+   "credit": "theimpulsivebuy · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27410581@N07/30110698222",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/8630/30110698222_81406bf565.jpg"
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "id": "riz-a-djej",
+ "title": "Riz a Djej (Lebanese Chicken & Rice)",
+ "summary": "Spiced rice with a little beef, topped with chicken and toasted almonds — a celebration dish on a budget.",
+ "ingredients": [
+  "1.5 lb chicken breast",
+  "1 onion, quartered",
+  "1 cinnamon stick",
+  "2 bay leaves",
+  "1 tsp salt",
+  "2 tbsp butter",
+  "½ lb ground beef",
+  "2 tsp seven spice",
+  "½ tsp ground cinnamon",
+  "2 cups long grain rice",
+  "¼ cup slivered almonds"
+ ],
+ "query": "chicken rice",
+ "options": [
+  {
+   "n": 1,
+   "title": "Grilled Chicken Rice - YourThai",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/444240498",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/218/444240498_79109dc853.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Hainanese Chicken Rice - Singapore Chom Chom",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/256158484",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/104/256158484_9c7db7a036.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Chicken Rice Noodles @ Pho 88",
+   "credit": "andrewarchy · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/22292214@N00/5611724473",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4113/5611724473_239c10e6a0_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Thai-style Hainanese Crispy Fried Chicken Rice, Iced Milk tea - Chilli Cafe AUD11.90",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/5098441431",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4145/5098441431_0f66a91636_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Thai-style Hainanese Crispy Fried Chicken Rice - Chilli Cafe AUD11.90",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/5099041818",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4132/5099041818_5bcf916994_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Gong Bao Chicken Rice - Sichuan House AUD9.80",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4304025123",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2778/4304025123_04815254be_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "We wanna eat chicken rice!",
+   "credit": "Takashi(aes256) · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/46151146@N04/11451164275",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3749/11451164275_ccec7d7c56_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Bean Jelly, Gong Bao Chicken Rice, Cumiin Lamb Ribs - Sichuan House",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4304028095",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4048/4304028095_fac308e0bc_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Garlicky bits - Chicken Rice - Coconut House AUD8.50",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3313103141",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3304/3313103141_2e1fc26824_b.jpg"
+  }
+ ]
+}

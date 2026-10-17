@@ -1,0 +1,31 @@
+{
+ "id": "minestrone",
+ "title": "Garden Minestrone",
+ "summary": "A pot full of vegetables, beans and pasta — eat the rainbow on a budget.",
+ "ingredients": [
+  "2 tbsp olive oil",
+  "1 onion, diced",
+  "2 carrots, diced",
+  "2 celery stalks, diced",
+  "1 zucchini, diced",
+  "3 cloves garlic, minced",
+  "1 (14.5 oz) can diced tomatoes",
+  "1 (15 oz) can kidney beans, drained",
+  "6 cups vegetable broth",
+  "1 tsp Italian seasoning",
+  "1 cup small pasta",
+  "2 cups spinach",
+  "1 tsp salt"
+ ],
+ "query": "garden minestrone food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Minestrone",
+   "credit": "dpotera · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/17304916@N00/3122286668",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3264/3122286668_b77f4ff6d4.jpg"
+  }
+ ]
+}

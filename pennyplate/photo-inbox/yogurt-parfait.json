@@ -1,0 +1,88 @@
+{
+ "id": "yogurt-parfait",
+ "title": "Honey Berry Yogurt Parfaits",
+ "summary": "Layers of yogurt, berries and toasted oats.",
+ "ingredients": [
+  "3 cups plain yogurt",
+  "1 pint strawberries, sliced",
+  "1 cup rolled oats",
+  "2 tbsp honey",
+  "2 tbsp butter",
+  "½ tsp ground cinnamon"
+ ],
+ "query": "yogurt parfaits food",
+ "options": [
+  {
+   "n": 1,
+   "title": "20111025-FNS-RBN-School Lunch",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6282545633",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6222/6282545633_233b8800d9_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "20111025-FNS-RBN-1864",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6283057112",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6019/6283057112_e412c2e5c8_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "20111025-FNS-RBN-School Lunch",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6282545047",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6239/6282545047_aa515577da_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Yogurt Parfait with Blueberries",
+   "credit": "Pen Waggener · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/46286575@N00/4903134042",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4123/4903134042_994963dd3e.jpg"
+  },
+  {
+   "n": 5,
+   "title": "20111025-FNS-RBN-School Lunch",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6283061566",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6107/6283061566_f2c6e9fc18_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "20111025-FNS-RBN-School Lunch",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6282545159",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6233/6282545159_cf310ba66d_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "20111025-FNS-RBN-1861",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6283057338",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6113/6283057338_97d59c295b_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "20111025-FNS-RBN-1916",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/6283061958",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6230/6283061958_4360ab9139_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Blueberry Yogurt Granola Parfait",
+   "credit": "Kitchen Life of a Navy Wife · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/51047615@N06/6942785198",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7083/6942785198_9615ae6d48_m.jpg"
+  }
+ ]
+}

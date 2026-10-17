@@ -1,0 +1,92 @@
+{
+ "id": "veggie-stir-fry-noodles",
+ "title": "Veggie Lo Mein",
+ "summary": "Slurpy noodles loaded with vegetables in a quick sauce.",
+ "ingredients": [
+  "12 oz spaghetti",
+  "2 tbsp vegetable oil",
+  "1 bell pepper, sliced",
+  "2 carrots, cut into matchsticks",
+  "2 cups shredded cabbage",
+  "3 green onions, sliced",
+  "2 cloves garlic, minced",
+  "¼ cup soy sauce",
+  "1 tbsp brown sugar",
+  "1 tbsp sesame oil"
+ ],
+ "query": "lo mein food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Chinese Food.",
+   "credit": "_Fidelio_ · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25560851@N04/4495805422",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4067/4495805422_428faf6ba2.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Chinese comfort food",
+   "credit": "LifeSupercharger · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/8047705@N02/5276530716",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5125/5276530716_bb2c078326_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Barb's cooking - Lo Mein w/BBQ Pork and Cauliflower w/bacon",
+   "credit": "roland",
+   "page": "https://www.flickr.com/photos/35034347371@N01/408660",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://live.staticflickr.com/1/408660_8be1835266_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Mmm... chicken lo mein",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/10715374483",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2891/10715374483_63e17b85f0_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Barb's cooking - Lo Mein w/BBQ Pork and Cauliflower w/bacon",
+   "credit": "roland",
+   "page": "https://www.flickr.com/photos/35034347371@N01/408658",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://live.staticflickr.com/1/408658_8c79b0cefc_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Homemade Shrimp Lo Mein",
+   "credit": "Rusty Clark ~ 100K Photos · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/23206546@N04/9280530880",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3674/9280530880_fe48d04129_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Beef Lo Mein",
+   "credit": "GbergT · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/59216116@N00/361438781",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/136/361438781_62747d9ea3.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Meal 4: Chinese food buffet.",
+   "credit": "mroach · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/73569497@N00/5199592708",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4112/5199592708_1b6529754e_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Snap! The Lo Mein Vice",
+   "credit": "Sean-Franc · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/16541534@N00/3277468600",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3460/3277468600_1a1de8f5a4_b.jpg"
+  }
+ ]
+}

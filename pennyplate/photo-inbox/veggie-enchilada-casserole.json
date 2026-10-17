@@ -1,0 +1,90 @@
+{
+ "id": "veggie-enchilada-casserole",
+ "title": "Veggie Enchilada Casserole",
+ "summary": "Layered like lasagna with beans, corn and lots of cheese.",
+ "ingredients": [
+  "12 corn tortillas",
+  "2 (10 oz) cans enchilada sauce",
+  "2 (15 oz) cans black beans, drained",
+  "1 cup frozen corn",
+  "1 bell pepper, diced",
+  "1 tsp ground cumin",
+  "2 cups shredded cheddar",
+  "½ cup sour cream"
+ ],
+ "query": "enchilada casserole",
+ "options": [
+  {
+   "n": 1,
+   "title": "Solar cooked chicken enchilada casserole",
+   "credit": "EBKauai · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/13470115@N08/5152902373",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1077/5152902373_744c7170f0.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Solar Chicken Enchilada Casserole",
+   "credit": "EBKauai · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/13470115@N08/5249969019",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5047/5249969019_379410c0cf_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Solar Cooked Chicken Enchilada Casserole",
+   "credit": "EBKauai · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/13470115@N08/5893150326",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6017/5893150326_a0215e2f1a_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Enchilada casserole",
+   "credit": "shawnzrossi · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/19517696@N00/529120841",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1191/529120841_43cce07530_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Chicken Enchilada Casserole",
+   "credit": "Jay Shouldol · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/67113020@N00/3954644276",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2471/3954644276_dcf19dfd3f_m.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Chicken Enchilada Casserole",
+   "credit": "Jay Shouldol · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/67113020@N00/3954776158",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2657/3954776158_1889f4fda1_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "chicken enchilada casserole and vegan brownie",
+   "credit": "JUL7777 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/58915463@N05/5472929698",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5217/5472929698_61dea9a929_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "chicken enchilada casserole",
+   "credit": "JUL7777 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/58915463@N05/5400075805",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5013/5400075805_e81c623b60.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Enchilada casserole!",
+   "credit": "wonderyort · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/11112304@N00/4940558875",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4093/4940558875_b8d426553c_b.jpg"
+  }
+ ]
+}

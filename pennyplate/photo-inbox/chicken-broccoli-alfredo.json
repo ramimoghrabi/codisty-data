@@ -1,0 +1,93 @@
+{
+ "id": "chicken-broccoli-alfredo",
+ "title": "Lighter Chicken & Broccoli Alfredo",
+ "summary": "Creamy without a gallon of cream — milk and parmesan do the work.",
+ "ingredients": [
+  "12 oz fettuccine",
+  "1 lb chicken breast, sliced",
+  "1 tbsp olive oil",
+  "1 crown broccoli, florets",
+  "2 tbsp butter",
+  "3 cloves garlic, minced",
+  "2 tbsp flour",
+  "2 cups milk",
+  "¾ cup grated parmesan",
+  "1 tsp salt",
+  "½ tsp black pepper"
+ ],
+ "query": "broccoli alfredo food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Lonely Dinner",
+   "credit": "sillygwailo · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35034348378@N01/218120989",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/72/218120989_dc4caeffc3_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Seafood Primavera",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/4488314520",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4052/4488314520_d3efaf44be_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Mmm...shrimp alfredo with broccoli",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/4640313012",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4059/4640313012_804627d9a9_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Mmm...leftovers",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/4642475378",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4054/4642475378_726094bccb_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Spaghettini Alfredo With Steamed Carrots and Broccoli and Garlic Bread",
+   "credit": "sillygwailo · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35034348378@N01/217372409",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/73/217372409_3492054e59_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Broccoli Alfredo with Parmesan",
+   "credit": "Merelymel13 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/62967061@N00/1470822007",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1206/1470822007_d839e482c6_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Alfredo Sauce",
+   "credit": "laurenbosak · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/47993825@N05/7306340216",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/7077/7306340216_4c59f762c1_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "broccoli red pepper alfredo",
+   "credit": "melissa_rae_dale · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/59975953@N00/535188523",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1384/535188523_85ccbded6c_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Spaghetti Squash",
+   "credit": "wellnesswildflower · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/145591593@N06/29913801012",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5012/29913801012_934365f6b8_b.jpg"
+  }
+ ]
+}

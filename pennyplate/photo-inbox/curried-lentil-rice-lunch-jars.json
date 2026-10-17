@@ -1,0 +1,87 @@
+{
+ "id": "curried-lentil-rice-lunch-jars",
+ "title": "Curried Lentil & Rice Lunch Jars",
+ "summary": "A sweet-and-savory lentil, rice, apple and raisin salad that gets better after a night in the fridge.",
+ "ingredients": [
+  "1 cup brown lentils",
+  "1 cup long grain rice",
+  "3 carrots, grated",
+  "1 apple, diced",
+  "½ cup raisins",
+  "1 red onion, finely diced",
+  "½ cup chopped parsley",
+  "¼ cup sliced almonds",
+  "¼ cup olive oil",
+  "2 lemons",
+  "2 tsp curry powder",
+  "1 tsp ground cumin",
+  "1 tsp salt"
+ ],
+ "query": "lentil rice",
+ "options": [
+  {
+   "n": 1,
+   "title": "lentil rice bento",
+   "credit": "gamene · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12670507@N02/6933079123",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7068/6933079123_192a8798bf_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Lightly curried lentil, rice and spinach soup",
+   "credit": "WordRidden · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/97844767@N00/152412044",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/47/152412044_b4b7962d8a_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "La Soulfood - Lentils, rice, beans and Red Snapper",
+   "credit": "bonho1962",
+   "page": "https://www.flickr.com/photos/60347638@N00/51778626503",
+   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "src": "https://live.staticflickr.com/65535/51778626503_288c15a136_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Mejadra (lentils, rice, fried onions).",
+   "credit": "neil conway · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30934989@N06/11942049476",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3774/11942049476_9a8af165c0.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Lentil rice, cauliflower and salad",
+   "credit": "wonderyort · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/11112304@N00/16116697328",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/7466/16116697328_5c75fe676e_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Lentils, Rice & Tomatos II",
+   "credit": "PakaLoeff · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44335001@N00/280037251",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/97/280037251_8ae8c01236_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Lentil rice and salad",
+   "credit": "wonderyort · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/11112304@N00/7902917072",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/8320/7902917072_924d5d99ed_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Lentils, Rice & Tomatos I",
+   "credit": "PakaLoeff · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44335001@N00/280037247",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/122/280037247_7ffb363508_b.jpg"
+  }
+ ]
+}

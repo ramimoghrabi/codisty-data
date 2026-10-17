@@ -1,0 +1,95 @@
+{
+ "id": "greek-chicken-gyro-pitas",
+ "title": "20-Minute Greek Chicken Gyro Pitas",
+ "summary": "Seared lemon-oregano chicken in warm pita with cool yogurt-cucumber sauce.",
+ "ingredients": [
+  "1 ½ lb chicken breast, thinly sliced",
+  "2 tbsp olive oil",
+  "2 tsp dried oregano",
+  "1 tsp paprika",
+  "1 tsp garlic powder",
+  "1 tsp salt",
+  "1 cup plain yogurt",
+  "1 cucumber, grated",
+  "1 lemon",
+  "2 cloves garlic, minced",
+  "2 tomatoes, sliced",
+  "1 red onion, thinly sliced",
+  "4 pita breads"
+ ],
+ "query": "gyro pitas food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Lamb giros in pita - Medallion Souvlaki and Cakes AUD9.50",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3464862583",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3641/3464862583_b603d154d3_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Beef and Lamb mixed Shawarma - insides - Oasis Bakery AUD8",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4631402241",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3407/4631402241_8aa75024bc_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Mmm... gyro kebabs",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/9094282773",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5448/9094282773_69b4f02311_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Beef and Lamb mixed Shawarma - Oasis Bakery AUD8",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4631999310",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4023/4631999310_c744547d35_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Mmm... gyros",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/7140164775",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8144/7140164775_b4e5d1def0_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Gyros",
+   "credit": "tsearcher2011 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/68117449@N08/10137670006",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3790/10137670006_7db65a3047_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Chicken Shwarma - Oasis Bakery AUD8",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/5067567554",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4106/5067567554_5d81014e31_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Gyros",
+   "credit": "roolrool · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/71317184@N00/4395882786",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4032/4395882786_d1c7dbc45c_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Mmm... gyros",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/9712150801",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3797/9712150801_503f10bee4_b.jpg"
+  }
+ ]
+}

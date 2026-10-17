@@ -1,0 +1,92 @@
+{
+ "id": "pumpkin-pie-oatmeal",
+ "title": "Pumpkin Pie Oatmeal",
+ "summary": "Creamy stovetop oats with pumpkin, cinnamon and crunchy walnuts. Tastes like dessert for pennies.",
+ "ingredients": [
+  "2 cups rolled oats",
+  "2 cups milk",
+  "2 cups water",
+  "1 (15 oz) can pumpkin purée",
+  "2 tbsp brown sugar",
+  "1 tsp ground cinnamon",
+  "¼ tsp ground nutmeg",
+  "¼ tsp salt",
+  "1 tsp vanilla extract",
+  "¼ cup chopped walnuts"
+ ],
+ "query": "pumpkin pie",
+ "options": [
+  {
+   "n": 1,
+   "title": "Pumpkin Pie",
+   "credit": "twoshortplanks · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/26679277@N00/305569680",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/109/305569680_10894faafe_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Pumpkin Pie Slice",
+   "credit": "TheCulinaryGeek · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/72949902@N00/5076305261",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4066/5076305261_09d8a88051_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Moms Pumpkin Pie at Prairie Grass Cafe in Northbrook",
+   "credit": "kurmanstaff · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/62558987@N07/15466693020",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3934/15466693020_a4a7d85655_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Slice of Pumpkin Pie",
+   "credit": "TheCulinaryGeek · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/72949902@N00/5076305433",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4087/5076305433_0da173f58c_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Pumpkin Pie Cupcake with Whipped Kreme & Candy Corn Gummy",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/3961100041",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3503/3961100041_2ebc2847e0_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "pumpkin pie",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/308410357",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/119/308410357_7ae646bd80_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Prairie Grass Cafe Pumpkin Pie",
+   "credit": "kurmanstaff · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/62558987@N07/15032099543",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7537/15032099543_0a2aa20355_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Pumpkin Pie from a *real* pumpkin",
+   "credit": "browniesfordinner · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/84688374@N00/2077699349",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2035/2077699349_789790e55a_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Pumpkin Pie Cupcakes",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/4974184726",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4112/4974184726_56c87a1b07_b.jpg"
+  }
+ ]
+}

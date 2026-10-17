@@ -1,0 +1,92 @@
+{
+ "id": "black-bean-tacos",
+ "title": "Crispy Black Bean Tacos",
+ "summary": "Smoky beans, crunchy cabbage and lime — a $1-a-serving favourite.",
+ "ingredients": [
+  "2 (15 oz) cans black beans, drained",
+  "1 tbsp vegetable oil",
+  "1 tsp ground cumin",
+  "1 tsp chili powder",
+  "½ tsp salt",
+  "12 corn tortillas",
+  "2 cups shredded cabbage",
+  "1 lime",
+  "½ cup salsa",
+  "¼ cup chopped cilantro"
+ ],
+ "query": "bean tacos",
+ "options": [
+  {
+   "n": 1,
+   "title": "Mmm... beef and bean tacos",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/15654743963",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8588/15654743963_a3e9eb4859_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Black bean tacos with mango salsa and avocado cream",
+   "credit": "wonderyort · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/11112304@N00/2525906303",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3189/2525906303_549ea1d5bf_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Mexicue brisket slider and pinto bean taco",
+   "credit": "rachelkramerbussel.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/33108296@N07/5227194398",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5081/5227194398_fee44f9c2d_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Black Bean Tacos (3)",
+   "credit": "TheHungryDudes · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/47854142@N04/5597022952",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5309/5597022952_bc572cbb73_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Black bean tacos",
+   "credit": "goblinbox_(queen_of_ad_hoc_bento) · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25977089@N00/6786814070",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7200/6786814070_7a9e56df96.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Garabatos Beans Tacos",
+   "credit": "El Gran Dee · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/13275668@N07/2393694348",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3079/2393694348_33b7331cab_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "black bean tacos",
+   "credit": "goblinbox_(queen_of_ad_hoc_bento) · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25977089@N00/25871634952",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1482/25871634952_3791509930_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Black Bean Tacos (6)",
+   "credit": "TheHungryDudes · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/47854142@N04/5597027980",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5023/5597027980_f465851d30_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Black Bean Tacos (1)",
+   "credit": "TheHungryDudes · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/47854142@N04/5596436209",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5067/5596436209_372d2d2d64_b.jpg"
+  }
+ ]
+}

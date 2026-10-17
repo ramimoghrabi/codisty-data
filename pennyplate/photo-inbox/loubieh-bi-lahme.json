@@ -1,0 +1,94 @@
+{
+ "id": "loubieh-bi-lahme",
+ "title": "Loubieh bi Lahme (Green Bean & Beef Stew)",
+ "summary": "Tender green beans in a tomato-beef stew with vermicelli rice.",
+ "ingredients": [
+  "1 lb beef stew meat, cubed",
+  "2 tbsp olive oil",
+  "1 onion, diced",
+  "4 cloves garlic, minced",
+  "2 (12 oz) bags frozen green beans",
+  "2 tbsp tomato paste",
+  "1 (28 oz) can crushed tomatoes",
+  "1 tsp seven spice",
+  "1 ½ tsp salt",
+  "2 tbsp butter",
+  "½ cup vermicelli",
+  "1 ½ cups long grain rice"
+ ],
+ "query": "beef stew",
+ "options": [
+  {
+   "n": 1,
+   "title": "Beef Stew",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/37188624",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/22/37188624_c48be2f7a0_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Beef stew",
+   "credit": "Burger Baroness · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/66787975@N00/367521922",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/104/367521922_e7a15fec1a_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Vegetable Beef Stew",
+   "credit": "Tobyotter · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/78428166@N00/3732916395",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2472/3732916395_ce8fc8f150_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Mmm... beef stew",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/13073820024",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7405/13073820024_44d6418a13_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Beef Stew!",
+   "credit": "Afroswede · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/51035768826@N01/1393493",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2/1393493_563e95c49a_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Beef stew with small potato dumplings and carrots",
+   "credit": "vauvau · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/98193606@N00/4311612078",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2761/4311612078_b04e25ed60_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Classic Beef Stew",
+   "credit": "TheGirlsNY · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/55768440@N00/5427043280",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5100/5427043280_c493cbf291_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Beef Stew",
+   "credit": "JuliaPayne1958 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/83133462@N05/8030121672",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8041/8030121672_3e092f0e1e.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Beef Stew",
+   "credit": "startcooking kathy & amandine · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70893713@N00/2760563712",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3157/2760563712_3859790569_m.jpg"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "fatteh-crispy-pita-chickpeas-garlic-yogurt",
+ "title": "Fatteh (Crispy Pita with Chickpeas & Garlic Yogurt)",
+ "summary": "A Levantine classic of crisp pita layered with warm spiced chickpeas and cool tahini yogurt.",
+ "ingredients": [
+  "4 pita breads, torn into pieces",
+  "3 tbsp olive oil",
+  "2 (15 oz) cans chickpeas, drained",
+  "1 tsp ground cumin",
+  "½ tsp paprika",
+  "2 cups plain yogurt",
+  "3 tbsp tahini",
+  "2 cloves garlic, crushed",
+  "1 lemon",
+  "1 tsp salt",
+  "1 tbsp butter",
+  "¼ cup slivered almonds",
+  "2 tbsp chopped parsley"
+ ],
+ "query": "garlic yogurt food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Garlic Yogurt Carrots",
+   "credit": "Laurel Fan · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/18295242@N00/100700269",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/37/100700269_692c0facab_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "k9093-1",
+   "credit": "USDAgov · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41284017@N08/8453554475",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8102/8453554475_6a130a1c3b_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Turkey Breast in a Paprika & Tomato Sauce",
+   "credit": "rexipe · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7352088@N08/1124524113",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1338/1124524113_da9d8ec648_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Spicy Baked Aubergine (Baingan Bharta)",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/753279896",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1258/753279896_330d4b06e5_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Palak Paneer (Pureed Spinach with cottage cheese)",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/1517531815",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2188/1517531815_d2551acc04_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Zeenats (my mums) Afghan Chicken",
+   "credit": "rexipe · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7352088@N08/931114730",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1027/931114730_afabc62d60.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Bento #43",
+   "credit": "chispita_666 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12477719@N00/1870378566",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2057/1870378566_593314094c_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Ingredients for chermoula",
+   "credit": "Ruth and Dave · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/95142644@N00/468846549",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/203/468846549_b6a052a04b_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Middle Eastern Lamb Pizza",
+   "credit": "basykes · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/11399912@N00/1332920803",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1368/1332920803_47deecccc9_b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "anda-bhurji",
+ "title": "Anda Bhurji (Spiced Indian Scrambled Eggs)",
+ "summary": "Soft eggs scrambled with onion, tomato, chile and warm spices, scooped up with naan. Dinner in 15 minutes.",
+ "ingredients": [
+  "2 tbsp vegetable oil",
+  "1 onion, finely diced",
+  "2 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 jalapeño, minced",
+  "½ tsp ground turmeric",
+  "1 tsp ground cumin",
+  "1 tsp garam masala",
+  "2 tomatoes, diced",
+  "8 eggs",
+  "½ tsp salt",
+  "¼ cup chopped cilantro",
+  "4 naan"
+ ],
+ "query": "scrambled eggs food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Breakfast at 12",
+   "credit": "jonolist · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/46635911@N00/2236452140",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2366/2236452140_75ecf80752_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Scrambled Eggs - The Commoner",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2409085893",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3193/2409085893_ef652e7374_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Eggs and....",
+   "credit": "MSVG · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/13907834@N00/5013954679",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4131/5013954679_0330e341c4_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Bacon and Scrambled Egg Toasted Roll with sweet chilli sauce - Dancing Goat Cafe",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3292802380",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3398/3292802380_3e37c25929_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Scrambled eggs",
+   "credit": "vidalia_11 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/56832361@N00/144821744",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/47/144821744_335d05b4a5_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Scrambled Eggs with Persian Fetta, Hazelnut Dukkah on Ciabatta spread with Artichoke and Mint Pesto - Dench Bakers",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2323681748",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2076/2323681748_0083aa7424_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Scrambled Eggs with Smoked Salmon - Babka",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/240472820",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/87/240472820_1a7547ee51.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Micro-scrambled egg",
+   "credit": "athomson · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10501421@N00/364254213",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/137/364254213_98f4f0a584_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Eggs Benedict with Bacon - The Maling Room AUD13",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3315947982",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3446/3315947982_3b237cb1a5_b.jpg"
+  }
+ ]
+}

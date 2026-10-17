@@ -1,0 +1,92 @@
+{
+ "id": "adas-bi-hamod",
+ "title": "Adas bi Hamod (Lemony Lentils & Greens)",
+ "summary": "A bright, garlicky lentil and spinach soup-stew from the Lebanese mountains.",
+ "ingredients": [
+  "1 ½ cups brown lentils",
+  "6 cups water",
+  "2 potatoes, diced",
+  "1 (10 oz) box frozen spinach",
+  "¼ cup olive oil",
+  "6 cloves garlic, crushed",
+  "1 cup chopped cilantro",
+  "1 tsp ground cumin",
+  "1 ½ tsp salt",
+  "2 lemons"
+ ],
+ "query": "lentils greens food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Tadka Daal (Indian lentil curry)",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/301016460",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/110/301016460_3bcfb3db02_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Sambar (Spicy lentils)",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/303071888",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/109/303071888_05b391e9bd_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Tarka dal",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/1248298366",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1003/1248298366_851dcdc627_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "AUD9 Buffet - Green Pepper",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2110184894",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2304/2110184894_523edb1095_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Plate #1 AUD9 Buffet - Green Pepper",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2109413461",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2214/2109413461_5c2e3a8f05_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Lentil Orzo Stuff on Greens",
+   "credit": "moria · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/49503029034@N01/18672877",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/12/18672877_27d844a317_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Lentil curry",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/559482494",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1179/559482494_ac1ac1eba4_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Soup and Main - RACV Club Conservatory Buffet",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2212057778",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2274/2212057778_f3aaaf32ac_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Vegan lentil burgers / Hamburguesas de lentejas",
+   "credit": "Lablascovegmenu · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35022955@N06/6210688693",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6102/6210688693_9f47fdfd8b_b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "id": "marry-me-chicken-pasta",
+ "title": "Marry Me Chicken Pasta",
+ "summary": "The creamy sun-dried tomato chicken everyone's making, stretched with pasta to feed four for less.",
+ "ingredients": [
+  "1 ½ lb chicken breast, cut into strips",
+  "1 tbsp olive oil",
+  "3 cloves garlic, minced",
+  "½ cup sun-dried tomatoes, chopped",
+  "1 tsp italian seasoning",
+  "½ tsp red pepper flakes",
+  "1 cup chicken broth",
+  "½ cup heavy cream",
+  "½ cup grated parmesan",
+  "2 cups spinach",
+  "12 oz pasta",
+  "1 tsp salt"
+ ],
+ "query": "chicken pasta",
+ "options": [
+  {
+   "n": 1,
+   "title": "Chicken & Pasta",
+   "credit": "Tobyotter · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/78428166@N00/6682407197",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7028/6682407197_9d6b093522_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "chicken pasta",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/4155682785",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2641/4155682785_56062bbc47_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Chicken pasta with curry",
+   "credit": "Audreys6 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/89836183@N02/8234600529",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8210/8234600529_9f98fb87fc_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Cheesecake Factory Thai Chicken Pasta",
+   "credit": "adrian8_8 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/26349479@N07/4586068438",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4066/4586068438_39f85422ba.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Chicken pasta",
+   "credit": "fifikins · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25925793@N00/4659642492",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1282/4659642492_1106646470_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Chicken pasta with mango chutney",
+   "credit": "hildgrim · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/22870477@N04/4166323334",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2563/4166323334_89d4d59ae7_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Cajun chicken pasta",
+   "credit": "MattCC716 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/27874898@N00/52408993713",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/65535/52408993713_9e3d75e32d_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "chicken pasta",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/10215937793",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5490/10215937793_2ca2e66cb4_b.jpg"
+  }
+ ]
+}

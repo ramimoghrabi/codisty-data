@@ -1,0 +1,98 @@
+{
+ "id": "peanut-sweet-potato-stew",
+ "title": "West African-Style Peanut & Sweet Potato Stew",
+ "summary": "A thick, cozy stew of sweet potatoes, chickpeas and kale in a peanut-tomato sauce, served over rice.",
+ "ingredients": [
+  "1 ½ cups long grain rice",
+  "2 tbsp vegetable oil",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 lb sweet potatoes, peeled and cubed",
+  "1 (14.5 oz) can diced tomatoes",
+  "1 (15 oz) can chickpeas, drained",
+  "2 tbsp tomato paste",
+  "½ cup peanut butter",
+  "1 tsp ground cumin",
+  "½ tsp cayenne pepper",
+  "3 cups water",
+  "1 tsp salt",
+  "1 bunch kale, stemmed and chopped",
+  "1 lime"
+ ],
+ "query": "potato stew",
+ "options": [
+  {
+   "n": 1,
+   "title": "Chicken potato stew Budapest",
+   "credit": "glen edelson · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25217744@N06/2378378328",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2248/2378378328_451f030a7a_m.jpg"
+  },
+  {
+   "n": 2,
+   "title": "curried chickpea and potato stew",
+   "credit": "Stacy Spensley · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/21001756@N06/4498070420",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4032/4498070420_231f4e56ea_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "curried chickpea and potato stew",
+   "credit": "Stacy Spensley · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/21001756@N06/4498070608",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4072/4498070608_1f9dbecded_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "curried chickpea and potato stew",
+   "credit": "Stacy Spensley · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/21001756@N06/4497433057",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4050/4497433057_0376d19831_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "curried chickpea and potato stew",
+   "credit": "Stacy Spensley · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/21001756@N06/4498070776",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4065/4498070776_5a9a964664_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Roast pork tenderloin with mashed potatoes and salad. Harissa-rubbed pork loin, pan-seared then baked with softened onions and bourbon-flambeed, caramelized carrots. Served with creamy mashed potatoes, stewed mushrooms and blueberries (unfortunately not i",
+   "credit": "haldean · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/9002151@N05/14663533258",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5594/14663533258_17cc873e18_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "309-365 Chicken and Potato Stew",
+   "credit": "elsie.hui · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/91188380@N05/12668941385",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2867/12668941385_afd22d0dce_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Amish potato cakes (i.e. pancakes made with mashed potatoes), stewed apples, and Harvard beets at Yoder's Restaurant, Sarasota, FL",
+   "credit": "sylvar · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44124401501@N01/7303492714",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7096/7303492714_fd575cf537_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Beef and potato stew in Japanese-style",
+   "credit": "pelican · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/85936780@N00/6225795153",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/6049/6225795153_2e8ccd7586_b.jpg"
+  }
+ ]
+}

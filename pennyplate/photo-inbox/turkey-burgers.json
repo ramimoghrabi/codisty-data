@@ -1,0 +1,92 @@
+{
+ "id": "turkey-burgers",
+ "title": "Juicy Turkey Burgers",
+ "summary": "Grated onion keeps them tender. Lighter than beef, just as satisfying.",
+ "ingredients": [
+  "1 lb ground turkey",
+  "½ onion, grated",
+  "1 clove garlic, minced",
+  "1 tbsp Worcestershire sauce",
+  "½ tsp salt",
+  "½ tsp black pepper",
+  "1 tbsp vegetable oil",
+  "4 hamburger buns",
+  "1 cup romaine lettuce leaves",
+  "1 tomato, sliced"
+ ],
+ "query": "turkey burgers",
+ "options": [
+  {
+   "n": 1,
+   "title": "Turkey Burger with Baked Beans and Potato Salad",
+   "credit": "TheCulinaryGeek · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/72949902@N00/5076897718",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4028/5076897718_78bb78e256_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Turkey Burger KCI_1549",
+   "credit": "kurmanstaff · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/62558987@N07/11741229116",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5504/11741229116_999770c8c9_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Turkey Burger KCI_1544",
+   "credit": "kurmanstaff · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/62558987@N07/11740466355",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3687/11740466355_c4ac791c4c_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Turkey Burgers Stuffed with Mozzerlla and Pesto",
+   "credit": "wickenden · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/26667277@N00/829971852",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1176/829971852_84f5acdc48_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Turkey Burger KCI_1542",
+   "credit": "kurmanstaff · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/62558987@N07/11740868284",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2859/11740868284_4156dcec6b_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Turkey Burger",
+   "credit": "diettogo1 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/92766653@N07/8593965026",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/8103/8593965026_1bf586fa04_m.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Double Turkey Burger",
+   "credit": "alexik · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/44098626@N00/2582315653",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3128/2582315653_352eb46de4_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Cooking Turkey Burgers",
+   "credit": "aMichiganMom · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/11172002@N05/2800664336",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3292/2800664336_0f68f5142c_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "turkey burger",
+   "credit": "ryochiji · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/66685169@N00/5045987904",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4149/5045987904_fd2bb7b354_b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "id": "classic-pancakes",
+ "title": "Fluffy Buttermilk-Style Pancakes",
+ "summary": "Breakfast-for-dinner night, with a lemon trick for 'buttermilk'.",
+ "ingredients": [
+  "2 cups flour",
+  "2 tbsp sugar",
+  "2 tsp baking powder",
+  "½ tsp baking soda",
+  "½ tsp salt",
+  "1 ¾ cups milk",
+  "1 tbsp lemon juice",
+  "2 eggs",
+  "3 tbsp butter, melted",
+  "½ cup maple syrup",
+  "1 pint strawberries"
+ ],
+ "query": "style pancakes",
+ "options": [
+  {
+   "n": 1,
+   "title": "British Style Pancakes 1",
+   "credit": "LearningLark · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44282411@N04/8479677842",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8381/8479677842_fca5acbde8_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "British Style Pancakes 2",
+   "credit": "LearningLark · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44282411@N04/8478590127",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8086/8478590127_76738834dc_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "British Style Pancakes 3",
+   "credit": "LearningLark · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44282411@N04/8479664632",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8247/8479664632_bde2cbcaf2_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "British Style Pancakes 4",
+   "credit": "LearningLark · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44282411@N04/8479648578",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8367/8479648578_f9b5ef54ff_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "British Style Pancakes 5",
+   "credit": "LearningLark · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44282411@N04/8479684444",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8392/8479684444_1f2de28617_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Homemade american-style pancakes",
+   "credit": "kalleboo · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/82365211@N00/161794395",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/55/161794395_43697c2799_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Grandma-Style Pancake",
+   "credit": "edenpictures · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/10485077@N06/5232609971",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5244/5232609971_76a1aebe7b_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Japanese Style Pancake",
+   "credit": "Another side of yukita · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/39019140@N00/2548402",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1/2548402_9f2f38d676.jpg"
+  }
+ ]
+}

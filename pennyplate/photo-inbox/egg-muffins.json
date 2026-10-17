@@ -1,0 +1,89 @@
+{
+ "id": "egg-muffins",
+ "title": "Veggie Egg Muffins",
+ "summary": "Grab-and-go protein for busy mornings.",
+ "ingredients": [
+  "10 eggs",
+  "¼ cup milk",
+  "1 bell pepper, finely diced",
+  "1 cup spinach, chopped",
+  "3 green onions, sliced",
+  "1 cup shredded cheddar",
+  "½ tsp salt"
+ ],
+ "query": "egg muffins food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Poached Eggs on Muffins Late Brunch",
+   "credit": "Annie Mole · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/21309047@N00/2358339920",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3145/2358339920_16ab7e7b0d_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Muffins de naranja / Orange muffins",
+   "credit": "Naty Rive · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/96952704@N00/411316187",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/188/411316187_8775090a96_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Mango Macademia Nut with Blueberry Muffins",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/3855446089",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2643/3855446089_01234e6e1a_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Ginger Citrus Zucchini Bread",
+   "credit": "Zak Greant · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/91083986@N00/4936410048",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4082/4936410048_f9d6aecd25_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Tom & Jerry Spiced Pumpkin Muffins",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/5066189535",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4150/5066189535_d452b87467_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Not for Poached Egg Aficionados",
+   "credit": "Annie Mole · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/21309047@N00/2358339198",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2047/2358339198_6db63f329e_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Mmm... sausage egg and cheese muffin",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/7774589076",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7272/7774589076_da21b6f687_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "cheddar & green onion cornbread muffins",
+   "credit": "ginnerobot · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/78011127@N00/3807874020",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3564/3807874020_6422e4fe29_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Easter Brunch @ Andalou",
+   "credit": "www.bluewaikiki.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/85356407@N00/2355408227",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3274/2355408227_7a73f8f111.jpg"
+  }
+ ]
+}

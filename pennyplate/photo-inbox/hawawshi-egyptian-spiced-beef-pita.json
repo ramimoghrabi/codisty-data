@@ -1,0 +1,88 @@
+{
+ "id": "hawawshi-egyptian-spiced-beef-pita",
+ "title": "Hawawshi (Egyptian Spiced Beef-Stuffed Pita)",
+ "summary": "Crispy baked pita pockets stuffed with juicy, herby spiced beef, an Egyptian street food favorite.",
+ "ingredients": [
+  "1 lb ground beef",
+  "1 onion, grated",
+  "1 bell pepper, finely diced",
+  "½ cup chopped parsley",
+  "2 tbsp tomato paste",
+  "1 tsp ground cumin",
+  "1 tsp paprika",
+  "½ tsp ground coriander",
+  "¼ tsp ground cinnamon",
+  "1 tsp salt",
+  "½ tsp black pepper",
+  "4 pita breads",
+  "2 tbsp vegetable oil",
+  "1 cucumber, sliced"
+ ],
+ "query": "stuffed pita food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Pitas stuffed with Avocado Salad",
+   "credit": "Qfamily · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/98545783@N00/2248726352",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2318/2248726352_6b01d793ba_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Pane naan",
+   "credit": "sandrokan · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/32206638@N00/11568199634",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2820/11568199634_ba1139990d_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Roast Lamb and Sundried Tomato Pita",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/210941571",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/82/210941571_55ab5225af.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Lamb-Stuffed Capsicum with Rice - Oasis Bakery AUD13",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4822795277",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4122/4822795277_c2d24d0858_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Lamb-Stuffed Capsicum with Rice - close-up Oasis Bakery AUD13",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4822795179",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4075/4822795179_9a6483d119_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Summer in Cyprus",
+   "credit": "kelly bone · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/14642500@N00/5662136708",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5265/5662136708_71ae84b13a.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Taste of 8th St: Cava Mezze",
+   "credit": "valkyrieh116 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/54357435@N00/4617329742",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3312/4617329742_99d1e909b2.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Stuffed Pitas",
+   "credit": "mastermaq · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/24311648@N00/2552391482",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3067/2552391482_7ffaafa3c7_b.jpg"
+  }
+ ]
+}

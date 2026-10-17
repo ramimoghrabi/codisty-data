@@ -1,0 +1,90 @@
+{
+ "id": "egg-fried-rice",
+ "title": "Better-Than-Takeout Egg Fried Rice",
+ "summary": "The best way to use leftover rice — ready in 15 minutes.",
+ "ingredients": [
+  "1 ⅓ cups long grain rice, cooked and chilled (about 4 cups cooked)",
+  "4 eggs",
+  "2 tbsp vegetable oil",
+  "1 cup frozen peas and carrots",
+  "3 green onions, sliced",
+  "2 cloves garlic, minced",
+  "3 tbsp soy sauce",
+  "1 tsp sesame oil"
+ ],
+ "query": "fried rice",
+ "options": [
+  {
+   "n": 1,
+   "title": "Japanese fried rice with prawns in a hot stone bowl at Gyoza Douraku in Melbourne",
+   "credit": "ultrakml · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/34948727@N00/11017830464",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7337/11017830464_5727652b85_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "House special fried rice",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/516570766",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/208/516570766_1bd7313d37_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Vegan fried rice",
+   "credit": "Lablascovegmenu · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35022955@N06/7893613332",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8309/7893613332_56cb1c7ff2.jpg"
+  },
+  {
+   "n": 4,
+   "title": "honey moon fried rice",
+   "credit": "Geoff Peters 604 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/54359128@N00/3010144552",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3010/3010144552_7b95a85756_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Egg Fried Rice",
+   "credit": "fakelvis · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/40933543@N00/3177377867",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3371/3177377867_99f2e0147f_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Special Fried Rice - Dumplings Plus AUD7",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3522091044",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3571/3522091044_49e1b21671_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Salted-fish and Chicken fried Rice - Hakka Teahouse, Glen Waverley AUD9 lunch special",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3334369091",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3595/3334369091_4a4b267f14_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Thai Fried Rice with Chicken - Kao Gang",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2440905796",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2324/2440905796_a06338e99a_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Cooked - Woolworths Select Oriental Fried Rice",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2436478104",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3056/2436478104_4563c0c060_b.jpg"
+  }
+ ]
+}
