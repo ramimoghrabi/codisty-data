@@ -43,6 +43,8 @@ CUISINES = ["american", "mexican", "italian", "asian", "indian", "middleEastern"
 DIETS = ["vegetarian", "vegan", "glutenFree", "dairyFree", "highProtein", "pescatarian"]
 EQUIPMENT = ["oven", "stovetop", "slowCooker", "airFryer", "pressureCooker", "microwave", "blender"]
 TINTS = ["tomato", "amber", "sage", "lime", "berry", "clay", "olive", "sea", "plum"]
+CUISINE_NAMES = {"american": "an American", "mexican": "a Mexican", "italian": "an Italian", "asian": "an Asian",
+                 "indian": "an Indian", "middleEastern": "a Middle Eastern", "mediterranean": "a Mediterranean", "breakfast": "a breakfast"}
 
 RECIPE_SCHEMA = {
     "type": "object",
@@ -185,6 +187,32 @@ def fits(r, diet):
 TREND_DAYS = (0, 3)     # Monday and Thursday: scout what's going viral
 
 
+def boost_briefs(recipes, rng):
+    """Ten briefs for growing the library fast, all aimed at what it's thinnest on."""
+    dinners = [r for r in recipes if r["meal"] == "dinner"]
+    counts = collections.Counter(r["cuisine"] for r in dinners)
+    cuisines = sorted([c for c in CUISINES if c != "breakfast"], key=lambda c: (counts[c], rng.random()))
+    gaps = sorted(DIET_GAPS, key=lambda g: (sum(1 for r in dinners if all(fits(r, d) for d in g[0])), rng.random()))
+    meals = collections.Counter(r["meal"] for r in recipes)
+    out = [("diet", f"A satisfying dinner that is {gaps[0][1]}, any cuisine."),
+           ("diet", f"A satisfying dinner that is {gaps[0][1]}, a different cuisine from the one above."),
+           ("diet", f"A satisfying dinner that is {gaps[1][1]}, any cuisine."),
+           ("diet", f"A satisfying dinner that is {gaps[2][1]}, any cuisine."),
+           ("cuisine", f"{CUISINE_NAMES[cuisines[0]].capitalize()} dinner not yet in the collection."),
+           ("cuisine", f"{CUISINE_NAMES[cuisines[1]].capitalize()} dinner, ready in 20 minutes or less."),
+           ("middleEastern", "A Middle Eastern home-cooking classic (Levantine, Gulf, Egyptian, Iraqi or North African) "
+                             "not yet in the collection. Authentic name with a short English gloss in the title.")]
+    if meals["breakfast"] <= meals["lunch"]:
+        out += [("breakfast", "A cheap, filling breakfast (meal 'breakfast', cuisine 'breakfast')."),
+                ("breakfast", "A make-ahead or grab-and-go breakfast (meal 'breakfast', cuisine 'breakfast'), different from the one above."),
+                ("lunch", "A make-ahead lunch that packs well (meal 'lunch').")]
+    else:
+        out += [("lunch", "A make-ahead lunch that packs well (meal 'lunch')."),
+                ("lunch", "A no-cook or 10-minute lunch (meal 'lunch'), different from the one above."),
+                ("breakfast", "A cheap, filling breakfast (meal 'breakfast', cuisine 'breakfast').")]
+    return out
+
+
 def trend_day(day=None):
     return (day or datetime.date.today()).weekday() in TREND_DAYS
 
@@ -204,13 +232,13 @@ def briefs(recipes, have_trends, rng, day=None):
     themes = {
         0: [trend, trend],
         1: [middle_east, ("diet", f"A satisfying dinner that is {gaps[0][1]}, any cuisine.")],
-        2: [("cuisine", f"A {others[0]} dinner, ready in 30 minutes or less."),
+        2: [("cuisine", f"{CUISINE_NAMES[others[0]].capitalize()} dinner, ready in 30 minutes or less."),
             ("lunch", "A make-ahead lunch that packs well (meal 'lunch').") if day.isocalendar()[1] % 2
             else ("breakfast", "A cheap, filling breakfast (meal 'breakfast', cuisine 'breakfast').")],
         3: [trend, ("diet", f"A satisfying dinner that is {gaps[1][1]}, any cuisine.")],
         4: [("fakeaway", "A 'fakeaway': a takeout favourite (pizza, burgers, orange chicken, shawarma, curry…) made at home for "
                          "far less. Say which takeout dish it copies in the summary."),
-            ("cuisine", f"A {others[1]} dinner everyone in a family would eat.")],
+            ("cuisine", f"{CUISINE_NAMES[others[1]].capitalize()} dinner everyone in a family would eat.")],
         5: [("batch", "A big-batch dinner for 6–8 that freezes well (tag 'freezer'), so cooking once covers two nights."),
             ("gadget", "A slow-cooker or air-fryer dinner (equipment slowCooker or airFryer) for a busy day.")],
         6: [("sunday", "A Sunday family dinner, one-pot or sheet-pan (tag it), that leaves leftovers for Monday's lunch."),
@@ -396,14 +424,16 @@ def main():
     ap.add_argument("--candidates", help="screen this JSON array instead of asking an AI")
     ap.add_argument("--ai", help="gemini or claude (default: RECIPE_AI, else whichever key is set)")
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--brief", metavar="FILE", help="write this week's full instructions for a writer (the Claude Code routine) and stop")
+    ap.add_argument("--brief", metavar="FILE", help="write today's full instructions for a writer (the Claude Code routine) and stop")
+    ap.add_argument("--boost", action="store_true", help="with --brief: ten briefs aimed at the library's gaps, no trends or collections")
     a = ap.parse_args()
 
     if a.brief:
         book = load(RECIPES)
         today = datetime.date.today()
-        trends = trend_day(today)
-        plan = briefs(book["recipes"], trends, random.Random(today.isoformat()), today)
+        trends = trend_day(today) and not a.boost
+        rng = random.Random(datetime.datetime.now().isoformat())
+        plan = boost_briefs(book["recipes"], rng) if a.boost else briefs(book["recipes"], trends, rng, today)
         examples = [r for r in book["recipes"] if r["id"] in ("chana-masala", "shish-tawook")]
         with open(a.brief, "w") as f:
             if trends:
@@ -425,7 +455,7 @@ def main():
                     + f"equipment: {', '.join(EQUIPMENT)}; tint: {', '.join(TINTS)}.\n")
             active = [c for c in load(os.path.join(os.path.dirname(HERE), "collections.json")) or []
                       if c.get("until", "") >= today.isoformat()] if os.path.exists(os.path.join(os.path.dirname(HERE), "collections.json")) else []
-            if today.weekday() == 0 or len(active) < 2:
+            if not a.boost and (today.weekday() == 0 or len(active) < 2):
                 index = "\n".join(f"{r['id']} | {r['title']} | {r['cuisine']} | {r['meal']} | {','.join(r['diets']) or '-'} | {r['minutes']} min"
                                    for r in book["recipes"])
                 f.write(COLLECTIONS_PROMPT.format(today=today.isoformat(), until=(today + datetime.timedelta(days=7)).isoformat(),

@@ -36,7 +36,8 @@ jobs:
       - name: Screen and add the best
         run: |
           if [ "$(python -c "import json,sys; print(len(json.load(open(sys.argv[1]))))" "$RUNNER_TEMP/candidates.json")" != "0" ]; then
-            python pennyplate/tools/generate_recipes.py --checker pennyplate/validator/.build/release/pennycheck --candidates "$RUNNER_TEMP/candidates.json" \
+            count=2; case "$GITHUB_REF_NAME" in *boost*) count=12;; esac      # boost runs grow the library faster
+            python pennyplate/tools/generate_recipes.py --checker pennyplate/validator/.build/release/pennycheck --candidates "$RUNNER_TEMP/candidates.json" --count $count \
               || echo "::warning::No recipe passed the checker today; publishing the collections anyway."
           fi
       - name: Add the collections and rebuild the shelves
