@@ -36,6 +36,7 @@ jobs:
       - name: Build the library
         env:
           KAWTHAR_DISCOVER: ${{ (inputs.discover && '1') || '' }}
+          KAWTHAR_SITE: https://orange-nightingale-935847.hostingersite.com
         run: python kawthar/build_feed.py
       - id: commit
         name: Commit

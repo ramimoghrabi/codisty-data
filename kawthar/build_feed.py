@@ -34,8 +34,11 @@ from concurrent.futures import ThreadPoolExecutor
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 PUBLIC = os.path.join(ROOT, "public", "kawthar")
-STUDIO = os.environ.get("KAWTHAR_STUDIO", "https://codisty.com/kawthar-studio/api")
-UA = "KawtharFeed/1.0 (+https://codisty.com/kawthar; info@codisty.com)"
+# Kawthar's website and Studio (Hostinger). The feed carries these links so the
+# app follows a domain change without an update.
+SITE = os.environ.get("KAWTHAR_SITE", "https://orange-nightingale-935847.hostingersite.com").rstrip("/")
+STUDIO = os.environ.get("KAWTHAR_STUDIO", f"{SITE}/studio/api")
+UA = f"KawtharFeed/1.0 (+{SITE}; info@codisty.com)"
 NOW = dt.datetime.now(dt.timezone.utc)
 PER_SOURCE = 60          # items kept per source in the catalog
 FEED_PER_SOURCE = 30     # videos per channel published to the app
@@ -472,6 +475,8 @@ def main():
         "live": live,
         "shelves": shelves,
         "featured": overrides.get("pinned", []) + featured,
+        "links": {"site": f"{SITE}/", "privacy": f"{SITE}/privacy-policy/", "terms": f"{SITE}/terms-of-use/",
+                  "support": f"{SITE}/support/", "overrides": f"{STUDIO}/overrides.json"},
     }
     if overrides.get("notice"):
         feed["notice"] = overrides["notice"]

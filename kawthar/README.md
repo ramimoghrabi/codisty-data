@@ -9,7 +9,7 @@ recited duas and live shrine streams, gathered automatically.
 - `build_feed.py` — runs every 3 hours (`.github/workflows/kawthar.yml`):
   reads the sources, accumulates `catalog.json`, tags, checks which shrines
   are live, applies the editors' decisions from Kawthar Studio
-  (`codisty.com/kawthar-studio/api/overrides.json` and `sources.json`), and
+  (`<KAWTHAR_SITE>/studio/api/overrides.json` and `sources.json`; the site is set in `.github/workflows/kawthar.yml`), and
   writes `public/kawthar/feed.json` (the app) and `public/kawthar/catalog.json`
   (the Studio). Mondays it also searches Apple Podcasts for new Shia shows,
   which wait in the Studio for approval.
