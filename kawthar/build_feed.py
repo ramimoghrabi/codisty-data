@@ -812,7 +812,9 @@ def main():
         by_source.setdefault(it["source"], []).append(it)
     kept = {}
     for sid, its in by_source.items():
-        for it in sorted(its, key=lambda x: x["published"], reverse=True)[:PER_SOURCE]:
+        # Partners' audio is kept whole; it's theirs and they asked for it to be here.
+        kept.update({it["id"]: it for it in its if it["id"].startswith("up:")})
+        for it in sorted((i for i in its if not i["id"].startswith("up:")), key=lambda x: x["published"], reverse=True)[:PER_SOURCE]:
             kept[it["id"]] = it
     items = kept
 
@@ -891,9 +893,10 @@ def main():
     am_path = os.path.join(PUBLIC, "applemusic.json")
     am_state_path = os.path.join(HERE, "applemusic_state.json")
     am_state = load(am_state_path, {})
-    am_discover = os.environ.get("KAWTHAR_APPLE_MUSIC") == "discover" or (NOW.weekday() == 2 and NOW.hour < 3)
-    am_due = am_discover or os.environ.get("KAWTHAR_APPLE_MUSIC") == "1" or not am_state.get("artists") or bool(am_state.get("pending")) \
-        or (NOW.hour < 3 and days_ago(am_state.get("updated", "2000-01-01T00:00:00Z")) >= 1)
+    # Off since 2026-10-17: the app no longer offers Apple Music (previews looked broken
+    # for non-subscribers, and Kawthar is coming to Android). Runs only on request.
+    am_discover = os.environ.get("KAWTHAR_APPLE_MUSIC") == "discover"
+    am_due = am_discover or os.environ.get("KAWTHAR_APPLE_MUSIC") == "1"
     if am_due:
         am = apple_music(am_state, am_discover)
         with open(am_state_path, "w", encoding="utf-8") as f:
@@ -953,13 +956,15 @@ def main():
         if sources.get(it["source"], {}).get("strict") and it["id"] not in approved and not strict_ok(it["title"]):
             it["held"] = "check"
             continue
-        per[it["source"]] = per.get(it["source"], 0) + 1
+        uploaded = it["id"].startswith("up:")
+        bucket = (it["source"], "up" if uploaded else it["type"])
+        per[bucket] = per.get(bucket, 0) + 1
         kind_of_source = sources.get(it["source"], {}).get("type")
-        cap = 500 if kind_of_source == "partner" else FEED_PER_PODCAST if it["type"] == "audio" else FEED_PER_SOURCE
-        if per[it["source"]] > cap and not it.get("dua") and it["id"] not in pinned_ids:
+        cap = 1000 if uploaded or kind_of_source == "partner" else FEED_PER_PODCAST if it["type"] == "audio" else FEED_PER_SOURCE
+        if per[bucket] > cap and not it.get("dua") and it["id"] not in pinned_ids:
             continue
         out = {k: it[k] for k in ("id", "source", "type", "title", "published", "kind") if k in it}
-        for k in ("video", "audio", "thumb", "duration", "lang", "dua", "views"):
+        for k in ("video", "audio", "thumb", "duration", "lang", "dua", "views", "of"):
             if it.get(k):
                 out[k] = it[k]
         if it.get("occasions"):
