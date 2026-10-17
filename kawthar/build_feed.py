@@ -65,7 +65,19 @@ POLITICAL = re.compile("|".join([
     r"الحوثي", r"houthi", r"انصار الله", r"\bhamas\b", r"حماس", r"سپاه", r"الحرس الثوري", r"\birgc\b", r"\bbiden\b", r"بايدن",
     r"خمنائي", r"صواريخ", r"صاروخ", r"الراية الصفراء", r"المقاومة", r"مقاومة", r"السيد القائد",
 ]), re.I)
-# Hate chants: one is enough to keep an artist out of Kawthar altogether.
+# Channels that mix latmiyat with party or war anthems ("strict" in sources.json)
+# publish only titles that clearly speak of the Ahl al-Bayt and use none of
+# these words; the rest waits for an editor in Kawthar Studio.
+STRICT_OK = re.compile(
+    r"حسين|الحسين|كربلاء|كربلا|زينب|الزهراء|زهراء|زهرا|فاطمة|فاطمه|فاطم|العباس|عباس|الفضل|البنين|رقية|رقيه|سكينة|سكينه|"
+    r"الأكبر|الاكبر|القاسم|المهدي|مهدي|الزمان|عاشور|محرم|الطف|الأربعين|الاربعين|علي|حيدر|المرتضى|كفيل|الكفيل|"
+    r"الرضا|الكاظم|الجواد|السجاد|العابدين|الحسن|المجتبى|الإمام|الامام|البقيع|النبي|محمد|المصطفى|الرسول|الغدير|"
+    r"عبد الله|الحوراء|العقيلة|الكساء|مولد|ولادة|لطمية|نعي|عزاء|مجلس|مجالس|ليلة|ليالي|الفاطمية|دعاء|زيارة|"
+    r"مولاي|مولاتي|سيدي|سيدتي|يا رب|الله")
+STRICT_BAD = re.compile(
+    r"المحور|الجنوب|الميدان|الزناد|البأس|الرعب|القدس|لن تغلب|عدتم|حرب|الحرب|اللواء|أبانا|ابانا|أمريكا|امريكا|"
+    r"الأمين العام|الامين العام|قائد|القائد|منصورين|جند|المقاوم|الشهداء|شهدا|الوطن|بلدي|ايران|إيران|بايد|الصدر|"
+    r"لبيك يا|انتصار|النصر|سيد الشهداء والوعد|الوعد|العهد|ثأر|الثأر")
 HATE = re.compile("|".join([
     r"يهود", r"یهود", r"\byahud", r"\bjews?\b", r"خيبر خيبر", r"khaybar khaybar", r"khyber khyber", r"الموت ل", r"مرگ بر", r"death to",
 ]), re.I)
@@ -208,6 +220,19 @@ def youtube_items(src):
             "views": int(stats.get("views", 0)) if stats is not None else 0,
         })
     return out
+
+
+RECITER_NAMES = []   # every source's names, longest first (set in main)
+
+
+def strict_ok(title):
+    """The title proper — before "| reciter | poet" — must speak of the Ahl
+    al-Bayt by itself, not through a reciter called Hussein or Ali."""
+    core = next((p for p in re.split(r"\s*[|｜]\s*|\s+[-–/]\s+", title) if p.strip()), "")
+    for n in RECITER_NAMES:
+        core = core.replace(n, " ")
+    core = re.sub(r"(?:الرادود|الملا|ملا|المنشد|الخطيب|كلمات|بصوت|أداء|اداء)\s+\S+(?:\s+\S+)?", " ", core)
+    return bool(STRICT_OK.search(core)) and not STRICT_BAD.search(title) and not POLITICAL.search(title)
 
 
 def iso_seconds(d):
@@ -611,7 +636,7 @@ def apple_music(state, discover):
     found = {}   # artistId -> (name, hint_lang, storefronts)
     # Apple allows ~20 calls a minute, so judging is spread over runs: what
     # doesn't fit in this run's time waits in "pending" for the next.
-    started, budget = time.time(), (50 if discover else 10) * 60
+    started, budget = time.time(), (35 if discover else 10) * 60
     pending = {aid: tuple(v) for aid, v in state.get("pending", {}).items()}
 
     # 1. Curated names.
@@ -654,7 +679,8 @@ def apple_music(state, discover):
         found.setdefault(aid, v)
     previous = {a["artistId"]: a for a in state.get("artists", [])}
     out, waiting = [], {}
-    for aid, (name, hint, storefronts) in sorted(found.items(), key=lambda kv: kv[0] not in curated):
+    hits = state.get("hits", {})
+    for aid, (name, hint, storefronts) in sorted(found.items(), key=lambda kv: (kv[0] not in curated, -hits.get(kv[0], 0))):
         verdict = judged.get(aid, {})
         age = days_ago(verdict.get("at", "2000-01-01T00:00:00Z"))
         if aid not in curated and verdict.get("v") in ("reject", "political") and age < 90:
@@ -705,6 +731,12 @@ def main():
             sources[s["id"]] = {**sources.get(s["id"], {}), **s}
     hidden_sources = set(overrides.get("hidden_sources", []))
     enabled = set(overrides.get("enabled_sources", []))  # re-enable a default-excluded source
+    names = set()
+    for src in sources.values():
+        for n in (src.get("name_ar"), src.get("name_en")):
+            if n and len(n) > 3:
+                names.update({n, re.sub(r"^(?:السيد|سيد|الملا|ملا|الشيخ)\s+", "", n)})
+    RECITER_NAMES[:] = sorted(names, key=len, reverse=True)
 
     catalog = load(os.path.join(HERE, "catalog.json"), {"items": {}, "live": {}})
     items = catalog.get("items", {})
@@ -905,6 +937,9 @@ def main():
         if POLITICAL.search(it["title"]) and it["id"] not in approved:
             it["held"] = "political"
             continue
+        if sources.get(it["source"], {}).get("strict") and it["id"] not in approved and not strict_ok(it["title"]):
+            it["held"] = "check"
+            continue
         per[it["source"]] = per.get(it["source"], 0) + 1
         kind_of_source = sources.get(it["source"], {}).get("type")
         cap = 500 if kind_of_source == "partner" else FEED_PER_PODCAST if it["type"] == "audio" else FEED_PER_SOURCE
@@ -928,6 +963,8 @@ def main():
         lst = []
         for v in arc["items"]:
             if v["id"] in hidden_items or (POLITICAL.search(v["title"]) and v["id"] not in approved) or HATE.search(v["title"]):
+                continue
+            if src.get("strict") and v["id"] not in approved and not strict_ok(v["title"]):
                 continue
             kind, occ, dua = classify(v["title"], src)
             it = {"id": v["id"], "source": sid, "type": "youtube", "title": v["title"], "published": v["published"],
