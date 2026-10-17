@@ -729,6 +729,10 @@ def main():
     for s in studio.get("sources", []):
         if s.get("approved", True):
             sources[s["id"]] = {**sources.get(s["id"], {}), **s}
+    # Editors' corrections in the Studio: names, country, type, picture, strict.
+    for sid, edits in (overrides.get("source_edits") or {}).items():
+        if sid in sources and isinstance(edits, dict):
+            sources[sid] = {**sources[sid], **{k: v for k, v in edits.items() if k in ("name_en", "name_ar", "country", "kind", "image", "strict")}}
     hidden_sources = set(overrides.get("hidden_sources", []))
     enabled = set(overrides.get("enabled_sources", []))  # re-enable a default-excluded source
     names = set()
@@ -812,14 +816,19 @@ def main():
             kept[it["id"]] = it
     items = kept
 
-    # Classify (always re-run, so better rules apply to old items).
+    # Classify (always re-run, so better rules apply to old items). An editor's
+    # choice of type in the Studio wins.
+    item_edits = overrides.get("item_edits") or {}
     archive_src = {"id": "archive", "name_en": "Internet Archive", "kind": "majlis"}
     for it in items.values():
+        it.pop("edit_kind", None)
+        if isinstance(item_edits.get(it["id"]), dict) and item_edits[it["id"]].get("kind"):
+            it["edit_kind"] = item_edits[it["id"]]["kind"]
         src = sources.get(it["source"], archive_src)
         if it.get("kind_hint"):
             src = {**src, "kind": it["kind_hint"]}
         kind, occ, dua = classify(it["title"], src)
-        it["kind"] = it.get("fixed_kind") or kind
+        it["kind"] = it.get("edit_kind") or it.get("fixed_kind") or kind
         it["occasions"] = occ
         it["dua"] = dua
         it["lang"] = (src.get("languages") or ["ar"])[0]
@@ -928,9 +937,13 @@ def main():
     approved = set(overrides.get("approved_items", []))
     pub_sources = [s for s in sources.values() if s["id"] not in hidden_sources and not s.get("live_only")
                    and (not s.get("default_off") or s["id"] in enabled)]
+    # Who the editors put first.
+    rank = {sid: n for n, sid in enumerate(overrides.get("reciter_priority", []))}
+    pub_sources.sort(key=lambda s: rank.get(s["id"], len(rank)))
     allowed = {s["id"] for s in pub_sources} | {"archive"}
     feed_items = []
     per = {}
+    pinned_ids = set(overrides.get("pinned", []))
     for it in sorted(items.values(), key=lambda x: x["published"], reverse=True):
         if it["id"] in hidden_items or it["source"] not in allowed:
             continue
@@ -943,7 +956,7 @@ def main():
         per[it["source"]] = per.get(it["source"], 0) + 1
         kind_of_source = sources.get(it["source"], {}).get("type")
         cap = 500 if kind_of_source == "partner" else FEED_PER_PODCAST if it["type"] == "audio" else FEED_PER_SOURCE
-        if per[it["source"]] > cap and not it.get("dua"):
+        if per[it["source"]] > cap and not it.get("dua") and it["id"] not in pinned_ids:
             continue
         out = {k: it[k] for k in ("id", "source", "type", "title", "published", "kind") if k in it}
         for k in ("video", "audio", "thumb", "duration", "lang", "dua", "views"):
