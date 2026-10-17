@@ -1,0 +1,29 @@
+{
+ "id": "cinnamon-apple-baked-oatmeal",
+ "title": "Cinnamon Apple Baked Oatmeal",
+ "summary": "One pan of tender, cake-like oatmeal with apples and walnuts. Slice it on Sunday and reheat all week.",
+ "ingredients": [
+  "3 cups rolled oats",
+  "2 apples, diced",
+  "½ cup chopped walnuts",
+  "1 tbsp ground cinnamon",
+  "2 tsp baking powder",
+  "½ tsp salt",
+  "2 cups milk",
+  "2 eggs",
+  "¼ cup honey",
+  "3 tbsp butter, melted",
+  "2 tsp vanilla extract"
+ ],
+ "query": "Cinnamon Apple Baked Oatmeal",
+ "options": [
+  {
+   "n": 1,
+   "title": "PearappleTart with Oatmeal Almond Crust",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/3389444959",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3419/3389444959_749bfd9fa0_b.jpg"
+  }
+ ]
+}
