@@ -62,7 +62,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/pennyplate/recipes.json public/pennyplate/feed.json pennyplate/collections.json
           git diff --cached --quiet || git commit -m "New recipes for the week of $(date -u +%F) (from the routine)"
-          git push origin main
+          git pull --rebase origin main && git push origin main
           git push origin --delete "${GITHUB_REF_NAME}"
       # Pages only deploys from main, and this run belongs to the claude/ branch,
       # so start the deploy as its own run on main.

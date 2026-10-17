@@ -40,7 +40,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A public/pennyplate pennyplate/photo-inbox pennyplate/photo-skip.json
           git diff --cached --quiet || git commit -m "Recipe photos for $(date -u +%F)"
-          git push origin main
+          git pull --rebase origin main && git push origin main
           git push origin --delete "${GITHUB_REF_NAME}"
       - name: Publish the site
         env:

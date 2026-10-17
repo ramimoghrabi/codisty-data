@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: data-update
+  group: photo-queue          # its own queue, so it never bumps a waiting recipe batch
   cancel-in-progress: false
 
 jobs:
@@ -32,4 +32,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pennyplate/photo-inbox
           git diff --cached --quiet || git commit -m "Photo options for $(date -u +%F)"
-          git push origin main
+          git pull --rebase origin main && git push origin main
