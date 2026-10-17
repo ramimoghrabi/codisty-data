@@ -324,17 +324,30 @@ def main():
             return s, podcast_items(s)
         return s, []
 
-    failures = 0
-    # A few at a time: polite to the hosts, and one slow feed doesn't stall the run.
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    def merge(got):
+        for it in got:
+            old = items.get(it["id"], {})
+            items[it["id"]] = {**old, **it, "first_seen": old.get("first_seen", iso(NOW))}
+
+    # A few at a time: polite to the hosts, and one slow feed doesn't stall
+    # the run. YouTube throttles bursts from cloud runners with 404s, so the
+    # ones that fail get a second, slower pass.
+    failed = []
+    with ThreadPoolExecutor(max_workers=3) as pool:
         for s, got in pool.map(gather, list(sources.values())):
             if got is None:
-                failures += 1
-                log("  - no update from", s["id"])
-                continue  # keep what we had
-            for it in got:
-                old = items.get(it["id"], {})
-                items[it["id"]] = {**old, **it, "first_seen": old.get("first_seen", iso(NOW))}
+                failed.append(s)
+            else:
+                merge(got)
+    failures = 0
+    for s in failed:
+        time.sleep(3)
+        _, got = gather(s)
+        if got is None:
+            failures += 1
+            log("  - no update from", s["id"])  # keep what we had
+        else:
+            merge(got)
     for a in seed.get("archive", []):
         for it in archive_items(a):
             items.setdefault(it["id"], {**it, "first_seen": iso(NOW)})
