@@ -1,0 +1,58 @@
+# Kawthar's living library (latmiyat, majalis, lectures, recited duas, live
+# shrine streams). Every 3 hours: read the official channels and feeds in
+# kawthar/sources.json plus those added in Kawthar Studio, tag new items,
+# apply the editors' decisions, publish public/kawthar/feed.json.
+# Studio's "Refresh now" sends the kawthar-refresh dispatch.
+name: Kawthar library
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      discover:
+        description: Also search Apple Podcasts for new shows
+        type: boolean
+        default: false
+  repository_dispatch:
+    types: [kawthar-refresh]
+
+concurrency:
+  group: kawthar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build the library
+        env:
+          KAWTHAR_DISCOVER: ${{ (inputs.discover && '1') || '' }}
+        run: python kawthar/build_feed.py
+      - id: commit
+        name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add kawthar/catalog.json public/kawthar
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "Kawthar library $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

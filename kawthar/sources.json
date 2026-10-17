@@ -1,0 +1,2893 @@
+{
+ "version": 1,
+ "sources": [
+  {
+   "id": "basim-karbalaei",
+   "type": "youtube",
+   "channel": "UCLlMiPx_v5jFahvImDu_EFQ",
+   "name_en": "Basim al-Karbalaei",
+   "name_ar": "باسم الكربلائي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCLlMiPx_v5jFahvImDu_EFQ"
+  },
+  {
+   "id": "husain-alakraf",
+   "type": "youtube",
+   "channel": "UCkA-Ue01VyMa7vBUUpQFOTw",
+   "name_en": "Husain al-Akraf",
+   "name_ar": "حسين الأكرف",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "BH",
+   "url": "https://www.youtube.com/channel/UCkA-Ue01VyMa7vBUUpQFOTw"
+  },
+  {
+   "id": "baqir-khaqani",
+   "type": "youtube",
+   "channel": "UC1tc7PapZl85wvxStwhJoDQ",
+   "name_en": "Muhammad Baqir al-Khaqani",
+   "name_ar": "محمد باقر الخاقاني",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC1tc7PapZl85wvxStwhJoDQ"
+  },
+  {
+   "id": "jalil-karbalai",
+   "type": "youtube",
+   "channel": "UCfOLagcfaUHoIXoGN0_rj1Q",
+   "name_en": "Jalil al-Karbalai",
+   "name_ar": "جليل الكربلائي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCfOLagcfaUHoIXoGN0_rj1Q"
+  },
+  {
+   "id": "saleh-durazi",
+   "type": "youtube",
+   "channel": "UCMO34RNTpbBbCgfj6U6oK_w",
+   "name_en": "Saleh al-Durazi",
+   "name_ar": "صالح الدرازي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "BH",
+   "url": "https://www.youtube.com/channel/UCMO34RNTpbBbCgfj6U6oK_w"
+  },
+  {
+   "id": "ali-bouhamad",
+   "type": "youtube",
+   "channel": "UCoUCJM_34vXTMFLTzcuxFrw",
+   "name_en": "Ali Bouhamad",
+   "name_ar": "علي بوحمد",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "KW",
+   "url": "https://www.youtube.com/channel/UCoUCJM_34vXTMFLTzcuxFrw"
+  },
+  {
+   "id": "mohammed-halfi",
+   "type": "youtube",
+   "channel": "UCoBLItzr5FQM0eunR0rSNJQ",
+   "name_en": "Mohammed al-Halfi",
+   "name_ar": "محمد الحلفي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCoBLItzr5FQM0eunR0rSNJQ"
+  },
+  {
+   "id": "mohammad-jannami",
+   "type": "youtube",
+   "channel": "UCDyoBTio1MI9fOrApobaRKg",
+   "name_en": "Muhammad al-Jannami",
+   "name_ar": "محمد الجنامي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCDyoBTio1MI9fOrApobaRKg"
+  },
+  {
+   "id": "sayed-faqid-mosawi",
+   "type": "youtube",
+   "channel": "UCcg5Y8NL7g6tYHZPpYzw3bQ",
+   "name_en": "Sayed Faqid al-Mosawi",
+   "name_ar": "سيد فاقد الموسوي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCcg5Y8NL7g6tYHZPpYzw3bQ"
+  },
+  {
+   "id": "hussain-faisal",
+   "type": "youtube",
+   "channel": "UCoh6UUUq_vhX403HSCKgCHA",
+   "name_en": "Hussain Faisal",
+   "name_ar": "حسين فيصل",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "KW",
+   "url": "https://www.youtube.com/channel/UCoh6UUUq_vhX403HSCKgCHA"
+  },
+  {
+   "id": "ammar-kenany",
+   "type": "youtube",
+   "channel": "UCbhwf5SwLcf6f3h0IbfZMnQ",
+   "name_en": "Ammar al-Kenany",
+   "name_ar": "عمار الكناني",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCbhwf5SwLcf6f3h0IbfZMnQ"
+  },
+  {
+   "id": "salam-husaini",
+   "type": "youtube",
+   "channel": "UChA06_EmzEWjCtvZi-NYOmg",
+   "name_en": "Sayed Salam al-Husaini",
+   "name_ar": "سيد سلام الحسيني",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UChA06_EmzEWjCtvZi-NYOmg"
+  },
+  {
+   "id": "muslim-waeli",
+   "type": "youtube",
+   "channel": "UC3B0rKVU3XWMjug0yROw6GQ",
+   "name_en": "Muslim al-Waeli",
+   "name_ar": "مسلم الوائلي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC3B0rKVU3XWMjug0yROw6GQ"
+  },
+  {
+   "id": "nazar-qatari",
+   "type": "youtube",
+   "channel": "UCTqwbxITb2UcvhngW1CcFIg",
+   "name_en": "Nazar al-Qatari",
+   "name_ar": "نزار القطري",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "KW",
+   "url": "https://www.youtube.com/channel/UCTqwbxITb2UcvhngW1CcFIg"
+  },
+  {
+   "id": "mohammed-bojbara",
+   "type": "youtube",
+   "channel": "UCl76PuP4wKeMzLa19ADw5-A",
+   "name_en": "Mohammed Bojbara",
+   "name_ar": "محمد بوجبارة",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "SA",
+   "url": "https://www.youtube.com/channel/UCl76PuP4wKeMzLa19ADw5-A"
+  },
+  {
+   "id": "haidar-baiyati",
+   "type": "youtube",
+   "channel": "UC-dHwBNLPU0b9idbhmaQP2A",
+   "name_en": "Haidar al-Baiyati",
+   "name_ar": "حيدر البياتي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC-dHwBNLPU0b9idbhmaQP2A"
+  },
+  {
+   "id": "qahtan-budeiri",
+   "type": "youtube",
+   "channel": "UCyWJ2jJY9yg5b6IaN9alouA",
+   "name_en": "Qahtan al-Budeiri",
+   "name_ar": "قحطان البديري",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCyWJ2jJY9yg5b6IaN9alouA"
+  },
+  {
+   "id": "murtaza-harb",
+   "type": "youtube",
+   "channel": "UCxo2RHnwrKjYHPB9HoKR5Aw",
+   "name_en": "Murtaza Harb",
+   "name_ar": "مرتضى حرب",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCxo2RHnwrKjYHPB9HoKR5Aw"
+  },
+  {
+   "id": "mohammad-hojairat",
+   "type": "youtube",
+   "channel": "UCjE239FByscuV-8z1G0lCBQ",
+   "name_en": "Mohammad al-Hojairat",
+   "name_ar": "محمد الحجيرات",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "KW",
+   "url": "https://www.youtube.com/channel/UCjE239FByscuV-8z1G0lCBQ"
+  },
+  {
+   "id": "ali-saeed-waeli",
+   "type": "youtube",
+   "channel": "UCLTlEYsiM2sNLbGh5Mk8hQA",
+   "name_en": "Ali Saeed al-Waeli",
+   "name_ar": "علي سعيد الوائلي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCLTlEYsiM2sNLbGh5Mk8hQA"
+  },
+  {
+   "id": "ali-karbalaei",
+   "type": "youtube",
+   "channel": "UCK6mgkGmSZ5VgQIQ22zoXvw",
+   "name_en": "Ali al-Karbalaei",
+   "name_ar": "علي الكربلائي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCK6mgkGmSZ5VgQIQ22zoXvw"
+  },
+  {
+   "id": "haidar-attar",
+   "type": "youtube",
+   "channel": "UCWI-peif9uPIw7prUvuzyRw",
+   "name_en": "Haidar al-Attar",
+   "name_ar": "حيدر العطار",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCWI-peif9uPIw7prUvuzyRw"
+  },
+  {
+   "id": "hussein-wali-lami",
+   "type": "youtube",
+   "channel": "UC9ooeoNcuzS7I54bRPJmalQ",
+   "name_en": "Hussein Wali al-Lami",
+   "name_ar": "حسين والي اللامي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC9ooeoNcuzS7I54bRPJmalQ"
+  },
+  {
+   "id": "abdulameer-biladi",
+   "type": "youtube",
+   "channel": "UCmBhOmDyzeSEcClVrCNGLLw",
+   "name_en": "Abdul Amir al-Biladi",
+   "name_ar": "عبدالأمير البلادي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": "BH",
+   "url": "https://www.youtube.com/channel/UCmBhOmDyzeSEcClVrCNGLLw"
+  },
+  {
+   "id": "ali-hamadi",
+   "type": "youtube",
+   "channel": "UCOAB8eo6xS2l7rzoPGKV0MA",
+   "name_en": "Ali Hamadi (Hammadi Media)",
+   "name_ar": "علي حمادي",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": null,
+   "url": "https://www.youtube.com/channel/UCOAB8eo6xS2l7rzoPGKV0MA"
+  },
+  {
+   "id": "maytham-tammar",
+   "type": "youtube",
+   "channel": "UCr9BQYZkgcpNT590rZ0QWnA",
+   "name_en": "Sheikh Maytham al-Tammar",
+   "name_ar": "ميثم التمار",
+   "kind": "latmiya",
+   "languages": [
+    "ar"
+   ],
+   "country": null,
+   "url": "https://www.youtube.com/channel/UCr9BQYZkgcpNT590rZ0QWnA"
+  },
+  {
+   "id": "mahmoud-karimi",
+   "type": "youtube",
+   "channel": "UCZOoI4cArtnXzYtPVqf0oNA",
+   "name_en": "Mahmoud Karimi",
+   "name_ar": "محمود کریمی",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCZOoI4cArtnXzYtPVqf0oNA"
+  },
+  {
+   "id": "mahdi-rasouli",
+   "type": "youtube",
+   "channel": "UCEfG8tf3pteddXT5cupq5vQ",
+   "name_en": "Mahdi Rasouli",
+   "name_ar": "مهدی رسولی",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCEfG8tf3pteddXT5cupq5vQ"
+  },
+  {
+   "id": "hossein-taheri",
+   "type": "youtube",
+   "channel": "UCXWCSst5G1uc9o0dRzPxk7g",
+   "name_en": "Hossein Taheri",
+   "name_ar": "حسین طاهری",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCXWCSst5G1uc9o0dRzPxk7g"
+  },
+  {
+   "id": "mohammadreza-taheri",
+   "type": "youtube",
+   "channel": "UCabzDYEssZd4RoGTptMYF1A",
+   "name_en": "Mohammad Reza Taheri",
+   "name_ar": "محمدرضا طاهری",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCabzDYEssZd4RoGTptMYF1A"
+  },
+  {
+   "id": "abdolreza-helali",
+   "type": "youtube",
+   "channel": "UCbPwZrukuG94CltIIULnORw",
+   "name_en": "Abdolreza Helali",
+   "name_ar": "عبدالرضا هلالی",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCbPwZrukuG94CltIIULnORw"
+  },
+  {
+   "id": "majid-banifatemeh",
+   "type": "youtube",
+   "channel": "UCC53Ek0XuVQKucnHDO7wuzQ",
+   "name_en": "Sayed Majid Bani Fatemeh",
+   "name_ar": "سید مجید بنی فاطمه",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCC53Ek0XuVQKucnHDO7wuzQ"
+  },
+  {
+   "id": "hanif-taheri",
+   "type": "youtube",
+   "channel": "UCCfjEoxbQ-weDOMW3gYTcSQ",
+   "name_en": "Hanif Taheri",
+   "name_ar": "حنیف طاهری",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCCfjEoxbQ-weDOMW3gYTcSQ"
+  },
+  {
+   "id": "hossein-sotoodeh",
+   "type": "youtube",
+   "channel": "UCB_oNbmQ__RVkqH_lC3FDoA",
+   "name_en": "Hossein Sotoodeh",
+   "name_ar": "حسین ستوده",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCB_oNbmQ__RVkqH_lC3FDoA"
+  },
+  {
+   "id": "hamid-alimi",
+   "type": "youtube",
+   "channel": "UCRGEhhsXKr5NtPMmChVgGEg",
+   "name_en": "Hamid Alimi",
+   "name_ar": "حمید علیمی",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCRGEhhsXKr5NtPMmChVgGEg"
+  },
+  {
+   "id": "reza-narimani",
+   "type": "youtube",
+   "channel": "UChiG5naOzZaqN7_79XKXw3g",
+   "name_en": "Sayed Reza Narimani",
+   "name_ar": "سید رضا نریمانی",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UChiG5naOzZaqN7_79XKXw3g"
+  },
+  {
+   "id": "nadeem-sarwar",
+   "type": "youtube",
+   "channel": "UC2kCC6CFwU3cZFJl9e_FJlQ",
+   "name_en": "Nadeem Sarwar",
+   "name_ar": "ندیم سرور",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UC2kCC6CFwU3cZFJl9e_FJlQ"
+  },
+  {
+   "id": "mir-hasan-mir",
+   "type": "youtube",
+   "channel": "UC_qRtpijKZ-iipmWYCndLrA",
+   "name_en": "Mir Hasan Mir",
+   "name_ar": "میر حسن میر",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UC_qRtpijKZ-iipmWYCndLrA"
+  },
+  {
+   "id": "ali-shanawar",
+   "type": "youtube",
+   "channel": "UCkGT-0h7M8dW4flapX-pguQ",
+   "name_en": "Ali Shanawar",
+   "name_ar": "علی شناور",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCkGT-0h7M8dW4flapX-pguQ"
+  },
+  {
+   "id": "farhan-ali-waris",
+   "type": "youtube",
+   "channel": "UC7o6_9PaatOjXSjN7kCdsww",
+   "name_en": "Farhan Ali Waris",
+   "name_ar": "فرحان علی وارث",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UC7o6_9PaatOjXSjN7kCdsww"
+  },
+  {
+   "id": "ali-hamza",
+   "type": "youtube",
+   "channel": "UCQnKDEATX0seEYw0deJZLBA",
+   "name_en": "Ali Hamza",
+   "name_ar": "علی حمزہ",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCQnKDEATX0seEYw0deJZLBA"
+  },
+  {
+   "id": "shadman-raza",
+   "type": "youtube",
+   "channel": "UCK0dVsshzzDsa6jl6c0bvWw",
+   "name_en": "Shadman Raza",
+   "name_ar": "شادمان رضا",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCK0dVsshzzDsa6jl6c0bvWw"
+  },
+  {
+   "id": "ali-safdar",
+   "type": "youtube",
+   "channel": "UCpQwwkXn2p76KUvI1PySjNw",
+   "name_en": "Ali Safdar",
+   "name_ar": "علی صفدر",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCpQwwkXn2p76KUvI1PySjNw"
+  },
+  {
+   "id": "hassan-sadiq",
+   "type": "youtube",
+   "channel": "UCqHOl13XIsvujU0tgMY6fqg",
+   "name_en": "Hassan Sadiq",
+   "name_ar": "حسن صادق",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCqHOl13XIsvujU0tgMY6fqg"
+  },
+  {
+   "id": "ali-jee",
+   "type": "youtube",
+   "channel": "UC4QJLmp5se05V35s4IFO6Jw",
+   "name_en": "Ali Jee",
+   "name_ar": "علی جی",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UC4QJLmp5se05V35s4IFO6Jw"
+  },
+  {
+   "id": "irfan-haider",
+   "type": "youtube",
+   "channel": "UCyuXnbyfx_cUN8Cf-Sp9f3A",
+   "name_en": "Irfan Haider",
+   "name_ar": "عرفان حیدر",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCyuXnbyfx_cUN8Cf-Sp9f3A"
+  },
+  {
+   "id": "shahid-baltistani",
+   "type": "youtube",
+   "channel": "UCZCqf32zgJIlANTgKbMtqBA",
+   "name_en": "Shahid Baltistani",
+   "name_ar": "شاہد بلتستانی",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCZCqf32zgJIlANTgKbMtqBA"
+  },
+  {
+   "id": "mesum-abbas",
+   "type": "youtube",
+   "channel": "UCL5nRC6B1hTJIIzkselavTQ",
+   "name_en": "Mesum Abbas",
+   "name_ar": "معصوم عباس",
+   "kind": "noha",
+   "languages": [
+    "ur"
+   ],
+   "country": "US",
+   "url": "https://www.youtube.com/channel/UCL5nRC6B1hTJIIzkselavTQ"
+  },
+  {
+   "id": "nasir-abbas-multan",
+   "type": "youtube",
+   "channel": "UCgjRvd3nIe2jfz-Og97jV6A",
+   "name_en": "Allama Nasir Abbas (Multan)",
+   "name_ar": "علامہ ناصر عباس",
+   "kind": "majlis",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCgjRvd3nIe2jfz-Og97jV6A"
+  },
+  {
+   "id": "shahenshah-naqvi",
+   "type": "youtube",
+   "channel": "UCrJwk31mLs0IlGoukxO-wAg",
+   "name_en": "Allama Syed Shahenshah Hussain Naqvi",
+   "name_ar": "علامہ سید شہنشاہ حسین نقوی",
+   "kind": "majlis",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCrJwk31mLs0IlGoukxO-wAg"
+  },
+  {
+   "id": "ali-raza-rizvi",
+   "type": "youtube",
+   "channel": "UCFqmhLq-8lUNqfSRHZ6Dx-Q",
+   "name_en": "Allama Syed Ali Raza Rizvi",
+   "name_ar": "علامہ سید علی رضا رضوی",
+   "kind": "majlis",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UCFqmhLq-8lUNqfSRHZ6Dx-Q"
+  },
+  {
+   "id": "jawad-naqvi",
+   "type": "youtube",
+   "channel": "UC5q41mpGBlCIaXc43iG4qwQ",
+   "name_en": "Syed Jawad Naqvi",
+   "name_ar": "سید جواد نقوی",
+   "kind": "lecture",
+   "languages": [
+    "ur"
+   ],
+   "country": "PK",
+   "url": "https://www.youtube.com/channel/UC5q41mpGBlCIaXc43iG4qwQ"
+  },
+  {
+   "id": "ammar-nakshawani",
+   "type": "youtube",
+   "channel": "UCpbGS6mQ9ho3h21qjKce04Q",
+   "name_en": "Sayed Ammar Nakshawani",
+   "name_ar": "السيد عمار نكشواني",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "GB",
+   "url": "https://www.youtube.com/channel/UCpbGS6mQ9ho3h21qjKce04Q"
+  },
+  {
+   "id": "azhar-nasser",
+   "type": "youtube",
+   "channel": "UCuG8eNSHyE-ZSWEnAiSDt6g",
+   "name_en": "Sheikh Azhar Nasser",
+   "name_ar": "الشيخ أزهر ناصر",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "US",
+   "url": "https://www.youtube.com/channel/UCuG8eNSHyE-ZSWEnAiSDt6g"
+  },
+  {
+   "id": "mahdi-modarresi",
+   "type": "youtube",
+   "channel": "UCGhE5pOHXhqnaUS4w0qDz1A",
+   "name_en": "Sayed Mahdi Modarresi",
+   "name_ar": "السيد مهدي المدرسي",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "US",
+   "url": "https://www.youtube.com/channel/UCGhE5pOHXhqnaUS4w0qDz1A"
+  },
+  {
+   "id": "jawad-qazwini",
+   "type": "youtube",
+   "channel": "UC9kH_08l65wqb9X-iqEOiIw",
+   "name_en": "Sayed Jawad Qazwini",
+   "name_ar": "السيد جواد القزويني",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "US",
+   "url": "https://www.youtube.com/channel/UC9kH_08l65wqb9X-iqEOiIw"
+  },
+  {
+   "id": "mohammed-hilli",
+   "type": "youtube",
+   "channel": "UCdbpFnDpvX7X8vgRxq_qUag",
+   "name_en": "Sheikh Mohammed al-Hilli",
+   "name_ar": "الشيخ محمد الحلي",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "GB",
+   "url": "https://www.youtube.com/channel/UCdbpFnDpvX7X8vgRxq_qUag"
+  },
+  {
+   "id": "shomali",
+   "type": "youtube",
+   "channel": "UC5Qm7V52b06JC36LLmXOQpg",
+   "name_en": "Dr Mohammad Ali Shomali",
+   "name_ar": "الشيخ محمد علي شمالي",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "GB",
+   "url": "https://www.youtube.com/channel/UC5Qm7V52b06JC36LLmXOQpg"
+  },
+  {
+   "id": "jaffer-ladak",
+   "type": "youtube",
+   "channel": "UCf7uimx4ICKvSbnEBV9DIcg",
+   "name_en": "Shaykh Jaffer Ladak",
+   "name_ar": "الشيخ جعفر لداك",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "GB",
+   "url": "https://www.youtube.com/channel/UCf7uimx4ICKvSbnEBV9DIcg"
+  },
+  {
+   "id": "thaqlain",
+   "type": "youtube",
+   "channel": "UC6ry6jhDUjceu5aXLe_LxjQ",
+   "name_en": "Thaqlain",
+   "name_ar": "ثقلين",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": null,
+   "url": "https://www.youtube.com/channel/UC6ry6jhDUjceu5aXLe_LxjQ"
+  },
+  {
+   "id": "imam-hussein-tv3",
+   "type": "youtube",
+   "channel": "UC1EEMoMgwhJE2_oGwK1kcsw",
+   "name_en": "Imam Hussein TV 3 (English)",
+   "name_ar": "قناة الإمام الحسين ٣",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC1EEMoMgwhJE2_oGwK1kcsw"
+  },
+  {
+   "id": "ico-america",
+   "type": "youtube",
+   "channel": "UC1Il6R8e4fJ2w5oc6X8DAaQ",
+   "name_en": "Islamic Center of America",
+   "name_ar": "المركز الإسلامي في أمريكا",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "US",
+   "url": "https://www.youtube.com/channel/UC1Il6R8e4fJ2w5oc6X8DAaQ"
+  },
+  {
+   "id": "al-khoei-ny",
+   "type": "youtube",
+   "channel": "UC9aYBYroj9pUzDtz7R-R_RA",
+   "name_en": "Imam Al-Khoei Foundation (New York)",
+   "name_ar": "مؤسسة الإمام الخوئي - نيويورك",
+   "kind": "lecture",
+   "languages": [
+    "en",
+    "ar"
+   ],
+   "country": "US",
+   "url": "https://www.youtube.com/channel/UC9aYBYroj9pUzDtz7R-R_RA"
+  },
+  {
+   "id": "wfksimc",
+   "type": "youtube",
+   "channel": "UCau2syxuJLuKz2va33u7N_g",
+   "name_en": "The World Federation of KSIMC",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "country": "GB",
+   "url": "https://www.youtube.com/channel/UCau2syxuJLuKz2va33u7N_g"
+  },
+  {
+   "id": "munir-khabbaz",
+   "type": "youtube",
+   "channel": "UCNCBRSqf48ejyPmbjjG7ZEg",
+   "name_en": "Sayed Munir al-Khabbaz",
+   "name_ar": "السيد منير الخباز",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "country": "SA",
+   "url": "https://www.youtube.com/channel/UCNCBRSqf48ejyPmbjjG7ZEg"
+  },
+  {
+   "id": "habib-kadhemi",
+   "type": "youtube",
+   "channel": "UCZhymCOMqyc8qVKvAXZDqpw",
+   "name_en": "Sheikh Habib al-Kadhemi",
+   "name_ar": "الشيخ حبيب الكاظمي",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCZhymCOMqyc8qVKvAXZDqpw"
+  },
+  {
+   "id": "abdulhamid-muhajir",
+   "type": "youtube",
+   "channel": "UCNkQZkmCiT7gOVTSMlLz7cQ",
+   "name_en": "Sheikh Abdul Hamid al-Muhajir",
+   "name_ar": "الشيخ عبدالحميد المهاجر",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCNkQZkmCiT7gOVTSMlLz7cQ"
+  },
+  {
+   "id": "ali-talqani",
+   "type": "youtube",
+   "channel": "UC-zM-uXAlX4UCQcfYD-G4Bg",
+   "name_en": "Sayed Ali al-Talqani",
+   "name_ar": "السيد علي الطالقاني",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC-zM-uXAlX4UCQcfYD-G4Bg"
+  },
+  {
+   "id": "jaafar-ibrahimi",
+   "type": "youtube",
+   "channel": "UC15tilGJydfllBaPQU9CDwQ",
+   "name_en": "Sheikh Jaafar al-Ibrahimi",
+   "name_ar": "الشيخ جعفر الإبراهيمي",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC15tilGJydfllBaPQU9CDwQ"
+  },
+  {
+   "id": "zaman-hasnawi",
+   "type": "youtube",
+   "channel": "UCxIn3IbIMdlNW0btV5m9mhw",
+   "name_en": "Sheikh Zaman al-Hasnawi",
+   "name_ar": "الشيخ زمان الحسناوي",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCxIn3IbIMdlNW0btV5m9mhw"
+  },
+  {
+   "id": "ali-mayahi",
+   "type": "youtube",
+   "channel": "UCJxQByGJHN-6TB9oiIVlGCw",
+   "name_en": "Sheikh Ali al-Mayahi",
+   "name_ar": "الشيخ علي المياحي",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCJxQByGJHN-6TB9oiIVlGCw"
+  },
+  {
+   "id": "fadhel-saffar",
+   "type": "youtube",
+   "channel": "UCbTeSNbGmxLpe6qzkW6vC5Q",
+   "name_en": "Office of Sheikh Fadhel al-Saffar",
+   "name_ar": "مكتب الشيخ فاضل الصفار",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCbTeSNbGmxLpe6qzkW6vC5Q"
+  },
+  {
+   "id": "abdulhai-qambar",
+   "type": "youtube",
+   "channel": "UCafZiKLBHYnXsPaJ3kLJx6g",
+   "name_en": "Abdulhai Al Qambar",
+   "name_ar": "عبدالحي آل قمبر",
+   "kind": "dua",
+   "languages": [
+    "ar"
+   ],
+   "country": null,
+   "url": "https://www.youtube.com/channel/UCafZiKLBHYnXsPaJ3kLJx6g"
+  },
+  {
+   "id": "abather-halwachi",
+   "type": "youtube",
+   "channel": "UCRsCZa0TvR8PVA0AyKNRu6Q",
+   "name_en": "Abather al-Halwachi",
+   "name_ar": "أباذر الحلواجي",
+   "kind": "dua",
+   "languages": [
+    "ar"
+   ],
+   "country": "BH",
+   "url": "https://www.youtube.com/channel/UCRsCZa0TvR8PVA0AyKNRu6Q"
+  },
+  {
+   "id": "ali-fani",
+   "type": "youtube",
+   "channel": "UC_Pfw3H0Y_diCCMiB0_MCSA",
+   "name_en": "Ali Fani",
+   "name_ar": "علی فانی",
+   "kind": "dua",
+   "languages": [
+    "fa",
+    "ar"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UC_Pfw3H0Y_diCCMiB0_MCSA"
+  },
+  {
+   "id": "mahdi-samavati",
+   "type": "youtube",
+   "channel": "UCg5HBBsSgPVqITKYv6KgavA",
+   "name_en": "Hajj Mahdi Samavati",
+   "name_ar": "حاج مهدی سماواتی",
+   "kind": "dua",
+   "languages": [
+    "fa",
+    "ar"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCg5HBBsSgPVqITKYv6KgavA"
+  },
+  {
+   "id": "farahmand-azad",
+   "type": "youtube",
+   "channel": "UCpLu0MPqOhFqaIBeCrEHCZA",
+   "name_en": "Mohsen Farahmand Azad",
+   "name_ar": "محسن فرهمند آزاد",
+   "kind": "dua",
+   "languages": [
+    "fa",
+    "ar"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCpLu0MPqOhFqaIBeCrEHCZA"
+  },
+  {
+   "id": "pouyanfar",
+   "type": "youtube",
+   "channel": "UC2VgZgGo2QfX_IdJH1aFunQ",
+   "name_en": "Mohammad Hossein Pouyanfar",
+   "name_ar": "محمدحسین پویانفر",
+   "kind": "dua",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UC2VgZgGo2QfX_IdJH1aFunQ"
+  },
+  {
+   "id": "duas-org",
+   "type": "youtube",
+   "channel": "UCooDp7i-ZTCRmgC_JW_5pYg",
+   "name_en": "Duas.org",
+   "name_ar": "أدعية",
+   "kind": "dua",
+   "languages": [
+    "ar",
+    "en"
+   ],
+   "country": null,
+   "url": "https://www.youtube.com/channel/UCooDp7i-ZTCRmgC_JW_5pYg"
+  },
+  {
+   "id": "amer-kadhmay",
+   "type": "youtube",
+   "channel": "UCrbSq4TfkTF70eZa5uzuQzA",
+   "name_en": "Sheikh Amer al-Kadhmay",
+   "name_ar": "الشيخ عامر الكاظمي",
+   "kind": "quran",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCrbSq4TfkTF70eZa5uzuQzA"
+  },
+  {
+   "id": "hamed-shakernejad",
+   "type": "youtube",
+   "channel": "UCTLZH1vzgW4LHnYNFQUt1Lg",
+   "name_en": "Hamed Shakernejad",
+   "name_ar": "حامد شاکرنژاد",
+   "kind": "quran",
+   "languages": [
+    "ar",
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCTLZH1vzgW4LHnYNFQUt1Lg"
+  },
+  {
+   "id": "ahmad-abolghasemi",
+   "type": "youtube",
+   "channel": "UC8Fmn4nr3ogCwMBvH8BJhNw",
+   "name_en": "Ahmad Abolghasemi",
+   "name_ar": "احمد ابوالقاسمی",
+   "kind": "quran",
+   "languages": [
+    "ar",
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UC8Fmn4nr3ogCwMBvH8BJhNw"
+  },
+  {
+   "id": "hassanain-hilou",
+   "type": "youtube",
+   "channel": "UCVlYPQhYWObgwsdfWhHS_qQ",
+   "name_en": "Sayed Hassanain al-Hilou",
+   "name_ar": "السيد حسنين الحلو",
+   "kind": "quran",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCVlYPQhYWObgwsdfWhHS_qQ"
+  },
+  {
+   "id": "karbala-quran-tv",
+   "type": "youtube",
+   "channel": "UCqAbG6ft9Px-wNrCs0lBIHw",
+   "name_en": "Holy Quran TV (Karbala group)",
+   "name_ar": "قناة القرآن الكريم الفضائية",
+   "kind": "quran",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCqAbG6ft9Px-wNrCs0lBIHw"
+  },
+  {
+   "id": "husayn-shrine-dar-quran",
+   "type": "youtube",
+   "channel": "UCHKsqqiipgmHMqCFQs3bATQ",
+   "name_en": "Dar al-Quran, Imam Husayn Shrine",
+   "name_ar": "دار القرآن الكريم في العتبة الحسينية المقدسة",
+   "kind": "quran",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCHKsqqiipgmHMqCFQs3bATQ"
+  },
+  {
+   "id": "alawi-shrine-dar-quran",
+   "type": "youtube",
+   "channel": "UCzCm1NGlRVpfFPIsGOenFKA",
+   "name_en": "Dar al-Quran, Imam Ali Shrine",
+   "name_ar": "دار القرآن الكريم في العتبة العلوية المقدسة",
+   "kind": "quran",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCzCm1NGlRVpfFPIsGOenFKA"
+  },
+  {
+   "id": "abbas-shrine-quran-institute",
+   "type": "youtube",
+   "channel": "UC6XozMXhFyymGQwoqmq_3tQ",
+   "name_en": "Quran Institute, al-Abbas Shrine",
+   "name_ar": "معهد القرآن الكريم في العتبة العباسية المقدسة",
+   "kind": "quran",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UC6XozMXhFyymGQwoqmq_3tQ"
+  },
+  {
+   "id": "imam-husayn-shrine",
+   "type": "youtube",
+   "channel": "UCG62vI9vb-neEb2t5XWT_Gg",
+   "name_en": "Imam Husayn Holy Shrine",
+   "name_ar": "العتبة الحسينية المقدسة",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCG62vI9vb-neEb2t5XWT_Gg",
+   "live": true,
+   "place_en": "Karbala",
+   "place_ar": "كربلاء"
+  },
+  {
+   "id": "karbala-tv",
+   "type": "youtube",
+   "channel": "UCI4gZRGRdfnfPajdxs8QtPQ",
+   "name_en": "Karbala TV (Imam Husayn Shrine)",
+   "name_ar": "قناة كربلاء الفضائية",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCI4gZRGRdfnfPajdxs8QtPQ",
+   "live": true,
+   "place_en": "Karbala",
+   "place_ar": "كربلاء",
+   "live_video": "L2-mZ5GqwSY"
+  },
+  {
+   "id": "abbas-shrine",
+   "type": "youtube",
+   "channel": "UCFHL7Ku2fj2FcMW1n6ILrhw",
+   "name_en": "al-Abbas Holy Shrine",
+   "name_ar": "العتبة العباسية المقدسة",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCFHL7Ku2fj2FcMW1n6ILrhw",
+   "live": true,
+   "place_en": "Karbala",
+   "place_ar": "كربلاء",
+   "live_video": "cF7rNqrwX2Q"
+  },
+  {
+   "id": "alkafeel-tv",
+   "type": "youtube",
+   "channel": "UCaaBs5EwkPCs1wXIeMPP0bA",
+   "name_en": "Alkafeel TV (al-Abbas Shrine media)",
+   "name_ar": "قناة الكفيل",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCaaBs5EwkPCs1wXIeMPP0bA",
+   "live": true,
+   "place_en": "Karbala",
+   "place_ar": "كربلاء",
+   "live_video": "D9kZNlxbW8s"
+  },
+  {
+   "id": "imam-ali-shrine",
+   "type": "youtube",
+   "channel": "UCiE5ev_voWCwuIKfc0k2hOA",
+   "name_en": "Imam Ali Holy Shrine",
+   "name_ar": "العتبة العلوية المقدسة",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCiE5ev_voWCwuIKfc0k2hOA",
+   "live": true,
+   "place_en": "Najaf",
+   "place_ar": "النجف الأشرف",
+   "live_video": "zL6hkOwydGU"
+  },
+  {
+   "id": "imam-ali-tv",
+   "type": "youtube",
+   "channel": "UCi4CSgJk3i_slWnWG9Y14qA",
+   "name_en": "Imam Ali TV (Imam Ali Shrine)",
+   "name_ar": "فضائية العتبة العلوية المقدسة",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCi4CSgJk3i_slWnWG9Y14qA",
+   "live": true,
+   "place_en": "Najaf",
+   "place_ar": "النجف الأشرف",
+   "live_video": "ujDNcsoRws0"
+  },
+  {
+   "id": "imam-ali-shrine-en",
+   "type": "youtube",
+   "channel": "UCmz9cRiiZD76Ef3r7PUN7oQ",
+   "name_en": "Imam Ali Holy Shrine (English)",
+   "name_ar": "العتبة العلوية المقدسة - الإنجليزية",
+   "kind": "shrine",
+   "languages": [
+    "en"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCmz9cRiiZD76Ef3r7PUN7oQ",
+   "live": true,
+   "place_en": "Najaf",
+   "place_ar": "النجف الأشرف"
+  },
+  {
+   "id": "kadhimiya-shrine",
+   "type": "youtube",
+   "channel": "UCNxqr-jWD-2VNDN--XTvHfg",
+   "name_en": "al-Kadhimiya Holy Shrine",
+   "name_ar": "العتبة الكاظمية المقدسة",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCNxqr-jWD-2VNDN--XTvHfg",
+   "live": true,
+   "place_en": "Kadhimiya",
+   "place_ar": "الكاظمية"
+  },
+  {
+   "id": "askari-shrine",
+   "type": "youtube",
+   "channel": "UCVHMwTQ7lsfqCzTzCVsW69A",
+   "name_en": "al-Askari Holy Shrine (Samarra)",
+   "name_ar": "العتبة العسكرية المقدسة",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCVHMwTQ7lsfqCzTzCVsW69A",
+   "live": true,
+   "place_en": "Samarra",
+   "place_ar": "سامراء"
+  },
+  {
+   "id": "imam-reza-shrine-fa",
+   "type": "youtube",
+   "channel": "UCB51FprNGZS3DiagP_aPDKw",
+   "name_en": "Imam Reza Holy Shrine (Persian)",
+   "name_ar": "حرم مطهر امام رضا علیه السلام",
+   "kind": "shrine",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCB51FprNGZS3DiagP_aPDKw",
+   "live": true,
+   "place_en": "Mashhad",
+   "place_ar": "مشهد"
+  },
+  {
+   "id": "imam-reza-shrine-en",
+   "type": "youtube",
+   "channel": "UCUGUu3xCNPNxJHyVccFBylA",
+   "name_en": "Imam Reza Holy Shrine (English)",
+   "name_ar": "حرم الإمام الرضا - الإنجليزية",
+   "kind": "shrine",
+   "languages": [
+    "en"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCUGUu3xCNPNxJHyVccFBylA",
+   "live": true,
+   "place_en": "Mashhad",
+   "place_ar": "مشهد"
+  },
+  {
+   "id": "imam-reza-tv",
+   "type": "youtube",
+   "channel": "UCJh5-9X-aV5KBgQpYTE-IXw",
+   "name_en": "Imam Reza TV (Arabic)",
+   "name_ar": "قناة الإمام الرضا العالمية",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCJh5-9X-aV5KBgQpYTE-IXw",
+   "live": true,
+   "place_en": "Mashhad",
+   "place_ar": "مشهد"
+  },
+  {
+   "id": "imam-reza-tv-urdu",
+   "type": "youtube",
+   "channel": "UCEMGool3pAV1eylNqFlV2Ug",
+   "name_en": "Imam Reza TV Urdu",
+   "name_ar": "امام رضا ٹی وی",
+   "kind": "shrine",
+   "languages": [
+    "ur"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCEMGool3pAV1eylNqFlV2Ug",
+   "live": true,
+   "place_en": "Mashhad",
+   "place_ar": "مشهد"
+  },
+  {
+   "id": "masumeh-shrine",
+   "type": "youtube",
+   "channel": "UCjFqtsUn_tixWyjod6W4NOA",
+   "name_en": "Lady Masumeh Shrine media (Astan Qom Media)",
+   "name_ar": "آستان قم مدیا",
+   "kind": "shrine",
+   "languages": [
+    "fa"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCjFqtsUn_tixWyjod6W4NOA",
+   "live": true,
+   "place_en": "Qom",
+   "place_ar": "قم"
+  },
+  {
+   "id": "kufa-mosque",
+   "type": "youtube",
+   "channel": "UCYVqfTcQg8JDJcKtUz3DJeA",
+   "name_en": "Great Mosque of Kufa",
+   "name_ar": "مسجد الكوفة المعظم",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCYVqfTcQg8JDJcKtUz3DJeA",
+   "live": true,
+   "place_en": "Kufa",
+   "place_ar": "الكوفة"
+  },
+  {
+   "id": "kufa-mosque-live",
+   "type": "youtube",
+   "channel": "UCpA169WNTQbaQevz-mBpp0g",
+   "name_en": "Great Mosque of Kufa – Live",
+   "name_ar": "البث المباشر لمسجد الكوفة المعظم",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCpA169WNTQbaQevz-mBpp0g",
+   "live": true,
+   "place_en": "Kufa",
+   "place_ar": "الكوفة"
+  },
+  {
+   "id": "saudi-quran-tv",
+   "type": "youtube",
+   "channel": "UCos52azQNBgW63_9uDJoPDA",
+   "name_en": "Makkah — Masjid al-Haram",
+   "name_ar": "مكة المكرمة — المسجد الحرام",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "SA",
+   "url": "https://www.youtube.com/channel/UCos52azQNBgW63_9uDJoPDA",
+   "live": true,
+   "place_en": "Makkah",
+   "place_ar": "مكة",
+   "live_video": "eC4LfEVxvKg",
+   "live_only": true
+  },
+  {
+   "id": "saudi-sunnah-tv",
+   "type": "youtube",
+   "channel": "UCROKYPep-UuODNwyipe6JMw",
+   "name_en": "Madinah — Masjid al-Nabawi",
+   "name_ar": "المدينة المنورة — المسجد النبوي",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "SA",
+   "url": "https://www.youtube.com/channel/UCROKYPep-UuODNwyipe6JMw",
+   "live": true,
+   "place_en": "Madinah",
+   "place_ar": "المدينة",
+   "live_video": "Rs7St51oDDc",
+   "live_only": true
+  },
+  {
+   "id": "imam-hussein-tv2",
+   "type": "youtube",
+   "channel": "UCkL7NzuBwMxd8H9gSoIP9Ug",
+   "name_en": "Imam Hussein TV 2 (Arabic)",
+   "name_ar": "قناة الإمام الحسين ٢",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCkL7NzuBwMxd8H9gSoIP9Ug"
+  },
+  {
+   "id": "imam-hussein-tv4",
+   "type": "youtube",
+   "channel": "UCGm6APhsBZy8Mkw5CKXiRHQ",
+   "name_en": "Imam Hussein TV 4 (Urdu)",
+   "name_ar": "امام حسین ٹی وی ٤",
+   "kind": "lecture",
+   "languages": [
+    "ur"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCGm6APhsBZy8Mkw5CKXiRHQ"
+  },
+  {
+   "id": "kisa-kids",
+   "type": "youtube",
+   "channel": "UCLdIatEAz9H-_9SNzVM5Q6w",
+   "name_en": "Kisa Kids",
+   "name_ar": "",
+   "kind": "kids",
+   "languages": [
+    "en"
+   ],
+   "country": "US",
+   "url": "https://www.youtube.com/channel/UCLdIatEAz9H-_9SNzVM5Q6w"
+  },
+  {
+   "id": "hadi-kids",
+   "type": "youtube",
+   "channel": "UCcbJq39LzRQhdxy7XgGxCtQ",
+   "name_en": "Hadi Kids TV",
+   "name_ar": "شبکه کودک هادی",
+   "kind": "kids",
+   "languages": [
+    "fa",
+    "ar"
+   ],
+   "country": "IR",
+   "url": "https://www.youtube.com/channel/UCcbJq39LzRQhdxy7XgGxCtQ"
+  },
+  {
+   "id": "kadhimiya-aljawadain-tv",
+   "type": "youtube",
+   "channel": "UCF6TQbaip8k4wFpNHIJnFJw",
+   "name_en": "Al-Jawadain TV – Kadhimiya Shrine live",
+   "name_ar": "قناة الجوادين - العتبة الكاظمية المقدسة",
+   "kind": "shrine",
+   "languages": [
+    "ar"
+   ],
+   "country": "IQ",
+   "url": "https://www.youtube.com/channel/UCF6TQbaip8k4wFpNHIJnFJw",
+   "live": true,
+   "place_en": "Kadhimiya",
+   "place_ar": "الكاظمية",
+   "live_only": true
+  },
+  {
+   "id": "shia-readers",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/1a9d5d7c/podcast/rss",
+   "name_en": "Shia Readers",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/3f/59/46/3f5946f5-8d0e-3160-7cac-c7305ab9b7d0/mza_16302941680767486953.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/shia-readers/id1503125795"
+  },
+  {
+   "id": "pod-1577484046",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/64e30e2c/podcast/rss",
+   "name_en": "مكتبة آل محمد",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/fb/a6/94/fba69481-c227-fc14-5e1f-5230b03faadd/mza_6745256968580434102.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A2%D9%84-%D9%85%D8%AD%D9%85%D8%AF/id1577484046"
+  },
+  {
+   "id": "pod-462197954",
+   "type": "podcast",
+   "feed": "https://moon-rose7.podomatic.com/rss2.xml",
+   "name_en": "ادعية, زيارات, نعي, قرآن كريم",
+   "name_ar": "",
+   "kind": "dua",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/69/1b/54/691b547e-1271-3396-d94f-30f442fb010e/mza_15529373230094845130.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9-%D8%B2%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D9%86%D8%B9%D9%8A-%D9%82%D8%B1%D8%A2%D9%86-%D9%83%D8%B1%D9%8A%D9%85/id462197954"
+  },
+  {
+   "id": "pod-1268421861",
+   "type": "podcast",
+   "feed": "https://athkar.podomatic.com/rss2.xml",
+   "name_en": "بودكاست اذكار",
+   "name_ar": "",
+   "kind": "dua",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/3d/68/32/3d68327a-26e3-5f59-ad25-0941cd49d7f4/mza_2228613704298213446.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA-%D8%A7%D8%B0%D9%83%D8%A7%D8%B1/id1268421861"
+  },
+  {
+   "id": "alhojairat-productions",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:40173407/sounds.rss",
+   "name_en": "alhojairat productions",
+   "name_ar": "",
+   "kind": "latmiya",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/f9/e3/23/f9e3239e-1a92-a53c-647d-6df34be67926/mza_1205572533828820203.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/alhojairat-productions/id1249715394"
+  },
+  {
+   "id": "100-days-100-clips-challenge",
+   "type": "podcast",
+   "feed": "https://feeds.redcircle.com/ae4fe046-1c97-4801-8571-171d216ef4a2",
+   "name_en": "100 Days 100 Clips Challenge",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/0d/b2/4d/0db24dcb-417d-147b-8b5c-224e2fde3524/mza_6523409320255088180.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/100-days-100-clips-challenge/id1494783867"
+  },
+  {
+   "id": "pod-1819382842",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/105ee7568/podcast/rss",
+   "name_en": "313",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "fr"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/2a/93/78/2a9378b0-bd2f-d71f-0b46-2171ec602cd5/mza_11548716055615279039.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/313/id1819382842"
+  },
+  {
+   "id": "50-days-50-clips-imam-hussain-edition",
+   "type": "podcast",
+   "feed": "https://feeds.redcircle.com/62d473bc-d2b4-4409-ac7c-1ff0241e2d50",
+   "name_en": "50 Days 50 Clips: Imam Hussain Edition",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/5b/e3/d5/5be3d50c-16fc-ad08-3250-aa6069984821/mza_17585356596001856694.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/50-days-50-clips-imam-hussain-edition/id1701569979"
+  },
+  {
+   "id": "a-commentary-on-nahj-al-balaghah-mizan-institute",
+   "type": "podcast",
+   "feed": "https://feeds.transistor.fm/a-commentary-on-nahjul-balaghah-mizan-institute",
+   "name_en": "A Commentary on Nahj Al-Balaghah - Mizan Institute",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/6c/75/6d/6c756d0b-ad1a-535b-6001-993d27b50bf1/mza_7448502814625156069.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/a-commentary-on-nahj-al-balaghah-mizan-institute/id1602556715"
+  },
+  {
+   "id": "ali",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/1d7d38c8/podcast/rss",
+   "name_en": "Ali",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts124/v4/2d/a0/a6/2da0a695-70e8-9084-ef2e-32d781f5c8f9/mza_2202723095740223600.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/ali/id1544045508"
+  },
+  {
+   "id": "biography-of-prophet-mohammad",
+   "type": "podcast",
+   "feed": "https://feeds.redcircle.com/73f4e9fc-27c2-4473-851b-d73432a8e129",
+   "name_en": "Biography of Prophet Mohammad (ص)",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/9b/e9/ef/9be9efe0-23cf-3e57-48ce-567d1da7073f/mza_17577289039703500715.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/biography-of-prophet-mohammad-%D8%B5/id1577027593"
+  },
+  {
+   "id": "dr-sayed-ammar-nakshawani",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/e606f04/podcast/rss",
+   "name_en": "Dr. Sayed Ammar Nakshawani",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/a9/57/1c/a9571c89-dc74-a558-6723-f92d79bc5b43/mza_4908784772035103803.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/dr-sayed-ammar-nakshawani/id1481860281"
+  },
+  {
+   "id": "dr-usama-al-atar-lectures",
+   "type": "podcast",
+   "feed": "https://feeds.feedburner.com/DrUsamaAl-atarLectures",
+   "name_en": "Dr. Usama Al-Atar Lectures",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/b0/b4/19b0b400-c2db-5f0e-39e0-3db73c6d6827/mza_573660931772073638.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/dr-usama-al-atar-lectures/id481092143"
+  },
+  {
+   "id": "dua-kumayl-a-deeper-look-mizan-institute",
+   "type": "podcast",
+   "feed": "https://feeds.transistor.fm/dua-kumayl-a-deeper-look",
+   "name_en": "Dua Kumayl: A Deeper Look - Mizan Institute",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/fb/cc/c3/fbccc333-bb7a-7d86-3c3a-2722020d9c67/mza_6466042877256055927.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/dua-kumayl-a-deeper-look-mizan-institute/id1554686414"
+  },
+  {
+   "id": "hujjat-podcast",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/8643f2c/podcast/rss",
+   "name_en": "Hujjat Podcast",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/f7/4f/5a/f74f5a09-169d-4e10-217b-1927d93afdb4/mza_17262232671914058619.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/hujjat-podcast/id1448299838"
+  },
+  {
+   "id": "imam-ali-conference-imam-ali-and-human-values",
+   "type": "podcast",
+   "feed": "https://feeds.captivate.fm/imam-ali-conference/",
+   "name_en": "Imam Ali Conference; Imam Ali and Human Values",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/66/e3/2f/66e32f9f-43b9-26a8-7170-0b069868f4c5/mza_13771078497869100304.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/imam-ali-conference-imam-ali-and-human-values/id1616124077"
+  },
+  {
+   "id": "imam-ali-conference-spirit-of-reform",
+   "type": "podcast",
+   "feed": "https://feeds.captivate.fm/spirit-of-reform/",
+   "name_en": "Imam Ali Conference; Spirit of Reform",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts114/v4/24/0e/ea/240eeab7-a022-1e1c-a32e-59b885f8aba3/mza_18028319252611252417.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/imam-ali-conference-spirit-of-reform/id1558321826"
+  },
+  {
+   "id": "islamisches-zentrum-imam-mahdi",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/4a84a2c0/podcast/rss",
+   "name_en": "Islamisches Zentrum Imam Mahdi",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "de"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts114/v4/6a/34/26/6a3426db-2e24-c173-ab44-e033b12e0426/mza_17537784819274517536.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/islamisches-zentrum-imam-mahdi/id1551740335"
+  },
+  {
+   "id": "jaffari-community-centre",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/10555e14/podcast/rss",
+   "name_en": "Jaffari Community Centre",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/fd/f3/18/fdf318c1-1693-a852-2fe4-241f2f855337/mza_9563407437128292430.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/jaffari-community-centre/id1492831816"
+  },
+  {
+   "id": "le-chiisme-apprendre-l-islam",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:1075752193/sounds.rss",
+   "name_en": "Le Chiisme (Apprendre l'islam)",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "fr"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/3d/11/21/3d11215e-4f1d-3c5c-2979-4ecaee2c8441/mza_787646048520323522.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/le-chiisme-apprendre-lislam/id1590746491"
+  },
+  {
+   "id": "les-chevaliers-de-la-wilayah",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/ddb94a3c/podcast/rss",
+   "name_en": "Les Chevaliers de la Wilayah",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "fr"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/cb/67/c1/cb67c139-2904-9928-c72d-5bfbe596830f/mza_2318508954658059672.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/les-chevaliers-de-la-wilayah/id1736402165"
+  },
+  {
+   "id": "live-in-london-with-dr-sayed-ammar-nakshawani",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/b90a884/podcast/rss",
+   "name_en": "Live in London with Dr. Sayed Ammar Nakshawani",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/10/80/f6/1080f677-b03d-ed11-ca7a-47a936aa9eb9/mza_15618609143749044450.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/live-in-london-with-dr-sayed-ammar-nakshawani/id1465171190"
+  },
+  {
+   "id": "monthly-reflections",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/32585b88/podcast/rss",
+   "name_en": "Monthly Reflections",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/7f/c3/51/7fc3510c-af2c-a2ea-5f2a-725acd1a57b3/mza_7965246568576236595.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/monthly-reflections/id1529177103"
+  },
+  {
+   "id": "muharram-2020-lectures-sayed-jawad-qazwini",
+   "type": "podcast",
+   "feed": "https://feeds.captivate.fm/muharram-2020-lectures/",
+   "name_en": "Muharram 2020 lectures - Sayed Jawad Qazwini",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/50/83/da/5083da13-2cc2-65f5-6bc5-883e10d7cf25/mza_4273302830091097216.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/muharram-2020-lectures-sayed-jawad-qazwini/id1726626609"
+  },
+  {
+   "id": "muharram-2022-lectures-sayed-jawad-qazwini",
+   "type": "podcast",
+   "feed": "https://feeds.captivate.fm/sjq-muharram-2022-lectures/",
+   "name_en": "Muharram 2022 lectures-Sayed Jawad Qazwini",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/00/a7/12/00a712e3-95c5-4bba-3b75-e00e4038af74/mza_8478484343521571358.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/muharram-2022-lectures-sayed-jawad-qazwini/id1726626248"
+  },
+  {
+   "id": "muharram-2023-lectures-sayed-jawad-qazwini",
+   "type": "podcast",
+   "feed": "https://feeds.captivate.fm/muharram-2023/",
+   "name_en": "Muharram 2023 Lectures - Sayed Jawad Qazwini",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/86/93/a5/8693a510-7f98-607d-1074-c8a78b73cce1/mza_10322646571382112015.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/muharram-2023-lectures-sayed-jawad-qazwini/id1730053644"
+  },
+  {
+   "id": "nahjul-balagha-an-english-reading-of-imam-ali-s",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/10344ce48/podcast/rss",
+   "name_en": "Nahjul Balagha - An English Reading of Imam Ali’s sermons and sayings by Seyyed Aleem Naqvi",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/be/6c/0a/be6c0aba-6259-39b1-86f7-38b29c236a52/mza_2307224885009704663.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/nahjul-balagha-an-english-reading-of-imam-alis/id1842470700"
+  },
+  {
+   "id": "reflections-on-ziyarat-ashura-mizan-institute",
+   "type": "podcast",
+   "feed": "https://feeds.transistor.fm/reflections-on-ziyarat-ashura",
+   "name_en": "Reflections on Ziyarat Ashura - Mizan Institute",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/8e/19/88/8e19882b-4d00-212f-23c4-4dd7d2f87183/mza_8396591967906075248.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/reflections-on-ziyarat-ashura-mizan-institute/id1582583624"
+  },
+  {
+   "id": "sicm-qur-an-tafsir-by-shaykh-bahmanpour",
+   "type": "podcast",
+   "feed": "https://media.rss.com/sicm-quran-tafsir/feed.xml",
+   "name_en": "SICM Qur'an Tafsir by Shaykh Bahmanpour",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/4b/c6/c5/4bc6c5dd-4b04-6a13-45ea-21d3e102a129/mza_14083805657160356422.png/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/sicm-quran-tafsir-by-shaykh-bahmanpour/id1788192155"
+  },
+  {
+   "id": "sayed-modarresi-lectures",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/fa231cac/podcast/rss",
+   "name_en": "Sayed Modarresi Lectures",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e4/c6/59/e4c659e8-a420-edfa-008b-2542a4e661cf/mza_966299015680273890.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/sa/podcast/sayed-modarresi-lectures/id1764086394"
+  },
+  {
+   "id": "sayyed-haydar-al-musawie",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/45fbd520/podcast/rss",
+   "name_en": "Sayyed Haydar Al-Musawie",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "de"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts114/v4/e5/5f/68/e55f6846-3f06-c0f4-0047-7ee0da4e77b5/mza_15470085295844994063.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/sayyed-haydar-al-musawie/id1546902603"
+  },
+  {
+   "id": "shia-islamic-belief-system-miz-n-institute",
+   "type": "podcast",
+   "feed": "https://feeds.transistor.fm/ramadhan-daily-2018",
+   "name_en": "Shia Islamic Belief System - Mizãn Institute",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/81/d3/d6/81d3d671-d469-0c38-9c2f-a09021c02174/mza_9993720835226259515.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/shia-islamic-belief-system-miz%C3%A3n-institute/id1465235973"
+  },
+  {
+   "id": "shiacast",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/7f75d38c/podcast/rss",
+   "name_en": "ShiaCast",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/c9/ad/de/c9adde65-9bb3-df2a-29af-4ea624a7f884/mza_15811996285519475038.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/shiacast/id1549382423"
+  },
+  {
+   "id": "tafsir-treasures-miz-n-institute",
+   "type": "podcast",
+   "feed": "https://feeds.transistor.fm/tafsir-treasures-mizan-institute",
+   "name_en": "Tafsir Treasures - Mizãn Institute",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f3/ce/e5/f3cee5ba-662f-360d-c530-87b6e18f864b/mza_13262487306533846667.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/tafsir-treasures-miz%C3%A3n-institute/id1504329790"
+  },
+  {
+   "id": "the-ami-podcast",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/40dd346c/podcast/rss",
+   "name_en": "The AMI Podcast",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/81/57/56/8157568b-31dd-4d54-5b35-48b4905cd173/mza_17252337655285852777.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/the-ami-podcast/id1541326014"
+  },
+  {
+   "id": "the-real-shia-beliefs",
+   "type": "podcast",
+   "feed": "https://feeds.redcircle.com/2feaf453-06e9-4f92-ab94-e4fd1656d5a9",
+   "name_en": "The Real Shia Beliefs",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/00/6a/3b/006a3bec-3c25-84f6-ed29-b45c85ff9b97/mza_11759713225468293494.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/the-real-shia-beliefs/id1741284821"
+  },
+  {
+   "id": "the-speaking-quran",
+   "type": "podcast",
+   "feed": "https://feeds.captivate.fm/the-speaking-quran/",
+   "name_en": "The Speaking Quran",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/38/e5/21/38e52163-4dd1-5fb1-2234-b04753e7def7/mza_3816265241882384309.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/the-speaking-quran/id1807411904"
+  },
+  {
+   "id": "zahraun-podcast",
+   "type": "podcast",
+   "feed": "https://zahraun.podomatic.com/rss2.xml",
+   "name_en": "Zahraun Podcast",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/81/df/bb/81dfbb8f-f70a-66a4-c3ba-18de5c09c478/mza_12446228162397763403.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/zahraun-podcast/id934114819"
+  },
+  {
+   "id": "m-mahdi",
+   "type": "podcast",
+   "feed": "https://m-mahdi.info/m-mahdi.xml",
+   "name_en": "m-mahdi",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts/32/83/14/ps.wrmnpeaj.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/m-mahdi/id439481709"
+  },
+  {
+   "id": "pod-1577358719",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/64c75b8c/podcast/rss",
+   "name_en": "السيد هادي المدرسي",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f6/35/d1/f635d138-a413-a1a8-cf2c-ba176f199ae1/mza_3690037648196154702.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A7%D9%84%D8%B3%D9%8A%D8%AF-%D9%87%D8%A7%D8%AF%D9%8A-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D9%8A/id1577358719"
+  },
+  {
+   "id": "pod-1523638761",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:92792926/sounds.rss",
+   "name_en": "الشيخ أحمد الشهابي",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/63/69/c2/6369c2c3-d730-10c4-dfed-4d23c8879841/mza_4951579588072930995.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%A8%D9%8A/id1523638761"
+  },
+  {
+   "id": "pod-762276912",
+   "type": "podcast",
+   "feed": "https://feeds.feedburner.com/Dralfadhli",
+   "name_en": "الشيخ د.عبدالهادي الفضلي",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts/v4/e4/bc/36/e4bc3620-31c4-3954-e505-accf5df98ded/mza_1484266100562819986.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%AF-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%87%D8%A7%D8%AF%D9%8A-%D8%A7%D9%84%D9%81%D8%B6%D9%84%D9%8A/id762276912"
+  },
+  {
+   "id": "pod-836991870",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:82451165/sounds.rss",
+   "name_en": "الشيخ فوزي آل سيف",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/a2/e8/15/a2e81591-42b8-68db-817d-daebe9485f19/mza_7839411452199412818.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D9%81%D9%88%D8%B2%D9%8A-%D8%A2%D9%84-%D8%B3%D9%8A%D9%81/id836991870"
+  },
+  {
+   "id": "pod-1542963466",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/42947478/podcast/rss",
+   "name_en": "الشيخ ياسين الجمري",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f6/7d/6f/f67d6f92-3a43-ae08-7152-1224d83c3873/mza_16154866530721068677.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D9%8A%D8%A7%D8%B3%D9%8A%D9%86-%D8%A7%D9%84%D8%AC%D9%85%D8%B1%D9%8A/id1542963466"
+  },
+  {
+   "id": "pod-1629936127",
+   "type": "podcast",
+   "feed": "https://media.rss.com/khutbahimamali/feed.xml",
+   "name_en": "اهل البيت {رَحْمَتُ اللَّهِ وَ بَرَكاتُهُ عَلَیكُمْ أَهْلَ الْبَیتِ } Ahl al-Bayt",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/c5/3f/07/c53f07f2-d3f0-6830-bad7-e81000e4d0b8/mza_12776358939957091607.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%A7%D9%87%D9%84-%D8%A7%D9%84%D8%A8%D9%8A%D8%AA-%D8%B1-%D8%AD-%D9%85-%D8%AA-%D8%A7%D9%84%D9%84-%D9%87-%D9%88-%D8%A8-%D8%B1-%D9%83%D8%A7%D8%AA-%D9%87-%D8%B9-%D9%84-%DB%8C%D9%83-%D9%85-%D8%A3-%D9%87-%D9%84-%D8%A7%D9%84-%D8%A8-%DB%8C%D8%AA/id1629936127"
+  },
+  {
+   "id": "pod-1700160927",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/e6912774/podcast/rss",
+   "name_en": "سماحة الشيخ هاني البناء",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/2e/8e/5c/2e8e5ce5-5b9b-5ac1-b3e8-e285be27415f/mza_12836208487551345979.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%B3%D9%85%D8%A7%D8%AD%D8%A9-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D9%87%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%A8%D9%86%D8%A7%D8%A1/id1700160927"
+  },
+  {
+   "id": "pod-1436399258",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/6d8c0b0/podcast/rss",
+   "name_en": "محاضرات",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts123/v4/8f/d4/ab/8fd4ab5d-54cb-73d2-1cd7-55e9b1025b2e/mza_9049664896429156214.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA/id1436399258"
+  },
+  {
+   "id": "pod-1480172650",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/e1367e0/podcast/rss",
+   "name_en": "محاضرات الضياء",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/51/44/18/51441821-f1e2-161a-c524-b303b821ad15/mza_103402399528045802.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D8%A1/id1480172650"
+  },
+  {
+   "id": "pod-1197893421",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:29995914/sounds.rss",
+   "name_en": "محاضرات العلامة الشيخ حسين العايش",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/95/a8/cd/95a8cdf9-f8a2-c6f9-5060-7375ea2a4827/mza_15459059605893526391.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%AD%D8%B3%D9%8A%D9%86-%D8%A7%D9%84%D8%B9%D8%A7%D9%8A%D8%B4/id1197893421"
+  },
+  {
+   "id": "pod-1459198374",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:121135986/sounds.rss",
+   "name_en": "محاضرات العلامة المنير",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/03/1d/61/031d61b3-296e-4463-7288-6d8d8e29d226/mza_3855391734976555510.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D9%86%D9%8A%D8%B1/id1459198374"
+  },
+  {
+   "id": "pod-1092204203",
+   "type": "podcast",
+   "feed": "https://non.podomatic.com/rss2.xml",
+   "name_en": "محاضرات دينية",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/bf/b6/30/bfb63092-0026-5d95-7dd0-b4e2245a2f46/mza_6414107460508306650.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D8%AF%D9%8A%D9%86%D9%8A%D8%A9/id1092204203"
+  },
+  {
+   "id": "pod-1092867922",
+   "type": "podcast",
+   "feed": "https://feeds.feedburner.com/wordpress/yhIW",
+   "name_en": "محاضرات دينية",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/1e/0e/5a/1e0e5aa9-4b5e-92c5-3fb1-8839f298cee2/mza_12876358621012636734.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D8%AF%D9%8A%D9%86%D9%8A%D8%A9/id1092867922"
+  },
+  {
+   "id": "pod-1510210898",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:815274163/sounds.rss",
+   "name_en": "محاضرات عاشورائية 1",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/e9/78/80/e9788093-07a9-5f23-7f63-ca67fe83ac10/mza_6345872522776503653.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7%D8%A6%D9%8A%D8%A9-1/id1510210898"
+  },
+  {
+   "id": "pod-1164016881",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:65968205/sounds.rss",
+   "name_en": "محاضرات مسجد الإمام الحسن عليه السلام بالجارودية",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/a3/ff/01/a3ff013f-2f40-66bd-1e2d-43991ed278e4/mza_2838808856426431390.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85-%D8%A7%D9%84%D8%AD%D8%B3%D9%86-%D8%B9%D9%84%D9%8A%D9%87-%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85-%D8%A8%D8%A7%D9%84%D8%AC%D8%A7%D8%B1%D9%88%D8%AF%D9%8A%D8%A9/id1164016881"
+  },
+  {
+   "id": "alhaiaa-podcast",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/17ba5100/podcast/rss",
+   "name_en": "Alhaiaa Podcast",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/d3/cb/09/d3cb091d-12bb-b255-5658-0680185342d1/mza_17176200104996169979.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/alhaiaa-podcast/id1503918361"
+  },
+  {
+   "id": "lamenting-husayn-with-sayed-asad-jafri",
+   "type": "podcast",
+   "feed": "https://feeds.redcircle.com/f8875cc3-8ab5-4925-b2f1-f8a428784dc1",
+   "name_en": "Lamenting Husayn With Sayed Asad Jafri",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/1c/14/3a/1c143ae2-1169-78e3-11a7-bb6b8a448421/mza_8464932697483795556.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/lamenting-husayn-with-sayed-asad-jafri/id1756250816"
+  },
+  {
+   "id": "maulana-nusrat-bukhari-muharram-2021-1443",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/6761242c/podcast/rss",
+   "name_en": "Maulana Nusrat Bukhari | Muharram 2021/1443",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "ur"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/4c/85/83/4c858319-2d86-66af-680b-678d452d00f6/mza_8869624592152392086.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/maulana-nusrat-bukhari-muharram-2021-1443/id1582696714"
+  },
+  {
+   "id": "umm-aaminah-s-majlis-list",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/2811db54/podcast/rss",
+   "name_en": "Umm Aaminah's Majlis List",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/0e/e7/c2/0ee7c210-5baf-1ae6-bc29-f11c7fa83902/mza_1018198995981981016.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/umm-aaminahs-majlis-list/id1520209366"
+  },
+  {
+   "id": "pod-1194797277",
+   "type": "podcast",
+   "feed": "https://feeds.soundcloud.com/users/soundcloud:users:259670082/sounds.rss",
+   "name_en": "تسجيلات حسينية الامام الحجة",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/ec/0a/a5/ec0aa58b-db00-1fb2-734d-0f1a46bf6a49/mza_14994771744461348918.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%D8%A7%D8%AA-%D8%AD%D8%B3%D9%8A%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D9%85-%D8%A7%D9%84%D8%AD%D8%AC%D8%A9/id1194797277"
+  },
+  {
+   "id": "pod-1529135861",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/323c36d8/podcast/rss",
+   "name_en": "مأتم آل معراج",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/8c/e8/d9/8ce8d9d4-ed82-ade1-1f2d-7ea1397f4c49/mza_14586990834924459531.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%A3%D8%AA%D9%85-%D8%A2%D9%84-%D9%85%D8%B9%D8%B1%D8%A7%D8%AC/id1529135861"
+  },
+  {
+   "id": "pod-1823094241",
+   "type": "podcast",
+   "feed": "https://media.rss.com/majalis-asuhra-matam-alhoora/feed.xml",
+   "name_en": "مجالس ليالي عاشوراء ١٤٤٧ هجرية مع الشيخ منير المعتوق",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/05/ca/62/05ca62c8-bf4a-ca00-ec4f-e1fa9febcf03/mza_15283102867314602009.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AC%D8%A7%D9%84%D8%B3-%D9%84%D9%8A%D8%A7%D9%84%D9%8A-%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7%D8%A1-%D9%A1%D9%A4%D9%A4%D9%A7-%D9%87%D8%AC%D8%B1%D9%8A%D8%A9-%D9%85%D8%B9-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D9%85%D9%86%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%88%D9%82/id1823094241"
+  },
+  {
+   "id": "pod-675263373",
+   "type": "podcast",
+   "feed": "https://majles-hasan.podomatic.com/rss2.xml",
+   "name_en": "مجلس المرحوم الحاج حسن عبدالله بوحليقة",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/4a/82/e2/4a82e205-afda-9d19-7f8b-564ae773b18d/mza_14457483762102315184.png/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D9%85%D8%B1%D8%AD%D9%88%D9%85-%D8%A7%D9%84%D8%AD%D8%A7%D8%AC-%D8%AD%D8%B3%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87-%D8%A8%D9%88%D8%AD%D9%84%D9%8A%D9%82%D8%A9/id675263373"
+  },
+  {
+   "id": "pod-413740247",
+   "type": "podcast",
+   "feed": "https://feeds.feedburner.com/Aseer0",
+   "name_en": "محاضرات الدكتور احمد الوائلي",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts/v4/4a/42/4a/4a424a46-62ee-957c-a886-192627a27acf/mza_5062017507690447114.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D8%A7%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D9%88%D8%A7%D8%A6%D9%84%D9%8A/id413740247"
+  },
+  {
+   "id": "sheikh-ahmad-al-waeli-lecture-archive",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/10ece6c10/podcast/rss",
+   "name_en": "منبر الشيخ الدكتور أحمد الوائلي | Sheikh Ahmad al-Waeli Lecture Archive",
+   "name_ar": "",
+   "kind": "majlis",
+   "languages": [
+    "ar"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/6d/65/c6/6d65c66c-ba3c-d7ad-f999-1bd01b4f91e4/mza_17786305535847447628.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D9%85%D9%86%D8%A8%D8%B1-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D9%88%D8%A7%D8%A6%D9%84%D9%8A-sheikh-ahmad-al-waeli/id1875540202"
+  },
+  {
+   "id": "pod-1582839380",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/675d01f8/podcast/rss",
+   "name_en": "رادیو کربلا",
+   "name_ar": "",
+   "kind": "noha",
+   "languages": [
+    "fa"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/86/64/e3/8664e3a9-6399-0a56-a662-de4c1ca8aa25/mza_10060405831149870604.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/%D8%B1%D8%A7%D8%AF%DB%8C%D9%88-%DA%A9%D8%B1%D8%A8%D9%84%D8%A7/id1582839380"
+  },
+  {
+   "id": "after-maghrib",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/a048efa4/podcast/rss",
+   "name_en": "After Maghrib 🌙",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/42/cc/04/42cc04f3-e1a9-d7d1-5d46-ce7e161fd540/mza_707732829207576032.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/after-maghrib/id1631400987"
+  },
+  {
+   "id": "behind-the-minbar",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/f15f68c8/podcast/rss",
+   "name_en": "Behind the Minbar 🎙️",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/d1/ea/82/d1ea827f-76da-0918-cfaa-1029116225e6/mza_4123097477675095686.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/behind-the-minbar/id1727876838"
+  },
+  {
+   "id": "jumah-nights",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/e39a6c4c/podcast/rss",
+   "name_en": "Jumah Nights 🔭",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/93/dd/98/93dd9884-1130-9fd5-fa12-6ce75bec3174/mza_1407253114688891035.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/jumah-nights/id1691944114"
+  },
+  {
+   "id": "poets-of-the-household",
+   "type": "podcast",
+   "feed": "https://media.rss.com/poetsofthehousehold/feed.xml",
+   "name_en": "Poets Of The Household",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/cd/b3/fc/cdb3fc17-9b2a-ab43-7db4-ae908ff10ae5/mza_6648234447196045807.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/poets-of-the-household/id1705912546"
+  },
+  {
+   "id": "standwithdignity-hussain-podcast",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/673737c0/podcast/rss",
+   "name_en": "Standwithdignity: Hussain Podcast",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/9d/87/88/9d8788d3-4c90-1e1a-5160-a91177239485/mza_8104926811821894954.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/standwithdignity-hussain-podcast/id1583076135"
+  },
+  {
+   "id": "sukoon-a-nasimco-podcast",
+   "type": "podcast",
+   "feed": "https://media.rss.com/sukoon-nasimco/feed.xml",
+   "name_en": "Sukoon - A NASIMCO Podcast",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/f5/a6/d9/f5a6d960-9bb1-baf4-fb32-ba06568b8f2b/mza_7017898117592959093.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/sukoon-a-nasimco-podcast/id1666621873"
+  },
+  {
+   "id": "the-insight-interviews",
+   "type": "podcast",
+   "feed": "https://anchor.fm/s/df5c4600/podcast/rss",
+   "name_en": "The Insight Interviews",
+   "name_ar": "",
+   "kind": "lecture",
+   "languages": [
+    "en"
+   ],
+   "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/2d/19/46/2d194609-8016-886f-ec0a-af179f15053a/mza_14948033316506263832.jpg/600x600bb.jpg",
+   "url": "https://podcasts.apple.com/us/podcast/the-insight-interviews/id1685920869"
+  }
+ ],
+ "archive": [
+  {
+   "identifier": "Anj.JafariyaNohayAshqoKaSamandarHaiSajjadKiAankhonMe",
+   "title": "Ashqo Ka Samandar Hai Sajjad Ki Aankhon Mai",
+   "creator": "Hasan",
+   "license": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "kind": "noha",
+   "files": [
+    {
+     "name": "Ashqo ka samandar hai sajjad ki aankhon mai .mp3",
+     "url": "https://archive.org/download/Anj.JafariyaNohayAshqoKaSamandarHaiSajjadKiAankhonMe/Ashqo%20ka%20samandar%20hai%20sajjad%20ki%20aankhon%20mai%20.mp3",
+     "length": "523.65"
+    },
+    {
+     "name": "Ashqo ka samandar hai sajjad ki aankhon mai .ogg",
+     "url": "https://archive.org/download/Anj.JafariyaNohayAshqoKaSamandarHaiSajjadKiAankhonMe/Ashqo%20ka%20samandar%20hai%20sajjad%20ki%20aankhon%20mai%20.ogg",
+     "length": "523.63"
+    }
+   ]
+  },
+  {
+   "identifier": "FathilAlMalkieeShiaIslamLecturesPart1",
+   "title": "fathil al malkiee shia islam lectures part1",
+   "creator": null,
+   "license": "http://creativecommons.org/licenses/publicdomain/",
+   "kind": "lecture",
+   "files": [
+    {
+     "name": "FathilAlMalkiee-lect1-Earlymarriageroles-fathilalmalikiee.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/FathilAlMalkiee-lect1-Earlymarriageroles-fathilalmalikiee.mp3",
+     "length": "3040.13"
+    },
+    {
+     "name": "FathilAlMalkiee-lect1-Earlymarriageroles-fathilalmalikiee.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/FathilAlMalkiee-lect1-Earlymarriageroles-fathilalmalikiee.ogg",
+     "length": "3040.12"
+    },
+    {
+     "name": "FathilAlMalkiee-lect1-JesuisCompainianAlMahdie.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/FathilAlMalkiee-lect1-JesuisCompainianAlMahdie.mp3",
+     "length": "2873.5"
+    },
+    {
+     "name": "FathilAlMalkiee-lect1-JesuisCompainianAlMahdie.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/FathilAlMalkiee-lect1-JesuisCompainianAlMahdie.ogg",
+     "length": "2873.47"
+    },
+    {
+     "name": "maleki11_moh_1423.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki11_moh_1423.mp3",
+     "length": "3143.02"
+    },
+    {
+     "name": "maleki11_moh_1423.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki11_moh_1423.ogg",
+     "length": "3143.01"
+    },
+    {
+     "name": "maleki12_moh_1423.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki12_moh_1423.mp3",
+     "length": "3373.42"
+    },
+    {
+     "name": "maleki12_moh_1423.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki12_moh_1423.ogg",
+     "length": "3373.41"
+    },
+    {
+     "name": "maleki13_moh_1423.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki13_moh_1423.mp3",
+     "length": "3083.47"
+    },
+    {
+     "name": "maleki13_moh_1423.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki13_moh_1423.ogg",
+     "length": "3083.26"
+    },
+    {
+     "name": "maleki14_moh_1423.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki14_moh_1423.mp3",
+     "length": "3382.56"
+    },
+    {
+     "name": "maleki14_moh_1423.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki14_moh_1423.ogg",
+     "length": "3381.5"
+    },
+    {
+     "name": "maleki_6th_night_safar_1424.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_6th_night_safar_1424.mp3",
+     "length": "2814.7"
+    },
+    {
+     "name": "maleki_6th_night_safar_1424.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_6th_night_safar_1424.ogg",
+     "length": "2814.69"
+    },
+    {
+     "name": "maleki_7th_night_moh_1424.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_7th_night_moh_1424.mp3",
+     "length": "3040.27"
+    },
+    {
+     "name": "maleki_7th_night_moh_1424.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_7th_night_moh_1424.ogg",
+     "length": "3039.74"
+    },
+    {
+     "name": "maleki_7th_night_safar_1424.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_7th_night_safar_1424.mp3",
+     "length": "2725.42"
+    },
+    {
+     "name": "maleki_7th_night_safar_1424.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_7th_night_safar_1424.ogg",
+     "length": "2725.41"
+    },
+    {
+     "name": "maleki_8th_night_moh_1424.mp3",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_8th_night_moh_1424.mp3",
+     "length": "3039.34"
+    },
+    {
+     "name": "maleki_8th_night_moh_1424.ogg",
+     "url": "https://archive.org/download/FathilAlMalkieeShiaIslamLecturesPart1/maleki_8th_night_moh_1424.ogg",
+     "length": "3038.95"
+    }
+   ]
+  },
+  {
+   "identifier": "FogaYeKartiHaiMaktalMeFatimaZahraMereHussainKoZalimNeZibahKarDala",
+   "title": "Foga Ye Karti Hai Maktal Me Fatima Zahra Mere Hussain ko zalim ne zibah kar dala",
+   "creator": "Hasan",
+   "license": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "kind": "noha",
+   "files": [
+    {
+     "name": "Fuga kar rahi hai maktal mai.mp3",
+     "url": "https://archive.org/download/FogaYeKartiHaiMaktalMeFatimaZahraMereHussainKoZalimNeZibahKarDala/Fuga%20kar%20rahi%20hai%20maktal%20mai.mp3",
+     "length": "808.7"
+    },
+    {
+     "name": "Fuga kar rahi hai maktal mai.ogg",
+     "url": "https://archive.org/download/FogaYeKartiHaiMaktalMeFatimaZahraMereHussainKoZalimNeZibahKarDala/Fuga%20kar%20rahi%20hai%20maktal%20mai.ogg",
+     "length": "808.67"
+    }
+   ]
+  },
+  {
+   "identifier": "HazratMuslimBinAqeelasNoha-shiamuslims.com",
+   "title": "Hazrat Muslim Bin Aqeel (as) Noha",
+   "creator": "https://www.shiamuslims.com",
+   "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+   "kind": "noha",
+   "files": [
+    {
+     "name": "Hazrat Muslim bin Aqeel (as) Noha.mp3",
+     "url": "https://archive.org/download/HazratMuslimBinAqeelasNoha-shiamuslims.com/Hazrat%20Muslim%20bin%20Aqeel%20%28as%29%20Noha.mp3",
+     "length": "517.51"
+    },
+    {
+     "name": "Hazrat Muslim bin Aqeel (as) Noha.ogg",
+     "url": "https://archive.org/download/HazratMuslimBinAqeelasNoha-shiamuslims.com/Hazrat%20Muslim%20bin%20Aqeel%20%28as%29%20Noha.ogg",
+     "length": "517.49"
+    }
+   ]
+  },
+  {
+   "identifier": "HujjatulIslamAllamaSyedMuntazirMehdiRizviMujtahidSuraHamdLecture10",
+   "title": "Sura Hamd Lecture 10",
+   "creator": "Hujjatul Islam Allama Syed Muntazir Mehdi Rizvi Mujtahid",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "lecture",
+   "files": [
+    {
+     "name": "muntazirmehdi200610.mp3",
+     "url": "https://archive.org/download/HujjatulIslamAllamaSyedMuntazirMehdiRizviMujtahidSuraHamdLecture10/muntazirmehdi200610.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "MoulanaBangloriMoulanaBangloriMajalisMoharram2007",
+   "title": "Moulana Banglori Majalis Moharram 2007",
+   "creator": "Moulana Banglori",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "majlis",
+   "files": [
+    {
+     "name": "moulanabanglorimajalis22007.mp3",
+     "url": "https://archive.org/download/MoulanaBangloriMoulanaBangloriMajalisMoharram2007/moulanabanglorimajalis22007.mp3",
+     "length": null
+    },
+    {
+     "name": "moulanabanglorimajalis32007.mp3",
+     "url": "https://archive.org/download/MoulanaBangloriMoulanaBangloriMajalisMoharram2007/moulanabanglorimajalis32007.mp3",
+     "length": null
+    },
+    {
+     "name": "moulanabanglorimajalis42007.mp3",
+     "url": "https://archive.org/download/MoulanaBangloriMoulanaBangloriMajalisMoharram2007/moulanabanglorimajalis42007.mp3",
+     "length": null
+    },
+    {
+     "name": "moulanabanglorimajalis52007.mp3",
+     "url": "https://archive.org/download/MoulanaBangloriMoulanaBangloriMajalisMoharram2007/moulanabanglorimajalis52007.mp3",
+     "length": null
+    },
+    {
+     "name": "moulanabanglorimajalis62007.mp3",
+     "url": "https://archive.org/download/MoulanaBangloriMoulanaBangloriMajalisMoharram2007/moulanabanglorimajalis62007.mp3",
+     "length": null
+    },
+    {
+     "name": "moulanabanglorimajalis72007.mp3",
+     "url": "https://archive.org/download/MoulanaBangloriMoulanaBangloriMajalisMoharram2007/moulanabanglorimajalis72007.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "MoulanaFarmanHussainMoulanaFarmanHussainMajalis12007",
+   "title": "Moulana Farman Hussain Majalis 1 2007",
+   "creator": "Moulana Farman Hussain",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "majlis",
+   "files": [
+    {
+     "name": "moulanafarmanhussainmajalis12007.mp3",
+     "url": "https://archive.org/download/MoulanaFarmanHussainMoulanaFarmanHussainMajalis12007/moulanafarmanhussainmajalis12007.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "MoulanaFarmanHussainMoulanaFarmanHussainMajalis22007",
+   "title": "Moulana Farman Hussain Majalis 2 2007",
+   "creator": "Moulana Farman Hussain",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "majlis",
+   "files": [
+    {
+     "name": "moulanafarmanhussainmajalis22007.mp3",
+     "url": "https://archive.org/download/MoulanaFarmanHussainMoulanaFarmanHussainMajalis22007/moulanafarmanhussainmajalis22007.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "MoulanaJafferBangloriMoulanaBangloriMajalis12007",
+   "title": "Moulana Banglori Majalis 1 2007",
+   "creator": "Moulana  Jaffer Banglori",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "majlis",
+   "files": [
+    {
+     "name": "moulanabanglorimajalis12007.mp3",
+     "url": "https://archive.org/download/MoulanaJafferBangloriMoulanaBangloriMajalis12007/moulanabanglorimajalis12007.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "MoulanaJavedAbediMoulanaJavedAbediMajalis3",
+   "title": "Moulana Javed Abedi Majalis 3",
+   "creator": "Moulana Javed Abedi",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "majlis",
+   "files": [
+    {
+     "name": "javedabedi3.mp3",
+     "url": "https://archive.org/download/MoulanaJavedAbediMoulanaJavedAbediMajalis3/javedabedi3.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "MoulanaJavedAbediMoulanaJavedAbediMajalisOne2007",
+   "title": "Moulana Javed Abedi Majalis One 2007",
+   "creator": "Moulana Javed Abedi",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "majlis",
+   "files": [
+    {
+     "name": "javedabedi1.mp3",
+     "url": "https://archive.org/download/MoulanaJavedAbediMoulanaJavedAbediMajalisOne2007/javedabedi1.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "MoulanaJavedAbediMoulanaJavedAbediMajalisTwo_0",
+   "title": "Moulana Javed Abedi Majalis Two",
+   "creator": "Moulana Javed Abedi",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "majlis",
+   "files": [
+    {
+     "name": "javedabedi2.mp3",
+     "url": "https://archive.org/download/MoulanaJavedAbediMoulanaJavedAbediMajalisTwo_0/javedabedi2.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "RoadToKarbala",
+   "title": "Road to karbala",
+   "creator": "http://www.noor-podcast.tk",
+   "license": "http://creativecommons.org/licenses/by/3.0/",
+   "kind": "lecture",
+   "files": [
+    {
+     "name": "karbala-road-imam-houssain--to-Mecca-p2_Modified.mp3",
+     "url": "https://archive.org/download/RoadToKarbala/karbala-road-imam-houssain--to-Mecca-p2_Modified.mp3",
+     "length": "3065.1"
+    },
+    {
+     "name": "karbala-road-imam-houssain--to-Mecca-p2_Modified.ogg",
+     "url": "https://archive.org/download/RoadToKarbala/karbala-road-imam-houssain--to-Mecca-p2_Modified.ogg",
+     "length": "3065.08"
+    }
+   ]
+  },
+  {
+   "identifier": "ShaykhHasnainKassamaliWiladatImamHussain_AS_2006",
+   "title": "Wiladat Imam Hussain (AS) 2006",
+   "creator": "Shaykh Hasnain Kassamali",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "lecture",
+   "files": [
+    {
+     "name": "wiladatImamHussain200611.mp3",
+     "url": "https://archive.org/download/ShaykhHasnainKassamaliWiladatImamHussain_AS_2006/wiladatImamHussain200611.mp3",
+     "length": null
+    }
+   ]
+  },
+  {
+   "identifier": "SyedAzizAyeeHatemkiAwaz",
+   "title": "Ayee Hatef ki Awaz",
+   "creator": "Syed Aziz",
+   "license": "http://creativecommons.org/licenses/by/2.5/",
+   "kind": "noha",
+   "files": [
+    {
+     "name": "AyeeHatefKi.mp3",
+     "url": "https://archive.org/download/SyedAzizAyeeHatemkiAwaz/AyeeHatefKi.mp3",
+     "length": "427.66"
+    },
+    {
+     "name": "AyeeHatefKi.ogg",
+     "url": "https://archive.org/download/SyedAzizAyeeHatemkiAwaz/AyeeHatefKi.ogg",
+     "length": "427.6"
+    },
+    {
+     "name": "AyeeHatefKi_64kb.mp3",
+     "url": "https://archive.org/download/SyedAzizAyeeHatemkiAwaz/AyeeHatefKi_64kb.mp3",
+     "length": "07:07"
+    }
+   ]
+  },
+  {
+   "identifier": "ahawsa_gmail_1",
+   "title": "Abas1M1436-1",
+   "creator": "موكب الإمام الحسين عليه  السلام",
+   "license": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "kind": "lecture",
+   "files": [
+    {
+     "name": "Abas1M1436-1.mp3",
+     "url": "https://archive.org/download/ahawsa_gmail_1/Abas1M1436-1.mp3",
+     "length": "168.78"
+    },
+    {
+     "name": "Abas1M1436-1.ogg",
+     "url": "https://archive.org/download/ahawsa_gmail_1/Abas1M1436-1.ogg",
+     "length": "169.17"
+    }
+   ]
+  },
+  {
+   "identifier": "mohammed_201505",
+   "title": "دعاء كميل الشهرودي",
+   "creator": "1",
+   "license": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "kind": "dua",
+   "files": [
+    {
+     "name": "دعاء كميل الشهرودي.mp3",
+     "url": "https://archive.org/download/mohammed_201505/%D8%AF%D8%B9%D8%A7%D8%A1%20%D9%83%D9%85%D9%8A%D9%84%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%88%D8%AF%D9%8A.mp3",
+     "length": "2889.36"
+    },
+    {
+     "name": "دعاء كميل الشهرودي.ogg",
+     "url": "https://archive.org/download/mohammed_201505/%D8%AF%D8%B9%D8%A7%D8%A1%20%D9%83%D9%85%D9%8A%D9%84%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%88%D8%AF%D9%8A.ogg",
+     "length": "2887.96"
+    }
+   ]
+  },
+  {
+   "identifier": "noha-9",
+   "title": "Noha 9",
+   "creator": "PDF Yusuf Abd'il Qadir",
+   "license": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "kind": "noha",
+   "files": [
+    {
+     "name": "Noha9.mp3",
+     "url": "https://archive.org/download/noha-9/Noha9.mp3",
+     "length": "450.59"
+    }
+   ]
+  },
+  {
+   "identifier": "noha-abbas-as",
+   "title": "Noha Abbas As",
+   "creator": "PDF Yusuf Abd'il Qadir",
+   "license": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "kind": "noha",
+   "files": [
+    {
+     "name": "Noha_Abbas_as.mp3",
+     "url": "https://archive.org/download/noha-abbas-as/Noha_Abbas_as.mp3",
+     "length": "529.11"
+    }
+   ]
+  },
+  {
+   "identifier": "shadabjaffri_gmail_01",
+   "title": "01",
+   "creator": null,
+   "license": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "kind": "noha",
+   "files": [
+    {
+     "name": "01.mp3",
+     "url": "https://archive.org/download/shadabjaffri_gmail_01/01.mp3",
+     "length": "677.37"
+    },
+    {
+     "name": "01.ogg",
+     "url": "https://archive.org/download/shadabjaffri_gmail_01/01.ogg",
+     "length": "677.22"
+    }
+   ]
+  }
+ ]
+}
