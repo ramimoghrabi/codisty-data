@@ -927,6 +927,23 @@ def main():
             archived[s["id"]] = arc
         elif arc and not YT_KEY:
             os.remove(path)   # API data can't be kept past 30 days without a refresh
+    # Without an API key: the full upload lists Kawthar's server makes every week
+    # (studio/api/channels.json — titles, links, approximate dates, views).
+    if not YT_KEY:
+        listed = (load_remote(f"{STUDIO}/channels.json", {}) or {}).get("channels") or {}
+        for sid, lst in listed.items():
+            if sid in archived or sid not in sources or sid in hidden_sources:
+                continue
+            vids = []
+            for v in lst.get("items", []):
+                if not v.get("v") or (v.get("s") or 0) < 60:
+                    continue   # Shorts and clips aren't for listening
+                d = v.get("d") or ""
+                vids.append({"id": f"yt:{v['v']}", "video": v["v"], "title": v.get("t") or "",
+                             "published": f"{d[:4]}-{d[4:6]}-{d[6:8]}T00:00:00Z" if len(d) == 8 else "2000-01-01T00:00:00Z",
+                             "views": v.get("n") or 0, "duration": v.get("s") or 0})
+            if vids:
+                archived[sid] = {"id": sid, "fetched": lst.get("fetched") or iso(NOW), "items": vids}
     if archived:
         log(f"archives: {len(archived)} reciters, {sum(len(a['items']) for a in archived.values())} videos")
 
@@ -985,7 +1002,8 @@ def main():
             if src.get("strict") and v["id"] not in approved and not strict_ok(v["title"]):
                 continue
             kind, occ, dua = classify(v["title"], src)
-            it = {"id": v["id"], "source": sid, "type": "youtube", "title": v["title"], "published": v["published"],
+            exact = items.get(v["id"], {}).get("published")   # the live feed's exact date, when it has the video
+            it = {"id": v["id"], "source": sid, "type": "youtube", "title": v["title"], "published": exact or v["published"],
                   "kind": kind, "video": v["video"], "views": v["views"], "duration": v["duration"], "lang": (src.get("languages") or ["ar"])[0]}
             if occ:
                 it["occasions"] = occ
