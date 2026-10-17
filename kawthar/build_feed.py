@@ -128,6 +128,20 @@ DUA = {DUA_IDS.get(k, k): compile_terms(v) for k, v in RULES.get("dua", {}).item
 PRIORITY = RULES.get("_meta", {}).get("kind_priority", ["live", "quran", "ziyarah", "dua", "latmiya", "noha", "majlis", "madh"])
 
 
+OG_IMAGE = re.compile(r'<meta property="og:image" content="([^"]+)"')
+
+
+def channel_avatar(channel):
+    """A YouTube channel's profile picture, for the reciter circles in the app."""
+    raw = fetch(f"https://www.youtube.com/channel/{channel}", tries=2, accept="text/html")
+    if not raw:
+        return None
+    m = OG_IMAGE.search(raw.decode("utf-8", "replace"))
+    if not m or "yt3." not in m.group(1):
+        return None
+    return re.sub(r"=s\d+-", "=s300-", m.group(1).replace("&amp;", "&"))
+
+
 def classify(title, source):
     text = norm(title)
     for name in (source.get("name_en"), source.get("name_ar")):
@@ -210,6 +224,7 @@ def podcast_items(src):
     img = chan.find("itunes:image", NS)
     if img is not None and img.get("href"):
         art = img.get("href")
+    art = small_art(art)
     out = []
     for it in chan.findall("item")[:PER_SOURCE]:
         enc = it.find("enclosure")
@@ -229,9 +244,14 @@ def podcast_items(src):
             "id": "pod:" + re.sub(r"[^A-Za-z0-9]+", "", guid)[-40:], "source": src["id"], "type": "audio",
             "title": (it.findtext("title") or "").strip(), "audio": url, "published": pub,
             "duration": parse_duration(it.findtext("itunes:duration", namespaces=NS)),
-            "thumb": (ep_img.get("href") if ep_img is not None and ep_img.get("href") else art) or None,
+            "thumb": small_art(ep_img.get("href") if ep_img is not None and ep_img.get("href") else art) or None,
         })
     return out
+
+
+def small_art(url):
+    """Podcast hosts publish 3000px artwork; the app shows it at 500 at most."""
+    return (url or "").replace("-t3000x3000.", "-t500x500.").replace("/3000x3000bb.", "/600x600bb.")
 
 
 def archive_items(item):
@@ -269,22 +289,84 @@ def live_video(channel):
 # ---------------------------------------------------------------- discovery
 
 DISCOVER_TERMS = ["shia", "ahlulbayt", "ahl al-bayt", "majlis", "majalis", "muharram", "karbala", "imam hussain", "imam husayn",
-                  "noha", "nauha", "latmiya", "ziyarat", "dua kumayl", "nahjul balagha", "اهل البيت", "مجالس حسينية", "محاضرات حسينية",
-                  "لطميات", "عاشوراء", "نعي", "مجلس عزاء", "شیعه", "مداحی", "مجالس عزا"]
-DISCOVER_COUNTRIES = ["us", "gb", "ca", "au", "sa", "iq", "kw", "bh", "lb", "pk", "in"]
-SHIA_SIGNS = re.compile(r"shia|shi'a|ahl ?ul ?bayt|ahlul ?bait|ahl al-bayt|husain|hussain|husayn|karbala|majlis|majalis|muharram|noha|nauha|"
-                        r"latmiya|ziyarat|ashura|imam ali|zahra|mahdi|اهل البيت|أهل البيت|الحسين|كربلاء|مجلس|مجالس|لطمي|شيع|عاشوراء|"
-                        r"الزهراء|المهدي|شیعه|امام حسین|مداح|نوحه|عزاداری", re.I)
+                  "noha", "nauha", "nohay", "latmiya", "latmiyat", "ziyarat", "dua kumayl", "nahjul balagha", "azadari", "majlis e aza",
+                  "اهل البيت", "مجالس حسينية", "محاضرات حسينية", "لطميات", "عاشوراء", "نعي", "مجلس عزاء", "رادود", "قصائد حسينية",
+                  "شیعه", "مداحی", "مجالس عزا", "نوحه", "عزاداری", "روضه", "نوحہ", "مجلس عزا"]
+DISCOVER_COUNTRIES = ["us", "iq", "kw", "pk", "gb", "lb"]
+
+# A show is judged on its name, its description and its episode titles.
+# Strong signs are specific to the Ahl al-Bayt; weak ones (majlis, noha,
+# shia, muharram…) are also business podcasts, people's names and actors.
+STRONG = re.compile(r"ahl ?ul ?bayt|ahl[ -]al[ -]bayt|ahlulbait|imam (hussain|husayn|husain|hussein)|husayni|hussaini|husaini|karbala|"
+                    r"latmiy|nauha|nohay|noha ?khwan|azadari|majlis[- ]e[- ]aza|marsiya|ithna|twelver|"
+                    r"أهل البيت|اهل البيت|الإمام الحسين|الامام الحسين|الحسين\b|كربلاء|لطمي|حسينية|رادود|عزاء|عاشوراء|الزهراء|"
+                    r"شیعه|امام حسین|نوحه|مداحی|عزاداری|هیئت|روضه|مرثیه|اہل بیت|مجلس عزا|نوحہ|مرثیہ", re.I)
+WEAK = re.compile(r"shia|shi'a|shiite|majlis|majalis|muharram|zahra|mahdi|ziyarat|ashura|imam ali|\bduas?\b|"
+                  r"مجلس|مجالس|شيع|المهدي|الإمام علي|زيارة|دعاء", re.I)
+NEGATIVE = re.compile(r"ahmadi|khuddam|bohra|dawat|fatemi|ismaili|aga khan|hanbali|salaf|sunnah|wahhab|divine mysteries|"
+                      r"mahdi has appeared|aba al[- ]sadiq|abdullah hashem|labeouf|real estate|business|marketing|money|market|techno|"
+                      r"surgeon|mandarin|hospitality|corporate|metabolic|burnout|christ|church|bible|rabbi|chassid|natak|premchand|"
+                      r"\bRA\b|\(ra\)|radi ?allahu|رضي الله عنه|"
+                      r"صحيح البخاري|صحيح مسلم|السلف|ابن تيمية|الوهاب", re.I)
+
+
+def guess_language(text):
+    if re.search(r"[ٹڈڑںےہ]", text):
+        return "ur"
+    if re.search(r"[پچژگکی]", text):
+        return "fa"
+    if re.search(r"[\u0600-\u06FF]", text):
+        return "ar"
+    return "en"
+
+
+def judge(c):
+    """auto: clearly a Shia show, published straight away (Studio can hide it).
+    review: plausible, waits for an editor. reject: not a Shia show."""
+    who = f"{c.get('name_en', '')} {c.get('author', '')}"
+    if NEGATIVE.search(who):
+        return "reject", {}
+    raw = fetch(c["feed"], tries=2, timeout=20)
+    if not raw:
+        return "review", {}
+    try:
+        chan = ET.fromstring(raw).find("channel")
+    except ET.ParseError:
+        return "reject", {}
+    if chan is None:
+        return "reject", {}
+    desc = " ".join(filter(None, [chan.findtext("description"), chan.findtext("itunes:summary", namespaces=NS)]))[:2000]
+    eps = chan.findall("item")[:30]
+    titles = [(e.findtext("title") or "") for e in eps]
+    audio = sum(1 for e in eps if e.find("enclosure") is not None and (e.find("enclosure").get("url") or "").startswith("https://"))
+    if NEGATIVE.search(desc) or sum(1 for t in titles if NEGATIVE.search(t)) > 2 or audio < 3:
+        return "reject", {}
+    n = max(1, len(titles))
+    strong = sum(1 for t in titles if STRONG.search(t)) / n
+    any_sign = sum(1 for t in titles if STRONG.search(t) or WEAK.search(t)) / n
+    named = bool(STRONG.search(who))
+    lang = guess_language(" ".join([who, desc] + titles))
+    kinds = {}
+    for t in titles:
+        k, _, _ = classify(t, {"kind": "majlis"})
+        kinds[k] = kinds.get(k, 0) + 1
+    info = {"kind": max(kinds, key=kinds.get) if kinds else "majlis", "languages": [lang],
+            "score": round(strong + any_sign / 2 + (0.5 if named else 0), 2)}
+    if (named and (any_sign >= 0.2 or STRONG.search(desc))) or strong >= 0.4:
+        return "auto", info
+    if named or any_sign >= 0.25 or STRONG.search(desc):
+        return "review", info
+    return "reject", info
 
 
 def discover(known_feeds, dismissed):
-    """New podcast shows that look Shia, for an editor to approve."""
+    """New podcast shows that might be Shia, to be judged."""
     found = {}
     for term in DISCOVER_TERMS:
         for cc in DISCOVER_COUNTRIES:
             url = "https://itunes.apple.com/search?media=podcast&limit=50&country=%s&term=%s" % (cc, urllib.request.quote(term))
             raw = fetch(url, tries=2, timeout=15)
-            time.sleep(1.2)  # iTunes Search allows ~20 calls a minute
+            time.sleep(3.1)  # iTunes Search allows ~20 calls a minute
             if not raw:
                 continue
             try:
@@ -294,14 +376,17 @@ def discover(known_feeds, dismissed):
             for r in results:
                 feed = r.get("feedUrl")
                 pid = f"pod-{r.get('collectionId')}"
-                text = " ".join(str(r.get(k, "")) for k in ("collectionName", "artistName", "primaryGenreName"))
-                if not feed or feed in known_feeds or pid in dismissed or pid in found or not SHIA_SIGNS.search(text):
+                text = " ".join(str(r.get(k, "")) for k in ("collectionName", "artistName"))
+                if not feed or feed in known_feeds or pid in dismissed or pid in found:
+                    continue
+                if not (STRONG.search(text) or WEAK.search(text)) or NEGATIVE.search(text):
                     continue
                 if r.get("trackCount", 0) < 3:
                     continue
                 found[pid] = {"id": pid, "type": "podcast", "feed": feed, "name_en": r.get("collectionName", ""),
-                              "author": r.get("artistName", ""), "image": r.get("artworkUrl600", ""), "episodes": r.get("trackCount", 0),
-                              "latest": (r.get("releaseDate") or "")[:10], "country": cc, "found": iso(NOW)}
+                              "author": r.get("artistName", ""), "image": small_art(r.get("artworkUrl600", "")),
+                              "episodes": r.get("trackCount", 0), "latest": (r.get("releaseDate") or "")[:10], "country": cc,
+                              "url": r.get("collectionViewUrl", ""), "found": iso(NOW)}
     return found
 
 
@@ -320,6 +405,33 @@ def main():
 
     catalog = load(os.path.join(HERE, "catalog.json"), {"items": {}, "live": {}})
     items = catalog.get("items", {})
+
+    # Shows the discovery judged clearly Shia join automatically.
+    for sid, s in catalog.get("auto_sources", {}).items():
+        sources.setdefault(sid, s)
+
+    # Partner audio uploaded in Kawthar Studio, with the rights holder's permission.
+    uploads = load_remote(f"{STUDIO}/uploads.json", None)
+    if uploads is not None:
+        for s in uploads.get("sources", []):
+            sources[s["id"]] = {**s, "type": "partner"}
+        live_ids = {u["id"] for u in uploads.get("items", [])}
+        for iid in [i for i in items if i.startswith("up:") and i not in live_ids]:
+            items.pop(iid)
+        for u in uploads.get("items", []):
+            old = items.get(u["id"], {})
+            items[u["id"]] = {**old, **u, "type": "audio", "fixed_kind": u.get("kind"), "first_seen": old.get("first_seen", iso(NOW))}
+
+    # Channel pictures for the reciter circles, refreshed every two weeks.
+    avatars = catalog.setdefault("avatars", {})
+    stale = [s for s in sources.values() if s.get("type") == "youtube" and s.get("channel") and not s.get("image")
+             and days_ago(avatars.get(s["id"], {}).get("checked", "2000-01-01T00:00:00Z")) > 14][:40]
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        for s, url in zip(stale, pool.map(lambda s: channel_avatar(s["channel"]), stale)):
+            avatars[s["id"]] = {"url": url or avatars.get(s["id"], {}).get("url"), "checked": iso(NOW)}
+    for s in sources.values():
+        if not s.get("image") and avatars.get(s["id"], {}).get("url"):
+            s["image"] = avatars[s["id"]]["url"]
     def gather(s):
         if s["type"] == "youtube" and not s.get("live_only"):
             return s, youtube_items(s)
@@ -372,7 +484,7 @@ def main():
         if it.get("kind_hint"):
             src = {**src, "kind": it["kind_hint"]}
         kind, occ, dua = classify(it["title"], src)
-        it["kind"] = kind
+        it["kind"] = it.get("fixed_kind") or kind
         it["occasions"] = occ
         it["dua"] = dua
         it["lang"] = (src.get("languages") or ["ar"])[0]
@@ -396,12 +508,36 @@ def main():
     # Weekly (Mondays) or on request: look for new shows.
     if os.environ.get("KAWTHAR_DISCOVER") == "1" or (NOW.weekday() == 0 and NOW.hour < 3):
         known = {s.get("feed") for s in sources.values() if s.get("feed")}
-        new = discover(known, set(studio.get("dismissed", [])))
+        dismissed = set(studio.get("dismissed", []))
+        new = discover(known, dismissed)
         candidates = catalog.get("candidates", {})
         for pid, c in new.items():
             candidates.setdefault(pid, c)
+        # Judge every show not judged yet: publish, keep for review, or drop.
+        auto = catalog.setdefault("auto_sources", {})
+        counts = {"auto": 0, "review": 0, "reject": 0}
+        for pid, c in list(candidates.items()):
+            if c.get("verdict"):
+                continue
+            verdict, info = judge(c)
+            counts[verdict] += 1
+            if verdict == "reject":
+                candidates.pop(pid)
+                dismissed.add(pid)
+                catalog.setdefault("rejected", []).append(pid)
+            elif verdict == "auto" and pid not in dismissed:
+                candidates.pop(pid)
+                auto[pid] = {"id": pid, "type": "podcast", "feed": c["feed"], "name_en": c["name_en"], "name_ar": "",
+                             "image": c.get("image"), "url": c.get("url"), "auto": True, **info}
+                sources.setdefault(pid, auto[pid])
+            else:
+                c.update(info, verdict="review")
         catalog["candidates"] = candidates
-        log(f"discovery: {len(new)} new candidate shows")
+        log(f"discovery: {len(new)} new shows; judged {counts}")
+    rejected = set(catalog.get("rejected", []))
+    for pid in list(catalog.get("candidates", {})):
+        if pid in rejected:
+            catalog["candidates"].pop(pid)
     for pid in list(catalog.get("candidates", {})):
         if pid in sources or pid in set(studio.get("dismissed", [])):
             catalog["candidates"].pop(pid)
@@ -426,7 +562,8 @@ def main():
             it["held"] = "political"
             continue
         per[it["source"]] = per.get(it["source"], 0) + 1
-        cap = FEED_PER_PODCAST if it["type"] == "audio" else FEED_PER_SOURCE
+        kind_of_source = sources.get(it["source"], {}).get("type")
+        cap = 500 if kind_of_source == "partner" else FEED_PER_PODCAST if it["type"] == "audio" else FEED_PER_SOURCE
         if per[it["source"]] > cap and not it.get("dua"):
             continue
         out = {k: it[k] for k in ("id", "source", "type", "title", "published", "kind") if k in it}
