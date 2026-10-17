@@ -1,0 +1,170 @@
+{
+ "version": 1,
+ "translations": [
+  {
+   "id": "bsb",
+   "abbr": "BSB",
+   "name": "Berean Standard Bible",
+   "lang": "en",
+   "rtl": false,
+   "license": "Public domain (dedicated 2023). Berean Bible, bereanbible.com",
+   "bytes": 1263425,
+   "sha": "57a5093e1bc74d0d",
+   "version": 1
+  },
+  {
+   "id": "kjv",
+   "abbr": "KJV",
+   "name": "King James Version",
+   "lang": "en",
+   "rtl": false,
+   "license": "Public domain",
+   "bytes": 1224509,
+   "sha": "2a170c90b7ddf7b0",
+   "version": 1
+  },
+  {
+   "id": "web",
+   "abbr": "WEB",
+   "name": "World English Bible",
+   "lang": "en",
+   "rtl": false,
+   "license": "Public domain. World English Bible, ebible.org",
+   "bytes": 1213290,
+   "sha": "63d746bf1c42ffe7",
+   "version": 1
+  },
+  {
+   "id": "asv",
+   "abbr": "ASV",
+   "name": "American Standard Version",
+   "lang": "en",
+   "rtl": false,
+   "license": "Public domain",
+   "bytes": 1222292,
+   "sha": "2d9ddf1c8fea11bc",
+   "version": 1
+  },
+  {
+   "id": "ylt",
+   "abbr": "YLT",
+   "name": "Young's Literal Translation",
+   "lang": "en",
+   "rtl": false,
+   "license": "Public domain",
+   "bytes": 1218613,
+   "sha": "1ef15545550e7ba0",
+   "version": 1
+  },
+  {
+   "id": "svd",
+   "abbr": "SVD",
+   "name": "الكتاب المقدس – ترجمة فان دايك",
+   "lang": "ar",
+   "rtl": true,
+   "license": "Public domain. Smith & Van Dyck, via ebible.org",
+   "bytes": 1506152,
+   "sha": "5c831d0e1ef34f52",
+   "version": 1
+  },
+  {
+   "id": "rv1909",
+   "abbr": "RVA",
+   "name": "Reina-Valera 1909",
+   "lang": "es",
+   "rtl": false,
+   "license": "Public domain",
+   "bytes": 1250575,
+   "sha": "87e3df7451b34de9",
+   "version": 1
+  },
+  {
+   "id": "lsg",
+   "abbr": "LSG",
+   "name": "Louis Segond 1910",
+   "lang": "fr",
+   "rtl": false,
+   "license": "Public domain, via ebible.org",
+   "bytes": 1337046,
+   "sha": "c546b5e6e9a1c7cf",
+   "version": 1
+  },
+  {
+   "id": "lut1912",
+   "abbr": "LUT",
+   "name": "Lutherbibel 1912",
+   "lang": "de",
+   "rtl": false,
+   "license": "Public domain, via ebible.org",
+   "bytes": 1297953,
+   "sha": "e749b3e4cf613bf4",
+   "version": 1
+  },
+  {
+   "id": "blivre",
+   "abbr": "BLIVRE",
+   "name": "Bíblia Livre",
+   "lang": "pt",
+   "rtl": false,
+   "license": "Bíblia Livre © 2018 Diego Santos, Mario Sérgio e Marco Teles, CC BY 4.0, via ebible.org",
+   "bytes": 1256680,
+   "sha": "b0316def1692dfe8",
+   "version": 1
+  },
+  {
+   "id": "synodal",
+   "abbr": "СИН",
+   "name": "Синодальный перевод",
+   "lang": "ru",
+   "rtl": false,
+   "license": "Public domain, via ebible.org",
+   "bytes": 1449926,
+   "sha": "b90d31ffa6185620",
+   "version": 1
+  },
+  {
+   "id": "cuv",
+   "abbr": "CUV",
+   "name": "和合本 (简体)",
+   "lang": "zh",
+   "rtl": false,
+   "license": "Public domain, via ebible.org",
+   "bytes": 1188310,
+   "sha": "291dd753e81d722b",
+   "version": 1
+  },
+  {
+   "id": "kor1910",
+   "abbr": "KOR",
+   "name": "성경 (1910)",
+   "lang": "ko",
+   "rtl": false,
+   "license": "Public domain, via ebible.org",
+   "bytes": 1253761,
+   "sha": "8e8d0d45050a17c6",
+   "version": 1
+  },
+  {
+   "id": "vie1934",
+   "abbr": "VI1934",
+   "name": "Kinh Thánh (1934)",
+   "lang": "vi",
+   "rtl": false,
+   "license": "Public domain, via ebible.org",
+   "bytes": 1356541,
+   "sha": "dd10ae6969daca8b",
+   "version": 1
+  },
+  {
+   "id": "adb1905",
+   "abbr": "ADB",
+   "name": "Ang Dating Biblia (1905)",
+   "lang": "tl",
+   "rtl": false,
+   "license": "Public domain",
+   "bytes": 1281595,
+   "sha": "ce3e56cbc6f3b1ee",
+   "version": 1
+  }
+ ]
+}
