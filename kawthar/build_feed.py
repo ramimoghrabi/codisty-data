@@ -609,6 +609,10 @@ def apple_music(state, discover):
     cfg = load(os.path.join(HERE, "applemusic.json"), {"artists": []})
     judged = state.setdefault("judged", {})
     found = {}   # artistId -> (name, hint_lang, storefronts)
+    # Apple allows ~20 calls a minute, so judging is spread over runs: what
+    # doesn't fit in this run's time waits in "pending" for the next.
+    started, budget = time.time(), (50 if discover else 10) * 60
+    pending = {aid: tuple(v) for aid, v in state.get("pending", {}).items()}
 
     # 1. Curated names.
     curated = {}
@@ -645,12 +649,21 @@ def apple_music(state, discover):
                 found.pop(aid)
         state["hits"] = {aid: len(v) for aid, v in counts.items()}
 
-    # 3. Judge new artists; refresh the songs of accepted ones.
+    # 3. Judge new artists; refresh the songs of accepted ones (weekly).
+    for aid, v in pending.items():
+        found.setdefault(aid, v)
     previous = {a["artistId"]: a for a in state.get("artists", [])}
-    out = []
-    for aid, (name, hint, storefronts) in found.items():
+    out, waiting = [], {}
+    for aid, (name, hint, storefronts) in sorted(found.items(), key=lambda kv: kv[0] not in curated):
         verdict = judged.get(aid, {})
-        if aid not in curated and verdict.get("v") in ("reject", "political") and days_ago(verdict.get("at", "2000-01-01T00:00:00Z")) < 90:
+        age = days_ago(verdict.get("at", "2000-01-01T00:00:00Z"))
+        if aid not in curated and verdict.get("v") in ("reject", "political") and age < 90:
+            continue
+        if aid not in curated and verdict.get("v") == "accept" and age < 7 and aid in previous:
+            out.append(previous[aid])
+            continue
+        if aid not in curated and time.time() - started > budget:
+            waiting[aid] = [name, hint, list(storefronts)]
             continue
         songs, cc = am_songs(aid, storefronts[:3])
         if aid in curated:
@@ -664,7 +677,8 @@ def apple_music(state, discover):
         c = curated.get(aid)
         if c:
             kind, lang = c.get("kind", kind), c.get("lang", lang)
-        out.append(am_entry(aid, name, clean, cc, kind, lang, {"name_ar": c.get("name_ar")} if c and c.get("name_ar") else None))
+        extra = {k: c[k] for k in ("name_ar", "country") if c and c.get(k)} or None
+        out.append(am_entry(aid, name, clean, cc, kind, lang, extra))
     # Keep accepted artists that weren't searched this time (daily runs).
     have = {a["artistId"] for a in out}
     out += [a for aid, a in previous.items() if aid not in have and judged.get(aid, {}).get("v") == "accept"]
@@ -674,8 +688,9 @@ def apple_music(state, discover):
         seen.setdefault(norm(a["name"]).replace(" ", ""), a)
     out = list(seen.values())
     out.sort(key=lambda a: (a["artistId"] not in curated, -len(a["songs"])))
-    log(f"apple music: {len(out)} reciters ({sum(len(a['songs']) for a in out)} songs), {len(judged)} artists judged")
-    return {"updated": iso(NOW), "artists": out, "judged": judged}
+    log(f"apple music: {len(out)} reciters ({sum(len(a['songs']) for a in out)} songs), {len(judged)} artists judged, "
+        f"{len(waiting)} waiting for the next run")
+    return {"updated": iso(NOW), "artists": out, "judged": judged, "pending": waiting, "hits": state.get("hits", {})}
 
 
 # ---------------------------------------------------------------- main
@@ -836,7 +851,7 @@ def main():
     am_state_path = os.path.join(HERE, "applemusic_state.json")
     am_state = load(am_state_path, {})
     am_discover = os.environ.get("KAWTHAR_APPLE_MUSIC") == "discover" or (NOW.weekday() == 2 and NOW.hour < 3)
-    am_due = am_discover or os.environ.get("KAWTHAR_APPLE_MUSIC") == "1" or not am_state.get("artists") \
+    am_due = am_discover or os.environ.get("KAWTHAR_APPLE_MUSIC") == "1" or not am_state.get("artists") or bool(am_state.get("pending")) \
         or (NOW.hour < 3 and days_ago(am_state.get("updated", "2000-01-01T00:00:00Z")) >= 1)
     if am_due:
         am = apple_music(am_state, am_discover)
