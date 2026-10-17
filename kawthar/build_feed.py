@@ -70,7 +70,7 @@ POLITICAL = re.compile("|".join([
 # these words; the rest waits for an editor in Kawthar Studio.
 STRICT_OK = re.compile(
     r"حسين|الحسين|كربلاء|كربلا|زينب|الزهراء|زهراء|زهرا|فاطمة|فاطمه|فاطم|العباس|عباس|الفضل|البنين|رقية|رقيه|سكينة|سكينه|"
-    r"الأكبر|الاكبر|القاسم|المهدي|مهدي|الزمان|عاشور|محرم|الطف|الأربعين|الاربعين|علي|حيدر|المرتضى|كفيل|الكفيل|"
+    r"الأكبر|الاكبر|القاسم|المهدي|مهدي|الزمان|عاشور|محرم|الطف|الأربعين|الاربعين|علي|حيدر|المرتضى|كفيل|الكفيل|القمر|"
     r"الرضا|الكاظم|الجواد|السجاد|العابدين|الحسن|المجتبى|الإمام|الامام|البقيع|النبي|محمد|المصطفى|الرسول|الغدير|"
     r"عبد الله|الحوراء|العقيلة|الكساء|مولد|ولادة|لطمية|نعي|عزاء|مجلس|مجالس|ليلة|ليالي|الفاطمية|دعاء|زيارة|"
     r"مولاي|مولاتي|سيدي|سيدتي|يا رب|الله")
@@ -223,6 +223,28 @@ def youtube_items(src):
 
 
 RECITER_NAMES = []   # every source's names, longest first (set in main)
+
+# Songs never belong in Kawthar: music videos and versions "with music", wedding and
+# graduation songs, national anthems. Wedding words alone are fine when the title is
+# about the Ahl al-Bayt ("عرس القاسم", "زفة القاسم" are Muharram classics).
+SONG = re.compile(
+    r"official music video|music video|\bmusic\b|بالموسيقى|with music|موسيقى|موسيقي|موزیک|instrumental|\bremix\b|karaoke|كاريوكي|"
+    r"graduation|\bتخرج|التخرج|جشن فارغ|زواج العمر|هدية الى العرسان|العرسان|\bwedding|عروسی|superpower|ابرقدرت|"
+    r"رمز الوطن|نشيد وطني|national anthem|سرود ملی", re.I)
+WEDDING = re.compile(r"عرس|زفة|زفه|زفاف|حنة|حنه|حناء", re.I)
+
+
+def title_core(title):
+    core = next((p for p in re.split(r"\s*[|｜]\s*|\s+[-–/]\s+", title) if p.strip()), "")
+    for n in RECITER_NAMES:
+        core = core.replace(n, " ")
+    return re.sub(r"(?:الرادود|الملا|ملا|المنشد|الخطيب|كلمات|بصوت|أداء|اداء)\s+\S+(?:\s+\S+)?", " ", core)
+
+
+def is_song(title):
+    if SONG.search(title):
+        return True
+    return bool(WEDDING.search(title)) and not STRICT_OK.search(title_core(title))
 
 
 def strict_ok(title):
@@ -973,6 +995,9 @@ def main():
         if sources.get(it["source"], {}).get("strict") and it["id"] not in approved and not strict_ok(it["title"]):
             it["held"] = "check"
             continue
+        if is_song(it["title"]) and it["id"] not in approved:
+            it["held"] = "song"
+            continue
         uploaded = it["id"].startswith("up:")
         bucket = (it["source"], "up" if uploaded else it["type"])
         per[bucket] = per.get(bucket, 0) + 1
@@ -1003,6 +1028,8 @@ def main():
             reason = None
             if POLITICAL.search(v["title"]) and v["id"] not in approved:
                 reason = "political"
+            elif is_song(v["title"]) and v["id"] not in approved:
+                reason = "song"
             elif src.get("strict") and v["id"] not in approved and not strict_ok(v["title"]):
                 reason = "check"
             if reason:
