@@ -462,7 +462,16 @@ STRONG = re.compile(r"ahl ?ul ?bayt|ahl[ -]al[ -]bayt|ahlulbait|imam (hussain|hu
                     r"شیعه|امام حسین|نوحه|مداحی|عزاداری|هیئت|روضه|مرثیه|اہل بیت|مجلس عزا|نوحہ|مرثیہ", re.I)
 WEAK = re.compile(r"shia|shi'a|shiite|majlis|majalis|muharram|zahra|mahdi|ziyarat|ashura|imam ali|\bduas?\b|"
                   r"مجلس|مجالس|شيع|المهدي|الإمام علي|زيارة|دعاء", re.I)
+# Rayati is purely Shia (Ithna Ashari): anything Sunni, Sufi, Ismaili/Bohra, Ahmadi or
+# from a sect claiming a new Mahdi is out, as are the imams of the Saudi Haram.
 NEGATIVE = re.compile(r"ahmadi|khuddam|bohra|dawat|fatemi|ismaili|aga khan|hanbali|salaf|sunnah|wahhab|divine mysteries|"
+                      r"sunni|ahl[ -]?(al|us|e)[ -]?sunn|barelv|deoband|tablighi|sufi|tariqa|naqshband|qadiri|chishti|qawwal|\bnaat\b|"
+                      r"mufti menk|nouman ali khan|omar suleiman|yasir qadhi|hamza yusuf|zakir naik|tariq jameel|tahir ?ul ?qadri|"
+                      r"ilyas qadri|owais raza qadri|bilal qadri|khadim hussain rizvi|sudais|shuraim|muaiqly|hudhaify|dossary|dosari|"
+                      r"baleela|ghamdi|alafasy|abu bakr|umar ibn|uthman|aisha|ayesha|sahaba|tarawee?h|"
+                      r"أهل السنة|اهل السنة|سلفي|صوفي|الصوفية|نقشبند|التراويح|السديس|الشريم|المعيقلي|الحذيفي|الدوسري|بليلة|الغامدي|"
+                      r"ابن باز|العثيمين|الألباني|الالباني|أبو بكر|ابو بكر|الفاروق|ذو النورين|الصحابة الكرام|"
+                      r"اہلسنت|اہل سنت|بریلوی|دیوبند|نعت|قوالی|طاہر القادری|صدیق اکبر|فاروق اعظم|"
                       r"mahdi has appeared|aba al[- ]sadiq|abdullah hashem|labeouf|real estate|business|marketing|money|market|techno|"
                       r"surgeon|mandarin|hospitality|corporate|metabolic|burnout|christ|church|bible|rabbi|chassid|natak|premchand|"
                       r"\bRA\b|\(ra\)|radi ?allahu|رضي الله عنه|"
@@ -515,7 +524,9 @@ def judge(c):
         kinds[k] = kinds.get(k, 0) + 1
     info = {"kind": max(kinds, key=kinds.get) if kinds else "majlis", "languages": [lang],
             "score": round(strong + any_sign / 2 + (0.5 if named else 0), 2)}
-    if (named and (any_sign >= 0.2 or STRONG.search(desc))) or strong >= 0.4:
+    # Published straight away only when the show is unmistakably Shia; anything else waits
+    # for an editor in the Studio.
+    if strong >= 0.4 and (named or STRONG.search(desc)):
         return "auto", info
     if named or any_sign >= 0.25 or STRONG.search(desc):
         return "review", info
@@ -960,7 +971,9 @@ def main():
         with open(am_state_path, "w", encoding="utf-8") as f:
             json.dump(am, f, ensure_ascii=False, separators=(",", ":"))
         hidden = set(overrides.get("hidden_sources", []))
-        public = {"updated": am["updated"], "artists": [a for a in am["artists"] if a["id"] not in hidden]}
+        # Never a Sunni reciter, a Haram imam or a qawwal, whatever the search found.
+        public = {"updated": am["updated"], "artists": [a for a in am["artists"]
+                                                       if a["id"] not in hidden and not NEGATIVE.search(a.get("name", ""))]}
         os.makedirs(PUBLIC, exist_ok=True)
         with open(am_path, "w", encoding="utf-8") as f:
             json.dump(public, f, ensure_ascii=False, separators=(",", ":"))

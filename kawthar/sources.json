@@ -1401,42 +1401,6 @@
    "place_ar": "الكوفة"
   },
   {
-   "id": "saudi-quran-tv",
-   "type": "youtube",
-   "channel": "UCos52azQNBgW63_9uDJoPDA",
-   "name_en": "Makkah — Masjid al-Haram",
-   "name_ar": "مكة المكرمة — المسجد الحرام",
-   "kind": "shrine",
-   "languages": [
-    "ar"
-   ],
-   "country": "SA",
-   "url": "https://www.youtube.com/channel/UCos52azQNBgW63_9uDJoPDA",
-   "live": true,
-   "place_en": "Makkah",
-   "place_ar": "مكة",
-   "live_video": "eC4LfEVxvKg",
-   "live_only": true
-  },
-  {
-   "id": "saudi-sunnah-tv",
-   "type": "youtube",
-   "channel": "UCROKYPep-UuODNwyipe6JMw",
-   "name_en": "Madinah — Masjid al-Nabawi",
-   "name_ar": "المدينة المنورة — المسجد النبوي",
-   "kind": "shrine",
-   "languages": [
-    "ar"
-   ],
-   "country": "SA",
-   "url": "https://www.youtube.com/channel/UCROKYPep-UuODNwyipe6JMw",
-   "live": true,
-   "place_en": "Madinah",
-   "place_ar": "المدينة",
-   "live_video": "Rs7St51oDDc",
-   "live_only": true
-  },
-  {
    "id": "imam-hussein-tv2",
    "type": "youtube",
    "channel": "UCkL7NzuBwMxd8H9gSoIP9Ug",
@@ -4290,6 +4254,8 @@
   }
  ],
  "removed": [
-  "ahmed-alsaadi"
+  "ahmed-alsaadi",
+  "saudi-quran-tv",
+  "saudi-sunnah-tv"
  ]
 }
