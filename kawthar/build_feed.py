@@ -785,8 +785,10 @@ def main():
     for sid, edits in (overrides.get("source_edits") or {}).items():
         if sid in sources and isinstance(edits, dict):
             sources[sid] = {**sources[sid], **{k: v for k, v in edits.items() if k in ("name_en", "name_ar", "country", "kind", "image", "strict")}}
-    # Channels taken out for good (not radood channels): gone from the library, the catalog and the Studio.
-    removed = set(seed.get("removed", []))
+    # Channels and recordings deleted for good (sources.json "removed", or Delete in the Studio):
+    # gone from the library, the catalog and the Studio, whatever the channel posts later.
+    removed = set(seed.get("removed", [])) | set(overrides.get("removed_sources", []))
+    removed_items = set(overrides.get("removed_items", []))
     for sid in removed:
         sources.pop(sid, None)
     hidden_sources = set(overrides.get("hidden_sources", [])) | removed
@@ -872,7 +874,7 @@ def main():
         kept.update({it["id"]: it for it in its if it["id"].startswith("up:")})
         for it in sorted((i for i in its if not i["id"].startswith("up:")), key=lambda x: x["published"], reverse=True)[:PER_SOURCE]:
             kept[it["id"]] = it
-    items = {k: v for k, v in kept.items() if v["source"] not in removed}
+    items = {k: v for k, v in kept.items() if v["source"] not in removed and k not in removed_items}
 
     # Classify (always re-run, so better rules apply to old items). An editor's
     # choice of type in the Studio wins.
