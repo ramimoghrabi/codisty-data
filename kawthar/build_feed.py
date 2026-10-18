@@ -59,10 +59,10 @@ FEED_POPULAR = 12         # each archived reciter's most-watched, added to the f
 # name political figures or parties are held back automatically; an editor can
 # still approve any of them in Kawthar Studio.
 POLITICAL = re.compile("|".join([
-    r"خامنه", r"خامنئي", r"رهبر انقلاب", r"رهبر شهید", r"رهبری", r"سليماني", r"سلیمانی", r"soleimani", r"نصر ?الله", r"nasrallah",
-    r"حزب ?الله", r"hezbollah", r"hizbullah", r"الحشد الشعبي", r"حشد شعبی", r"رئیسی", r"raisi", r"ترامب", r"ترمپ", r"\btrump\b",
+    r"خامنه", r"خامنئي", r"رهبر انقلاب", r"رهبر شهید", r"رهبری", r"سليماني", r"سلیمانی", r"soleimani", r"نصرالله", r"حسن نصر ?الله", r"السيد نصر ?الله", r"nasrallah",
+    r"حزب ?الله", r"hezbollah", r"hizbullah", r"الحشد الشعبي", r"حشد شعبی", r"رئیسی", r"\braisi\b", r"ترامب", r"ترمپ", r"\btrump\b",
     r"نتنياهو", r"netanyahu", r"صهيون", r"صهیون", r"zionis", r"اسرائيل", r"اسرائیل", r"\bisrael", r"انتخابات", r"election",
-    r"الحوثي", r"houthi", r"انصار الله", r"\bhamas\b", r"حماس", r"سپاه", r"الحرس الثوري", r"\birgc\b", r"\bbiden\b", r"بايدن",
+    r"الحوثي", r"houthi", r"انصار الله", r"\bhamas\b", r"(?<![\u0600-\u06FF])حماس(?![\u0600-\u06FF])", r"سپاه", r"الحرس الثوري", r"\birgc\b", r"\bbiden\b", r"بايدن",
     r"خمنائي", r"صواريخ", r"صاروخ", r"الراية الصفراء", r"المقاومة", r"مقاومة", r"السيد القائد",
 ]), re.I)
 # Channels that mix latmiyat with party or war anthems ("strict" in sources.json)
@@ -73,11 +73,23 @@ STRICT_OK = re.compile(
     r"الأكبر|الاكبر|القاسم|المهدي|مهدي|الزمان|عاشور|محرم|الطف|الأربعين|الاربعين|علي|حيدر|المرتضى|كفيل|الكفيل|القمر|"
     r"الرضا|الكاظم|الجواد|السجاد|العابدين|الحسن|المجتبى|الإمام|الامام|البقيع|النبي|محمد|المصطفى|الرسول|الغدير|"
     r"عبد الله|الحوراء|العقيلة|الكساء|مولد|ولادة|لطمية|نعي|عزاء|مجلس|مجالس|ليلة|ليالي|الفاطمية|دعاء|زيارة|"
-    r"مولاي|مولاتي|سيدي|سيدتي|يا رب|الله")
+    r"مولاي|مولاتي|سيدي|سيدتي|يا رب|الله|مناجاة|المناجاة|شعبان|الشعبانية|رمضان|قرآن|القرآن|سورة|تلاوة|ليله|الصادق|الباقر|"
+    r"العسكري|الهادي|الحجة|المعصومة|اهل البيت|أهل البيت|آل محمد|(?<![\u0600-\u06FF])كاظم(?![\u0600-\u06FF])|أبا صالح|ابا صالح|"
+    r"صاحب الزمان|المنتظر|قتيل العبرات|السقاء|أبا الفضل|ابا الفضل|أم البنين|ام البنين|الطفوف|الغاضرية|العطشان|ابن طه|"
+    r"يا زهراء|يا حسين|السبط|الشهيد المظلوم")
+STRICT_OK_EN = re.compile(r"\b(?:husa?yn|hussa?in|hussein|zahra|fatima|abbas|zainab|zaynab|karbala|mahdi|ashura|muharram|imam|"
+                          r"proph|ahl ?al.?bayt|arba.?een|arbain|sajjad|ruqayya|sakina|qasim)", re.I)
+# An occasion anywhere in the title ("… | محرم 1440", "الليلة العاشرة") is enough on its own.
+OCCASION = re.compile(r"محرم|عاشوراء|الأربعين|الاربعين|الفاطمية|ليلة \d|ليله \d|الليلة|وفاة|شهادة الإمام|شهادة الامام|استشهاد الإمام|"
+                      r"استشهاد الامام|شهادة السيدة|ولادة|مولد|رمضان|muharram|ashura|arba.?een|fatimiyya", re.I)
+# Parts of a title that only credit people, and openers that say nothing ("البث المباشر | …").
+CREDIT = re.compile(r"كلمات|ألحان|الحان|توزيع|هندسة|إخراج|اخراج|تصوير|مونتاج|الشاعر|شعر\s|بصوت|أداء|اداء|الرادود|الملا|المنشد|انتاج|إنتاج")
+GENERIC = re.compile(r"^(?:البث المباشر|بث مباشر|مباشر|live|إعلان|اعلان|حصريا|حصري|جديد|new|exclusive|promo|برومو|فيديو كليب|video ?clip)$", re.I)
+TASHKEEL = re.compile("[\u064B-\u0652\u0670\u0640]")
 STRICT_BAD = re.compile(
     r"المحور|الجنوب|الميدان|الزناد|البأس|الرعب|القدس|لن تغلب|عدتم|حرب|الحرب|اللواء|أبانا|ابانا|أمريكا|امريكا|"
-    r"الأمين العام|الامين العام|قائد|القائد|منصورين|جند|المقاوم|الشهداء|شهدا|الوطن|بلدي|ايران|إيران|بايد|الصدر|"
-    r"لبيك يا|انتصار|النصر|سيد الشهداء والوعد|الوعد|العهد|ثأر|الثأر")
+    r"الأمين العام|الامين العام|قائد|القائد|منصورين|جند|المقاوم|(?<!سيد )الشهداء|شهدا|الوطن|بلدي|ايران|إيران|بايد|الصدر|"
+    r"لبيك يا|انتصار|النصر|سيد الشهداء والوعد|الوعد|(?<!دعاء )العهد|ثأر|الثأر")
 HATE = re.compile("|".join([
     r"يهود", r"یهود", r"\byahud", r"\bjews?\b", r"خيبر خيبر", r"khaybar khaybar", r"khyber khyber", r"الموت ل", r"مرگ بر", r"death to",
 ]), re.I)
@@ -231,30 +243,48 @@ SONG = re.compile(
     r"official music video|music video|\bmusic\b|بالموسيقى|with music|موسيقى|موسيقي|موزیک|instrumental|\bremix\b|karaoke|كاريوكي|"
     r"graduation|\bتخرج|التخرج|جشن فارغ|زواج العمر|هدية الى العرسان|العرسان|\bwedding|عروسی|superpower|ابرقدرت|"
     r"رمز الوطن|نشيد وطني|national anthem|سرود ملی", re.I)
-WEDDING = re.compile(r"عرس|زفة|زفه|زفاف|حنة|حنه|حناء", re.I)
+# Henna as a word of its own — not inside الممتحنة, احنه ("we") or صحنه.
+WEDDING = re.compile(r"عرس|زفة|زفه|زفاف|(?<![\u0600-\u06FF])(?:ال|و|ب|ل)?(?:حنة|حنه|حناء)(?![\u0600-\u06FF])", re.I)
+# Talks about music or weddings ("Why Music is Haram", "Are Our Weddings Halal?") are not songs.
+TALK = re.compile(r"haram|halal|ruling|lecture|tafsir|surah|sermon|khutba|q ?& ?a|question|effect of|حكم|حرام|حلال|تفسير|سورة|"
+                  r"محاضرة|خطبة|استفتاء|سؤال|احکام|حکم|سخنرانی|تفسیر", re.I)
 
 
-def title_core(title):
-    core = next((p for p in re.split(r"\s*[|｜]\s*|\s+[-–/]\s+", title) if p.strip()), "")
+def plain(title):
+    """Without vowel marks or tatweel, so "عبّاس" and "السَقاء" read as written."""
+    return TASHKEEL.sub("", title)
+
+
+def political(title):
+    return bool(POLITICAL.search(plain(title)))
+
+
+def _clean(part):
     for n in RECITER_NAMES:
-        core = core.replace(n, " ")
-    return re.sub(r"(?:الرادود|الملا|ملا|المنشد|الخطيب|كلمات|بصوت|أداء|اداء)\s+\S+(?:\s+\S+)?", " ", core)
+        part = part.replace(n, " ")
+    part = re.sub(r"(?:الرادود|الملا|ملا|المنشد|الخطيب|كلمات|بصوت|أداء|اداء|reciter|lyrics by|poet)\s+\S+(?:\s+\S+)?", " ", part, flags=re.I)
+    return re.sub(r"[\s_#()\[\]{}«»\"'.,!؟?:0-9٠-٩هـ]+", " ", part).strip()
+
+
+def about_ahl_al_bayt(title):
+    """The title proper — the first part that isn't a credit or an opener like
+    "البث المباشر" — names the Ahl al-Bayt by itself (not through a reciter
+    called Hussein or Ali), or the title names an occasion anywhere."""
+    parts = [p for p in re.split(r"\s*[|｜]\s*|\s+[-–/_]\s+|\s*_\s*", plain(title)) if p.strip()]
+    first = next((c for c in (_clean(p) for p in parts if not CREDIT.search(p)) if c and not GENERIC.match(c)), "")
+    return bool(STRICT_OK.search(first) or STRICT_OK_EN.search(first)) or any(OCCASION.search(p) for p in parts)
 
 
 def is_song(title):
-    if SONG.search(title):
+    t = plain(title)
+    if SONG.search(t) and not TALK.search(t):
         return True
-    return bool(WEDDING.search(title)) and not STRICT_OK.search(title_core(title))
+    return bool(WEDDING.search(t)) and not about_ahl_al_bayt(title)
 
 
 def strict_ok(title):
-    """The title proper — before "| reciter | poet" — must speak of the Ahl
-    al-Bayt by itself, not through a reciter called Hussein or Ali."""
-    core = next((p for p in re.split(r"\s*[|｜]\s*|\s+[-–/]\s+", title) if p.strip()), "")
-    for n in RECITER_NAMES:
-        core = core.replace(n, " ")
-    core = re.sub(r"(?:الرادود|الملا|ملا|المنشد|الخطيب|كلمات|بصوت|أداء|اداء)\s+\S+(?:\s+\S+)?", " ", core)
-    return bool(STRICT_OK.search(core)) and not STRICT_BAD.search(title) and not POLITICAL.search(title)
+    t = plain(title)
+    return about_ahl_al_bayt(title) and not STRICT_BAD.search(t) and not POLITICAL.search(t)
 
 
 def iso_seconds(d):
@@ -755,7 +785,11 @@ def main():
     for sid, edits in (overrides.get("source_edits") or {}).items():
         if sid in sources and isinstance(edits, dict):
             sources[sid] = {**sources[sid], **{k: v for k, v in edits.items() if k in ("name_en", "name_ar", "country", "kind", "image", "strict")}}
-    hidden_sources = set(overrides.get("hidden_sources", []))
+    # Channels taken out for good (not radood channels): gone from the library, the catalog and the Studio.
+    removed = set(seed.get("removed", []))
+    for sid in removed:
+        sources.pop(sid, None)
+    hidden_sources = set(overrides.get("hidden_sources", [])) | removed
     enabled = set(overrides.get("enabled_sources", []))  # re-enable a default-excluded source
     names = set()
     for src in sources.values():
@@ -838,7 +872,7 @@ def main():
         kept.update({it["id"]: it for it in its if it["id"].startswith("up:")})
         for it in sorted((i for i in its if not i["id"].startswith("up:")), key=lambda x: x["published"], reverse=True)[:PER_SOURCE]:
             kept[it["id"]] = it
-    items = kept
+    items = {k: v for k, v in kept.items() if v["source"] not in removed}
 
     # Classify (always re-run, so better rules apply to old items). An editor's
     # choice of type in the Studio wins.
@@ -989,7 +1023,7 @@ def main():
     for it in sorted(items.values(), key=lambda x: x["published"], reverse=True):
         if it["id"] in hidden_items or it["source"] not in allowed:
             continue
-        if POLITICAL.search(it["title"]) and it["id"] not in approved:
+        if political(it["title"]) and it["id"] not in approved:
             it["held"] = "political"
             continue
         if sources.get(it["source"], {}).get("strict") and it["id"] not in approved and not strict_ok(it["title"]):
@@ -1026,7 +1060,7 @@ def main():
             if v["id"] in hidden_items or HATE.search(v["title"]):
                 continue
             reason = None
-            if POLITICAL.search(v["title"]) and v["id"] not in approved:
+            if political(v["title"]) and v["id"] not in approved:
                 reason = "political"
             elif is_song(v["title"]) and v["id"] not in approved:
                 reason = "song"
