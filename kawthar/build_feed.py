@@ -844,9 +844,13 @@ def main():
             originals[sid] = {k: sources[sid].get(k) for k in keep}
             sources[sid] = {**sources[sid], **keep}
 
+    # Studio → Sources → Collecting: a paused source isn't asked for anything new; what was collected stays.
+    collect = {"youtube": True, "podcasts": True, "discovery": True, **(overrides.get("collect") or {})}
+    log("collecting:", ", ".join(k for k, on in collect.items() if on) or "nothing new (all paused)")
+
     # Channel pictures for the reciter circles, refreshed every two weeks.
     avatars = catalog.setdefault("avatars", {})
-    stale = [s for s in sources.values() if s.get("type") == "youtube" and s.get("channel") and not s.get("image")
+    stale = [s for s in sources.values() if collect["youtube"] and s.get("type") == "youtube" and s.get("channel") and not s.get("image")
              and days_ago(avatars.get(s["id"], {}).get("checked", "2000-01-01T00:00:00Z")) > 14][:40]
     with ThreadPoolExecutor(max_workers=3) as pool:
         for s, url in zip(stale, pool.map(lambda s: channel_avatar(s["channel"]), stale)):
@@ -855,9 +859,9 @@ def main():
         if not s.get("image") and avatars.get(s["id"], {}).get("url"):
             s["image"] = avatars[s["id"]]["url"]
     def gather(s):
-        if s["type"] == "youtube" and not s.get("live_only"):
+        if s["type"] == "youtube" and not s.get("live_only") and collect["youtube"]:
             return s, youtube_items(s)
-        if s["type"] == "podcast":
+        if s["type"] == "podcast" and collect["podcasts"]:
             return s, podcast_items(s)
         return s, []
 
@@ -942,7 +946,7 @@ def main():
     live.sort(key=lambda l: (l["video"] is None, next((i for i, k in enumerate(order) if k in l["id"]), 99)))
 
     # Weekly (Mondays) or on request: look for new shows.
-    if os.environ.get("KAWTHAR_DISCOVER") == "1" or (NOW.weekday() == 0 and NOW.hour < 3):
+    if collect["discovery"] and (os.environ.get("KAWTHAR_DISCOVER") == "1" or (NOW.weekday() == 0 and NOW.hour < 3)):
         known = {s.get("feed") for s in sources.values() if s.get("feed")}
         dismissed = set(studio.get("dismissed", []))
         new = discover(known, dismissed)
@@ -1008,7 +1012,7 @@ def main():
     for s in reciters:
         path = os.path.join(ARCHIVE_DIR, f"{s['id']}.json")
         arc = load(path, None)
-        if YT_KEY and (arc is None or days_ago(arc.get("fetched", "2000-01-01T00:00:00Z")) >= ARCHIVE_REFRESH_DAYS) and api.left() > 80:
+        if YT_KEY and collect["youtube"] and (arc is None or days_ago(arc.get("fetched", "2000-01-01T00:00:00Z")) >= ARCHIVE_REFRESH_DAYS) and api.left() > 80:
             got = yt_archive(api, s)
             if got is not None:
                 arc = {"id": s["id"], "channel": s["channel"], "fetched": iso(NOW), "items": got}
