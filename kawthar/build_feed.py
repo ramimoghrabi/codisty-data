@@ -800,7 +800,9 @@ def main():
         sources.pop(sid, None)
     # The Studio's Videos / Audio / Live switches hide through the same lists, for the apps; the library keeps
     # what they hid (switched_*), so turning a switch back on shows it at once instead of after a rebuild.
-    hidden_sources = (set(overrides.get("hidden_sources", [])) - set(overrides.get("switched_sources", []))) | removed
+    switched = load_remote(f"{STUDIO}/switched.json", None) or {"sources": overrides.get("switched_sources", []),
+                                                                 "items": overrides.get("switched_items", [])}
+    hidden_sources = (set(overrides.get("hidden_sources", [])) - set(switched.get("sources", []))) | removed
     enabled = set(overrides.get("enabled_sources", []))  # re-enable a default-excluded source
     names = set()
     for src in sources.values():
@@ -1043,7 +1045,7 @@ def main():
         json.dump(catalog, f, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
 
     # ---- the published feed ----
-    hidden_items = set(overrides.get("hidden_items", [])) - set(overrides.get("switched_items", []))
+    hidden_items = set(overrides.get("hidden_items", [])) - set(switched.get("items", []))
     approved = set(overrides.get("approved_items", []))
     pub_sources = [s for s in sources.values() if s["id"] not in hidden_sources and not s.get("live_only")
                    and (not s.get("default_off") or s["id"] in enabled)]
