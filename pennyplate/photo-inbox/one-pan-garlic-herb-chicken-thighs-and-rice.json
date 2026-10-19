@@ -1,0 +1,95 @@
+{
+ "id": "one-pan-garlic-herb-chicken-thighs-and-rice",
+ "title": "One-Pan Garlic & Herb Chicken Thighs with Rice",
+ "summary": "Crisp-skinned chicken thighs bake on a bed of garlicky rice and carrots that soaks up all the juices. One pan, no fuss.",
+ "ingredients": [
+  "2 lb bone-in chicken thighs",
+  "2 tbsp olive oil",
+  "1 tsp paprika",
+  "1 tsp dried thyme",
+  "1 ½ tsp salt",
+  "½ tsp black pepper",
+  "1 onion, diced",
+  "6 cloves garlic, minced",
+  "2 carrots, sliced",
+  "1 ½ cups long grain rice",
+  "3 cups chicken broth",
+  "1 lemon",
+  "¼ cup chopped parsley"
+ ],
+ "query": "with rice",
+ "options": [
+  {
+   "n": 1,
+   "title": "Basmati Rice",
+   "credit": "cookbookman17 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58545726@N02/6121427720",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/6182/6121427720_bde3e8dc66_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Jollof Rice",
+   "credit": "secretlondon123 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/25834786@N03/3013516170",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3167/3013516170_18785cab0f.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Sakura Rice Fields",
+   "credit": "Follow Your Nose · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/31816015@N02/4845499708",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4107/4845499708_8d3edca932_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Poha (Fried flattened rice)",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/305698269",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/116/305698269_7ab5752616_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Chicken Katsu Curry with Rice - Wagamama Flinders Lane",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2426703227",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3148/2426703227_382444081b_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Steamed Rice with Chicken and Chinese Sausage - Soup Restaurant",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2500744954",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2256/2500744954_17b7efa345_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Rice!",
+   "credit": "Simoubuntu · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/54094993@N06/5742471687",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3488/5742471687_e1cbd1f6c2_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Calcarenitic eolianite (Hanna Bay Member, Rice Bay Formation, Holocene; Graham's Harbour, San Salvador Island, Bahamas) 9",
+   "credit": "James St. John · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/47445767@N05/16055493589",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7581/16055493589_37585aae4b_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "……DEWI SRI - rice goddess....",
+   "credit": "suRANTo dwi saputra",
+   "page": "https://www.flickr.com/photos/125321218@N07/48574350567",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://live.staticflickr.com/65535/48574350567_071e7dd369_b.jpg"
+  }
+ ]
+}
