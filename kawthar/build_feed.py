@@ -844,13 +844,38 @@ def main():
             originals[sid] = {k: sources[sid].get(k) for k in keep}
             sources[sid] = {**sources[sid], **keep}
 
-    # Studio → Sources → Collecting: a paused source isn't asked for anything new; what was collected stays.
+    # Studio → Imports → Collecting: each puller's switch, schedule and settings. This job runs every hour; a
+    # puller pulls when it's on, within its hours and its interval has passed — or at once when "Run now" was
+    # pressed. A paused or resting source isn't asked for anything new; what was collected stays.
     collect = {"youtube": True, "podcasts": True, "discovery": True, **(overrides.get("collect") or {})}
-    log("collecting:", ", ".join(k for k, on in collect.items() if on) or "nothing new (all paused)")
+    pull_settings = overrides.get("pullers") or {}
+    pulls = catalog.setdefault("pulls", {})
+
+    def due(name):
+        p = {"every_hours": 3, "from_hour": 0, "to_hour": 24, **(pull_settings.get(name) or {})}
+        last, requested = pulls.get(name, {}).get("last"), p.get("requested")
+        if requested and (not last or requested > last):
+            return True, "run now"
+        if not collect.get(name, True):
+            return False, "paused"
+        hour = (NOW + dt.timedelta(hours=3)).hour   # Baghdad and Beirut time, as the Studio shows it
+        f, t = int(p.get("from_hour", 0)), int(p.get("to_hour", 24))
+        if not (f == t or (f < t and f <= hour < t) or (f > t and (hour >= f or hour < t))):
+            return False, "outside its hours"
+        if last and (NOW - dt.datetime.fromisoformat(last.replace("Z", "+00:00"))).total_seconds() < float(p.get("every_hours", 3)) * 3600 - 900:
+            return False, "not due yet"
+        return True, "scheduled"
+
+    pull_youtube, why_youtube = due("youtube")
+    pull_podcasts, why_podcasts = due("podcasts")
+    yt_scope = (pull_settings.get("youtube") or {}).get("channels", "all")
+    chosen = set(overrides.get("featured_reciters", [])) | set(overrides.get("reciter_priority", []))
+    log(f"youtube: {'pulling' if pull_youtube else 'resting'} ({why_youtube}, channels: {yt_scope}); "
+        f"podcasts: {'pulling' if pull_podcasts else 'resting'} ({why_podcasts})")
 
     # Channel pictures for the reciter circles, refreshed every two weeks.
     avatars = catalog.setdefault("avatars", {})
-    stale = [s for s in sources.values() if collect["youtube"] and s.get("type") == "youtube" and s.get("channel") and not s.get("image")
+    stale = [s for s in sources.values() if pull_youtube and s.get("type") == "youtube" and s.get("channel") and not s.get("image")
              and days_ago(avatars.get(s["id"], {}).get("checked", "2000-01-01T00:00:00Z")) > 14][:40]
     with ThreadPoolExecutor(max_workers=3) as pool:
         for s, url in zip(stale, pool.map(lambda s: channel_avatar(s["channel"]), stale)):
@@ -858,22 +883,35 @@ def main():
     for s in sources.values():
         if not s.get("image") and avatars.get(s["id"], {}).get("url"):
             s["image"] = avatars[s["id"]]["url"]
+    def wanted(s):
+        if s["type"] == "youtube" and not s.get("live_only") and pull_youtube:
+            return yt_scope == "all" or (yt_scope == "latmiyat" and s.get("kind") in ("latmiya", "noha")) or (yt_scope == "featured" and s["id"] in chosen)
+        return s["type"] == "podcast" and pull_podcasts
+
     def gather(s):
-        if s["type"] == "youtube" and not s.get("live_only") and collect["youtube"]:
-            return s, youtube_items(s)
-        if s["type"] == "podcast" and collect["podcasts"]:
-            return s, podcast_items(s)
-        return s, []
+        if not wanted(s):
+            return s, []
+        return s, youtube_items(s) if s["type"] == "youtube" else podcast_items(s)
+
+    found = {"youtube": 0, "podcast": 0}
+    checked = {"youtube": 0, "podcast": 0}
 
     def merge(got):
         for it in got:
             old = items.get(it["id"], {})
+            if not old:
+                kind = sources.get(it.get("source"), {}).get("type")
+                if kind in found:
+                    found[kind] += 1
             items[it["id"]] = {**old, **it, "first_seen": old.get("first_seen", iso(NOW))}
 
     # A few at a time: polite to the hosts, and one slow feed doesn't stall
     # the run. YouTube throttles bursts from cloud runners with 404s, so the
     # ones that fail get a second, slower pass.
     failed = []
+    for s in sources.values():
+        if wanted(s):
+            checked["youtube" if s["type"] == "youtube" else "podcast"] += 1
     with ThreadPoolExecutor(max_workers=3) as pool:
         for s, got in pool.map(gather, list(sources.values())):
             if got is None:
@@ -946,7 +984,7 @@ def main():
     live.sort(key=lambda l: (l["video"] is None, next((i for i, k in enumerate(order) if k in l["id"]), 99)))
 
     # Weekly (Mondays) or on request: look for new shows.
-    if collect["discovery"] and (os.environ.get("KAWTHAR_DISCOVER") == "1" or (NOW.weekday() == 0 and NOW.hour < 3)):
+    if collect["discovery"] and (os.environ.get("KAWTHAR_DISCOVER") == "1" or (NOW.weekday() == 0 and NOW.hour < 1)):
         known = {s.get("feed") for s in sources.values() if s.get("feed")}
         dismissed = set(studio.get("dismissed", []))
         new = discover(known, dismissed)
@@ -1012,7 +1050,7 @@ def main():
     for s in reciters:
         path = os.path.join(ARCHIVE_DIR, f"{s['id']}.json")
         arc = load(path, None)
-        if YT_KEY and collect["youtube"] and (arc is None or days_ago(arc.get("fetched", "2000-01-01T00:00:00Z")) >= ARCHIVE_REFRESH_DAYS) and api.left() > 80:
+        if YT_KEY and pull_youtube and (arc is None or days_ago(arc.get("fetched", "2000-01-01T00:00:00Z")) >= ARCHIVE_REFRESH_DAYS) and api.left() > 80:
             got = yt_archive(api, s)
             if got is not None:
                 arc = {"id": s["id"], "channel": s["channel"], "fetched": iso(NOW), "items": got}
@@ -1042,6 +1080,16 @@ def main():
                 archived[sid] = {"id": sid, "fetched": lst.get("fetched") or iso(NOW), "items": vids}
     if archived:
         log(f"archives: {len(archived)} reciters, {sum(len(a['items']) for a in archived.values())} videos")
+
+    # Each puller's last run, for the Studio (public/kawthar/pulls.json).
+    if pull_youtube:
+        pulls["youtube"] = {"last": iso(NOW), "found": found["youtube"], "checked": checked["youtube"], "why": why_youtube}
+    if pull_podcasts:
+        pulls["podcasts"] = {"last": iso(NOW), "found": found["podcast"], "checked": checked["podcast"], "why": why_podcasts}
+    os.makedirs(PUBLIC, exist_ok=True)
+    with open(os.path.join(PUBLIC, "pulls.json"), "w", encoding="utf-8") as f:
+        json.dump({"generated": iso(NOW), "youtube": {**pulls.get("youtube", {}), "now": why_youtube},
+                   "podcasts": {**pulls.get("podcasts", {}), "now": why_podcasts}}, f, ensure_ascii=False, separators=(",", ":"))
 
     catalog["items"] = items
     catalog["updated"] = iso(NOW)

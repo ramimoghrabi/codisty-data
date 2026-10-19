@@ -1,12 +1,13 @@
 # Kawthar's living library (latmiyat, majalis, lectures, recited duas, live
-# shrine streams). Every 3 hours: read the official channels and feeds in
-# kawthar/sources.json plus those added in Kawthar Studio, tag new items,
-# apply the editors' decisions, publish public/kawthar/feed.json.
+# shrine streams). Every hour: apply the editors' decisions and the Studio's
+# audio, and pull new videos and episodes when the Studio's pullers say so
+# (Imports → Collecting: how often, which hours, Run now), then publish
+# public/kawthar/feed.json.
 # Studio's "Refresh now" sends the kawthar-refresh dispatch.
 name: Kawthar library
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       discover:
