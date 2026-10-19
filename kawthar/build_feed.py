@@ -792,10 +792,6 @@ def main():
     for s in studio.get("sources", []):
         if s.get("approved", True):
             sources[s["id"]] = {**sources.get(s["id"], {}), **s}
-    # Editors' corrections in the Studio: names, country, type, picture, strict.
-    for sid, edits in (overrides.get("source_edits") or {}).items():
-        if sid in sources and isinstance(edits, dict):
-            sources[sid] = {**sources[sid], **{k: v for k, v in edits.items() if k in ("name_en", "name_ar", "country", "kind", "image", "strict")}}
     # Channels and recordings deleted for good (sources.json "removed", or Delete in the Studio):
     # gone from the library, the catalog and the Studio, whatever the channel posts later.
     removed = set(seed.get("removed", [])) | set(overrides.get("removed_sources", []))
@@ -824,13 +820,27 @@ def main():
     uploads = load_remote(f"{STUDIO}/uploads.json", None)
     if uploads is not None:
         for s in uploads.get("sources", []):
-            sources[s["id"]] = {**s, "type": "partner"}
+            # Only reciters not known yet: a track moved to a channel's reciter used to replace the whole channel.
+            if s["id"] in sources or s["id"] in removed:
+                continue
+            # Imported artists are "audio"; "partner" is kept for rights holders who upload or convert with us.
+            sources[s["id"]] = {**s, "type": "audio" if s["id"].startswith("audio-") else "partner"}
         live_ids = {u["id"] for u in uploads.get("items", [])}
         for iid in [i for i in items if i.startswith("up:") and i not in live_ids]:
             items.pop(iid)
         for u in uploads.get("items", []):
             old = items.get(u["id"], {})
             items[u["id"]] = {**old, **u, "type": "audio", "fixed_kind": u.get("kind"), "first_seen": old.get("first_seen", iso(NOW))}
+
+    # Editors' corrections in the Studio (names, country, type, picture, strict), on every source wherever it came
+    # from: channels, podcasts, partners and imported artists. The catalog keeps the originals (below), so the
+    # Studio can tell an edit from the value it replaced and saving a form unchanged keeps the edit.
+    originals = {}
+    for sid, edits in (overrides.get("source_edits") or {}).items():
+        if sid in sources and isinstance(edits, dict):
+            keep = {k: v for k, v in edits.items() if k in ("name_en", "name_ar", "country", "kind", "image", "strict")}
+            originals[sid] = {k: sources[sid].get(k) for k in keep}
+            sources[sid] = {**sources[sid], **keep}
 
     # Channel pictures for the reciter circles, refreshed every two weeks.
     avatars = catalog.setdefault("avatars", {})
@@ -892,7 +902,12 @@ def main():
     # Classify (always re-run, so better rules apply to old items). An editor's
     # choice of type in the Studio wins.
     item_edits = overrides.get("item_edits") or {}
-    archive_src = {"id": "archive", "name_en": "Internet Archive", "kind": "majlis"}
+    archive_src = {"id": "archive", "name_en": "Internet Archive", "kind": "majlis", "languages": ["ur"]}   # its majalis are Urdu
+    # Episodes edited in the Studio come back from their feed unedited: the edits win again.
+    for u in (uploads or {}).get("items", []):
+        if not u["id"].startswith("up:") and u["id"] in items:
+            items[u["id"]] = {**items[u["id"]], **u, "fixed_kind": u.get("kind") or items[u["id"]].get("fixed_kind")}
+
     for it in items.values():
         it.pop("edit_kind", None)
         if isinstance(item_edits.get(it["id"]), dict) and item_edits[it["id"]].get("kind"):
@@ -902,9 +917,11 @@ def main():
             src = {**src, "kind": it["kind_hint"]}
         kind, occ, dua = classify(it["title"], src)
         it["kind"] = it.get("edit_kind") or it.get("fixed_kind") or kind
-        it["occasions"] = occ
+        uploaded = it["id"].startswith("up:")
+        it["occasions"] = (it.get("occasions") or occ) if uploaded else occ
         it["dua"] = dua
-        it["lang"] = (src.get("languages") or ["ar"])[0]
+        # The Studio's audio says its own language; everything else takes its source's.
+        it["lang"] = it.get("lang") if uploaded and it.get("lang") else (src.get("languages") or ["ar"])[0]
 
     # Live streams.
     live = []
@@ -1188,7 +1205,8 @@ def main():
         json.dump(feed, f, ensure_ascii=False, separators=(",", ":"))
     # The full catalog (hidden items included) for Kawthar Studio.
     with open(os.path.join(PUBLIC, "catalog.json"), "w", encoding="utf-8") as f:
-        json.dump({"updated": catalog["updated"], "sources": list(sources.values()), "items": list(items.values()) + held_archive,
+        json.dump({"updated": catalog["updated"], "sources": [{**s, **originals.get(s["id"], {})} for s in sources.values()],
+                   "items": list(items.values()) + held_archive,
                    "live": live, "candidates": list(catalog.get("candidates", {}).values())}, f, ensure_ascii=False, separators=(",", ":"))
     log(f"items {len(feed_items)} (catalog {len(items)}), live {sum(1 for l in live if l['video'])}/{len(live)}, "
         f"shelves {len(shelves)}, featured {len(featured)}, source failures {failures}")
