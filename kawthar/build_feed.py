@@ -1033,6 +1033,8 @@ def main():
     pub_sources.sort(key=lambda s: rank.get(s["id"], len(rank)))
     allowed = {s["id"] for s in pub_sources} | {"archive"}
     feed_items = []
+    # The Studio's audio reaches the apps in its own file (studio/api/uploads.json); here it only fills the shelves.
+    upload_pool = []
     per = {}
     pinned_ids = set(overrides.get("pinned", []))
     for it in sorted(items.values(), key=lambda x: x["published"], reverse=True):
@@ -1048,6 +1050,9 @@ def main():
             it["held"] = "song"
             continue
         uploaded = it["id"].startswith("up:")
+        if uploaded:
+            upload_pool.append({k: it[k] for k in ("id", "source", "type", "published", "kind", "lang") if k in it})
+            continue
         bucket = (it["source"], "up" if uploaded else it["type"])
         per[bucket] = per.get(bucket, 0) + 1
         kind_of_source = sources.get(it["source"], {}).get("type")
@@ -1120,8 +1125,13 @@ def main():
         if len(featured) == 10:
             break
 
+    audio_pool = sorted([it for it in feed_items if it["type"] != "youtube"] + upload_pool, key=lambda x: x["published"], reverse=True)
+
     def shelf(sid, en, ar, pred, n=24):
-        ids = [it["id"] for it in feed_items if pred(it)][:n]
+        # Videos and audio each fill a shelf, so it is full whichever the listener picks: All, Videos or Audio.
+        videos = [it for it in feed_items if it["type"] == "youtube" and pred(it)][:n]
+        audio = [it for it in audio_pool if pred(it)][:n]
+        ids = [it["id"] for it in sorted(videos + audio, key=lambda x: x["published"], reverse=True)]
         return {"id": sid, "title_en": en, "title_ar": ar, "items": ids} if len(ids) >= 3 else None
 
     country = {s["id"]: s.get("country") for s in sources.values()}
@@ -1152,7 +1162,7 @@ def main():
         shelf("farsi", "Persian", "بالفارسية", lambda i: i.get("lang") == "fa"),
         shelf("duas", "Recited duas & ziyarat", "الأدعية والزيارات", lambda i: i["kind"] == "dua"),
         shelf("quran", "Quran recitation", "تلاوات القرآن", lambda i: i["kind"] == "quran"),
-        shelf("podcasts", "Podcasts", "بودكاست", lambda i: i["type"] == "audio"),
+        shelf("podcasts", "Podcasts", "بودكاست", lambda i: sources.get(i["source"], {}).get("type") == "podcast"),
         shelf("kids", "For children", "للأطفال", lambda i: i["kind"] == "kids"),
     ] if s]
 
