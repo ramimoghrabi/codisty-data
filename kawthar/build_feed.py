@@ -883,10 +883,18 @@ def main():
     for s in sources.values():
         if not s.get("image") and avatars.get(s["id"], {}).get("url"):
             s["image"] = avatars[s["id"]]["url"]
+    def listed(name, sid):
+        # The Studio's "Only these names" / "Everyone except these names", resolved to reciters there.
+        p = pull_settings.get(name) or {}
+        if p.get("only") is not None:
+            return sid in set(p["only"])
+        return sid not in set(p.get("skip") or [])
+
     def wanted(s):
         if s["type"] == "youtube" and not s.get("live_only") and pull_youtube:
-            return yt_scope == "all" or (yt_scope == "latmiyat" and s.get("kind") in ("latmiya", "noha")) or (yt_scope == "featured" and s["id"] in chosen)
-        return s["type"] == "podcast" and pull_podcasts
+            scoped = yt_scope == "all" or (yt_scope == "latmiyat" and s.get("kind") in ("latmiya", "noha")) or (yt_scope == "featured" and s["id"] in chosen)
+            return scoped and listed("youtube", s["id"])
+        return s["type"] == "podcast" and pull_podcasts and listed("podcasts", s["id"])
 
     def gather(s):
         if not wanted(s):
