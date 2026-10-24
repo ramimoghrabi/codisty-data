@@ -1,0 +1,95 @@
+{
+ "id": "slow-cooker-chicken-and-dumplings",
+ "title": "Slow-Cooker Chicken & Dumplings",
+ "summary": "Fall-apart chicken and vegetables in a creamy herb broth, topped with fluffy biscuit dumplings. Set it in the morning and dinner is waiting.",
+ "ingredients": [
+  "1 ½ lb chicken breast",
+  "3 carrots, sliced",
+  "3 stalks celery, sliced",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "4 cups chicken broth",
+  "3 tbsp all-purpose flour",
+  "1 tsp dried thyme",
+  "2 bay leaves",
+  "1 tsp salt",
+  "½ tsp black pepper",
+  "1 cup frozen peas",
+  "8 refrigerated biscuits"
+ ],
+ "query": "chicken dumplings food",
+ "options": [
+  {
+   "n": 1,
+   "title": "basil chicken dumpling",
+   "credit": "stu_spivack · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/35034346243@N01/134506201",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/54/134506201_01df9835e5_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Omega3 Mango Dumpling",
+   "credit": "snowpea&bokchoi · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/28531775@N06/4266837850",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4033/4266837850_462fce758a_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Lamb and Carrot Dumplings - Original Taste - Alpha",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2299407445",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2407/2299407445_a49649449a_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Chicken and prawn gyoza wiith chickpea, lemongrass and coriander - Momotaro Rahmen",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2620981136",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3066/2620981136_fbcc5d928c_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Steamed Pork Dumplings - DC Noodle, Box Hill",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/504366768",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/223/504366768_6b949014f0.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Chicken and Mushroom Stew - Original Taste - Alpha",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2300203732",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3029/2300203732_9de93d666c_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "ginger chicken",
+   "credit": "ginnerobot · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/78011127@N00/3168342551",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1072/3168342551_1bdce9613a_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Khao Soi with chicken THB20 - Night Market, Kad Suan Kaew",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3455807164",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3599/3455807164_ba9574af7f_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Handmade Pork Dumplings with Chilli Sauce - Dumplings Plus AUD8",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3522093550",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3414/3522093550_ecc660d525_b.jpg"
+  }
+ ]
+}

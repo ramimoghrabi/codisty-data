@@ -1,0 +1,89 @@
+{
+ "id": "big-batch-white-bean-chicken-chili",
+ "title": "Big-Batch White Bean Chicken Chili",
+ "summary": "A mild, lime-bright chili packed with tender chicken and creamy white beans. Make one pot, freeze half for another night.",
+ "ingredients": [
+  "2 tbsp olive oil",
+  "2 onions, diced",
+  "4 cloves garlic, minced",
+  "2 jalapeños, seeded and minced",
+  "2 tsp ground cumin",
+  "2 tsp dried oregano",
+  "1 tsp chili powder",
+  "2 lb boneless chicken thighs",
+  "4 (15 oz) cans white beans, drained",
+  "6 cups chicken broth",
+  "1 cup frozen corn",
+  "1 ½ tsp salt",
+  "½ tsp black pepper",
+  "2 limes",
+  "½ cup chopped cilantro"
+ ],
+ "query": "chicken chili",
+ "options": [
+  {
+   "n": 1,
+   "title": "Mmm... chicken chili burritos",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/15290390856",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3912/15290390856_6f8998593e_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Mmm... chicken chili with white beans",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/15290290762",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5568/15290290762_5679596fb7_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "white chicken chili",
+   "credit": "polaritize · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/37490118@N04/3462673855",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3646/3462673855_7a40dcc690_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Crockpot Chicken Chili with Cheese",
+   "credit": "thelesleyshow · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35925030@N05/6697249233",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7141/6697249233_c43a808a2b_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Crockpot Chicken Chili",
+   "credit": "thelesleyshow · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35925030@N05/6697255305",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7015/6697255305_bae7389e6f_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Buffalo Chicken Chili",
+   "credit": "nikoretro · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/22768390@N00/2220540471",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2302/2220540471_b2ff52e102_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "chicken chili",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/4344379753",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4028/4344379753_57a080d489_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Buffalo Chicken Chili",
+   "credit": "nikoretro · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/22768390@N00/2221333320",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2325/2221333320_8839b936ac_b.jpg"
+  }
+ ]
+}
