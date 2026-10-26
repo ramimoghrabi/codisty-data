@@ -1,65 +1,5 @@
 [
  {
-  "id": "cozy-fall-comfort-2026-10-17",
-  "title": "🍂 Cozy Fall Comfort",
-  "subtitle": "Stews, soups and bakes for the first chilly evenings",
-  "until": "2026-10-24",
-  "recipes": [
-   "slow-cooker-beef-stew",
-   "split-pea-soup",
-   "creamy-potato-soup",
-   "shepherds-pie",
-   "chicken-noodle-soup",
-   "beef-bean-chili",
-   "slow-cooker-pulled-pork",
-   "chicken-pot-pie-skillet",
-   "smoky-sweet-potato-black-bean-chili",
-   "lasagna-soup",
-   "moroccan-chickpea-stew",
-   "coconut-sweet-potato-chickpea-curry"
-  ]
- },
- {
-  "id": "cook-once-eat-twice-2026-10-17",
-  "title": "🧊 Cook Once, Eat Twice",
-  "subtitle": "Big batches that freeze well, so one cook covers two nights",
-  "until": "2026-10-24",
-  "recipes": [
-   "freezer-turkey-meatballs-marinara",
-   "beef-bean-chili",
-   "shepherds-pie",
-   "baked-ziti",
-   "beef-enchiladas",
-   "breakfast-burritos",
-   "split-pea-soup",
-   "lasagna-soup",
-   "mini-meatloaves",
-   "pork-carnitas",
-   "spinach-ricotta-lasagna-roll-ups",
-   "egg-muffins"
-  ]
- },
- {
-  "id": "twenty-minute-dinners-2026-10-17",
-  "title": "⚡ 20-Minute Weeknights",
-  "subtitle": "Fast, cheap dinners for the busiest evenings",
-  "until": "2026-10-24",
-  "recipes": [
-   "sloppy-joes",
-   "bean-cheese-quesadillas",
-   "aglio-e-olio",
-   "egg-fried-rice",
-   "peanut-noodles",
-   "thai-basil-chicken",
-   "chicken-lettuce-wraps",
-   "upgraded-ramen",
-   "black-bean-tacos",
-   "huevos-rancheros",
-   "ginger-shrimp-bok-choy-noodles",
-   "chili-lime-shrimp-tacos"
-  ]
- },
- {
   "id": "game-night-2026-10-19",
   "title": "⚾ World Series Game Night",
   "subtitle": "Handheld, shareable dinners for watching the games (Game 1 is Friday).",
@@ -116,6 +56,62 @@
    "aloo-matar",
    "creamy-garlic-one-pot-pasta",
    "smoked-sausage-potato-green-bean-skillet"
+  ]
+ },
+ {
+  "id": "halloween-night-2026-10-26",
+  "title": "🎃 Halloween Night Dinners",
+  "subtitle": "Fast, fun and kid-approved before the trick-or-treating starts.",
+  "until": "2026-11-02",
+  "recipes": [
+   "homemade-pizza",
+   "mini-meatloaves",
+   "sloppy-joes",
+   "broccoli-mac-cheese",
+   "baked-ziti",
+   "tomato-soup-grilled-cheese",
+   "creamy-beef-spaghetti-bake",
+   "bean-cheese-quesadillas",
+   "beef-bean-chili",
+   "chicken-pot-pie-skillet"
+  ]
+ },
+ {
+  "id": "high-protein-2026-10-26",
+  "title": "💪 High-Protein Budget Dinners",
+  "subtitle": "25 g or more per serving without the pricey cuts.",
+  "until": "2026-11-02",
+  "recipes": [
+   "cottage-cheese-flatbread-chicken-sandwiches",
+   "honey-beef-sweet-potato-cottage-cheese-bowls",
+   "turkey-burgers",
+   "sheet-pan-chicken-potatoes",
+   "red-lentil-dal",
+   "keema-matar",
+   "thai-basil-chicken",
+   "spinach-feta-frittata-crispy-potatoes",
+   "warm-lentil-feta-bowls-fried-eggs",
+   "garlic-shrimp-orzo-spinach-feta",
+   "beef-broccoli",
+   "baked-chicken-parm"
+  ]
+ },
+ {
+  "id": "fall-sheet-pan-2026-10-26",
+  "title": "🍂 Cozy Fall Sheet-Pan Dinners",
+  "subtitle": "Load a pan, roast, done. Easy cleanup for busy evenings.",
+  "until": "2026-11-02",
+  "recipes": [
+   "sheet-pan-chicken-potatoes",
+   "sausage-peppers-sheet-pan",
+   "honey-mustard-pork-chops-sheet-pan",
+   "garlic-herb-pork-tenderloin-with-potatoes-green-beans",
+   "sheet-pan-lemon-dill-salmon-potatoes-asparagus",
+   "sheet-pan-fajitas",
+   "chicken-shawarma",
+   "lemon-potato-chickpea-tray-bake",
+   "briam-greek-roasted-vegetables-feta",
+   "honey-garlic-drumsticks"
   ]
  }
 ]
