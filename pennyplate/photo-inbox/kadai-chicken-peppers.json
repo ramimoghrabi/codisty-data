@@ -1,0 +1,83 @@
+{
+ "id": "kadai-chicken-peppers",
+ "title": "Kadai Chicken with Peppers & Basmati",
+ "summary": "Chicken simmered with sizzling bell peppers, onion and toasted spices in a thick tomato masala. On the table in 30 minutes.",
+ "ingredients": [
+  "1 ½ lb chicken breast, cut into bite-size cubes",
+  "2 tbsp vegetable oil",
+  "1 onion, sliced",
+  "2 bell peppers, cut into strips",
+  "4 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 jalapeño, sliced",
+  "2 tsp ground coriander",
+  "2 tsp ground cumin",
+  "2 tsp garam masala",
+  "1 tsp paprika",
+  "1 tsp salt",
+  "1 (14.5 oz) can diced tomatoes",
+  "2 tbsp tomato paste",
+  "¼ cup chopped cilantro",
+  "1 ½ cups basmati rice",
+  "3 cups water"
+ ],
+ "query": "peppers basmati food",
+ "options": [
+  {
+   "n": 1,
+   "title": "leftovers bento",
+   "credit": "gamene · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12670507@N02/3945749399",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2468/3945749399_840c4a2d7d_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Baby Acapulco's Soup in Paris!",
+   "credit": "austinevan · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/19762676@N00/3237830858",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3327/3237830858_25eed4eaee_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Another use for octodogs!Rose-dog bento",
+   "credit": "I Love Egg · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/29664345@N08/2782656974",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3141/2782656974_c7bc50be2e_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "AUD9 Buffet - Green Pepper",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2110184894",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2304/2110184894_523edb1095_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Plate #1 AUD9 Buffet - Green Pepper",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2109413461",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2214/2109413461_5c2e3a8f05_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Baby Acapulco's Soup in Paris (before)",
+   "credit": "austinevan · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/19762676@N00/3237845838",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3511/3237845838_281caf2024_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "rice for lunch",
+   "credit": "mRio · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/64738468@N00/7256911696",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8002/7256911696_5cafb83eba_b.jpg"
+  }
+ ]
+}
