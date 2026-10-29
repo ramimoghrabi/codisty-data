@@ -1,0 +1,71 @@
+{
+ "id": "creamy-pumpkin-sausage-pasta",
+ "title": "Creamy Pumpkin Sausage Pasta",
+ "summary": "A blushing pumpkin-tomato cream sauce with browned sausage, tossed through penne. Cozy fall comfort for about $2 a serving.",
+ "ingredients": [
+  "12 oz penne",
+  "1 lb Italian sausage",
+  "1 onion, finely diced",
+  "3 cloves garlic, minced",
+  "2 tbsp tomato paste",
+  "1 (15 oz) can pumpkin purée",
+  "1 cup chicken broth",
+  "½ cup heavy cream",
+  "½ cup grated parmesan",
+  "¼ tsp cayenne pepper",
+  "½ tsp dried oregano",
+  "1 tsp salt",
+  "½ tsp black pepper"
+ ],
+ "query": "sausage pasta",
+ "options": [
+  {
+   "n": 1,
+   "title": "7757 sausage pasta",
+   "credit": "imcountingufoz · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/10774420@N00/3586719150",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3356/3586719150_aaf6920c21_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Sausage pasta",
+   "credit": "Open Grid Scheduler / Grid Engine",
+   "page": "https://www.flickr.com/photos/29155878@N03/23482368309",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://live.staticflickr.com/768/23482368309_511fef287b_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Sausage pasta",
+   "credit": "Open Grid Scheduler / Grid Engine",
+   "page": "https://www.flickr.com/photos/29155878@N03/23824189916",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://live.staticflickr.com/639/23824189916_f2f05bca20_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Easy Italian Sausage Pasta Sauce",
+   "credit": "mommyknows { Kim Becker } · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/13724840@N00/8699748992",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8255/8699748992_9f4bd81349_m.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Joe's Sausage & Pasta Dish",
+   "credit": "joeymanley · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/94055174@N00/5459431908",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5298/5459431908_009b2c6922_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Sausage pasta #Masseto",
+   "credit": "The Pageman · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/54191799@N00/8286206799",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/8488/8286206799_3f1d0480ba.jpg"
+  }
+ ]
+}
