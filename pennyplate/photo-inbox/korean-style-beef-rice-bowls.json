@@ -1,0 +1,74 @@
+{
+ "id": "korean-style-beef-rice-bowls",
+ "title": "Korean-Style Beef Rice Bowls",
+ "summary": "Sweet-savory garlic-ginger ground beef over rice with quick cucumber pickles, shredded carrot and a fried egg. Mild enough for kids.",
+ "ingredients": [
+  "1 ¼ cups white rice",
+  "1 lb ground beef",
+  "¼ cup soy sauce",
+  "2 tbsp brown sugar",
+  "1 tbsp sesame oil",
+  "4 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "4 green onions, sliced",
+  "1 cucumber, thinly sliced",
+  "2 tbsp rice vinegar",
+  "1 tsp sugar",
+  "½ tsp salt",
+  "2 carrots, grated",
+  "4 eggs",
+  "1 tbsp vegetable oil",
+  "1 tbsp sesame seeds"
+ ],
+ "query": "rice bowls",
+ "options": [
+  {
+   "n": 1,
+   "title": "rice bowl large fish 01",
+   "credit": "chawan-ya.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/29819592@N04/3410443470",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3338/3410443470_8fe1c68415_m.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Rice bowl",
+   "credit": "kalleboo · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/82365211@N00/3346341189",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3640/3346341189_943a4a78a7_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "rice bowl chick blue 01",
+   "credit": "chawan-ya.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/29819592@N04/3410442916",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3617/3410442916_9fe8a6933f_m.jpg"
+  },
+  {
+   "n": 4,
+   "title": "rice bowl chick pink 01",
+   "credit": "chawan-ya.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/29819592@N04/3410442932",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3543/3410442932_a980713999_m.jpg"
+  },
+  {
+   "n": 5,
+   "title": "rice bowl puppy blue 01",
+   "credit": "chawan-ya.com · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/29819592@N04/3409634267",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3366/3409634267_ac70bed433_m.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Rice Bowl, Madagascar",
+   "credit": "Rod Waddington · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/64607715@N05/22279504882",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/673/22279504882_c08e926210_b.jpg"
+  }
+ ]
+}
