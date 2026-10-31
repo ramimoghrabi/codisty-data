@@ -1,0 +1,38 @@
+{
+ "id": "slow-cooker-sausage-white-bean-ragu",
+ "title": "Slow-Cooker Sausage & White Bean Ragu",
+ "summary": "Italian sausage, creamy white beans and tomatoes simmer all day, then get tossed with pasta and spinach.",
+ "ingredients": [
+  "1 lb Italian sausage",
+  "1 onion, diced",
+  "4 cloves garlic, minced",
+  "2 (15 oz) cans white beans, drained",
+  "1 (28 oz) can crushed tomatoes",
+  "1 tsp Italian seasoning",
+  "½ tsp cayenne pepper",
+  "1 tsp salt",
+  "½ cup water",
+  "8 oz pasta",
+  "5 oz baby spinach",
+  "2 oz parmesan, grated"
+ ],
+ "query": "bean ragu food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Beef Ragu with Gnocchi - Lower House, Federation Square",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/240473283",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/90/240473283_c03db39d68.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Grilled octopus, cranberry beans, date-tomato ragu, preserved lemon, olive tapenade",
+   "credit": "T.Tseng · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/68147320@N02/10433674854",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7432/10433674854_d12bd28c0b_b.jpg"
+  }
+ ]
+}
