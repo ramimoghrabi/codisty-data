@@ -1,0 +1,71 @@
+{
+ "id": "cheesy-beef-taco-pasta",
+ "title": "One-Pot Cheesy Beef Taco Pasta",
+ "summary": "Taco-night flavors and macaroni cooked together in one skillet, finished with melty cheddar and black beans.",
+ "ingredients": [
+  "1 lb ground beef",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "1 tbsp chili powder",
+  "1 tsp ground cumin",
+  "1 tsp paprika",
+  "1 tsp salt",
+  "1 (15 oz) can tomato sauce",
+  "2 cups water",
+  "8 oz elbow macaroni",
+  "1 (15 oz) can black beans, drained",
+  "6 oz shredded cheddar cheese",
+  "2 green onions, sliced"
+ ],
+ "query": "taco pasta",
+ "options": [
+  {
+   "n": 1,
+   "title": "My 2012 Mosaic",
+   "credit": "Girl Interrupted Eating · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35468144810@N01/6601002351",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7032/6601002351_9e805de74b_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "April edibles",
+   "credit": "fifikins · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25925793@N00/4567315555",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4045/4567315555_c15419d6dd_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Vesuvio Food Truck",
+   "credit": "ricardodiaz11 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/41652235@N00/4299914740",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2723/4299914740_fe5496f369_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Italian Shiitake Tacos",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/3889033046",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3430/3889033046_7120913bde_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Taqueria La Michoacana: Tacos al Pastor at $2 each",
+   "credit": "Shreveport-Bossier: Louisiana's Other Side · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/57902140@N08/5380016852",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5206/5380016852_d976567573_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Wine & Food Festival",
+   "credit": "U.S. Embassy Montevideo",
+   "page": "https://www.flickr.com/photos/41243200@N08/5204907800",
+   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "src": "https://live.staticflickr.com/5122/5204907800_41d65283cd_b.jpg"
+  }
+ ]
+}
