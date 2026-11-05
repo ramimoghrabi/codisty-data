@@ -1,0 +1,97 @@
+{
+ "id": "red-lentil-butternut-coconut-stew",
+ "title": "Red Lentil & Butternut Coconut Stew",
+ "summary": "A creamy, gently spiced stew of red lentils, sweet squash and spinach, served over fluffy rice.",
+ "ingredients": [
+  "1 tbsp vegetable oil",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 tbsp curry powder",
+  "1 tsp ground cumin",
+  "½ tsp ground turmeric",
+  "3 cups butternut squash, cut into small cubes",
+  "1 ½ cups red lentils, rinsed",
+  "1 (13.5 oz) can coconut milk",
+  "3 cups water",
+  "1 tsp salt",
+  "5 oz baby spinach",
+  "1 lime",
+  "1 ½ cups basmati rice"
+ ],
+ "query": "coconut stew",
+ "options": [
+  {
+   "n": 1,
+   "title": "Smoked eggplant with traditional coconut stew",
+   "credit": "T.Tseng · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/68147320@N02/48494242991",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/65535/48494242991_9fde6cc037_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Smoked eggplant with traditional coconut stew",
+   "credit": "T.Tseng · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/68147320@N02/48494413542",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/65535/48494413542_6af5affef6_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Chicken Stew",
+   "credit": "rovingI · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/70522326@N00/1205814362",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1298/1205814362_e1971b43f9_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Noodles with Stewed Duck in Chinese Herbs - Proud Peacock AUD9",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3433631289",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3604/3433631289_6e14520c12_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Banana Bread - close-up - Apte AUD13.50 - photo by Julia",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4105639478",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2572/4105639478_703aa710c8_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Banana Bread - Apte AUD13.50",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4105639848",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2769/4105639848_daab1c0230_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Tasmanian Salmon + bacon - close-up - Apte AUD15.50+AUD3 - photo by Julia",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4104873955",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2570/4104873955_b94dcfbd77_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Khao Soi - close-up",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4421557507",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4048/4421557507_8acebf1842_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Tasmanian Salmon + bacon - Apte AUD15.50+AUD3",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4104873429",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2646/4104873429_52dd9166ab_b.jpg"
+  }
+ ]
+}
