@@ -1,0 +1,87 @@
+{
+ "id": "smash-burgers-oven-fries",
+ "title": "Burger-Joint Smash Burgers with Oven Fries",
+ "summary": "A fakeaway copy of a drive-thru smash burger and fries: crispy-edged patties, melted cheddar and a tangy sauce, for a fraction of the price.",
+ "ingredients": [
+  "2 lb potatoes, cut into thin fries",
+  "3 tbsp vegetable oil",
+  "1 ½ tsp salt",
+  "1 ½ lb ground beef",
+  "4 oz cheddar cheese, sliced thin",
+  "4 burger buns",
+  "½ cup mayonnaise",
+  "2 tbsp ketchup",
+  "1 tbsp yellow mustard",
+  "2 tbsp chopped pickles",
+  "1 onion, sliced thin",
+  "4 leaves romaine lettuce",
+  "½ tsp black pepper"
+ ],
+ "query": "smash burgers",
+ "options": [
+  {
+   "n": 1,
+   "title": "Smash Burger",
+   "credit": "viviandnguyen_ · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/11849171@N00/7273092958",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/7230/7273092958_3276bd7d79_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Smash Burger",
+   "credit": "Forsaken Fotos · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/55229469@N07/34345471071",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4163/34345471071_fc1b292331_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Smash burger and fries",
+   "credit": "sarahstierch",
+   "page": "https://www.flickr.com/photos/7633518@N08/54592611175",
+   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "src": "https://live.staticflickr.com/65535/54592611175_95490716c6_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Smash burgers & handcut twice fried pomme frites! Great way to start a Friday night!",
+   "credit": "martinbowling · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/22333927@N06/6692084359",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7144/6692084359_aae7407440.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Buffalo and Blue Cheese Burger, Smash Burger",
+   "credit": "Haydn Blackey · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/54549113@N00/19852913903",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/287/19852913903_6dd2a956be_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Smash Burger, Wednesbury",
+   "credit": "Bex.Walton · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7831824@N04/51799984634",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/65535/51799984634_d059be20ff_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Fried pickle and ranch dressing, Smash Burger",
+   "credit": "Haydn Blackey · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/54549113@N00/20465111502",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/289/20465111502_e92f4c2333_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Smash Burger",
+   "credit": "Haydn Blackey · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/54549113@N00/20480125941",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/562/20480125941_d2b0e30ccd_b.jpg"
+  }
+ ]
+}
