@@ -1,0 +1,57 @@
+{
+ "id": "sheet-pan-grinder-sliders",
+ "title": "Sheet-Pan Grinder Sliders",
+ "summary": "Toasty baked salami and provolone sliders topped with a crunchy, tangy grinder salad.",
+ "ingredients": [
+  "8 burger buns",
+  "6 oz salami",
+  "8 oz provolone",
+  "2 tbsp mayonnaise",
+  "1 tbsp butter, melted",
+  "½ tsp garlic powder",
+  "2 cups shredded romaine lettuce",
+  "1 tomato, diced",
+  "½ red onion, thinly sliced",
+  "¼ cup pickles, chopped",
+  "2 tbsp white vinegar",
+  "3 tbsp olive oil",
+  "1 tsp dried oregano",
+  "½ tsp salt",
+  "¼ tsp black pepper"
+ ],
+ "query": "Grinder Sliders",
+ "options": [
+  {
+   "n": 1,
+   "title": "Package loading dock",
+   "credit": "nSeika · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/33542052@N07/5153952034",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1236/5153952034_7da145531f_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Airfix Beam engine 2",
+   "credit": "Elsie esq. · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/61132483@N00/7979687537",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8040/7979687537_02d8d6d948_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Retrofit for SWOBO",
+   "credit": "Burnsey (AKA Sean Burns) · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/98105312@N07/14993462591",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5555/14993462591_3a818b83d4_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Master Grinder",
+   "credit": "Andrea Pokrzywinski · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/65781065@N00/8312121030",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8077/8312121030_272766b8cb_b.jpg"
+  }
+ ]
+}
