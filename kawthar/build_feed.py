@@ -210,8 +210,25 @@ def iso(d):
     return d.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+# YouTube refuses its channel feeds to GitHub's servers (404, since November 2026). After a few refusals in a row
+# the rest are fetched through the Studio (studio/ytfeed.php, which serves only the channels Rayati knows).
+YT_RELAY = os.environ.get("KAWTHAR_YT_RELAY", f"{SITE}/studio/ytfeed.php")
+_yt_direct = {"ok": True, "misses": 0}
+
+
 def youtube_items(src):
-    raw = fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={src['channel']}")
+    raw = None
+    if _yt_direct["ok"]:
+        raw = fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={src['channel']}", tries=1)
+        if raw:
+            _yt_direct["misses"] = 0
+        else:
+            _yt_direct["misses"] += 1
+            if _yt_direct["misses"] >= 3 and _yt_direct["ok"]:
+                _yt_direct["ok"] = False
+                log("  YouTube refuses this server's feed requests: the rest through the Studio")
+    if not raw:
+        raw = fetch(f"{YT_RELAY}?channel={urllib.parse.quote(src['channel'])}", tries=3)
     if not raw:
         return None
     try:
@@ -979,11 +996,12 @@ def main():
     live = []
     shrines = [s for s in sources.values() if s.get("live") and s["id"] not in hidden_sources]
     with ThreadPoolExecutor(max_workers=4) as pool:
-        found = dict(zip([s["id"] for s in shrines], pool.map(lambda s: live_video(s["channel"]), shrines)))
+        # (Not "found": that counts the new videos and episodes for pulls.json.)
+        streams = dict(zip([s["id"] for s in shrines], pool.map(lambda s: live_video(s["channel"]), shrines)))
     for s in shrines:
         # A shrine that isn't live this minute keeps its last stream id: their
         # 24/7 streams keep the same id for long stretches.
-        vid = found.get(s["id"]) or catalog.get("live", {}).get(s["id"]) or s.get("live_video")
+        vid = streams.get(s["id"]) or catalog.get("live", {}).get(s["id"]) or s.get("live_video")
         catalog.setdefault("live", {})[s["id"]] = vid
         live.append({"id": s["id"], "name_en": s["name_en"], "name_ar": s.get("name_ar"), "channel": s["channel"], "video": vid,
                      "place_en": s.get("place_en"), "place_ar": s.get("place_ar")})
