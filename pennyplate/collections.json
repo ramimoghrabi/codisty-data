@@ -1,59 +1,5 @@
 [
  {
-  "id": "diwali-veg-2026-11-02",
-  "title": "🪔 Diwali Week Veg Dinners",
-  "subtitle": "Warm, spiced vegetarian curries for Diwali on Sunday, Nov 8.",
-  "until": "2026-11-09",
-  "recipes": [
-   "chana-masala",
-   "red-lentil-dal",
-   "aloo-gobi",
-   "rajma",
-   "egg-curry",
-   "palak-chana-spinach-chickpeas",
-   "baingan-bharta",
-   "aloo-matar",
-   "coconut-sweet-potato-chickpea-curry",
-   "anda-bhurji"
-  ]
- },
- {
-  "id": "election-night-2026-11-02",
-  "title": "⚡ Election Night Quick Dinners",
-  "subtitle": "Fast, filling meals for a busy Tuesday evening.",
-  "until": "2026-11-09",
-  "recipes": [
-   "sloppy-joes",
-   "bean-cheese-quesadillas",
-   "upgraded-ramen",
-   "aglio-e-olio",
-   "egg-fried-rice",
-   "tuna-melts",
-   "thai-basil-chicken",
-   "chicken-lettuce-wraps",
-   "creamy-tomato-pasta",
-   "cheesy-beef-taco-pasta"
-  ]
- },
- {
-  "id": "pantry-beans-2026-11-02",
-  "title": "🫘 Pantry Bean & Lentil Dinners",
-  "subtitle": "Cheap, hearty dinners from the cupboard.",
-  "until": "2026-11-09",
-  "recipes": [
-   "mexican-rice-beans",
-   "pasta-e-fagioli",
-   "mujaddara",
-   "koshari",
-   "minestrone",
-   "greek-lentil-soup",
-   "shorbat-adas",
-   "smoky-sweet-potato-black-bean-chili",
-   "spaghetti-marinara",
-   "black-bean-tacos"
-  ]
- },
- {
   "id": "veterans-day-comfort-2026-11-09",
   "title": "🎖️ Veterans Day Comfort Dinners",
   "subtitle": "Hearty all-American classics for a Wednesday night in.",
