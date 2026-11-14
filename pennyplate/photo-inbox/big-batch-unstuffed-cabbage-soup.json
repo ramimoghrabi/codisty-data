@@ -1,0 +1,100 @@
+{
+ "id": "big-batch-unstuffed-cabbage-soup",
+ "title": "Big-Batch Unstuffed Cabbage Roll Soup",
+ "summary": "All the cozy flavor of cabbage rolls in one pot: beef, rice and tender cabbage in a sweet-tangy tomato broth. Makes enough to freeze for a second night.",
+ "ingredients": [
+  "1 tbsp vegetable oil",
+  "2 lb ground beef",
+  "1 onion, diced",
+  "2 carrots, diced",
+  "4 cloves garlic, minced",
+  "2 tbsp tomato paste",
+  "1 ½ lb shredded cabbage",
+  "2 (14.5 oz) cans diced tomatoes",
+  "1 (15 oz) can tomato sauce",
+  "6 cups water",
+  "1 cup long grain rice",
+  "2 bay leaves",
+  "1 tbsp paprika",
+  "1 tsp dried thyme",
+  "1 tbsp brown sugar",
+  "1 tbsp apple cider vinegar",
+  "1 ½ tsp salt",
+  "½ tsp black pepper"
+ ],
+ "query": "roll soup",
+ "options": [
+  {
+   "n": 1,
+   "title": "Soup with quail egg - Real Dry Noodle - Vietnamese Grill Bar",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2462987456",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2046/2462987456_c9d17a5539_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Monday Bento",
+   "credit": "I Love Egg · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/29664345@N08/2903853962",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3287/2903853962_53cfddcf1b_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Ramen with Charshu, Japanese Fish Roll, Oyster Mushroom in Pork Bone Soup - Sushiko",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2649810692",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2135/2649810692_cb1820a19a_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Tang yuan",
+   "credit": "joyosity · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/33993074@N00/3144578977",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3237/3144578977_06ca17d406_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Shop front - Vietnamese Grill Bar",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2449127382",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2124/2449127382_89a828be2c_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Roasted Salmon Skin sushi roll, Soft Shell Crab sushi roll, Salmon and Avocado sushi roll, Miso Soup - Kenzan GPO",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2673449759",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3030/2673449759_f6a2e74663_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Vietnamese Curry Laksa - Proud Peacock AUD10",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3433632073",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3363/3433632073_cd75974b6b_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Noodles with Stewed Duck in Chinese Herbs - Proud Peacock AUD9",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3433631289",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3604/3433631289_6e14520c12_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Tantan Ramen with miso soup-base - Kenzan GPO AUD16",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3126884841",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3110/3126884841_e122840624_b.jpg"
+  }
+ ]
+}
