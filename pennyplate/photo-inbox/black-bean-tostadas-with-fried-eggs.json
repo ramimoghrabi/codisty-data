@@ -1,0 +1,80 @@
+{
+ "id": "black-bean-tostadas-with-fried-eggs",
+ "title": "Black Bean Tostadas with Fried Eggs",
+ "summary": "Crisp corn tostadas piled with smashed spiced black beans, melty cheese and a runny egg.",
+ "ingredients": [
+  "8 corn tortillas",
+  "1 tbsp vegetable oil",
+  "3 (15 oz) cans black beans, drained",
+  "1 tsp ground cumin",
+  "1 tsp chili powder",
+  "½ tsp garlic powder",
+  "½ cup water",
+  "¾ cup shredded cheddar cheese",
+  "8 eggs",
+  "1 tomato, diced",
+  "½ cup salsa",
+  "1 lime",
+  "¼ cup chopped cilantro",
+  "½ tsp salt"
+ ],
+ "query": "fried eggs food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Nasi goreng, fried rice, fried egg, food",
+   "credit": "JoeCh8 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/198284804@N04/52894998567",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/65535/52894998567_3b0e745c0d_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Two eggs sunny side up, bacon, and home fries with cheddar cheese",
+   "credit": "@joefoodie · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/98178986@N00/1473232665",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/1131/1473232665_34dabb989d_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "fried egg supernova",
+   "credit": "MattHurst · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/22937701@N00/5313353035",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5002/5313353035_209f2bf880_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "My annoying dinner",
+   "credit": "Peter O'Connor aka anemoneprojectors · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/58414938@N00/3753319914",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2646/3753319914_f028faabb2_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Omurice - Satsuki",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2406406379",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3151/2406406379_6499d208f9_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Insides - Omurice - Satsuki",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2407237880",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3232/2407237880_1c2de719e9_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Breton crepe with fried egg, ham and cheese at Morris Jones",
+   "credit": "ultrakml · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/34948727@N00/8037933920",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8457/8037933920_0c1cd88071_b.jpg"
+  }
+ ]
+}

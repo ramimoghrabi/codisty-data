@@ -1,0 +1,87 @@
+{
+ "id": "coconut-red-lentil-spinach-soup",
+ "title": "Coconut Red Lentil & Spinach Soup",
+ "summary": "Silky red lentils simmered with ginger, turmeric and coconut milk, ladled over rice.",
+ "ingredients": [
+  "1 tbsp vegetable oil",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 tsp ground turmeric",
+  "1 tsp ground cumin",
+  "1 ½ cups red lentils, rinsed",
+  "1 (13.5 oz) can coconut milk",
+  "4 cups water",
+  "1 tsp salt",
+  "1 (10 oz) bag spinach",
+  "1 lime",
+  "1 ½ cups long grain rice"
+ ],
+ "query": "spinach soup",
+ "options": [
+  {
+   "n": 1,
+   "title": "Watercress and Spinach Soup",
+   "credit": "simpleprovisions · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/80665970@N03/8522413047",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8366/8522413047_d70a988349_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Watercress and Spinach Soup",
+   "credit": "simpleprovisions · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/80665970@N03/8523526890",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8522/8523526890_1990d44f19_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Watercress and Spinach Soup",
+   "credit": "simpleprovisions · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/80665970@N03/8522412513",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8392/8522412513_099efea784_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Chick Pea and Spinach Soup",
+   "credit": "austinevan · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/19762676@N00/4284579281",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4011/4284579281_497d72b9d6_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Navy Bean & Spinach Soup",
+   "credit": "shawnzrossi · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/19517696@N00/2272970648",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2382/2272970648_a85bb1ec8d_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Watercress and Spinach Soup",
+   "credit": "simpleprovisions · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/80665970@N03/8522412725",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8371/8522412725_44db79a600_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Watercress and Spinach Soup",
+   "credit": "simpleprovisions · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/80665970@N03/8522412365",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8102/8522412365_54169c611b_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Lightly curried lentil, rice and spinach soup",
+   "credit": "WordRidden · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/97844767@N00/152412044",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/47/152412044_b4b7962d8a_b.jpg"
+  }
+ ]
+}

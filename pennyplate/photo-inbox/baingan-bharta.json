@@ -1,0 +1,81 @@
+{
+ "id": "baingan-bharta",
+ "title": "Baingan Bharta (Smoky Eggplant Curry)",
+ "summary": "Roasted eggplant mashed with onion, tomato and warm spices, scooped up with naan or rice.",
+ "ingredients": [
+  "2 eggplants",
+  "3 tbsp vegetable oil",
+  "1 onion, finely diced",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "1 jalapeño, minced",
+  "2 tomatoes, chopped",
+  "1 tsp ground cumin",
+  "1 tsp ground coriander",
+  "1 tsp ground turmeric",
+  "2 tsp garam masala",
+  "1 tsp salt",
+  "1 cup frozen peas",
+  "¼ cup chopped cilantro",
+  "1 ½ cups basmati rice"
+ ],
+ "query": "eggplant curry",
+ "options": [
+  {
+   "n": 1,
+   "title": "Roti Lunch Special, Goat Masala, Butter Chicken, Eggplant Curry - Chilli India Express - AUD10.95",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3486009774",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3403/3486009774_e55b68107b_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Chicken and deep fried eggplant curry at curry Kusamakura, Shinjuku",
+   "credit": "nakashi · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/81497476@N00/32124290464",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2490/32124290464_8980b8314b_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Eggplant curry",
+   "credit": "dollen · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/39804614253@N01/8355883534",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/8512/8355883534_bb2102e7b3.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Keema and eggplant curry",
+   "credit": "pelican · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/85936780@N00/3476318078",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3577/3476318078_9ae0ae92b2_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Eggplant curry with coconut cream, tofu...",
+   "credit": "veganLazySmurf · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/22693495@N02/9215530601",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3691/9215530601_33d3b196e6.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Chicken and deep fried eggplant curry at curry Kusamakura, Shinjuku",
+   "credit": "nakashi · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/81497476@N00/32124290454",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2534/32124290454_5990bcfa49_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Pork and eggplant curry",
+   "credit": "pelican · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/85936780@N00/3454855775",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3592/3454855775_1a9e32fbfd_b.jpg"
+  }
+ ]
+}

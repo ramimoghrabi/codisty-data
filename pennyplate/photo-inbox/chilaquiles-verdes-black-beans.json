@@ -1,0 +1,93 @@
+{
+ "id": "chilaquiles-verdes-black-beans",
+ "title": "Chilaquiles Verdes with Black Beans & Eggs",
+ "summary": "Crisp chips simmered briefly in tangy green salsa, then topped with beans, melty cheese and fried eggs.",
+ "ingredients": [
+  "2 tbsp vegetable oil",
+  "1 onion, diced",
+  "2 cloves garlic, minced",
+  "2 cups salsa verde",
+  "½ cup water",
+  "6 oz tortilla chips",
+  "2 (15 oz) cans black beans, drained",
+  "6 oz cheddar cheese, shredded",
+  "6 eggs",
+  "½ cup sour cream",
+  "¼ cup chopped cilantro"
+ ],
+ "query": "beans eggs food",
+ "options": [
+  {
+   "n": 1,
+   "title": "My annoying dinner",
+   "credit": "Peter O'Connor aka anemoneprojectors · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/58414938@N00/3753319914",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2646/3753319914_f028faabb2_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Golden waterfall - Poached Eggs with Middle Eastern Chickpea Bake - Mitte AUD15",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4258894682",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2736/4258894682_2300ebbe02_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "The Botanical Breakfast - The Botanical AU19.50 1",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3436991345",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3609/3436991345_f8e811305e_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Eggs Benedict with Bacon - The Maling Room AUD13",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/3315947982",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3446/3315947982_3b237cb1a5_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "jack-o-lantern onigiri bento [explored]",
+   "credit": "gamene · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12670507@N02/4054000907",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2649/4054000907_e098f3a438_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Thanksgiving dinner",
+   "credit": "flyingroc · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/8962549@N02/3065338200",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3274/3065338200_b3066a422a.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Breakfasts",
+   "credit": "Avid Hills · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25690635@N03/3241926435",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3315/3241926435_cb6ec2c588_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Scrambled Eggs with Chorizo, Cannelini Beans, Cherry Tomatoes - The Maling Room",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2426657413",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3266/2426657413_b155e2d1d3_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Pad Thai Noodles with prawn - Pawan Thai",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2448169497",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2323/2448169497_837483c674_b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "id": "ground-beef-stroganoff",
+ "title": "Ground Beef Stroganoff",
+ "summary": "Creamy mushroom and beef sauce over egg noodles, a comfort dinner for pennies.",
+ "ingredients": [
+  "12 oz egg noodles",
+  "1 lb ground beef",
+  "1 onion, diced",
+  "16 oz mushrooms, sliced",
+  "3 cloves garlic, minced",
+  "2 tbsp all-purpose flour",
+  "2 cups chicken broth",
+  "1 tbsp tomato paste",
+  "1 tbsp Worcestershire sauce",
+  "1 tbsp mustard",
+  "½ tsp paprika",
+  "½ cup sour cream",
+  "1 tsp salt",
+  "½ tsp black pepper",
+  "¼ cup chopped parsley"
+ ],
+ "query": "beef stroganoff food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Steak Stroganoff",
+   "credit": "roolrool · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/71317184@N00/4066022704",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2489/4066022704_2af7bf49e1_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Beef Stroganoff with unpolished red rice",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4703242780",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4013/4703242780_7a5331cf49_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Beef Stroganoff with Little Creek Cattle Company grass-fed Round Steak",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/2553653628",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3177/2553653628_0575705572_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Beef Stroganoff with unpolished red rice - bright",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/4703242240",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4070/4703242240_4d01bbb785_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Beef Stroganoff - Romanza",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/34348389",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/22/34348389_66444555e3.jpg"
+  },
+  {
+   "n": 6,
+   "title": "Beef Stroganoff",
+   "credit": "benketaro · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/56525796@N00/1580394718",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2144/1580394718_0f08df0adf_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Beef Stroganoff, sorta",
+   "credit": "jeffreyw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7927684@N03/4360825644",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4068/4360825644_2341e95eec_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Stuffed Banana Pepper Sammich",
+   "credit": "reynolds.james.e · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/22324943@N00/2568547311",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3023/2568547311_190d667ecf_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Baked Mushroom Stroganoff Spud with Squash",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/3612329429",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2466/3612329429_f04f82df9f_b.jpg"
+  }
+ ]
+}

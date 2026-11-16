@@ -1,0 +1,36 @@
+{
+ "id": "lemon-chickpea-orzo",
+ "title": "Lemony Chickpea Orzo",
+ "summary": "Creamy, risotto-like orzo with chickpeas, spinach and parmesan.",
+ "ingredients": [
+  "1 ½ cups orzo",
+  "2 tbsp olive oil",
+  "1 onion, diced",
+  "3 cloves garlic, minced",
+  "4 cups vegetable broth",
+  "1 (15 oz) can chickpeas, drained",
+  "3 cups spinach",
+  "1 lemon",
+  "½ cup grated parmesan",
+  "½ tsp salt"
+ ],
+ "query": "chickpea orzo food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Chickpea-Sun-dried Tomatoes Soup",
+   "credit": "olga666flickr · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/40814068@N03/4008787855",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2649/4008787855_efdaab021a_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Chickpeas, Greens, and Sundried Tomatoes",
+   "credit": "moria · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/49503029034@N01/2295278900",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3176/2295278900_c0c406fddc_b.jpg"
+  }
+ ]
+}
