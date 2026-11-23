@@ -1,0 +1,65 @@
+{
+ "id": "oven-doner-kebab-pitas",
+ "title": "Oven Doner-Style Kebab Pitas",
+ "summary": "Spiced beef loaf baked, sliced paper-thin and stuffed into warm pitas with crunchy cabbage and garlic yogurt.",
+ "ingredients": [
+  "1 lb ground beef",
+  "½ cup breadcrumbs",
+  "1 egg",
+  "3 cloves garlic, minced",
+  "2 tsp ground cumin",
+  "1 tsp paprika",
+  "1 tsp dried oregano",
+  "1 tsp salt",
+  "½ tsp black pepper",
+  "½ cup plain yogurt",
+  "1 lemon",
+  "2 cups cabbage, shredded",
+  "2 tomatoes, sliced",
+  "1 cucumber, sliced",
+  "8 pita breads"
+ ],
+ "query": "style kebab",
+ "options": [
+  {
+   "n": 1,
+   "title": "Xinjiang Lamb Skewers - No Nation, Box Hill South",
+   "credit": "avlxyz · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/10559879@N00/240473142",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/87/240473142_267a82a7ee.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Kebab Italy style",
+   "credit": "Jon Åslund · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/45074090@N00/5854767928",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3113/5854767928_c1b45e992f_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "o37",
+   "credit": "Why Not Linh Vu · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/23431242@N06/5422165879",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5014/5422165879_260d2e519b_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Pork Barbeque",
+   "credit": "pulaw · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35832040@N07/11618020783",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5532/11618020783_787c0a0f91_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Seekh Kebab - Pakistani Style",
+   "credit": "*Siddiqi*",
+   "page": "https://www.flickr.com/photos/68319403@N00/24995573542",
+   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "src": "https://live.staticflickr.com/1486/24995573542_4ab85a5160_b.jpg"
+  }
+ ]
+}

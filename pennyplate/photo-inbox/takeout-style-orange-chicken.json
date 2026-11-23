@@ -1,0 +1,99 @@
+{
+ "id": "takeout-style-orange-chicken",
+ "title": "Crispy Orange Chicken with Broccoli Rice",
+ "summary": "A copycat of mall-court orange chicken: crisp pan-fried chicken in a sticky fresh-orange glaze, for a fraction of the takeout price.",
+ "ingredients": [
+  "1 ½ lb chicken breast, cut into bite-size pieces",
+  "1 egg",
+  "½ cup cornstarch",
+  "1 tsp salt",
+  "¼ tsp black pepper",
+  "¼ cup vegetable oil",
+  "2 oranges",
+  "3 tbsp soy sauce",
+  "3 tbsp honey",
+  "2 tbsp rice vinegar",
+  "3 cloves garlic, minced",
+  "1 tbsp grated ginger",
+  "¼ tsp cayenne pepper",
+  "1 tbsp cornstarch",
+  "2 tbsp water",
+  "1 ½ cups white rice",
+  "1 broccoli crown, cut into florets"
+ ],
+ "query": "broccoli rice",
+ "options": [
+  {
+   "n": 1,
+   "title": "Duck Breast with Purple Sprouting Broccoli, Rice Noodles & Spiced Broth",
+   "credit": "Girl Interrupted Eating · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/35468144810@N01/4481983857",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4023/4481983857_64fddfec3d_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Halibut, Broccoli, Rice",
+   "credit": "The Marmot · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/38142119@N00/15215623558",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2945/15215623558_23b5e04b89_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Making broccoli, rice & vegan gravy #PerfectRainyFriday",
+   "credit": "jessica mullen · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/94348950@N00/6894728007",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7046/6894728007_688b4fb594.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Vegan Broccoli Rice Bowl",
+   "credit": "Becky Striepe · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/71795002@N00/5638360068",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5307/5638360068_868b6d3566.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Broccoli & Rice",
+   "credit": "Red Lobster Lover Joe twitter:RLLoverJoe",
+   "page": "https://www.flickr.com/photos/164188154@N05/54895557182",
+   "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "src": "https://live.staticflickr.com/65535/54895557182_3a715cc9a9_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "vegetarian duck bento",
+   "credit": "gamene · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12670507@N02/4113208447",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2543/4113208447_7ac711af92_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "robot love bento [explored]",
+   "credit": "gamene · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12670507@N02/4532702502",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2770/4532702502_144d2852d9_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Delicious food - hot chicken with rice",
+   "credit": "photosteve101 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/42931449@N07/5260510345",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5082/5260510345_31150751e4_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "ginger chicken",
+   "credit": "ginnerobot · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/78011127@N00/3168342551",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/1072/3168342551_1bdce9613a_b.jpg"
+  }
+ ]
+}
