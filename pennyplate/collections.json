@@ -51,5 +51,65 @@
    "lemon-potato-chickpea-tray-bake",
    "briam-greek-roasted-vegetables-feta"
   ]
+ },
+ {
+  "id": "leftover-rescue-2026-11-23",
+  "title": "🥧 Thanksgiving Leftover Rescue",
+  "subtitle": "Cozy second-day meals that stretch the feast",
+  "until": "2026-11-30",
+  "recipes": [
+   "turkey-stuffing-skillet",
+   "turkey-burgers",
+   "chicken-pot-pie-skillet",
+   "tomato-soup-grilled-cheese",
+   "creamy-potato-soup",
+   "split-pea-soup",
+   "chicken-noodle-soup",
+   "big-batch-white-bean-chicken-chili",
+   "creamy-pumpkin-sausage-pasta",
+   "shepherds-pie",
+   "slow-cooker-chicken-and-dumplings",
+   "pumpkin-pie-oatmeal"
+  ]
+ },
+ {
+  "id": "gulf-nights-2026-11-23",
+  "title": "🇴🇲 Gulf Feast Nights",
+  "subtitle": "Rice and spice dinners for Oman National Day",
+  "until": "2026-11-30",
+  "recipes": [
+   "chicken-kabsa",
+   "riz-a-djej",
+   "musakhan",
+   "mujaddara",
+   "timman-hummus",
+   "sayadieh-fish-and-rice",
+   "kafta-bil-sanieh",
+   "chicken-shawarma",
+   "hummus-bil-lahme",
+   "shish-tawook",
+   "fattoush",
+   "oven-doner-kebab-pitas"
+  ]
+ },
+ {
+  "id": "viral-dinners-2026-11-23",
+  "title": "🔥 Viral Dinners, Budget Style",
+  "subtitle": "Internet favorites made for a family budget",
+  "until": "2026-11-30",
+  "recipes": [
+   "smash-burger-tacos",
+   "oven-doner-kebab-pitas",
+   "baked-feta-pasta",
+   "marry-me-chicken-pasta",
+   "cottage-cheese-alfredo-chicken-pasta",
+   "million-dollar-spaghetti-bake",
+   "crunchy-cheeseburger-rice-bowls",
+   "oven-crispy-chicken-sandwiches",
+   "smash-burgers-oven-fries",
+   "cottage-cheese-flatbread-chicken-sandwiches",
+   "french-onion-pasta",
+   "sheet-pan-grinder-sliders"
+  ]
  }
 ]
