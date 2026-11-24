@@ -1,58 +1,5 @@
 [
  {
-  "id": "busy-pre-thanksgiving-2026-11-16",
-  "title": "🦃 Busy Pre-Thanksgiving Dinners",
-  "subtitle": "Fast weeknight meals while the big feast gets planned",
-  "until": "2026-11-23",
-  "recipes": [
-   "cottage-cheese-alfredo-chicken-pasta",
-   "crunchy-cheeseburger-rice-bowls",
-   "sloppy-joes",
-   "tuna-melts",
-   "bean-cheese-quesadillas",
-   "thai-basil-chicken",
-   "egg-fried-rice",
-   "garlic-shrimp-orzo-spinach-feta",
-   "greek-chicken-gyro-pitas",
-   "aglio-e-olio"
-  ]
- },
- {
-  "id": "dinners-under-2-2026-11-16",
-  "title": "💸 Dinners Under $2 a Serving",
-  "subtitle": "Beans, lentils and rice that stretch the budget",
-  "until": "2026-11-23",
-  "recipes": [
-   "red-lentil-dal",
-   "mexican-rice-beans",
-   "chana-masala",
-   "greek-lentil-soup",
-   "mujaddara",
-   "pasta-e-fagioli",
-   "koshari",
-   "rajma",
-   "spaghetti-marinara",
-   "smoky-sweet-potato-black-bean-chili"
-  ]
- },
- {
-  "id": "sheet-pan-fall-2026-11-16",
-  "title": "🍂 Sheet-Pan Fall Dinners",
-  "subtitle": "Minimal cleanup, maximum cozy",
-  "until": "2026-11-23",
-  "recipes": [
-   "hot-honey-chicken-thighs-carrots-potatoes",
-   "sheet-pan-chicken-potatoes",
-   "sausage-peppers-sheet-pan",
-   "sheet-pan-smoked-sausage-brussels-sweet-potatoes",
-   "honey-mustard-pork-chops-sheet-pan",
-   "chicken-shawarma",
-   "sheet-pan-lemon-dill-salmon-potatoes-asparagus",
-   "lemon-potato-chickpea-tray-bake",
-   "briam-greek-roasted-vegetables-feta"
-  ]
- },
- {
   "id": "leftover-rescue-2026-11-23",
   "title": "🥧 Thanksgiving Leftover Rescue",
   "subtitle": "Cozy second-day meals that stretch the feast",
