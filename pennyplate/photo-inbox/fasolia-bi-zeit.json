@@ -1,0 +1,90 @@
+{
+ "id": "fasolia-bi-zeit",
+ "title": "Fasolia bi Zeit (Lebanese White Bean & Tomato Stew)",
+ "summary": "Tender white beans in a garlicky tomato-olive oil sauce, served over rice with lemon.",
+ "ingredients": [
+  "3 tbsp olive oil",
+  "1 onion, diced",
+  "1 carrot, diced",
+  "5 cloves garlic, minced",
+  "2 tbsp tomato paste",
+  "1 tsp ground coriander",
+  "½ tsp ground allspice",
+  "½ tsp ground cinnamon",
+  "1 (14.5 oz) can diced tomatoes",
+  "2 (15 oz) cans white beans, drained",
+  "1 ½ cups water",
+  "1 tsp salt",
+  "½ tsp black pepper",
+  "¼ cup chopped parsley",
+  "1 lemon",
+  "1 ½ cups basmati rice"
+ ],
+ "query": "tomato stew",
+ "options": [
+  {
+   "n": 1,
+   "title": "Roasted eggplant and tomato stew with chickpeas",
+   "credit": "rusvaplauke · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/7440954@N05/2452525166",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3246/2452525166_5dc40293a5_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "Okra and Carrots in a Tomato Stew Base",
+   "credit": "Augapfel · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/47038415@N00/4139224869",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2665/4139224869_37e6787cae_b.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Hearty Chicken and Tomato Stew",
+   "credit": "firsttubedotcom · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/14507113@N04/3508347836",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3388/3508347836_5341f187f0_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Nom main - steamed cod with chorizo, potato and tomato stew",
+   "credit": "Jon Juan · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/96297851@N00/4783977854",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/4077/4783977854_9f45ffeebe_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "sausage, chickpea, and tomato stew with bulgur wheat",
+   "credit": "JUL7777 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/58915463@N05/5400676150",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5052/5400676150_e6c5d0bd7b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "blueberry crumble cake, brown rice, potato and tomato stew",
+   "credit": "JUL7777 · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/58915463@N05/5522735723",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5178/5522735723_163516224e_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "polenta with mushroom tomato stew #homemade",
+   "credit": "thomaswanhoff · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/51035727839@N01/9274844584",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3720/9274844584_ddba16726b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Fasoolya -- braised lamb with green beans & tomato stew",
+   "credit": "gozamos · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/49934554@N08/7054432527",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/5040/7054432527_5a021fbe0b_b.jpg"
+  }
+ ]
+}
