@@ -1,0 +1,93 @@
+{
+ "id": "peanut-butter-apple-baked-oat-cups",
+ "title": "Peanut Butter Apple Baked Oat Cups",
+ "summary": "Make-ahead muffin-tin oat cups with grated apple, cinnamon and a swirl of peanut butter.",
+ "ingredients": [
+  "2 ½ cups rolled oats",
+  "2 apples, grated",
+  "1 banana, mashed",
+  "2 eggs",
+  "1 ½ cups milk",
+  "¼ cup peanut butter",
+  "2 tbsp honey",
+  "1 tsp baking powder",
+  "1 tsp ground cinnamon",
+  "1 tsp vanilla extract",
+  "½ tsp salt"
+ ],
+ "query": "oat cups food",
+ "options": [
+  {
+   "n": 1,
+   "title": "Apple crumble a la mode",
+   "credit": "Burger Baroness · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/66787975@N00/2948627658",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/3019/2948627658_79a41bd999_b.jpg"
+  },
+  {
+   "n": 2,
+   "title": "The Ultimate Chocolate Breakfast Smoothie",
+   "credit": "Veva Health · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/79485769@N05/6969966904",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/5232/6969966904_41d615faaf.jpg"
+  },
+  {
+   "n": 3,
+   "title": "Cherry Apple Cobbler",
+   "credit": "ginnerobot · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/78011127@N00/4071338145",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/2772/4071338145_cb5b11734d_b.jpg"
+  },
+  {
+   "n": 4,
+   "title": "Asparagus Crepe with Vegan Hollandaise",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/3930200459",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2560/3930200459_b9e593f219_b.jpg"
+  },
+  {
+   "n": 5,
+   "title": "Dirt Simple Peanut Butter Dog Treats",
+   "credit": "mccun934 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/51035597937@N01/6662417481",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/7013/6662417481_6141a21665_b.jpg"
+  },
+  {
+   "n": 6,
+   "title": "dinner",
+   "credit": "jasleen_kaur · CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/25384802@N08/4903028351",
+   "license": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "src": "https://live.staticflickr.com/4075/4903028351_d70e562ef1_b.jpg"
+  },
+  {
+   "n": 7,
+   "title": "Oat Bread",
+   "credit": "suavehouse113 · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/94513428@N00/3922205232",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2499/3922205232_f9f2b7c4a0_b.jpg"
+  },
+  {
+   "n": 8,
+   "title": "Berry White Chocolate Charlotte",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/3393624831",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/3610/3393624831_05d787b4d0_b.jpg"
+  },
+  {
+   "n": 9,
+   "title": "Almond Maple Scones",
+   "credit": "Vegan Feast Catering · CC BY 2.0",
+   "page": "https://www.flickr.com/photos/25128194@N02/4372293090",
+   "license": "https://creativecommons.org/licenses/by/2.0/",
+   "src": "https://live.staticflickr.com/2752/4372293090_c0b4900043_b.jpg"
+  }
+ ]
+}
